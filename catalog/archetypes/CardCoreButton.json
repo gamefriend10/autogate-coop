@@ -1,0 +1,10 @@
+{
+    "UseUITint": true,
+    "__base_type": "Button",
+    "based_on": "MorphCoreConstructSubmenu_Button",
+    "extended_tooltips": [],
+    "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_MoprhIntoStructure.UI_Icons_Abilities_MoprhIntoStructure'",
+    "id": "CardCoreConstructSubmenu_Button",
+    "name": "Test Name",
+    "tooltip": "Test Tooltip"
+  }
