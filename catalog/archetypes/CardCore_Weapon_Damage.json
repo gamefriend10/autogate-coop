@@ -1,0 +1,40 @@
+{
+  "__base_type": "GameEffectDamage",
+  "amount": 200.0,
+  "amount_expression": {},
+  "based_on": "MorphCore_Weapon_Damage",
+  "damage_tags": [
+    "damage_ranged"
+  ],
+  "death_type": "Normal_DeathType",
+  "editor_icon": "",
+  "effect_target": {
+    "effect_parent": "none",
+    "target": "Target"
+  },
+  "flags": {
+    "alert": true,
+    "damage_response": true
+  },
+  "friendly_fire_percentage": 100.0,
+  "id": "CardCore_Weapon_Damage",
+  "impact_fx": "BP_FXI_MorphCore_Impact",
+  "tag_bonuses": [
+    "MorphCore_Weapon_TagBonusLight"
+  ],
+  "target_armor_multiplier": 1.0,
+  "tracker": "",
+  "validator": "emptyRef",
+  "vitals_leech": {
+    "energy": {
+      "max": 0.0,
+      "min": 0.0,
+      "percent": 0.0
+    },
+    "health": {
+      "max": 0.0,
+      "min": 0.0,
+      "percent": 0.0
+    }
+  }
+}

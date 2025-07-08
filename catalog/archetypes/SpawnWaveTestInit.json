@@ -1,0 +1,138 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "Unit_CreateUnit",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "5"
+              }
+            }
+          ],
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "Lancer"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Vector"
+                },
+                "value": "X=0.0 Y=0.0"
+              }
+            }
+          ],
+          "id": "position"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Boolean"
+                },
+                "value": "false"
+              }
+            }
+          ],
+          "id": "force_position"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Degrees"
+                },
+                "value": "0"
+              }
+            }
+          ],
+          "id": "facing"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Boolean"
+                },
+                "value": "false"
+              }
+            }
+          ],
+          "id": "birth"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [
+    {
+      "function_id": "Timer_OnPeriodicEvent",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Time"
+                },
+                "value": "5.0"
+              }
+            }
+          ],
+          "id": "duration"
+        }
+      ]
+    }
+  ],
+  "id": "SpawnWaveTestInit"
+}

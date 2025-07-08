@@ -1,1 +1,12 @@
-﻿{}
+﻿{
+  "map": {
+    "_CardCore0": {
+      "based_on": "CardCore",
+      "id": "_CardCore0"
+    },
+    "_CardCore1": {
+      "based_on": "CardCore",
+      "id": "_CardCore1"
+    }
+  }
+}

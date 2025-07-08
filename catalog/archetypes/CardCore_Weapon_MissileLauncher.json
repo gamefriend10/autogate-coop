@@ -1,0 +1,54 @@
+{
+  "__base_type": "GameEffectLaunchProjectile",
+  "anim_montage_component": "",
+  "based_on": "MorphCore_Weapon_MissileLauncher",
+  "cancel_fx": "",
+  "editor_icon": "",
+  "fallback_unit": {
+    "effect_parent": "none",
+    "target": "Source"
+  },
+  "flags": {
+    "channeling": false,
+    "ignore_destructible_tree": false,
+    "landing_spot_find": false,
+    "landing_spot_reserve": false,
+    "mark_exclusive_target": false,
+    "stop_at_unpathable": false
+  },
+  "id": "CardCore_Weapon_MissileLauncher",
+  "impact_effect": "CardCore_Weapon_Damage",
+  "impact_fx": "",
+  "impact_location": {
+    "effect_parent": "none",
+    "entity_or_point": "EntityOrPoint",
+    "target": "Target"
+  },
+  "launch_fx": "BP_FXS_MorphCore_Launch",
+  "launch_location": {
+    "effect_parent": "none",
+    "entity_or_point": "EntityOrPoint",
+    "target": "Source"
+  },
+  "movement": {
+    "acceleration_time": 0,
+    "height_offset": 0,
+    "lob": false,
+    "lob_gravity": 30.0,
+    "lock_facing": false,
+    "lock_height_offset": false,
+    "max_speed": 10.0,
+    "socket": "Auto"
+  },
+  "periodic": {
+    "duration": 0.0,
+    "effect": "emptyRef"
+  },
+  "projectile": "MorphCore_Weapon_Missile",
+  "range_max": 0.0,
+  "skillshots": [],
+  "tracker": "",
+  "validator": "emptyRef",
+  "validator_chase": "emptyRef",
+  "warning_fx": ""
+}
