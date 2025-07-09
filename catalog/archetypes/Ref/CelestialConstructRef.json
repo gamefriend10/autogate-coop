@@ -1,0 +1,349 @@
+{
+  "__base_type": "ConstructAbilityData",
+  "based_on": "ConstructAbilityData",
+  "commands": [
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "emptyRef",
+      "unit": "ArcshipTier1",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedArcshipTier1_Requirement",
+      "unit": "PowerBank",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedArcshipTier1_Requirement",
+      "unit": "CreationChamber",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedCreationChamber_Requirement",
+      "unit": "Mainframe",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedArcshipTier2_Requirement",
+      "unit": "Bastion",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedCreationChamber_Requirement",
+      "unit": "LinkNode",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedArcshipTier1_Requirement",
+      "unit": "Purifier",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedCreationChamber_Requirement",
+      "unit": "ForceProjector",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedBastionORCompletedMainframe_Requirement",
+      "unit": "GuardianNexus",
+      "validator": "emptyRef"
+    },
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": -1.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": false
+      },
+      "requirement": "CompletedArcshipTier1_Requirement",
+      "unit": "CollectionArray",
+      "validator": "emptyRef"
+    }
+  ],
+  "flags": {
+    "best_unit": true,
+    "build_inside": false,
+    "consume_worker": false,
+    "redirect_commands_to_topbar": true,
+    "requires_vision": false,
+    "requires_workers": false,
+    "use_structure_radius": true
+  },
+  "id": "Celestial_ConstructRef",
+  "ignore_cascadefield_requirements": false,
+  "range": 9999.0,
+  "range_indicator": "SimplePips",
+  "smart": {
+    "priority": 0,
+    "smart_filter": {
+      "alliance": {
+        "ally": true,
+        "enemy": true,
+        "neutral": true,
+        "player": true,
+        "self": true
+      },
+      "tags": {
+        "excluded": [],
+        "required": []
+      }
+    }
+  },
+  "target_actor": "BlueprintGeneratedClass'/Game/Pegasus/Blueprints/Targeting/BP_ConstructionTargetActor.BP_ConstructionTargetActor_C'",
+  "targeting_participation_alias": [],
+  "targeting_participation_range": 0.0,
+  "unreal_component": "BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/AbilityComponents/AC_Ability_Channel_Work.AC_Ability_Channel_Work_C'"
+}

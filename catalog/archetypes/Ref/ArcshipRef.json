@@ -1,52 +1,72 @@
-﻿{
+{
   "__base_type": "UnitData",
   "abilityList": [
-    "attackData",
+    "structureProductionQueueAbilityData",
     "moveData",
     "stopData",
     "holdPositionData",
-    "MorphCore_Construct"
+    "MorphToArcshipTier3Flying",
+    "Celestial_Construct",
+    "Arcship_Spawn",
+    "Arcship_Rally",
+    "Rejuvenation",
+    "attackData"
   ],
   "additional_black_mask_vision_radius": 5.0,
   "alias_tech": [
-    "_MorphCore"
+    "_ArcshipTier1",
+    "_ArcshipTier2"
   ],
-  "armor": 10.0,
-  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Celestial_Mecha_Heavy.UI_Icons_Armor_Celestial_Mecha_Heavy'",
-  "armor_name": "pegasus_core|ArmorName_CelestialArmor",
-  "attack_target_priority": 20,
-  "based_on": "MorphCore",
+  "armor": 15.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Celestial_Building_0.UI_Icons_Armor_Celestial_Building_0'",
+  "armor_name": "pegasus_core|ArmorName_CelestialStructureArmor",
+  "attack_target_priority": 11,
+  "based_on": "BaseUnit_CelestialS",
   "behaviors": [],
   "buffs": [],
   "build_cost": {
-    "resource_a": 100.0,
-    "resource_b": 0.0,
+    "resource_a": 350.0,
+    "resource_b": 100.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
-  "build_time": 0.2,
+  "build_time": 30.0,
   "cargo_size": "One",
-  "cascade_field_radius": 0,
+  "cascade_field_radius": 10,
   "commandList": [
+    {
+      "ability": "structureProductionQueueAbilityData",
+      "button": "CancelProduction_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": true,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 6,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
     {
       "ability": "attackData",
       "button": "AttackButton",
       "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
-      "repeatable": false,
+      "repeatable": true,
       "row": 2,
       "slot": 1,
       "submenu": 0,
       "targetSubmenu": -1
     },
     {
-      "ability": "stopData",
-      "button": "StopButton",
-      "commandIndex": 0,
+      "ability": "Arcship_Spawn",
+      "button": "MorphCore_Button",
+      "commandIndex": 1,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
-      "repeatable": false,
+      "repeatable": true,
       "row": 2,
       "slot": 2,
       "submenu": 0,
@@ -56,6 +76,7 @@
       "ability": "holdPositionData",
       "button": "HoldPositionButton",
       "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -68,6 +89,7 @@
       "ability": "moveData",
       "button": "MoveButton",
       "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -80,6 +102,7 @@
       "ability": "moveData",
       "button": "PatrolButton",
       "commandIndex": 1,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -89,9 +112,23 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "DummyBuild",
-      "button": "CardCoreConstructSubmenu_Button",
+      "ability": "MorphToArcshipTier3Flying",
+      "button": "MorphToArcshipTier3_Button",
       "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "DummyBuild",
+      "button": "CelestialBuildSubmenu_Button",
+      "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -101,9 +138,10 @@
       "targetSubmenu": 1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToArcshipTier1_Button",
+      "ability": "Celestial_Construct",
+      "button": "ArcshipTier1_Button",
       "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -113,9 +151,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToPowerBank_Button",
+      "ability": "Celestial_Construct",
+      "button": "PowerBank_Button",
       "commandIndex": 1,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -125,9 +164,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToCreationChamber_Button",
+      "ability": "Celestial_Construct",
+      "button": "CreationChamber_Button",
       "commandIndex": 2,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -137,9 +177,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToMainframe_Button",
+      "ability": "Celestial_Construct",
+      "button": "Mainframe_Button",
       "commandIndex": 3,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -149,9 +190,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToBastion_Button",
+      "ability": "Celestial_Construct",
+      "button": "Bastion_Button",
       "commandIndex": 4,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -161,9 +203,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToLinkNode_Button",
+      "ability": "Celestial_Construct",
+      "button": "LinkNode_Button",
       "commandIndex": 5,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -173,9 +216,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToPurifier_Button",
+      "ability": "Celestial_Construct",
+      "button": "Purifier_Button",
       "commandIndex": 6,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -185,9 +229,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToForceProjector_Button",
+      "ability": "Celestial_Construct",
+      "button": "ForceProjector_Button",
       "commandIndex": 7,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -197,9 +242,10 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToGuardianNexus_Button",
+      "ability": "Celestial_Construct",
+      "button": "GuardianNexus_Button",
       "commandIndex": 8,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -209,42 +255,85 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "MorphCore_Construct",
-      "button": "MorphToCollectionArray_Button",
+      "ability": "Celestial_Construct",
+      "button": "CollectionArray_Button",
       "commandIndex": 9,
+      "hotkey_link_alias": "emptyRef",
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 1,
       "slot": 5,
       "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Arcship_Rally",
+      "button": "Rally_Button",
+      "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Rejuvenation",
+      "button": "Rejuvenation_Button",
+      "commandIndex": 0,
+      "hotkey_link_alias": "emptyRef",
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
       "targetSubmenu": -1
     }
   ],
   "construction_set_sfx": "OnConstructionSet",
-  "damage_response": "Acquire_or_Flee",
-  "default_acquire_level": "Offensive",
+  "damage_response": "No_Response",
+  "default_acquire_level": "Defensive",
   "default_control_groups": [],
   "effects": {
-    "birth": "CelestialWarpBuffApplier",
+    "birth": "emptyRef",
     "constructed": "emptyRef",
     "creation": "emptyRef",
     "death": "emptyRef",
     "revenge": "emptyRef"
   },
-  "enabled_unit_tech": [],
+  "enabled_unit_tech": [
+    {
+      "unit": "Cabal"
+    },
+    {
+      "unit": "Scythe"
+    },
+    {
+      "unit": "Saber"
+    },
+    {
+      "unit": "Bastion"
+    },
+    {
+      "unit": "WarpNode"
+    }
+  ],
   "energy_type": "Energy",
   "expiration_time": 60.0,
   "faction": "Celestial",
   "fidget": {
-    "delay_maximum": 30.0,
-    "delay_minimum": 10.0,
+    "delay_maximum": 0.0,
+    "delay_minimum": 0.0,
     "turning_angle": 90.0,
     "turning_duration": 1.0,
     "weights": {
       "animate": 33.0,
       "idle": 33.0,
-      "turn": 0.0
+      "turn": 33.0
     }
   },
   "flags": {
@@ -277,8 +366,8 @@
   },
   "global_energy": "emptyRef",
   "global_resource_overrides": [],
-  "height": 5.5,
-  "id": "CardCore",
+  "height": 4.5,
+  "id": "ArcshipTier2FlyingRef",
   "inner_radius": 0.375,
   "minimap_icon": "",
   "minimap_icon_custom_color": "FFFFFFFF",
@@ -290,7 +379,7 @@
   "minimap_material_instance": "",
   "minimap_widget": "",
   "movement": {
-    "acceleration_time": 0.5,
+    "acceleration_time": 0.0,
     "collision": {
       "air": true,
       "burrowed": false,
@@ -299,30 +388,30 @@
       "item": false,
       "worker": false
     },
-    "deceleration_time": 0.5,
+    "deceleration_time": 0.0,
     "flocking": {
       "separation_delay": 0.5,
-      "separation_radius": 1.0,
-      "separation_strength": 1.5
+      "separation_radius": 3.4,
+      "separation_strength": 2.0
     },
     "idle_pushable": false,
     "lock_facing": true,
     "moving_turn_period": 0.0,
     "pathing_mode": "Flying",
-    "push_priority": 0,
+    "push_priority": 3,
     "push_priority_same_team": 0,
-    "speed": 2.0,
+    "speed": 1.0,
     "stationary_turn_period": 0.0,
-    "turn_radius": 0.5,
+    "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "CardCore",
+  "name": "pegasus_core|UnitData_name_ArcshipTier2",
   "num_corpses": 1,
-  "outer_radius": 1.0,
+  "outer_radius": 3.4,
   "placed_name": "",
   "power_consumed": 0.0,
-  "power_produced": 0.0,
+  "power_produced": 30.0,
   "responses": [],
   "sb_id": "none",
   "selection_alias": "",
@@ -347,18 +436,21 @@
     "BaseSoundCooldownData_Unit_UnderConstruction"
   ],
   "starting_snowtags": [
-    "entity_unit",
+    "entity_unit_structure",
+    "preventdefeat_elimination",
     "heightplane_air",
-    "attribute_heavy",
     "attribute_mechanical",
-    "attribute_ranged",
-    "attribute_worker"
+    "attribute_heavy",
+    "townhall",
+    "state_resourcedropoff_a",
+    "state_resourcedropoff_b"
   ],
-  "subgroup_priority": 101,
+  "subgroup_priority": 61,
   "supply_add": 0.0,
-  "supply_cost": 2.0,
+  "supply_cost": 0.0,
   "targeting_participation_alias": [],
   "traits": [
+    "ArcshipCascadeFieldAndPower_Trait",
     "ArcshipSpeedUpgrade_Trait"
   ],
   "turret_list": [],
@@ -367,27 +459,27 @@
     "callout_attacks_ground": true
   },
   "ui_kind": "unit",
-  "unit_button": "MorphCore_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Angel/UI_Portrait_Angel_Default_MorphCore.UI_Portrait_Angel_Default_MorphCore'",
-  "unreal_actor": "BP_UA_MorphCore_00",
+  "unit_button": "ArcshipTier2_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Angel/UI_Portrait_Angel_Default_ArcshipT2.UI_Portrait_Angel_Default_ArcshipT2'",
+  "unreal_actor": "BP_SA_ArcshipAir_B_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
   "veterancy_data": "BaseVeterancyData",
-  "veterancy_given_on_death": 200,
+  "veterancy_given_on_death": 700,
   "veterancy_starting_tier": 0,
   "veterancy_tiers": [],
   "veterancy_vxp_weight": 0,
   "victory_points": 0.0,
   "vision_height": 0.0,
-  "vision_radius": 12.0,
+  "vision_radius": 15.0,
   "vital_energy": {
-    "maximum": 0.0,
-    "regen": 0.0,
-    "starting": 0.0
+    "maximum": 100.0,
+    "regen": 0.5,
+    "starting": 50.0
   },
   "vital_health": {
-    "maximum": 180.0,
-    "regen": 0.0,
-    "starting": 180.0
+    "maximum": 1200.0,
+    "regen": 1.5,
+    "starting": 1200.0
   },
   "vital_out_shroud_deduction_energy_flat": 0.0,
   "vital_out_shroud_deduction_energy_multiplier": 0.0,
@@ -408,7 +500,5 @@
   "vital_shroud_bonus_shield_multiplier": 0.0,
   "vital_shroud_combat_delay": 5.0,
   "vitals_force_hide": false,
-  "weaponList": [
-    "CardCore_Weapon"
-  ]
+  "weaponList": []
 }

@@ -1,6 +1,6 @@
 ﻿{
   "based_on": "DefaultMapSettings",
-  "description": "Just another Stormgate map",
+  "description": "Autobattler inspired by Hearthstone Battlegrounds",
   "id": "InstanceMapSettings",
   "player_slots": [
     {
@@ -28,5 +28,6 @@
       }
     }
   ],
-  "title": "Untitled Map"
+  "show_score_screen": false,
+  "title": "AutoGate - Coop"
 }

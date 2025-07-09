@@ -1,7 +1,16 @@
 {
+  "47D5D6D8-4A52-2C46-653C-7AA2EE111A00": {
+    "facing": 0,
+    "kind": "ArcshipTier1",
+    "player": 1,
+    "position": [
+      245760,
+      -16384
+    ]
+  },
   "B87160A1-4E77-2BE9-7067-988E3C04BE64": {
     "facing": 0,
-    "kind": "_CardCore1",
+    "kind": "CardCore",
     "player": 1,
     "position": [
       -58619,
