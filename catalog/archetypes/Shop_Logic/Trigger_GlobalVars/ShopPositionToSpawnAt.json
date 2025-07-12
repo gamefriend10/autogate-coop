@@ -2,18 +2,13 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "CurrentShopSpawnPos",
+  "id": "ShopPositionToSpawnAt",
   "initial_values": [
     {
       "type": "Value",
       "value": {
         "type": {
           "directive": "FunctionType",
-          "implements": "",
-          "inner_type": "",
-          "param_id": "",
-          "sub_directive": "None",
-          "tags": [],
           "type": "Vector"
         },
         "value": "X=-3.000 Y=-3.000"
@@ -22,15 +17,10 @@
   ],
   "is_array": false,
   "is_constant": false,
-  "name": "CurrentShopSpawnPos",
+  "name": "ShopPositionToSpawnAt",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",
-    "implements": "",
-    "inner_type": "",
-    "param_id": "",
-    "sub_directive": "None",
-    "tags": [],
     "type": "Vector"
   }
 }

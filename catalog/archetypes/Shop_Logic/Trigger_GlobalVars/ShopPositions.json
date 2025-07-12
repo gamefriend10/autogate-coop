@@ -1,0 +1,46 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 3,
+  "based_on": "GlobalVariable",
+  "id": "ShopPositions",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    }
+  ],
+  "is_array": true,
+  "is_constant": false,
+  "name": "ShopPositions",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Vector"
+  }
+}

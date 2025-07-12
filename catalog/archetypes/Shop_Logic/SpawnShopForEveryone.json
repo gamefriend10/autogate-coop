@@ -1,7 +1,8 @@
-﻿{
+{
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -16,16 +17,12 @@
                         "value": {
                           "type": {
                             "directive": "FunctionType",
-                            "implements": "",
-                            "inner_type": "",
-                            "param_id": "",
-                            "sub_directive": "None",
                             "tags": [
                               "to_text"
                             ],
                             "type": "String"
                           },
-                          "value": "SpawnWaveTestInit"
+                          "value": "SpawnShopForEveryone"
                         }
                       }
                     ],
@@ -62,57 +59,36 @@
               "value": {
                 "type": {
                   "directive": "TypeRef",
-                  "implements": "",
-                  "inner_type": "",
-                  "param_id": "",
-                  "sub_directive": "None",
-                  "tags": [],
                   "type": "Trigger"
                 },
-                "value": "CardCore_SpawnUnits"
+                "value": "SetShopPositionsToPlayer1"
               }
             }
           ],
           "id": "trigger"
-        },
-        {
-          "expressions": [
-            {
-              "preset": {
-                "preset_id": "Trigger_CheckIgnoreConditions",
-                "value_id": "check"
-              },
-              "type": "Preset"
-            }
-          ],
-          "id": "conditions"
-        },
-        {
-          "expressions": [
-            {
-              "preset": {
-                "preset_id": "Trigger_WaitDontWait",
-                "value_id": "nowait"
-              },
-              "type": "Preset"
-            }
-          ],
-          "id": "wait"
-        },
-        {
-          "expressions": [
-            {
-              "preset": {
-                "preset_id": "Time_Forever",
-                "value_id": "forever"
-              },
-              "type": "Preset"
-            }
-          ],
-          "id": "timeout"
         }
-      ],
-      "sub_functions": []
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "SpawnShop"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",
@@ -129,7 +105,7 @@
                   "directive": "FunctionType",
                   "type": "Time"
                 },
-                "value": "5.0"
+                "value": "3.0"
               }
             }
           ],
@@ -138,6 +114,6 @@
       ]
     }
   ],
-  "id": "SpawnWaveTestInit",
+  "id": "SpawnShopForEveryone",
   "variables": []
 }

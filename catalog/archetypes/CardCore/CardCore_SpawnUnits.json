@@ -3,6 +3,7 @@
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -17,10 +18,6 @@
                         "value": {
                           "type": {
                             "directive": "FunctionType",
-                            "implements": "",
-                            "inner_type": "",
-                            "param_id": "",
-                            "sub_directive": "None",
                             "tags": [
                               "to_text"
                             ],
@@ -64,7 +61,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "2"
+                "value": "1"
               }
             }
           ],
@@ -106,56 +103,11 @@
               "type": "Variable",
               "variable": {
                 "indices": [],
-                "variable_id": "CurrentShopSpawnPos"
+                "variable_id": "ShopPositionToSpawnAt"
               }
             }
           ],
           "id": "position"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Boolean"
-                },
-                "value": "false"
-              }
-            }
-          ],
-          "id": "force_position"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Degrees"
-                },
-                "value": "0"
-              }
-            }
-          ],
-          "id": "facing"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Boolean"
-                },
-                "value": "false"
-              }
-            }
-          ],
-          "id": "birth"
         }
       ]
     }
