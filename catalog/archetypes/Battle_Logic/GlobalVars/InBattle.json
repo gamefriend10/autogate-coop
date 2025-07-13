@@ -1,0 +1,26 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "InBattle",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Boolean"
+        },
+        "value": "false"
+      }
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "InBattle",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Boolean"
+  }
+}

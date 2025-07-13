@@ -101,7 +101,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "CardCore_SpawnUnits"
+                "value": "HogDog_Spawn"
               }
             }
           ],
@@ -162,7 +162,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "CardCore_SpawnUnits"
+                "value": "HogDog_Spawn"
               }
             }
           ],
@@ -223,7 +223,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "CardCore_SpawnUnits"
+                "value": "HogDog_Spawn"
               }
             }
           ],

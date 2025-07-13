@@ -10,7 +10,7 @@
   },
   "B87160A1-4E77-2BE9-7067-988E3C04BE64": {
     "facing": 0,
-    "kind": "CardCore",
+    "kind": "BattleCenterPoint",
     "player": 1,
     "position": [
       -58619,
