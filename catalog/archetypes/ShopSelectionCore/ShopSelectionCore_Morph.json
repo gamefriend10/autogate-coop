@@ -1,0 +1,48 @@
+{
+  "__base_type": "MorphAbilityData",
+  "based_on": "MorphAbilityData",
+  "command_visualizer": "WaypointLine",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "requirement": "NoRequirement",
+      "unit": "HandSelectionCore"
+    }
+  ],
+  "flags": {
+    "approach": false,
+    "best_unit": false,
+    "builds": false,
+    "cancelable": false,
+    "disable_abilities": true,
+    "perform_height_transition": true,
+    "placement": false,
+    "unload_cargo": false,
+    "upgrade": false
+  },
+  "height_transition_duration": -1.0,
+  "height_transition_initial_delay": 0.0,
+  "id": "ShopSelectionCore_Morph",
+  "morph_duration": 0.0,
+  "morph_finish_effect": "emptyRef",
+  "morph_finish_fx": "",
+  "morph_start_fx": "",
+  "placement_range": 0.0,
+  "progress_description": "pegasus_core|MorphAbilityData_progress_description_Progress",
+  "target_actor": "BP_InstantTargetActor",
+  "timings": {
+    "abilities": 1.0,
+    "vitals": 1.0
+  },
+  "unreal_component": "BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/AbilityComponents/AC_Ability_Morph.AC_Ability_Morph_C'",
+  "vital_energy_field": 0,
+  "vital_energy_update": "maintain_percentage",
+  "vital_health_field": 0,
+  "vital_health_update": "maintain_percentage",
+  "vital_shield_field": 0,
+  "vital_shield_update": "maintain_percentage"
+}

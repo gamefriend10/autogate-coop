@@ -8,6 +8,24 @@
       -16384
     ]
   },
+  "8E7240D2-4D99-C851-07BC-458C4EC21D4C": {
+    "facing": 855467448,
+    "kind": "ShopSelectionCore",
+    "player": 1,
+    "position": [
+      68096,
+      -49094
+    ]
+  },
+  "9264599F-4C51-1DDD-FD03-CF92776505D0": {
+    "facing": 1038711721,
+    "kind": "ShopSelectionCore",
+    "player": 1,
+    "position": [
+      136980,
+      -53819
+    ]
+  },
   "B87160A1-4E77-2BE9-7067-988E3C04BE64": {
     "facing": 0,
     "kind": "BattleCenterPoint",
