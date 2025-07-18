@@ -10,7 +10,7 @@
         "scope": "Ability"
       },
       "requirement": "NoRequirement",
-      "unit": "HandSelectionCore"
+      "unit": "HandCore"
     }
   ],
   "flags": {
@@ -26,7 +26,7 @@
   },
   "height_transition_duration": -1.0,
   "height_transition_initial_delay": 0.0,
-  "id": "ShopSelectionCore_Morph",
+  "id": "ShopCore_Morph",
   "morph_duration": 0.0,
   "morph_finish_effect": "emptyRef",
   "morph_finish_fx": "",

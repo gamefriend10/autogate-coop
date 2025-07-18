@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "ShopToHandSelectionCoreTransitionTrigger"
+                          "value": "ShopToHandCoreTransitionTrigger"
                         }
                       }
                     ],
@@ -152,7 +152,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "ShopSelectionCore"
+                "value": "ShopCore"
               }
             }
           ],
@@ -170,6 +170,6 @@
       "sub_functions": []
     }
   ],
-  "id": "ShopToHandSelectionCoreTransitionTrigger",
+  "id": "ShopToHandCoreTransitionTrigger",
   "variables": []
 }
