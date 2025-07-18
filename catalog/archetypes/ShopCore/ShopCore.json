@@ -164,11 +164,7 @@
   ],
   "starting_snowtags": [
     "entity_unit",
-    "heightplane_air",
-    "attribute_heavy",
-    "attribute_mechanical",
-    "attribute_ranged",
-    "attribute_worker"
+    "shopcore_snowtag"
   ],
   "subgroup_priority": 101,
   "supply_add": 0.0,

@@ -126,23 +126,9 @@
   "based_on": "Trigger",
   "conditions": [
     {
-      "function_id": "Unit_IsType",
+      "function_id": "Entity_HasAllTags",
       "is_enabled": true,
       "parameters": [
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Unit_GetTriggeringUnit",
-                "is_enabled": true,
-                "parameters": [],
-                "sub_functions": []
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "unit"
-        },
         {
           "expressions": [
             {
@@ -150,13 +136,13 @@
               "value": {
                 "type": {
                   "directive": "TypeRef",
-                  "type": "UnitData"
+                  "type": "SnowTag"
                 },
-                "value": "ShopCore"
+                "value": "shopcore_snowtag"
               }
             }
           ],
-          "id": "type"
+          "id": "tags"
         }
       ],
       "sub_functions": []

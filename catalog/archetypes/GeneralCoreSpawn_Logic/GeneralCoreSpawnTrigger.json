@@ -54,36 +54,26 @@
         {
           "functions": [
             {
-              "function_id": "Logic_Comparison",
+              "function_id": "Entity_HasAllTags",
               "is_enabled": true,
               "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "InBattle"
-                      }
-                    }
-                  ],
-                  "id": "value1"
-                },
                 {
                   "expressions": [
                     {
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "Boolean"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "true"
+                        "value": "hogdog_snowtag"
                       }
                     }
                   ],
-                  "id": "value2"
+                  "id": "tags"
                 }
-              ]
+              ],
+              "sub_functions": []
             }
           ],
           "id": "if"
