@@ -1,0 +1,32 @@
+{
+  "abilityList": [
+    "ShopCore_Morph"
+  ],
+  "based_on": "BaseCore",
+  "build_cost": {
+    "resource_a": 0.0,
+    "resource_b": 0.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "commandList": [
+    {
+      "ability": "ShopCore_Morph",
+      "button": "MorphToPowerBank_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "ShopCore",
+  "name": "Shop Core",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag"
+  ]
+}

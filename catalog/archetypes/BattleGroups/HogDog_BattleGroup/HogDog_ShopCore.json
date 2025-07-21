@@ -1,0 +1,26 @@
+{
+  "abilityList": [
+    "HogDog_ShopCore_Morph"
+  ],
+  "based_on": "HogDog_BaseCore",
+  "commandList": [
+    {
+      "ability": "HogDog_ShopCore_Morph",
+      "button": "MorphToPowerBank_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "HogDog_ShopCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag",
+    "hogdog_snowtag"
+  ]
+}

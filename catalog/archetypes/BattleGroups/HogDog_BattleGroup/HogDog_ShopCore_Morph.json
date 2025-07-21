@@ -1,0 +1,15 @@
+{
+  "based_on": "ShopCore_Morph",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "requirement": "NoRequirement",
+      "unit": "HogDog_HandCore"
+    }
+  ],
+  "id": "HogDog_ShopCore_Morph"
+}

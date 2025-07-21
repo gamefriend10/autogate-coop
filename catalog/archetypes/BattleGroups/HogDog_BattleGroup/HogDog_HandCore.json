@@ -1,0 +1,32 @@
+{
+  "abilityList": [
+    "HogDog_HandCore_Construct"
+  ],
+  "based_on": "HogDog_BaseCore",
+  "build_cost": {
+    "resource_a": 3.0,
+    "resource_b": 0.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "commandList": [
+    {
+      "ability": "HogDog_HandCore_Construct",
+      "button": "MorphToCreationChamber_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "HogDog_HandCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "handcore_snowtag",
+    "hogdog_snowtag"
+  ]
+}

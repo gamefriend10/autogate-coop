@@ -8,8 +8,8 @@
   "game_mode": "Melee",
   "gameplay_level_name": "BasicStartingLevel",
   "id": "b2515569-46b8-4d2b-419f-d6ba69b470de",
-  "map_name": "Unititled Map",
-  "map_tags": [],
+  "map_name": "AutoGate",
+  "map_tags": ["Custom"],
   "tile_set_id": "TerrainTileset_UrbanRuins",
   "version": "1.0.0",
   "visibility": "Visible"

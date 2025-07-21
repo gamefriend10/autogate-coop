@@ -1,0 +1,5 @@
+{
+  "based_on": "BaseCore",
+  "id": "HogDog_BaseCore",
+  "name": "=== HogDog ===\n*Skirmisher* *End Of Buy Phase*: If a *Skirmisher* is\nadjacent (diagonally included), add 1 Scout\nto this Battle Group."
+}
