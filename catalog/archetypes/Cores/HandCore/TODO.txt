@@ -1,0 +1,1 @@
+1. delete the hand core after constructing staging

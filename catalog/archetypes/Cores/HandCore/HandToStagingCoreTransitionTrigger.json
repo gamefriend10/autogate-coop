@@ -49,27 +49,6 @@
       ]
     },
     {
-      "function_id": "Actor_SetPosition",
-      "is_enabled": true,
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Vector"
-                },
-                "value": "X=-15.000 Y=-5.000"
-              }
-            }
-          ],
-          "id": "pos"
-        }
-      ]
-    },
-    {
       "function_id": "Variable_SetVariable",
       "is_enabled": true,
       "parameters": [
@@ -87,14 +66,13 @@
         {
           "expressions": [
             {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Vector"
-                },
-                "value": "X=-15.000 Y=-5.000"
-              }
+              "function": {
+                "function_id": "Actor_GetPosition",
+                "is_enabled": true,
+                "parameters": [],
+                "sub_functions": []
+              },
+              "type": "Function"
             }
           ],
           "id": "value"
@@ -138,7 +116,7 @@
                   "directive": "TypeRef",
                   "type": "SnowTag"
                 },
-                "value": "handcore_snowtag"
+                "value": "stagingcore_snowtag"
               }
             }
           ],
@@ -150,7 +128,7 @@
   ],
   "events": [
     {
-      "function_id": "Unit_OnAbilityUsed",
+      "function_id": "Unit_OnBirthed",
       "is_enabled": true,
       "parameters": [],
       "sub_functions": []

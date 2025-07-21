@@ -1,0 +1,15 @@
+{
+  "based_on": "ShopCore_Morph",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "requirement": "NoRequirement",
+      "unit": "GauntFather_HandCore"
+    }
+  ],
+  "id": "GauntFather_ShopCore_Morph"
+}

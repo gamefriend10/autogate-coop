@@ -2,7 +2,7 @@
   "abilityList": [
     "StagingCore_Sell"
   ],
-  "based_on": "BaseCore",
+  "based_on": "GauntFather_BaseCore",
   "build_cost": {
     "resource_a": 3.0,
     "resource_b": 0.0,
@@ -32,10 +32,10 @@
     "x": 4.0,
     "y": 4.0
   },
-  "id": "StagingCore",
-  "name": "Staging Core",
+  "id": "GauntFather_StagingCore",
   "starting_snowtags": [
     "entity_unit",
+    "gauntfather_snowtag",
     "stagingcore_snowtag"
   ]
 }

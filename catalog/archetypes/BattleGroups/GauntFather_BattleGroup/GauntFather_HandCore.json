@@ -1,8 +1,8 @@
 {
   "abilityList": [
-    "StagingCore_Sell"
+    "GauntFather_HandCore_Construct"
   ],
-  "based_on": "BaseCore",
+  "based_on": "GauntFather_BaseCore",
   "build_cost": {
     "resource_a": 3.0,
     "resource_b": 0.0,
@@ -11,8 +11,8 @@
   },
   "commandList": [
     {
-      "ability": "StagingCore_Sell",
-      "button": "Salvage_Button",
+      "ability": "GauntFather_HandCore_Construct",
+      "button": "MorphToCreationChamber_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -23,19 +23,10 @@
       "targetSubmenu": -1
     }
   ],
-  "footprint": {
-    "angled": false,
-    "clumpable": true,
-    "snap": true,
-    "unbuildable": false,
-    "vision_block_height": 0,
-    "x": 4.0,
-    "y": 4.0
-  },
-  "id": "StagingCore",
-  "name": "Staging Core",
+  "id": "GauntFather_HandCore",
   "starting_snowtags": [
     "entity_unit",
-    "stagingcore_snowtag"
+    "handcore_snowtag",
+    "gauntfather_snowtag"
   ]
 }
