@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "GeneralCoreSpawnTrigger"
+                          "value": "GeneralShopCoreSpawn"
                         }
                       }
                     ],
@@ -54,9 +54,32 @@
         {
           "functions": [
             {
-              "function_id": "Entity_HasAllTags",
+              "function_id": "Logic_Comparison",
               "is_enabled": true,
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "BattleGroupToSpawnTag"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
                 {
                   "expressions": [
                     {
@@ -70,7 +93,7 @@
                       }
                     }
                   ],
-                  "id": "tags"
+                  "id": "value2"
                 }
               ],
               "sub_functions": []
@@ -93,7 +116,7 @@
                           "directive": "TypeRef",
                           "type": "Trigger"
                         },
-                        "value": "HogDog_Spawn"
+                        "value": "HogDog_ShopCore_Spawn"
                       }
                     }
                   ],
@@ -112,9 +135,32 @@
         {
           "functions": [
             {
-              "function_id": "Entity_HasAllTags",
+              "function_id": "Logic_Comparison",
               "is_enabled": true,
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "BattleGroupToSpawnTag"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
                 {
                   "expressions": [
                     {
@@ -128,7 +174,7 @@
                       }
                     }
                   ],
-                  "id": "tags"
+                  "id": "value2"
                 }
               ],
               "sub_functions": []
@@ -151,7 +197,7 @@
                           "directive": "TypeRef",
                           "type": "Trigger"
                         },
-                        "value": "GauntFather_Spawn"
+                        "value": "GauntFather_ShopCore_Spawn"
                       }
                     }
                   ],
@@ -167,6 +213,6 @@
   ],
   "based_on": "Trigger",
   "events": [],
-  "id": "GeneralCoreSpawnTrigger",
+  "id": "GeneralShopCoreSpawn",
   "variables": []
 }

@@ -1,4 +1,5 @@
 {
+  "__base_type": "Trigger",
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
@@ -22,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "HandToStagingCoreTransitionTrigger"
+                          "value": "ShopCore_Spawn"
                         }
                       }
                     ],
@@ -49,9 +50,53 @@
       ]
     },
     {
-      "function_id": "Variable_SetVariable",
-      "is_enabled": true,
+      "function_id": "Unit_CreateUnit",
       "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "ShopCore"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "player"
+        },
         {
           "expressions": [
             {
@@ -61,79 +106,31 @@
               }
             }
           ],
-          "id": "variable"
+          "id": "position"
         },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Actor_GetPosition",
-                "is_enabled": true,
-                "parameters": [],
-                "sub_functions": []
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "is_enabled": true,
-      "parameters": [
         {
           "expressions": [
             {
               "type": "Value",
               "value": {
                 "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
+                  "directive": "FunctionType",
+                  "type": "Boolean"
                 },
-                "value": "GeneralUnitsForCoreSpawn"
+                "value": "true"
               }
             }
           ],
-          "id": "trigger"
+          "id": "force_position"
         }
       ]
     }
   ],
   "based_on": "Trigger",
-  "conditions": [
-    {
-      "function_id": "Entity_HasAllTags",
-      "is_enabled": true,
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "stagingcore_snowtag"
-              }
-            }
-          ],
-          "id": "tags"
-        }
-      ],
-      "sub_functions": []
-    }
-  ],
-  "events": [
-    {
-      "function_id": "Unit_OnBirthed",
-      "is_enabled": true,
-      "parameters": [],
-      "sub_functions": []
-    }
-  ],
-  "id": "HandToStagingCoreTransitionTrigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "ShopCore_Spawn",
   "variables": []
 }

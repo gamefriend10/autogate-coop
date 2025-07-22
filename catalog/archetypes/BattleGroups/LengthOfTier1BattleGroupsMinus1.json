@@ -1,0 +1,26 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "LengthOfTier1BattleGroupsMinus1",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Integer"
+        },
+        "value": "1"
+      }
+    }
+  ],
+  "is_array": false,
+  "is_constant": true,
+  "name": "LengthOfTier1BattleGroupsMinus1",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Integer"
+  }
+}

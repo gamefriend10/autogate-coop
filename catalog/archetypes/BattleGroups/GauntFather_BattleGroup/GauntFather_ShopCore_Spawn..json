@@ -1,4 +1,5 @@
 {
+  "__base_type": "Trigger",
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
@@ -22,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "HandToStagingCoreTransitionTrigger"
+                          "value": "GauntFather_ShopCore_Spawn"
                         }
                       }
                     ],
@@ -49,33 +50,23 @@
       ]
     },
     {
-      "function_id": "Variable_SetVariable",
+      "function_id": "Trigger_Run",
       "is_enabled": true,
       "parameters": [
         {
           "expressions": [
             {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "ShopPositionToSpawnAt"
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "ShopCore_Spawn"
               }
             }
           ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Actor_GetPosition",
-                "is_enabled": true,
-                "parameters": [],
-                "sub_functions": []
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "value"
+          "id": "trigger"
         }
       ]
     },
@@ -92,7 +83,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "GeneralUnitsForCoreSpawn"
+                "value": "GauntFather_Spawn"
               }
             }
           ],
@@ -102,38 +93,10 @@
     }
   ],
   "based_on": "Trigger",
-  "conditions": [
-    {
-      "function_id": "Entity_HasAllTags",
-      "is_enabled": true,
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "stagingcore_snowtag"
-              }
-            }
-          ],
-          "id": "tags"
-        }
-      ],
-      "sub_functions": []
-    }
-  ],
-  "events": [
-    {
-      "function_id": "Unit_OnBirthed",
-      "is_enabled": true,
-      "parameters": [],
-      "sub_functions": []
-    }
-  ],
-  "id": "HandToStagingCoreTransitionTrigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "GauntFather_ShopCore_Spawn",
   "variables": []
 }

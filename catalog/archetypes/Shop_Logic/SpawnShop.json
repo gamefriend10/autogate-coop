@@ -89,6 +89,73 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BattleGroupToSpawnTag"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "function": {
+                      "function_id": "Random_Integer",
+                      "is_enabled": true,
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ],
+                          "id": "min"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [],
+                                "variable_id": "LengthOfTier1BattleGroupsMinus1"
+                              }
+                            }
+                          ],
+                          "id": "max"
+                        }
+                      ],
+                      "sub_functions": []
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "variable_id": "Tier1BattleGroups"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
       "is_enabled": true,
       "parameters": [
@@ -101,7 +168,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "HogDog_Spawn"
+                "value": "GeneralShopCoreSpawn"
               }
             }
           ],
@@ -150,6 +217,73 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BattleGroupToSpawnTag"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "function": {
+                      "function_id": "Random_Integer",
+                      "is_enabled": true,
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ],
+                          "id": "min"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [],
+                                "variable_id": "LengthOfTier1BattleGroupsMinus1"
+                              }
+                            }
+                          ],
+                          "id": "max"
+                        }
+                      ],
+                      "sub_functions": []
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "variable_id": "Tier1BattleGroups"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
       "is_enabled": true,
       "parameters": [
@@ -162,7 +296,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "HogDog_Spawn"
+                "value": "GeneralShopCoreSpawn"
               }
             }
           ],
@@ -211,6 +345,73 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BattleGroupToSpawnTag"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "function": {
+                      "function_id": "Random_Integer",
+                      "is_enabled": true,
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ],
+                          "id": "min"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [],
+                                "variable_id": "LengthOfTier1BattleGroupsMinus1"
+                              }
+                            }
+                          ],
+                          "id": "max"
+                        }
+                      ],
+                      "sub_functions": []
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "variable_id": "Tier1BattleGroups"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
       "is_enabled": true,
       "parameters": [
@@ -223,7 +424,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "HogDog_Spawn"
+                "value": "GeneralShopCoreSpawn"
               }
             }
           ],
