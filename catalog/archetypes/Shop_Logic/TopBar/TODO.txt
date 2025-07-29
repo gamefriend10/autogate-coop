@@ -1,0 +1,6 @@
+2. on ability used, check that the ability was refresh dummy, del shop and spawn new
+- do the del shop part
+
+1. create freeze dummy ability
+2. on abiltiy used, check that the ability was freeze dummy, stasis the cores
+

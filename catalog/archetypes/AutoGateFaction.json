@@ -1,0 +1,512 @@
+{
+  "__base_type": "Faction",
+  "ability_splat": "CelestialTargeting",
+  "available_to_coop": false,
+  "background_playlist": "MediaPlaylist'/Game/Pegasus/UI/Assets/Video/Backgrounds/Celestials/PL_Backgrounds_Versus_Celestials.PL_Backgrounds_Versus_Celestials'",
+  "based_on": "BaseFaction",
+  "cascade_field": "BP_Celestial_CascadeField",
+  "character_image": "Texture2D'/Game/Pegasus/UI/Assets/CoOp/Characters/UI_Coop_Character_Celestials.UI_Coop_Character_Celestials'",
+  "commander_levels": [],
+  "construction_grid": "BP_CelestialConstructionGrid",
+  "default_scout": "MorphCore",
+  "default_town_hall": "ArcshipTier1",
+  "default_worker": "Prism",
+  "description": "pegasus_core|Faction_description_Celestial",
+  "description_title": "Base Faction",
+  "faction_group": "FG_Celestial",
+  "flags": {
+    "show_topbar": true
+  },
+  "granted_by": "emptyRef",
+  "hero": {
+    "spawn_offset": {
+      "x": 0,
+      "y": 0
+    },
+    "unit": "emptyRef"
+  },
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Logos/Factions/Celestials/UI_Logos_Factions_Celestials_Standard_1024.UI_Logos_Factions_Celestials_Standard_1024'",
+  "icon_observer": "MaterialInterface'/Game/Pegasus/UI/Assets/Observer/MI_ObserverFactionLogo_Celestials.MI_ObserverFactionLogo_Celestials'",
+  "id": "AutoGate",
+  "loadout": "Celestial1v1Loadout",
+  "lobby_index": 11,
+  "luminite_worker_count": 3,
+  "name": "pegasus_core|Faction_Name_Celestial",
+  "pet_spawn_offsets": [
+    {
+      "x": 6.0,
+      "y": 6.0
+    },
+    {
+      "x": -6.0,
+      "y": -6.0
+    },
+    {
+      "x": 6.0,
+      "y": -6.0
+    },
+    {
+      "x": -6.0,
+      "y": 6.0
+    }
+  ],
+  "power": {
+    "regen_amount": 1.0,
+    "regen_period": 6.0
+  },
+  "prime_structure": {
+    "buff": "CelestialPrimeStructure",
+    "structure_filter": {
+      "alliance": {
+        "ally": false,
+        "enemy": false,
+        "neutral": false,
+        "player": true,
+        "self": false
+      },
+      "tags": {
+        "excluded": [],
+        "required": [
+          "entity_unit_structure"
+        ]
+      }
+    },
+    "structure_sorts": [
+      "TS_DistanceClosest"
+    ]
+  },
+  "quick_macro_build": [
+    {
+      "ability": "Celestial_Construct",
+      "button": "ArcshipTier1_Button",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "PowerBank_Button",
+      "commandIndex": 1,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "CreationChamber_Button",
+      "commandIndex": 2,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "Mainframe_Button",
+      "commandIndex": 3,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "Bastion_Button",
+      "commandIndex": 4,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "LinkNode_Button",
+      "commandIndex": 5,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "Purifier_Button",
+      "commandIndex": 6,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "ForceProjector_Button",
+      "commandIndex": 7,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "GuardianNexus_Button",
+      "commandIndex": 8,
+      "row": 1,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Celestial_Construct",
+      "button": "CollectionArray_Button",
+      "commandIndex": 9,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "quick_macro_build_advanced": [],
+  "quick_macro_research": [
+    {
+      "ability": "ForceProjector_Research",
+      "button": "ShortDashUpgrade_Button",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "ArgentRangeUpgrade_Button",
+      "commandIndex": 1,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "RollOutUpgrade_Button",
+      "commandIndex": 2,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "BlazeOfLightUpgrade_Button",
+      "commandIndex": 3,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "VisionTagUpgrade_Button",
+      "commandIndex": 4,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "CabalAdeptTrainingUpgrade_Button",
+      "commandIndex": 5,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "CabalMasterTrainingUpgrade_Button",
+      "commandIndex": 6,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "PurifierDummyUpgrade1_Button",
+      "commandIndex": 2,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "PurifierDummyUpgrade2_Button",
+      "commandIndex": 3,
+      "row": 1,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "PurifierDummyUpgrade3_Button",
+      "commandIndex": 4,
+      "row": 1,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "PurifierDummyUpgrade4_Button",
+      "commandIndex": 5,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ForceProjector_Research",
+      "button": "ForceProjectorDummyUpgrade4_Button",
+      "commandIndex": 8,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "ArcshipSpeedUpgrade_Button",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Purifier_Research",
+      "button": "ImbueStructureRampingDamageUpgrade_Button",
+      "commandIndex": 1,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "quick_macro_research_advanced": [
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "RecallUpgrade_Button",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "TensorPulseUpgrade_Button",
+      "commandIndex": 1,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "SaberAbilitiesUpgrade_Button",
+      "commandIndex": 2,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "DisableTowerUpgrade_Button",
+      "commandIndex": 3,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "AnimancerAdeptTrainingUpgrade_Button",
+      "commandIndex": 4,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "AnimancerMasterTrainingUpgrade_Button",
+      "commandIndex": 5,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "GuardianNexus_Research",
+      "button": "ArchangelDiveBombUpgrade_Button",
+      "commandIndex": 6,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "quick_macro_train": [
+    {
+      "ability": "CollectionArray_Spawn",
+      "button": "Prism_Button",
+      "commandIndex": 0,
+      "repeatable": true,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Arcship_Spawn",
+      "button": "MorphCore_Button",
+      "commandIndex": 1,
+      "repeatable": true,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "CreationChamber_Spawn",
+      "button": "Argent_Button",
+      "commandIndex": 0,
+      "repeatable": true,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "CreationChamber_Spawn",
+      "button": "Kri_Button",
+      "commandIndex": 1,
+      "repeatable": true,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "CreationChamber_Spawn",
+      "button": "Scanner_Button",
+      "commandIndex": 2,
+      "repeatable": true,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "CreationChamber_Spawn",
+      "button": "Cabal_Button",
+      "commandIndex": 3,
+      "repeatable": true,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "quick_macro_train_advanced": [
+    {
+      "ability": "Mainframe_Spawn",
+      "button": "Shrike_Button",
+      "commandIndex": 0,
+      "repeatable": true,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Mainframe_Spawn",
+      "button": "Scythe_Button",
+      "commandIndex": 1,
+      "repeatable": true,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Bastion_Spawn",
+      "button": "Seraphim_Button",
+      "commandIndex": 0,
+      "repeatable": true,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Bastion_Spawn",
+      "button": "Animancer_Button",
+      "commandIndex": 1,
+      "repeatable": true,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Bastion_Spawn",
+      "button": "Archangel_Button",
+      "commandIndex": 2,
+      "repeatable": true,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Mainframe_Spawn",
+      "button": "Saber_Button",
+      "commandIndex": 2,
+      "repeatable": true,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "resource_pools": [],
+  "rewards": [],
+  "starting_auto_harvester": "CollectionArray",
+  "starting_resources": {
+    "resource_a": 300.0,
+    "resource_b": 300.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "starting_units": [
+    {
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "unit": "ArcshipTier1Flying"
+    }
+  ],
+  "starting_worker_count": 1,
+  "store_item": "emptyRef",
+  "supply_max": 300.0,
+  "supply_starting": 300.0,
+  "topbar_unit": "ShopTopBarCaster",
+  "ui_id": "Celestial"
+}

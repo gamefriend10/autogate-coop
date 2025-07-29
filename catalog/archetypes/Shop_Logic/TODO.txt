@@ -1,0 +1,48 @@
+1. use Camera_MoveToPositionInstant to set camera locations back to their shops
+
+    {
+      "function_id": "Camera_MoveToPositionInstant",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetOwningPlayer",
+                "is_enabled": true,
+                "parameters": [
+                  {
+                    "expressions": [ 
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Vector"
+                },
+                "value": "X=-3.000 Y=-3.000"
+              }
+            }
+          ],
+          "id": "pos"
+        }
+      ]
+    }

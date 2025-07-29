@@ -1,0 +1,10 @@
+{
+  "UseUITint": true,
+  "__base_type": "Button",
+  "based_on": "BaseButton",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_LevelUp.UI_Icons_BasicCommands_LevelUp'",
+  "id": "Tier2Upgrade_Button",
+  "name": "Unlock Tier 2",
+  "tooltip": "Allows Tier 2 Battle Groups to be randomly chosen when Refreshing the shop."
+}

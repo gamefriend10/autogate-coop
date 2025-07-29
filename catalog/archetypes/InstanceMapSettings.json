@@ -5,25 +5,33 @@
   "player_slots": [
     {
       "attribute_instance_map_settings": {
+        "additional_overrides": [
+          {
+            "attribute_definition": "factionAttributeDefinition",
+            "locked": true,
+            "value": 11
+          }
+        ],
         "slot_type": {
           "locked": true,
           "value": "human"
         },
         "team": {
-          "locked": false,
+          "locked": true,
           "value": 0
         }
       }
     },
     {
       "attribute_instance_map_settings": {
+        "additional_overrides": [],
         "slot_type": {
-          "locked": false,
-          "value": "ai"
+          "locked": true,
+          "value": "human"
         },
         "team": {
-          "locked": false,
-          "value": 1
+          "locked": true,
+          "value": 0
         }
       }
     }

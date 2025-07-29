@@ -92,28 +92,7 @@
     }
   ],
   "based_on": "Trigger",
-  "events": [
-    {
-      "function_id": "Timer_OnPeriodicEvent",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Time"
-                },
-                "value": "3.0"
-              }
-            }
-          ],
-          "id": "duration"
-        }
-      ]
-    }
-  ],
+  "events": [],
   "id": "SpawnShopForEveryone",
   "variables": []
 }

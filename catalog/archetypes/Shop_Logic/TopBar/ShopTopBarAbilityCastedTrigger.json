@@ -1,0 +1,307 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "ShopTopBarAbilityCastedTrigger"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier2Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Variable_SetVariable",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "Tier"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "1"
+                      }
+                    }
+                  ],
+                  "id": "player"
+                },                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier2Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Refresh"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Trigger_Run",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "SpawnShopForEveryone"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "attribute_topbar"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ],
+      "sub_functions": []
+    }
+  ],
+  "events": [
+    {
+      "function_id": "Unit_OnAbilityUsed",
+      "is_enabled": true,
+      "parameters": [],
+      "sub_functions": []
+    }
+  ],
+  "id": "ShopTopBarAbilityCastedTrigger",
+  "variables": []
+}

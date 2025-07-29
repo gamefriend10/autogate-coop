@@ -50,8 +50,7 @@
       ]
     },
     {
-      "function_id": "Trigger_Run",
-      "is_enabled": true,
+      "function_id": "Unit_CreateUnit",
       "parameters": [
         {
           "expressions": [
@@ -59,14 +58,70 @@
               "type": "Value",
               "value": {
                 "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
+                  "directive": "FunctionType",
+                  "type": "Integer"
                 },
-                "value": "ShopCore_Spawn"
+                "value": "1"
               }
             }
           ],
-          "id": "trigger"
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "GauntFather_ShopCore"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "ShopPositionToSpawnAt"
+              }
+            }
+          ],
+          "id": "position"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Boolean"
+                },
+                "value": "true"
+              }
+            }
+          ],
+          "id": "force_position"
         }
       ]
     },

@@ -1,0 +1,38 @@
+{
+  "__base_type": "GlobalResourcePool",
+  "based_on": "BaseGlobalResourcePool",
+  "description": "",
+  "flags": {
+    "permanent": false
+  },
+  "harvest_on_death": {
+    "percentage_multiplier_ally": 100.0,
+    "percentage_multiplier_enemy": 100.0,
+    "percentage_multiplier_neutral": 100.0,
+    "percentage_multiplier_player": 100.0,
+    "percentage_on_shroud": 100.0,
+    "percentage_supply": 0.0,
+    "percentage_veterancy_xp": 0.0,
+    "range": 0.0,
+    "target_filter": {
+      "alliance": {
+        "ally": true,
+        "enemy": true,
+        "neutral": true,
+        "player": true,
+        "self": true
+      },
+      "tags": {
+        "excluded": [],
+        "required": []
+      }
+    }
+  },
+  "id": "Health",
+  "name": "",
+  "resource_vital": {
+    "maximum": 100.0,
+    "regen": 0.0,
+    "starting": 100.0
+  }
+}

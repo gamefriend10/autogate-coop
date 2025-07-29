@@ -1,0 +1,10 @@
+{
+  "UseUITint": false,
+  "__base_type": "Button",
+  "based_on": "Button",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_Salvage.UI_Icons_BasicCommands_Salvage'",
+  "id": "Refresh_Button",
+  "name": "Refresh",
+  "tooltip": "Replace your shop with new Battle Groups to purchase."
+}

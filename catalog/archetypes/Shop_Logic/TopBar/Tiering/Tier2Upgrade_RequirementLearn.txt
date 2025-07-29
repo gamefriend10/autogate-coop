@@ -1,0 +1,47 @@
+{
+  "__base_type": "Requirement",
+  "based_on": "Requirement",
+  "can_show": {
+    "root": {
+      "left": {
+        "node": "Literal",
+        "type": "Variable",
+        "value": "Tier"
+      },
+      "node": "Logical",
+      "operator": "==",
+      "right": {
+        "node": "Literal",
+        "type": "Count",
+        "value": 1
+      },
+      "type": "Bool"
+    },
+    "type": "Bool"
+  },
+  "can_use": [
+    {
+      "check": {
+        "root": {
+          "left": {
+            "node": "Literal",
+            "type": "GlobalVariable",
+            "value": "Tier"
+          },
+          "node": "Logical",
+          "operator": "==",
+          "right": {
+            "node": "Literal",
+            "type": "Count",
+            "value": 1
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "Can only go to Tier 2 from Tier 1.",
+      "reason_announcement": "None"
+    }
+  ],
+  "id": "Tier2Upgrade_RequirementLearn"
+}
