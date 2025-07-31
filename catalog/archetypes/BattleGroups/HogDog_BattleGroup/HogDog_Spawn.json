@@ -126,134 +126,29 @@
       ]
     },
     {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "Logic_Comparison",
-              "is_enabled": true,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "InBattle"
-                      }
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "FunctionType",
-                          "type": "Boolean"
-                        },
-                        "value": "true"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
+              "type": "Variable",
+              "variable": {
+                "variable_id": "units_spawned"
+              }
             }
           ],
-          "id": "if"
+          "id": "destination"
         },
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "UnitGroup_IssueOrderTargetingPos",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "UnitGroup_GetLastCreatedUnits",
-                        "is_enabled": true,
-                        "parameters": [],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "unit_group"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Actor_GetPosition",
-                        "is_enabled": true,
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "Point_GetPointFromPlacedName",
-                                  "is_enabled": true,
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "type": "Value",
-                                          "value": {
-                                            "type": {
-                                              "directive": "FunctionType",
-                                              "type": "String"
-                                            },
-                                            "value": "BattleCenterPoint"
-                                          }
-                                        }
-                                      ],
-                                      "id": "name"
-                                    }
-                                  ],
-                                  "sub_functions": []
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "actor"
-                          }
-                        ],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "target_pos"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "guid": "",
-                        "type": {
-                          "directive": "TypeRef",
-                          "implements": "ability_data",
-                          "inner_type": "",
-                          "param_id": "",
-                          "sub_directive": "None",
-                          "tags": [],
-                          "type": ""
-                        },
-                        "value": "attackData"
-                      }
-                    }
-                  ],
-                  "id": "order"
-                }
-              ]
+              "function": {
+                "function_id": "UnitGroup_GetLastCreatedUnits"
+              },
+              "type": "Function"
             }
           ],
-          "id": "then"
+          "id": "source"
         }
       ]
     },
@@ -334,134 +229,125 @@
       ]
     },
     {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "Logic_Comparison",
-              "is_enabled": true,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "InBattle"
-                      }
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "FunctionType",
-                          "type": "Boolean"
-                        },
-                        "value": "true"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
+              "type": "Variable",
+              "variable": {
+                "variable_id": "units_spawned"
+              }
             }
           ],
-          "id": "if"
+          "id": "destination"
         },
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "UnitGroup_IssueOrderTargetingPos",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "UnitGroup_GetLastCreatedUnits",
-                        "is_enabled": true,
-                        "parameters": [],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "unit_group"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Actor_GetPosition",
-                        "is_enabled": true,
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "Point_GetPointFromPlacedName",
-                                  "is_enabled": true,
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "type": "Value",
-                                          "value": {
-                                            "type": {
-                                              "directive": "FunctionType",
-                                              "type": "String"
-                                            },
-                                            "value": "BattleCenterPoint"
-                                          }
-                                        }
-                                      ],
-                                      "id": "name"
-                                    }
-                                  ],
-                                  "sub_functions": []
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "actor"
-                          }
-                        ],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "target_pos"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "guid": "",
-                        "type": {
-                          "directive": "TypeRef",
-                          "implements": "ability_data",
-                          "inner_type": "",
-                          "param_id": "",
-                          "sub_directive": "None",
-                          "tags": [],
-                          "type": ""
-                        },
-                        "value": "attackData"
-                      }
-                    }
-                  ],
-                  "id": "order"
-                }
-              ]
+              "function": {
+                "function_id": "UnitGroup_GetLastCreatedUnits"
+              },
+              "type": "Function"
             }
           ],
-          "id": "then"
+          "id": "source"
+        }
+      ]
+    },
+    {
+      "function_id": "Blackboard_SetValue_UnitGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "is_enabled": true,
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "units"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "UnitGroup_CopyOfUnitGroup",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "units_spawned"
+                        }
+                      }
+                    ],
+                    "id": "unit_group"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "UnitsToOrderToBattle"
+              }
+            }
+          ],
+          "id": "destination"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "units_spawned"
+              }
+            }
+          ],
+          "id": "source"
         }
       ]
     }
@@ -472,5 +358,27 @@
   "enabled": true,
   "events": [],
   "id": "HogDog_Spawn",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "units_spawned",
+      "initial_values": [
+        {
+          "function": {
+            "function_id": "UnitGroup_GetNewUnitGroup"
+          },
+          "type": "Function"
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "units_spawned",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "UnitGroup"
+      }
+    }
+  ]
 }

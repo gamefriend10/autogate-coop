@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "ShopToHandCoreTransitionTrigger"
+                          "value": "HandCoreBuildTrigger"
                         }
                       }
                     ],
@@ -49,9 +49,19 @@
       ]
     },
     {
-      "function_id": "Actor_SetPosition",
-      "is_enabled": true,
+      "function_id": "Blackboard_SetValue_UnitGroup",
       "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfPlayer"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
         {
           "expressions": [
             {
@@ -59,20 +69,14 @@
               "value": {
                 "type": {
                   "directive": "FunctionType",
-                  "type": "Vector"
+                  "type": "String"
                 },
-                "value": "X=-15.000 Y=-5.000"
+                "value": "HandCoreUnitsToMove"
               }
             }
           ],
-          "id": "pos"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_ForEachUnitInGroup",
-      "is_enabled": true,
-      "parameters": [
+          "id": "key"
+        },
         {
           "expressions": [
             {
@@ -125,95 +129,12 @@
               "type": "Function"
             }
           ],
-          "id": "units"
-        }
-      ],
-      "sub_functions": [
-        {
-          "functions": [
-            {
-              "function_id": "Actor_SetPosition",
-              "is_enabled": true,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "UnitGroup_GetCurrentUnit"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "actor"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Actor_GetPosition",
-                        "is_enabled": true,
-                        "parameters": [],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "pos"
-                }
-              ]
-            },
-            {
-              "function_id": "UI_SendChatMessage",
-              "is_enabled": false,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Text_ToText",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "type": "Value",
-                                "value": {
-                                  "type": {
-                                    "directive": "FunctionType",
-                                    "tags": [
-                                      "to_text"
-                                    ],
-                                    "type": "String"
-                                  },
-                                  "value": "ShopToHandCoreTransitionTrigger: Iterating over units"
-                                }
-                              }
-                            ],
-                            "id": "value"
-                          }
-                        ]
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "message"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "PlayerGroup_GetAllPlayers"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "group"
-                }
-              ]
-            }
-          ],
-          "id": "actions"
+          "id": "value"
         }
       ]
+    },
+    {
+      "function_id": "Unit_Remove"
     }
   ],
   "based_on": "Trigger",
@@ -231,7 +152,7 @@
                   "directive": "TypeRef",
                   "type": "SnowTag"
                 },
-                "value": "shopcore_snowtag"
+                "value": "handcore_snowtag"
               }
             }
           ],
@@ -249,6 +170,6 @@
       "sub_functions": []
     }
   ],
-  "id": "ShopToHandCoreTransitionTrigger",
+  "id": "HandCoreBuildTrigger",
   "variables": []
 }

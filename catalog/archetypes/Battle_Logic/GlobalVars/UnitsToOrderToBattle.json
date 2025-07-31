@@ -2,25 +2,21 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "InBattle",
+  "id": "UnitsToOrderToBattle",
   "initial_values": [
     {
-      "type": "Value",
-      "value": {
-        "type": {
-          "directive": "FunctionType",
-          "type": "Boolean"
-        },
-        "value": "true"
-      }
+      "function": {
+        "function_id": "UnitGroup_GetNewUnitGroup"
+      },
+      "type": "Function"
     }
   ],
   "is_array": false,
   "is_constant": false,
-  "name": "InBattle",
+  "name": "UnitsToOrderToBattle",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",
-    "type": "Boolean"
+    "type": "UnitGroup"
   }
 }

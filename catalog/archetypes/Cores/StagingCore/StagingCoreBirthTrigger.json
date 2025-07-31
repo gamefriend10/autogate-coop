@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "ShopToHandCoreTransitionTrigger"
+                          "value": "StagingCoreBirthTrigger"
                         }
                       }
                     ],
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "function_id": "Actor_SetPosition",
+      "function_id": "General_Wait",
       "is_enabled": true,
       "parameters": [
         {
@@ -59,13 +59,98 @@
               "value": {
                 "type": {
                   "directive": "FunctionType",
-                  "type": "Vector"
+                  "type": "Time"
                 },
-                "value": "X=-15.000 Y=-5.000"
+                "value": "0.1"
               }
             }
           ],
-          "id": "pos"
+          "id": "duration"
+        }
+      ]
+    },
+    {
+      "function_id": "Blackboard_SetValue_UnitGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "is_enabled": true,
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "units"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_UnitGroup",
+                "is_enabled": true,
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfPlayer"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "HandCoreUnitsToMove"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
         }
       ]
     },
@@ -184,7 +269,7 @@
                                     ],
                                     "type": "String"
                                   },
-                                  "value": "ShopToHandCoreTransitionTrigger: Iterating over units"
+                                  "value": "StagingCoreBirthTrigger: Iterating over units"
                                 }
                               }
                             ],
@@ -231,7 +316,7 @@
                   "directive": "TypeRef",
                   "type": "SnowTag"
                 },
-                "value": "shopcore_snowtag"
+                "value": "stagingcore_snowtag"
               }
             }
           ],
@@ -243,12 +328,12 @@
   ],
   "events": [
     {
-      "function_id": "Unit_OnAbilityUsed",
+      "function_id": "Unit_OnBirthed",
       "is_enabled": true,
       "parameters": [],
       "sub_functions": []
     }
   ],
-  "id": "ShopToHandCoreTransitionTrigger",
+  "id": "StagingCoreBirthTrigger",
   "variables": []
 }

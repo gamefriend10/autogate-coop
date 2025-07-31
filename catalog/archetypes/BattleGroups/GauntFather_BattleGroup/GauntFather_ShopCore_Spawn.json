@@ -124,27 +124,6 @@
           "id": "force_position"
         }
       ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "is_enabled": true,
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "GauntFather_Spawn"
-              }
-            }
-          ],
-          "id": "trigger"
-        }
-      ]
     }
   ],
   "based_on": "Trigger",

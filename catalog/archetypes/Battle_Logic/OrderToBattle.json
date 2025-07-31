@@ -1,0 +1,190 @@
+{
+  "__base_type": "Trigger",
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "OrderToBattle"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "InBattle"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Boolean"
+                        },
+                        "value": "true"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "UnitGroup_IssueOrderTargetingPos",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "indices": [],
+                        "variable_id": "UnitsToOrderToBattle"
+                      }
+                    }
+                  ],
+                  "id": "unit_group"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Actor_GetPosition",
+                        "is_enabled": true,
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Point_GetPointFromPlacedName",
+                                  "is_enabled": true,
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Value",
+                                          "value": {
+                                            "type": {
+                                              "directive": "FunctionType",
+                                              "type": "String"
+                                            },
+                                            "value": "BattleCenterPoint"
+                                          }
+                                        }
+                                      ],
+                                      "id": "name"
+                                    }
+                                  ],
+                                  "sub_functions": []
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "actor"
+                          }
+                        ],
+                        "sub_functions": []
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "target_pos"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "guid": "",
+                        "type": {
+                          "directive": "TypeRef",
+                          "implements": "ability_data",
+                          "inner_type": "",
+                          "param_id": "",
+                          "sub_directive": "None",
+                          "tags": [],
+                          "type": ""
+                        },
+                        "value": "attackData"
+                      }
+                    }
+                  ],
+                  "id": "order"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "OrderToBattle",
+  "variables": []
+}

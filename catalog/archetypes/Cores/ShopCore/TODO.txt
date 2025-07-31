@@ -1,1 +1,0 @@
-1. after buying, store the spawned units in triggering player's blackboard hand slot

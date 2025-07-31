@@ -1,0 +1,278 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "StagingCoreAbilityUsedTrigger"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "StagingCore_Sell"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "UnitGroup_ForEachUnitInGroup",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetValue_UnitGroup",
+                        "is_enabled": true,
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Blackboard_GetBlackboardOfEntity",
+                                  "is_enabled": true,
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "function": {
+                                            "function_id": "Unit_GetTriggeringUnit"
+                                          },
+                                          "type": "Function"
+                                        }
+                                      ],
+                                      "id": "entity"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "blackboard"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "String"
+                                  },
+                                  "value": "units"
+                                }
+                              }
+                            ],
+                            "id": "key"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "units"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Unit_Remove",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "UnitGroup_GetCurrentUnit"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "UI_SendChatMessage",
+                      "is_enabled": false,
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Text_ToText",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "tags": [
+                                              "to_text"
+                                            ],
+                                            "type": "String"
+                                          },
+                                          "value": "StagingCoreAbilityUsedTrigger: Iterating over units"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "message"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "PlayerGroup_GetAllPlayers"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "group"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "stagingcore_snowtag"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ],
+      "sub_functions": []
+    }
+  ],
+  "events": [
+    {
+      "function_id": "Unit_OnAbilityUsed",
+      "is_enabled": true,
+      "parameters": [],
+      "sub_functions": []
+    }
+  ],
+  "id": "StagingCoreAbilityUsedTrigger",
+  "variables": []
+}
