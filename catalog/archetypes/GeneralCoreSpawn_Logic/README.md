@@ -3,9 +3,9 @@
 LONG if-then-else that checks determines which ShopCore BattleGroup to spawn
 
 prereqs:
-1. ShopPositionIndexForBlackboard is set
-2. ShopPositionToSpawnAt is set
-3. BattleGroupToSpawnTag is set
+1. ShopPositionToSpawnAt is set
+2. BattleGroupToSpawnTag is set
+3. ShopPositionKeyToSaveToBlackboard is set
 
 # GeneralUnitsForCoreSpawn
 

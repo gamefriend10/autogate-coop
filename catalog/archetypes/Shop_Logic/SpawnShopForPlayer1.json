@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "SpawnShopForEveryone"
+                          "value": "SpawnShopForPlayer1"
                         }
                       }
                     ],
@@ -93,6 +93,6 @@
   ],
   "based_on": "Trigger",
   "events": [],
-  "id": "SpawnShopForEveryone",
+  "id": "SpawnShopForPlayer1",
   "variables": []
 }

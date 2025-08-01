@@ -1,0 +1,26 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "ShopPositionKeyToSaveToBlackboard",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "String"
+        },
+        "value": "shop_core_at_shop_position_0"
+      }
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "ShopPositionKeyToSaveToBlackboard",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "String"
+  }
+}

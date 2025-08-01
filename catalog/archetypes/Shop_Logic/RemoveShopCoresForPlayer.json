@@ -1,5 +1,4 @@
 {
-  "__base_type": "Trigger",
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
@@ -23,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "GauntFather_ShopCore_Spawn"
+                          "value": "RemoveShopCoresForPlayer"
                         }
                       }
                     ],
@@ -50,146 +49,18 @@
       ]
     },
     {
-      "function_id": "Unit_CreateUnit",
+      "function_id": "Variable_SetVariable",
       "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
-                "value": "1"
-              }
-            }
-          ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "GauntFather_ShopCore"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "1"
-              }
-            }
-          ],
-          "id": "player"
-        },
         {
           "expressions": [
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "ShopPositionToSpawnAt"
+                "variable_id": "BlackboardKeyForShopCoreShopPosition"
               }
             }
           ],
-          "id": "position"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Boolean"
-                },
-                "value": "true"
-              }
-            }
-          ],
-          "id": "force_position"
-        }
-      ]
-    },
-    {
-      "function_id": "Blackboard_SetValue_Unit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Blackboard_GetBlackboardOfPlayer"
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "blackboard"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "ShopPositionKeyToSaveToBlackboard"
-              }
-            }
-          ],
-          "id": "key"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Unit_GetLastCreatedUnit",
-                "parameters": []
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Blackboard_SetValue_String",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Blackboard_GetBlackboardOfEntity",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Unit_GetLastCreatedUnit"
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "entity"
-                  }
-                ]
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "blackboard"
+          "id": "variable"
         },
         {
           "expressions": [
@@ -200,31 +71,154 @@
                   "directive": "FunctionType",
                   "type": "String"
                 },
-                "value": "shop_position_key"
-              }
-            }
-          ],
-          "id": "key"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "ShopPositionKeyToSaveToBlackboard"
+                "value": "shop_core_at_shop_position_0"
               }
             }
           ],
           "id": "value"
         }
       ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "RemoveShopCoreAtPlayerPosition"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BlackboardKeyForShopCoreShopPosition"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "shop_core_at_shop_position_1"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "RemoveShopCoreAtPlayerPosition"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BlackboardKeyForShopCoreShopPosition"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "shop_core_at_shop_position_2"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "RemoveShopCoreAtPlayerPosition"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",
-  "conditions": [],
-  "dev_only": false,
-  "enabled": true,
   "events": [],
-  "id": "GauntFather_ShopCore_Spawn",
-  "variables": []
+  "id": "RemoveShopCoresForPlayer",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "shop_core_to_remove",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "shop_core_to_remove",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Unit"
+      }
+    }
+  ]
 }
