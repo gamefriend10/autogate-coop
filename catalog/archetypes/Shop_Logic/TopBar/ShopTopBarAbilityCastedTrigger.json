@@ -153,7 +153,8 @@
                     }
                   ],
                   "id": "player"
-                },                {
+                },
+                {
                   "expressions": [
                     {
                       "type": "Value",
