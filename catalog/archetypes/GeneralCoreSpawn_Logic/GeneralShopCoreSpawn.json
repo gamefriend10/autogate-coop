@@ -49,13 +49,66 @@
       ]
     },
     {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_ToString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "BattleGroupToSpawnTag"
+                                  }
+                                }
+                              ],
+                              "id": "value"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
       "function_id": "General_IfThenElse",
       "sub_functions": [
         {
           "functions": [
             {
               "function_id": "Logic_Comparison",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -105,7 +158,6 @@
           "functions": [
             {
               "function_id": "Trigger_Run",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -136,7 +188,6 @@
           "functions": [
             {
               "function_id": "Logic_Comparison",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -186,7 +237,6 @@
           "functions": [
             {
               "function_id": "Trigger_Run",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -198,6 +248,85 @@
                           "type": "Trigger"
                         },
                         "value": "GauntFather_ShopCore_Spawn"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "BattleGroupToSpawnTag"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
+                        },
+                        "value": "bunkerrush_snowtag"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "BunkerRush_ShopCore_Spawn"
                       }
                     }
                   ],

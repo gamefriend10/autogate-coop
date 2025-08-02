@@ -1,6 +1,9 @@
 # SpawnShop
 
 1. Set input/prereq vars for GeneralShopCoreSpawn
+  1. (set `ShopPositionToSpawnAt`)
+  2. (set `BattleGroupToSpawnTag` via running PickBattleGroupToSpawn())
+  3. (set `ShopPositionKeyToSaveToBlackboard`)
 2. run GeneralShopCoreSpawn
 3. repeat for all shop positions
 

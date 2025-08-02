@@ -1,0 +1,11 @@
+{
+  "__base_type": "SnowTag",
+  "based_on": "SnowTag",
+  "display_name": "pegasus_core|SnowTag_display_name_entity_unit",
+  "display_name_noun_phrase": "pegasus_core|SnowTag_display_name_noun_phrase_entity_unit",
+  "flags": {
+    "display_as_attribute": false,
+    "display_as_callout": false
+  },
+  "id": "bunkerrush_snowtag"
+}

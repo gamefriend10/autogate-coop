@@ -1,0 +1,46 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 3,
+  "based_on": "GlobalVariable",
+  "id": "Tier2AndBelowBattleGroups",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "hogdog_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "gauntfather_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "bunkerrush_snowtag"
+      }
+    }
+  ],
+  "is_array": true,
+  "is_constant": false,
+  "name": "Tier2AndBelowBattleGroups",
+  "per_element_initial_values": true,
+  "type": {
+    "directive": "TypeRef",
+    "type": "SnowTag"
+  }
+}

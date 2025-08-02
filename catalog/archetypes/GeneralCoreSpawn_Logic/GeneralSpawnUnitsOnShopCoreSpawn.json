@@ -85,7 +85,6 @@
           "functions": [
             {
               "function_id": "Entity_HasAllTags",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -112,7 +111,6 @@
           "functions": [
             {
               "function_id": "Trigger_Run",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -143,7 +141,6 @@
           "functions": [
             {
               "function_id": "Entity_HasAllTags",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -170,7 +167,6 @@
           "functions": [
             {
               "function_id": "Trigger_Run",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -182,6 +178,62 @@
                           "type": "Trigger"
                         },
                         "value": "GauntFather_Spawn"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Entity_HasAllTags",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
+                        },
+                        "value": "bunkerrush_snowtag"
+                      }
+                    }
+                  ],
+                  "id": "tags"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "BunkerRush_Spawn"
                       }
                     }
                   ],

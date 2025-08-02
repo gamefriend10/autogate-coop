@@ -10,5 +10,5 @@ Trigger: stagingCore is birthed (expected to be from the HandCore constructing i
 
 Trigger: stagingCore uses an ability
 
-1. if ability is Sell
+1. if ability is Sell OR SellFor2
   1. delete stagingCore's `units` (tracked by blackboard)

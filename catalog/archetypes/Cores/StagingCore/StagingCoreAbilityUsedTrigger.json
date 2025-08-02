@@ -54,49 +54,116 @@
         {
           "functions": [
             {
-              "function_id": "Logic_Comparison",
-              "is_enabled": true,
+              "function_id": "Logic_AndOrConditions",
               "parameters": [
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "Ability_GetTriggeringAbility"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
                       "preset": {
-                        "preset_id": "Logic_ComparisonOperator",
-                        "value_id": "eq"
+                        "preset_id": "Logic_AndOrOperator",
+                        "value_id": "or"
                       },
                       "type": "Preset"
                     }
                   ],
                   "id": "op"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "StagedAbilityData"
-                        },
-                        "value": "StagingCore_Sell"
-                      }
-                    }
-                  ],
-                  "id": "value2"
                 }
               ],
-              "sub_functions": []
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Ability_GetTriggeringAbility"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "StagedAbilityData"
+                                },
+                                "value": "StagingCore_Sell"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ],
+                      "sub_functions": []
+                    },
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Ability_GetTriggeringAbility"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "StagedAbilityData"
+                                },
+                                "value": "StagingCore_SellFor2"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ],
+                      "sub_functions": []
+                    }
+                  ],
+                  "id": "conditions"
+                }
+              ]
             }
           ],
           "id": "if"

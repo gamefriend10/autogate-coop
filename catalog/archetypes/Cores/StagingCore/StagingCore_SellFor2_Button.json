@@ -1,0 +1,10 @@
+{
+  "UseUITint": true,
+  "__base_type": "Button",
+  "based_on": "Button",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_Salvage.UI_Icons_BasicCommands_Salvage'",
+  "id": "StagingCore_SellFor2_Button",
+  "name": "Sell",
+  "tooltip": "Remove this Battle Group and gain <d ref=\"StagingCore_SellFor2.commands[0].cost_resources.resource_a * (-1)\" style=\"Yellow\"/> Luminite."
+}

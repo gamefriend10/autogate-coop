@@ -1,0 +1,37 @@
+{
+  "based_on": "HandCore_Construct",
+  "commands": [
+    {
+      "constructed_effect": "emptyRef",
+      "construction_effect": "emptyRef",
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "overrides": {
+        "build_time": 0.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "ignore_unit_resource_cost": true
+      },
+      "requirement": "emptyRef",
+      "unit": "BunkerRush_StagingCore",
+      "validator": "emptyRef"
+    }
+  ],
+  "id": "BunkerRush_HandCore_Construct"
+}
