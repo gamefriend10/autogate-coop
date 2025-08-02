@@ -1,11 +1,11 @@
 {
-  "1A659772-4AD6-6FA7-517A-A1B1984D5EA4": {
-    "facing": 627591918,
-    "kind": "MegaResourceA",
+  "3E343E4F-48A7-4CD3-0A42-C499064E4DF0": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition7",
     "player": 1,
     "position": [
-      98304,
-      -278528
+      983040,
+      1507328
     ]
   },
   "47D5D6D8-4A52-2C46-653C-7AA2EE111A00": {
@@ -13,17 +13,44 @@
     "kind": "ArcshipTier1",
     "player": 1,
     "position": [
-      245760,
-      -16384
+      638976,
+      1064960
     ]
   },
-  "5C0F6595-4BBE-5208-DF8B-88BAE9CBF077": {
-    "facing": 1339990018,
+  "53A3991F-467D-D9EF-071A-DB8D3039810B": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition1",
+    "player": 1,
+    "position": [
+      196608,
+      1507328
+    ]
+  },
+  "55698E63-4EE7-8DC2-5168-AC82769D7029": {
+    "facing": 1770902314,
     "kind": "locationMarkerPlayerStart",
     "player": 1,
     "position": [
-      80425,
-      -164988
+      589824,
+      1015808
+    ]
+  },
+  "8BB2D357-4DDA-D1AC-30F5-ACA8F95F20EB": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition2",
+    "player": 1,
+    "position": [
+      327680,
+      1507328
+    ]
+  },
+  "B3DBE22C-4B7A-A390-F9C5-2BB925043520": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition4",
+    "player": 1,
+    "position": [
+      589824,
+      1507328
     ]
   },
   "B87160A1-4E77-2BE9-7067-988E3C04BE64": {
@@ -31,8 +58,35 @@
     "kind": "BattleCenterPoint",
     "player": 1,
     "position": [
-      -58619,
-      -65878
+      -1703936,
+      0
+    ]
+  },
+  "DB9B1A34-4A43-FF9C-1F9B-5EBF02522684": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition6",
+    "player": 1,
+    "position": [
+      851968,
+      1507328
+    ]
+  },
+  "E94E44F5-4438-F6C3-2A79-37B2D0FECE0A": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition3",
+    "player": 1,
+    "position": [
+      458752,
+      1507328
+    ]
+  },
+  "F6B3E27D-4B27-936B-3C10-1DA81DF18E05": {
+    "facing": 0,
+    "kind": "Player1_ShopPosition5",
+    "player": 1,
+    "position": [
+      720896,
+      1507328
     ]
   },
   "version": 1

@@ -1,9 +1,49 @@
 {
   "__base_type": "GlobalVariable",
-  "array_size": 3,
+  "array_size": 7,
   "based_on": "GlobalVariable",
   "id": "ShopPositions",
   "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "FunctionType",
+          "type": "Vector"
+        },
+        "value": "X=-3.000 Y=-3.000"
+      }
+    },
     {
       "type": "Value",
       "value": {
