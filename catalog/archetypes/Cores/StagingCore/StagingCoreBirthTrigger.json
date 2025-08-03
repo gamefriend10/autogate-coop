@@ -299,6 +299,46 @@
           "id": "actions"
         }
       ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "GetNearestStagingPositionForPlayer1"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "AddStagingCoreToPlayerBlackboard"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",
