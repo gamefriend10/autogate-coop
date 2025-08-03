@@ -1,0 +1,19 @@
+﻿{
+  "__base_type": "TerrainTileset",
+  "based_on": "TerrainTileset_SigmaStation",
+  "cliff_set_a": "DA_Cliffset_Sigma1",
+  "cliff_set_b": "DA_Cliffset_Sigma1",
+  "display_name": "",
+  "doodad_aggregate_layer": "Moss",
+  "id": "TerrainTileset_AutoGate",
+  "layer_1": "TerrainLayer_SigmaStation_FloorTilesLarge",
+  "layer_2": "TerrainLayer_UrbanRuins_RedGrass",
+  "layer_3": "TerrainLayer_SigmaStation_ConcreteTiles",
+  "layer_4": "TerrainLayer_UrbanRuins_SteelTiles03",
+  "layer_5": "TerrainLayer_SigmaStation_MetalGrates",
+  "layer_6": "TerrainLayer_SigmaStation_MetalicAsymTiles",
+  "layer_7": "TerrainLayer_SigmaStation_Terrain_06",
+  "layer_8": "TerrainLayer_SigmaStation_Terrain_07",
+  "render_abyss": false,
+  "water_table": "DA_WaterTable_ForestAutumn"
+}
