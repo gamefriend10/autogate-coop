@@ -49,8 +49,7 @@
       ]
     },
     {
-      "function_id": "Actor_SetPosition",
-      "is_enabled": true,
+      "function_id": "Trigger_Run",
       "parameters": [
         {
           "expressions": [
@@ -58,10 +57,66 @@
               "type": "Value",
               "value": {
                 "type": {
-                  "directive": "FunctionType",
-                  "type": "Vector"
+                  "directive": "TypeRef",
+                  "type": "Trigger"
                 },
-                "value": "X=-15.000 Y=-5.000"
+                "value": "PickFirstOpenHandPositionForPlayer"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "SetHandCoreBlackboardHandPosition"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "GetVectorForPlayer1HandPosition"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Actor_SetPosition",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_HandPositionToSpawnAt"
               }
             }
           ],
@@ -280,6 +335,26 @@
             }
           ],
           "id": "key"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "AddHandCoreToOpenHandPositionInPlayerBlackboard"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     }

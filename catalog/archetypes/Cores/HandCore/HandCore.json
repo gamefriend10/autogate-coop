@@ -2,6 +2,9 @@
   "abilityList": [
     "HandCore_Construct"
   ],
+  "alias_tech": [
+    "_HandCore"
+  ],
   "based_on": "BaseCore",
   "build_cost": {
     "resource_a": 3.0,

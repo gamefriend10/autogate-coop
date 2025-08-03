@@ -7,7 +7,7 @@
         "name": "",
         "scope": "Ability"
       },
-      "requirement": "NoRequirement",
+      "requirement": "Requirement_ShopCore_Morph",
       "unit": "BunkerRush_HandCore"
     }
   ],

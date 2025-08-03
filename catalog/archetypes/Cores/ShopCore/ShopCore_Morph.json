@@ -9,13 +9,13 @@
         "name": "",
         "scope": "Ability"
       },
-      "requirement": "NoRequirement",
+      "requirement": "Requirement_ShopCore_Morph",
       "unit": "HandCore"
     }
   ],
   "flags": {
     "approach": false,
-    "best_unit": false,
+    "best_unit": true,
     "builds": false,
     "cancelable": false,
     "disable_abilities": true,
