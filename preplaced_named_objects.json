@@ -1,7 +1,7 @@
 {
   "1BE9789B-4320-53C2-F9FA-B9BD901CACF0": {
     "facing": 0,
-    "kind": "Player1_StagingPosition1",
+    "kind": "Player1_StagingPosition00",
     "player": 1,
     "position": [
       469008,
@@ -10,7 +10,7 @@
   },
   "28CECFBC-4574-2D4A-1A52-BFB2DCF5BF5E": {
     "facing": 0,
-    "kind": "Player1_StagingPosition2",
+    "kind": "Player1_StagingPosition01",
     "player": 1,
     "position": [
       650994,
@@ -37,7 +37,7 @@
   },
   "496FC2C9-4464-7E5F-DF65-6A9A5BA5DA80": {
     "facing": 0,
-    "kind": "Player1_StagingPosition3",
+    "kind": "Player1_StagingPosition02",
     "player": 1,
     "position": [
       830105,
@@ -64,7 +64,7 @@
   },
   "71546EBF-4966-F533-493B-C9BE39426DC7": {
     "facing": 0,
-    "kind": "Player1_StagingPosition4",
+    "kind": "Player1_StagingPosition10",
     "player": 1,
     "position": [
       470043,
@@ -73,7 +73,7 @@
   },
   "825E724A-40BD-A99E-EB28-E5B5F2F80155": {
     "facing": 0,
-    "kind": "Player1_StagingPosition5",
+    "kind": "Player1_StagingPosition11",
     "player": 1,
     "position": [
       647081,
@@ -91,7 +91,7 @@
   },
   "937BFF8E-4BF0-4048-27EC-34A790562746": {
     "facing": 0,
-    "kind": "Player1_StagingPosition6",
+    "kind": "Player1_StagingPosition12",
     "player": 1,
     "position": [
       832143,
@@ -163,7 +163,7 @@
   },
   "CB811D24-4993-88A0-D26B-40B6BBADEE0A": {
     "facing": 0,
-    "kind": "Player1_StagingPosition7",
+    "kind": "Player1_StagingPosition20",
     "player": 1,
     "position": [
       470392,
@@ -190,7 +190,7 @@
   },
   "E05FDC7D-4E00-5B14-93BC-8DA3B15AD349": {
     "facing": 0,
-    "kind": "Player1_StagingPosition8",
+    "kind": "Player1_StagingPosition21",
     "player": 1,
     "position": [
       647190,
@@ -217,7 +217,7 @@
   },
   "FE0793F2-4C75-F793-B7FB-3F967610E0B1": {
     "facing": 0,
-    "kind": "Player1_StagingPosition9",
+    "kind": "Player1_StagingPosition22",
     "player": 1,
     "position": [
       832210,

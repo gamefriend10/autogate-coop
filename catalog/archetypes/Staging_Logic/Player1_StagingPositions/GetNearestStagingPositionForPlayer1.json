@@ -94,7 +94,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition1"
+                                                      "value": "Player1_StagingPosition00"
                                                     }
                                                   }
                                                 ],
@@ -174,7 +174,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_0"
+                        "value": "00"
                       }
                     }
                   ],
@@ -236,7 +236,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition2"
+                                                      "value": "Player1_StagingPosition01"
                                                     }
                                                   }
                                                 ],
@@ -316,7 +316,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_1"
+                        "value": "01"
                       }
                     }
                   ],
@@ -378,7 +378,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition3"
+                                                      "value": "Player1_StagingPosition02"
                                                     }
                                                   }
                                                 ],
@@ -458,7 +458,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_2"
+                        "value": "02"
                       }
                     }
                   ],
@@ -520,7 +520,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition4"
+                                                      "value": "Player1_StagingPosition10"
                                                     }
                                                   }
                                                 ],
@@ -600,7 +600,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_3"
+                        "value": "10"
                       }
                     }
                   ],
@@ -662,7 +662,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition5"
+                                                      "value": "Player1_StagingPosition11"
                                                     }
                                                   }
                                                 ],
@@ -742,7 +742,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_4"
+                        "value": "11"
                       }
                     }
                   ],
@@ -804,7 +804,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition6"
+                                                      "value": "Player1_StagingPosition12"
                                                     }
                                                   }
                                                 ],
@@ -884,7 +884,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_5"
+                        "value": "12"
                       }
                     }
                   ],
@@ -946,7 +946,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition7"
+                                                      "value": "Player1_StagingPosition20"
                                                     }
                                                   }
                                                 ],
@@ -1026,7 +1026,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_6"
+                        "value": "20"
                       }
                     }
                   ],
@@ -1088,7 +1088,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition8"
+                                                      "value": "Player1_StagingPosition21"
                                                     }
                                                   }
                                                 ],
@@ -1168,7 +1168,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_7"
+                        "value": "21"
                       }
                     }
                   ],
@@ -1230,7 +1230,7 @@
                                                         "directive": "FunctionType",
                                                         "type": "String"
                                                       },
-                                                      "value": "Player1_StagingPosition9"
+                                                      "value": "Player1_StagingPosition22"
                                                     }
                                                   }
                                                 ],
@@ -1310,7 +1310,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "staging_position_8"
+                        "value": "22"
                       }
                     }
                   ],
