@@ -7,7 +7,6 @@ returns: "hand_position_X" to be used in player blackboard in GlobalVar: `GV_Ope
  1. then set `GV_OpenHandPositionToSpawnAt` to "hand_position_0"
  2. General_SkipRemainingActions
 3. repeat for the rest of the 5 hand positions...
-4. If we get here (we've run out of hand positions), set `GV_OpenHandPositionToSpawnAt` to "NO_OPEN_POSITIONS"
 
 # Vector GetVectorForPlayerXHandPosition(String `GV_OpenHandPositionToSpawnAt`)
 

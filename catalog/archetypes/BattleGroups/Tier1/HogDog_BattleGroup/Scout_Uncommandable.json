@@ -152,7 +152,7 @@
     "has_prime_structure": false,
     "hologram": false,
     "overlap_resource_a": false,
-    "receives_veterancy_from_kills": true,
+    "receives_veterancy_from_kills": false,
     "requires_cascade_field": false,
     "requires_cascade_field_to_morph": true,
     "seek_and_destroy": false,
@@ -271,7 +271,7 @@
   "unreal_actor": "BP_UH_Scout_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
   "veterancy_data": "BaseVeterancyData",
-  "veterancy_given_on_death": 100,
+  "veterancy_given_on_death": 10000,
   "veterancy_starting_tier": 0,
   "veterancy_tiers": [
     {

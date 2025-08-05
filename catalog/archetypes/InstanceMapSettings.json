@@ -24,7 +24,13 @@
     },
     {
       "attribute_instance_map_settings": {
-        "additional_overrides": [],
+        "additional_overrides": [
+          {
+            "attribute_definition": "factionAttributeDefinition",
+            "locked": true,
+            "value": 11
+          }
+        ],
         "slot_type": {
           "locked": true,
           "value": "human"
@@ -37,5 +43,6 @@
     }
   ],
   "show_score_screen": false,
+  "tileset": "TerrainTileset_Deadlands",
   "title": "AutoGate - Coop"
 }

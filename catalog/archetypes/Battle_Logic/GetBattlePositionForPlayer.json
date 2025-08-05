@@ -1,0 +1,415 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "GetBattlePositionForPlayer"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_Switch",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_PlayerToCreateBattleUnitsFor"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "1"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "GV_BattlePositionForPlayer"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player1_BattlePoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "GV_BattlePositionForPlayer"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player2_BattlePoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "3"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "GV_BattlePositionForPlayer"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player3_BattlePoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "GV_BattlePositionForPlayer"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player4_BattlePoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "cases"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [],
+  "id": "GetBattlePositionForPlayer",
+  "variables": []
+}

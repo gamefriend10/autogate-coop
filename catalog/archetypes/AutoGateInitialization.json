@@ -1,0 +1,43 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "Game_SetStartingResources",
+      "guid": "F0443F1B4752B1CAB3587C824B90F0E3",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers",
+                "guid": "5046DB6343CF6A7D3AE7CB9EB19E2DF8",
+                "is_enabled": true,
+                "parameters": [],
+                "sub_functions": []
+              },
+              "guid": "664D81A44B49A4BC172D7CBDF337080F",
+              "type": "Function"
+            }
+          ],
+          "guid": "286D36514AD1A490B5BD79919AB6E165",
+          "id": "player_group"
+        }
+      ],
+      "sub_functions": []
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": false,
+  "events": [
+    {
+      "function_id": "Game_OnMapInitialization",
+      "is_enabled": true,
+      "parameters": [],
+      "sub_functions": []
+    }
+  ],
+  "id": "AutoGateInitialization",
+  "variables": []
+}

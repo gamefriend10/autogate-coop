@@ -1,0 +1,340 @@
+{
+  "__base_type": "Trigger",
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "CreateBattleUnitsForPlayer"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_ForEachInteger",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "row"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "0"
+              }
+            }
+          ],
+          "id": "start"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "2"
+              }
+            }
+          ],
+          "id": "end"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_ForEachInteger",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "col"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "0"
+                      }
+                    }
+                  ],
+                  "id": "start"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "end"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "GV_StagingCoreToDuplicateTheBattleUnitsOf"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Blackboard_GetValue_Unit",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Blackboard_GetBlackboardOfPlayer",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "GV_PlayerToCreateBattleUnitsFor"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "player"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "blackboard"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "String_Concat",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "row"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "col"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "strings"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "key"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "GetBattlePositionForPlayer"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "DuplicateUnitsAndMoveToBattleArea"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "CreateBattleUnitsForPlayer",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "row",
+      "initial_values": [
+        {
+          "type": "Value",
+          "value": {
+            "type": {
+              "directive": "FunctionType",
+              "type": "Integer"
+            },
+            "value": "0"
+          }
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "row",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "col",
+      "initial_values": [
+        {
+          "type": "Value",
+          "value": {
+            "type": {
+              "directive": "FunctionType",
+              "type": "Integer"
+            },
+            "value": "0"
+          }
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "col",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    }
+  ]
+}

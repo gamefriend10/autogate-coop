@@ -135,7 +135,7 @@
     "has_prime_structure": false,
     "hologram": false,
     "overlap_resource_a": false,
-    "receives_veterancy_from_kills": true,
+    "receives_veterancy_from_kills": false,
     "requires_cascade_field": false,
     "requires_cascade_field_to_morph": true,
     "seek_and_destroy": false,
