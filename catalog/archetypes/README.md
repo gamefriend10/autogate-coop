@@ -1,5 +1,8 @@
 # AutoGateInitialization TODO
 
+Set camera zoom limit
+Set everyone's camera to 100 zoom over 5 secs
+
 `autoGateState` = FSM_CreateStateMachine("autoGate")
 `buyState` = FSM_CreateStateMachine("buy")
 `battleState` = FSM_CreateStateMachine("battle")

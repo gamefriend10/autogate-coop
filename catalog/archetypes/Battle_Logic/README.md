@@ -11,10 +11,13 @@ Q: what happens when the units in the unitgroup die...? do they get auto removed
 TODO: remove this from StagingCoreBirthTrigger
 OnEnterBattlePhaseTrigger
 
-TODO: Set camera for every player to battle point
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
   Set `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
   CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
+  DISABLED: Camera_PushCameraTrackingTarget(
+    Player_GetActiveCamera(PlayerGroup_GetCurrentPlayer),
+    UnitGroup_GetFirstUnit(`UnitsToOrderToBattle`) TODO: track player's group? or just set camera to center
+  )
 SpawnEnemy()
 OrderToBattle()
 
