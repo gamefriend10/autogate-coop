@@ -95,7 +95,7 @@
     "constructed": "emptyRef",
     "creation": "emptyRef",
     "death": "emptyRef",
-    "revenge": "ResourcePickupRefund"
+    "revenge": "emptyRef"
   },
   "enabled_unit_tech": [],
   "energy_type": "Energy",
