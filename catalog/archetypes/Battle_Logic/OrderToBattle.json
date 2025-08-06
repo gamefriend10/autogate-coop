@@ -50,132 +50,79 @@
       ]
     },
     {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
+      "function_id": "UnitGroup_IssueOrderTargetingPos",
+      "parameters": [
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "Logic_Comparison",
-              "is_enabled": true,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "InBattle"
-                      }
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "FunctionType",
-                          "type": "Boolean"
-                        },
-                        "value": "true"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
+              "type": "Variable",
+              "variable": {
+                "variable_id": "UnitsToOrderToBattle"
+              }
             }
           ],
-          "id": "if"
+          "id": "unit_group"
         },
         {
-          "functions": [
+          "expressions": [
             {
-              "function_id": "UnitGroup_IssueOrderTargetingPos",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "indices": [],
-                        "variable_id": "UnitsToOrderToBattle"
-                      }
-                    }
-                  ],
-                  "id": "unit_group"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Actor_GetPosition",
-                        "is_enabled": true,
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "Point_GetPointFromPlacedName",
-                                  "is_enabled": true,
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "type": "Value",
-                                          "value": {
-                                            "type": {
-                                              "directive": "FunctionType",
-                                              "type": "String"
-                                            },
-                                            "value": "BattleCenterPoint"
-                                          }
-                                        }
-                                      ],
-                                      "id": "name"
-                                    }
-                                  ],
-                                  "sub_functions": []
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "actor"
-                          }
-                        ],
-                        "sub_functions": []
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "target_pos"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "guid": "",
-                        "type": {
-                          "directive": "TypeRef",
-                          "implements": "ability_data",
-                          "inner_type": "",
-                          "param_id": "",
-                          "sub_directive": "None",
-                          "tags": [],
-                          "type": ""
+              "function": {
+                "function_id": "Actor_GetPosition",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Point_GetPointFromPlacedName",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "BattleCenterPoint"
+                                  }
+                                }
+                              ],
+                              "id": "name"
+                            }
+                          ]
                         },
-                        "value": "attackData"
+                        "type": "Function"
                       }
-                    }
-                  ],
-                  "id": "order"
-                }
-              ]
+                    ],
+                    "id": "actor"
+                  }
+                ]
+              },
+              "type": "Function"
             }
           ],
-          "id": "then"
+          "id": "target_pos"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "implements": "ability_data",
+                  "inner_type": "",
+                  "param_id": "",
+                  "sub_directive": "None",
+                  "tags": [],
+                  "type": ""
+                },
+                "value": "attackData"
+              }
+            }
+          ],
+          "id": "order"
         }
       ]
     }

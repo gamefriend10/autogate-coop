@@ -1,7 +1,9 @@
 OrderToBattle
 
 prereqs:
-1. UnitsToOrderToBattle has all the appropriate units added to it
+1. `UnitsToOrderToBattle` has all the appropriate units added to it
+
+Orders units to attack BattleCenterPoint
 
 Q: what happens when the units in the unitgroup die...? do they get auto removed? will it crash? spam errors?
 
@@ -9,9 +11,12 @@ Q: what happens when the units in the unitgroup die...? do they get auto removed
 TODO: remove this from StagingCoreBirthTrigger
 OnEnterBattlePhaseTrigger
 
+TODO: Set camera for every player to battle point
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
   Set `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
   CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
+SpawnEnemy()
+OrderToBattle()
 
 ---
 CreateBattleUnitsForPlayer(Player `GV_PlayerToCreateBattleUnitsFor`)
@@ -51,4 +56,4 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
     Unit_GetVeterancyTier(UnitGroup_GetCurrentUnit)
     General_DoDoNot.do_not
   )
-  UnitGroup_AddUnit(UnitsToOrderToBattle)
+  UnitGroup_AddUnit(`UnitsToOrderToBattle`)

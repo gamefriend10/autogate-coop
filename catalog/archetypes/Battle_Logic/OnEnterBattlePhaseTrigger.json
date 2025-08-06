@@ -1,4 +1,4 @@
-{
+﻿{
   "__base_type": "Trigger",
   "actions": [
     {
@@ -116,6 +116,46 @@
             }
           ],
           "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "SpawnEnemy"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "OrderToBattle"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     }

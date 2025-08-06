@@ -40,9 +40,66 @@
           "value": 0
         }
       }
+    },
+    {
+      "attribute_instance_map_settings": {
+        "additional_overrides": [
+          {
+            "attribute_definition": "factionAttributeDefinition",
+            "locked": true,
+            "value": 11
+          }
+        ],
+        "slot_type": {
+          "locked": true,
+          "value": "human"
+        },
+        "team": {
+          "locked": true,
+          "value": 0
+        }
+      }
+    },
+    {
+      "attribute_instance_map_settings": {
+        "additional_overrides": [
+          {
+            "attribute_definition": "factionAttributeDefinition",
+            "locked": true,
+            "value": 11
+          }
+        ],
+        "slot_type": {
+          "locked": true,
+          "value": "human"
+        },
+        "team": {
+          "locked": true,
+          "value": 0
+        }
+      }
+    },
+    {
+      "attribute_instance_map_settings": {
+        "additional_overrides": [
+          {
+            "attribute_definition": "factionAttributeDefinition",
+            "locked": true,
+            "value": 11
+          }
+        ],
+        "slot_type": {
+          "locked": true,
+          "value": "ai"
+        },
+        "team": {
+          "locked": true,
+          "value": 1
+        }
+      }
     }
   ],
   "show_score_screen": false,
-  "tileset": "TerrainTileset_Deadlands",
+  "tileset": "TerrainTileset_AutoGate",
   "title": "AutoGate - Coop"
 }
