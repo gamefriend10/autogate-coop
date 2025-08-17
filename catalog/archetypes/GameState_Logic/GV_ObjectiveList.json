@@ -1,0 +1,55 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "GV_ObjectiveList",
+  "initial_values": [
+    {
+      "function": {
+        "function_id": "Objectives_List_Create",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Text_ToText",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "tags": [
+                                "to_text"
+                              ],
+                              "type": "String"
+                            },
+                            "value": "Objectives"
+                          }
+                        }
+                      ],
+                      "id": "value"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "title"
+          }
+        ]
+      },
+      "type": "Function"
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "GV_ObjectiveList",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "ObjectivesList"
+  }
+}

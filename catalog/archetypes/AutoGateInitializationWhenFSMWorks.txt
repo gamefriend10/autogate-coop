@@ -1,0 +1,515 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "Camera_SetCameraZoomLimits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Distance"
+                },
+                "value": "150.0"
+              }
+            }
+          ],
+          "id": "max"
+        }
+      ]
+    },
+    {
+      "function_id": "PlayerGroup_ForEachPlayerInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetActivePlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "players"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Camera_ZoomCameraToDistance",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Value"
+                        },
+                        "value": "100.0"
+                      }
+                    }
+                  ],
+                  "id": "distance"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Time"
+                        },
+                        "value": "5.0"
+                      }
+                    }
+                  ],
+                  "id": "duration"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_CreateStateMachine",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "autoGate"
+              }
+            }
+          ],
+          "id": "name"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "FSM_GetLastCreatedStateMachine"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_CreateStateMachine",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "buy"
+              }
+            }
+          ],
+          "id": "name"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buyState"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "FSM_GetLastCreatedStateMachine"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_CreateStateMachine",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "battle"
+              }
+            }
+          ],
+          "id": "name"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "battleState"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "FSM_GetLastCreatedStateMachine"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_SetInitialSubState",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buyState"
+              }
+            }
+          ],
+          "id": "sub_state"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_AddSubState",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "battleState"
+              }
+            }
+          ],
+          "id": "sub_state"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_AddTransition",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buyState"
+              }
+            }
+          ],
+          "id": "from"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "battleState"
+              }
+            }
+          ],
+          "id": "to"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "go_to_battle"
+              }
+            }
+          ],
+          "id": "signal"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_AddTransition",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "battleState"
+              }
+            }
+          ],
+          "id": "from"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buyState"
+              }
+            }
+          ],
+          "id": "to"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "go_to_buy"
+              }
+            }
+          ],
+          "id": "signal"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_SetEnterTrigger",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "OnEnterBattlePhaseTrigger"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "FSM_SendSignal",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "autoGateState"
+              }
+            }
+          ],
+          "id": "state_machine"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "go_to_battle"
+              }
+            }
+          ],
+          "id": "signal"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [
+    {
+      "function_id": "Game_OnMapInitialization",
+      "is_enabled": true,
+      "parameters": [],
+      "sub_functions": []
+    }
+  ],
+  "id": "AutoGateInitialization",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "autoGateState",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "autoGateState",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "StateMachine"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "buyState",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "buyState",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "StateMachine"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "battleState",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "battleState",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "StateMachine"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "UseUITint": false,
+  "__base_type": "Button",
+  "based_on": "Button",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_HoldPosition.UI_Icons_BasicCommands_HoldPosition'",
+  "id": "UnreadyUp_Button",
+  "name": "Unready Up",
+  "tooltip": "Set yourself as NOT ready to begin the Battle phase. All players must be ready to begin the Battle phase."
+}

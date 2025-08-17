@@ -2,7 +2,9 @@
   "__base_type": "UnitData",
   "abilityList": [
     "Refresh",
-    "Tier2Upgrade"
+    "Tier2Upgrade",
+    "ReadyUp",
+    "UnreadyUp"
   ],
   "additional_black_mask_vision_radius": 5.0,
   "alias_tech": [],
@@ -32,6 +34,30 @@
       "repeatable": false,
       "row": 1,
       "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "UnreadyUp",
+      "button": "UnreadyUp_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ReadyUp",
+      "button": "ReadyUp_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
       "submenu": 0,
       "targetSubmenu": -1
     },

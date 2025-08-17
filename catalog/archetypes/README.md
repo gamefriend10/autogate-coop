@@ -1,4 +1,11 @@
-# AutoGateInitialization TODO
+# AutoGateInitialization 
+
+Set camera zoom limit
+Set everyone's camera to 100 zoom over 5 secs
+InitReadyUpObjective_Trigger()
+TODO: SpawnShopForEveryone
+
+# AutoGateInitializationWhenFSMWorks (TODO When state machines work)
 
 Set camera zoom limit
 Set everyone's camera to 100 zoom over 5 secs
@@ -13,6 +20,6 @@ FSM_AddSubState(`autoGateState`, `battleState`)
 FSM_AddTransition(`autoGateState`, `buyState`, `battleState`, "go_to_battle")
 FSM_AddTransition(`autoGateState`, `battleState`, `buyState`, "go_to_buy")
 
-FSM_SetEnterTrigger(`autoGateState`, OnEnterBattlePhaseTrigger)
+DISABLED: FSM_SetEnterTrigger(`autoGateState`, OnEnterBattlePhaseTrigger)
 
-FSM_SendSignal(`autoGateState`, "go_to_battle")
+DISABLED: FSM_SendSignal(`autoGateState`, "go_to_battle")

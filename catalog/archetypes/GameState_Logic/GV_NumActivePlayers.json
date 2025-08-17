@@ -1,0 +1,35 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "GV_NumActivePlayers",
+  "initial_values": [
+    {
+      "function": {
+        "function_id": "PlayerGroup_CountPlayers",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "PlayerGroup_GetActivePlayers"
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "group"
+          }
+        ]
+      },
+      "type": "Function"
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "GV_NumActivePlayers",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Integer"
+  }
+}
