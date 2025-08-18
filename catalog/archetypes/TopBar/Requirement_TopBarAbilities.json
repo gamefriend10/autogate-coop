@@ -7,7 +7,7 @@
       "check": {
         "root": {
           "left": {
-            "name": "ExpressionApi::count_completed_units_of_alias",
+            "name": "ExpressionApi::count_completed_upgrade_of_type",
             "node": "FunctionCall",
             "parameters": [
               {
@@ -23,29 +23,29 @@
               {
                 "argument": {
                   "node": "Literal",
-                  "type": "Alias",
-                  "value": "_HandCore"
+                  "type": "UpgradeData",
+                  "value": "GameStateIsBattleStateDummyUpgrade"
                 },
-                "name": "alias",
-                "type": "Alias"
+                "name": "upgrade",
+                "type": "UpgradeData"
               }
             ],
             "type": "Count"
           },
           "node": "Logical",
-          "operator": "<",
+          "operator": "!=",
           "right": {
             "node": "Literal",
             "type": "Count",
-            "value": 6
+            "value": 1
           },
           "type": "Bool"
         },
         "type": "Bool"
       },
-      "reason": "Your hand must have space (6 is the max). Place your hand cores down (Z by default) to free up space.",
+      "reason": "You must be in the Buy phase to use any Top Bar Abilities.",
       "reason_announcement": "None"
     }
   ],
-  "id": "Requirement_ShopCore_Morph"
+  "id": "Requirement_TopBarAbilities"
 }

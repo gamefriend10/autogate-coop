@@ -8,7 +8,6 @@ Orders units to attack BattleCenterPoint
 Q: what happens when the units in the unitgroup die...? do they get auto removed? will it crash? spam errors?
 
 ----
-TODO: remove this from StagingCoreBirthTrigger
 OnEnterBattlePhaseTrigger
 
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())

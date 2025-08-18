@@ -1,6 +1,6 @@
 # UnreadyUp
 
-TODO: Requirements: `GV_CurrentGameState` = "buyState"
+Requirements: GameStateIsBattleStateDummyUpgrade is not researched
 
 ## UnreadyUp_Trigger
 

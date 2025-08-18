@@ -6,18 +6,58 @@
   "initial_values": [
     {
       "function": {
-        "function_id": "PlayerGroup_CountPlayers",
+        "function_id": "Math_Arithmetic_Integer",
         "parameters": [
           {
             "expressions": [
               {
                 "function": {
-                  "function_id": "PlayerGroup_GetActivePlayers"
+                  "function_id": "PlayerGroup_CountPlayers",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "function": {
+                            "function_id": "PlayerGroup_GetActivePlayers"
+                          },
+                          "type": "Function"
+                        }
+                      ],
+                      "id": "group"
+                    }
+                  ]
                 },
                 "type": "Function"
               }
             ],
-            "id": "group"
+            "id": "value1"
+          },
+          {
+            "expressions": [
+              {
+                "preset": {
+                  "preset_id": "Math_ArithmeticOperator",
+                  "value_id": "minus"
+                },
+                "type": "Preset"
+              }
+            ],
+            "id": "op"
+          },
+          {
+            "expressions": [
+              {
+                "type": "Value",
+                "value": {
+                  "type": {
+                    "directive": "FunctionType",
+                    "type": "Integer"
+                  },
+                  "value": "1"
+                }
+              }
+            ],
+            "id": "value2"
           }
         ]
       },

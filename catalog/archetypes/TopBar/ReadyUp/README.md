@@ -1,14 +1,16 @@
 # ReadyUp
 
-TODO: Requirements: `GV_CurrentGameState` = "buyState"
+Requirements: GameStateIsBattleStateDummyUpgrade is not researched
 
 ## ReadyUp_Trigger
 
 Set triggering player's blackboard `ready` to true
 Add 1 to `GV_NumPlayersReady`
+Refresh `GV_NumActivePlayers` (just in case someone leaves) (active players - 1 AI)
 UpdateReadyUpObjective_Trigger()
 TechTree_SetAbilityAllowed(triggering player, ReadyUp, remove)
 TechTree_SetAbilityAllowed(triggering player, UnreadyUp, add)
-TODO: If `GV_NumPlayersReady` == number of active players:
-  Set `GV_CurrentGameState` to "battleState"
+If `GV_NumPlayersReady` == `GV_NumActivePlayers`:
+  PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+    TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1)
   TriggerRun(OnEnterBattlePhaseTrigger)

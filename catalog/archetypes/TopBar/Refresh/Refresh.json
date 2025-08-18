@@ -62,7 +62,7 @@
         "energy": 0.0,
         "health": 0.0
       },
-      "requirement": "NoRequirement"
+      "requirement": "Requirement_TopBarAbilities"
     }
   ],
   "display_effect_area": "emptyRef",

@@ -1,6 +1,6 @@
 # `GV_NumActivePlayers`
 
-Inits to PlayerGroup_CountPlayers(PlayerGroup_GetActivePlayers())
+Inits to PlayerGroup_CountPlayers(PlayerGroup_GetActivePlayers() - 1 AI)
 
 # `GV_ObjectiveList`
 
