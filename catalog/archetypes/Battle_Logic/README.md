@@ -13,10 +13,8 @@ OnEnterBattlePhaseTrigger
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
   Set `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
   CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
-  DISABLED: Camera_PushCameraTrackingTarget(
-    Player_GetActiveCamera(PlayerGroup_GetCurrentPlayer),
-    UnitGroup_GetFirstUnit(`UnitsToOrderToBattle`) TODO: track player's group? or just set camera to center
-  )
+  TODO: Set camera to player's corner
+  TODO: Pan camera to battle center
 SpawnEnemy()
 OrderToBattle()
 

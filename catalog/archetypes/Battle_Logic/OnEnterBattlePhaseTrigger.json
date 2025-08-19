@@ -113,60 +113,6 @@
                   "id": "trigger"
                 }
               ]
-            },
-            {
-              "function_id": "Camera_PushCameraTrackingTarget",
-              "is_enabled": false,
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Player_GetActiveCamera",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "PlayerGroup_GetCurrentPlayer"
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "player"
-                          }
-                        ]
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "camera"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "UnitGroup_GetFirstUnit",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "type": "Variable",
-                                "variable": {
-                                  "variable_id": "UnitsToOrderToBattle"
-                                }
-                              }
-                            ],
-                            "id": "group"
-                          }
-                        ]
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "actor"
-                }
-              ]
             }
           ],
           "id": "actions"
