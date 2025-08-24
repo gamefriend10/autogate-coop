@@ -56,6 +56,33 @@
             {
               "type": "Variable",
               "variable": {
+                "variable_id": "GV_PlayerToSpawnShopCoreFor"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_PlayerToSpawnShopFor"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
                 "variable_id": "ShopPositionToSpawnAt"
               }
             }

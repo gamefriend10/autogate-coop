@@ -148,8 +148,7 @@
                   ],
                   "id": "value2"
                 }
-              ],
-              "sub_functions": []
+              ]
             }
           ],
           "id": "if"
@@ -157,8 +156,19 @@
         {
           "functions": [
             {
-              "function_id": "Trigger_Run",
+              "function_id": "Variable_SetVariable",
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_ShopCoreToSpawn"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
                 {
                   "expressions": [
                     {
@@ -166,13 +176,13 @@
                       "value": {
                         "type": {
                           "directive": "TypeRef",
-                          "type": "Trigger"
+                          "type": "UnitData"
                         },
-                        "value": "HogDog_ShopCore_Spawn"
+                        "value": "HogDog_ShopCore"
                       }
                     }
                   ],
-                  "id": "trigger"
+                  "id": "value"
                 }
               ]
             }
@@ -227,8 +237,7 @@
                   ],
                   "id": "value2"
                 }
-              ],
-              "sub_functions": []
+              ]
             }
           ],
           "id": "if"
@@ -236,8 +245,19 @@
         {
           "functions": [
             {
-              "function_id": "Trigger_Run",
+              "function_id": "Variable_SetVariable",
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_ShopCoreToSpawn"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
                 {
                   "expressions": [
                     {
@@ -245,13 +265,13 @@
                       "value": {
                         "type": {
                           "directive": "TypeRef",
-                          "type": "Trigger"
+                          "type": "UnitData"
                         },
-                        "value": "GauntFather_ShopCore_Spawn"
+                        "value": "GauntFather_ShopCore"
                       }
                     }
                   ],
-                  "id": "trigger"
+                  "id": "value"
                 }
               ]
             }
@@ -315,8 +335,19 @@
         {
           "functions": [
             {
-              "function_id": "Trigger_Run",
+              "function_id": "Variable_SetVariable",
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_ShopCoreToSpawn"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
                 {
                   "expressions": [
                     {
@@ -324,18 +355,38 @@
                       "value": {
                         "type": {
                           "directive": "TypeRef",
-                          "type": "Trigger"
+                          "type": "UnitData"
                         },
-                        "value": "BunkerRush_ShopCore_Spawn"
+                        "value": "BunkerRush_ShopCore"
                       }
                     }
                   ],
-                  "id": "trigger"
+                  "id": "value"
                 }
               ]
             }
           ],
           "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "ShopCore_Spawn"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     }

@@ -1,0 +1,15 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "GV_PlayerToSpawnShopCoreFor",
+  "initial_values": [],
+  "is_array": false,
+  "is_constant": false,
+  "name": "GV_PlayerToSpawnShopCoreFor",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Player"
+  }
+}

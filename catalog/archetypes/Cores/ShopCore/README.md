@@ -1,4 +1,32 @@
-# ShopToHandCoreTransitionTrigger
+ShopCore_Spawn(`GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, `ShopPositionKeyToSaveToBlackboard`):
+
+// Creates shop core
+Unit_CreateUnit(1, `GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, true)
+// Assigns shop core to player's blackboard
+Blackboard_SetValue_Unit(
+  Blackboard_GetBlackboardOfPlayer(`GV_PlayerToSpawnShopCoreFor`),
+  `ShopPositionKeyToSaveToBlackboard`,
+  Unit_GetLastCreatedUnit()
+)
+// Saves shop position to shop core's blackboard
+Blackboard_SetValue_String(
+  Blackboard_GetBlackboardOfEntity(Unit_GetLastCreatedUnit()),
+  "shop_position_key",
+  `ShopPositionKeyToSaveToBlackboard`
+)
+
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "1"
+              }
+
+---
+
+ShopToHandCoreTransitionTrigger
 
 Trigger: shopCore uses ability (expected to only be Buy, which morphs ShopCore into HandCore)
 

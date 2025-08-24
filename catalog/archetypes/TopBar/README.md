@@ -9,7 +9,7 @@ triggers when: anyone's topbar casts ability
 1. if triggering ability was refresh
   1. set `PlayerToRemoveShopCoreFor` to triggering player
   3. RemoveShopCoresForPlayer(`PlayerToRemoveShopCoreFor`)
-  4. SpawnShopForPlayer1
+  4. SpawnShopForPlayer1 TODO: change this to triggering player?
 
 If triggering ability was ReadyUp
   Trigger_Run(ReadyUp_Trigger)

@@ -3,7 +3,7 @@
 Set camera zoom limit
 Set everyone's camera to 100 zoom over 5 secs
 InitReadyUpObjective_Trigger()
-TODO: SpawnShopForEveryone
+OnEnterBuyPhaseTrigger()
 
 # AutoGateInitializationWhenFSMWorks (TODO When state machines work)
 

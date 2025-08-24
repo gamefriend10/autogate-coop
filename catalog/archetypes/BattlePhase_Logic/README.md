@@ -23,10 +23,10 @@ CreateBattleUnitsForPlayer(Player `GV_PlayerToCreateBattleUnitsFor`)
 
 Set row = 0
 Set col = 0
+Set `GV_BattlePositionForPlayer` = GetBattlePositionForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
 General_ForEachInteger(row, 0, 2):
   General_ForEachInteger(col, 0, 2):
     Set `GV_StagingCoreToDuplicateTheBattleUnitsOf` = player `GV_PlayerToCreateBattleUnitsFor` 's blackboard[[row][col]] stagingCore
-    Set `GV_BattlePositionForPlayer` = GetBattlePositionForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
     DuplicateUnitsAndMoveToBattleArea(`GV_StagingCoreToDuplicateTheBattleUnitsOf`, `GV_BattlePositionForPlayer`)
     
 

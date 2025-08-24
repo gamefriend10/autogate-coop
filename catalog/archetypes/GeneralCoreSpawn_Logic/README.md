@@ -1,17 +1,26 @@
-# GeneralShopCoreSpawn
+GeneralShopCoreSpawn(
+  `GV_PlayerToSpawnShopCoreFor`,
+  `ShopPositionToSpawnAt`,
+  `BattleGroupToSpawnTag`,
+  `ShopPositionKeyToSaveToBlackboard`
+):
 
 LONG if-then-else that determines which ShopCore BattleGroup to spawn
 
-prereqs:
-1. `ShopPositionToSpawnAt` is set
-2. `BattleGroupToSpawnTag` is set
-3. `ShopPositionKeyToSaveToBlackboard` is set
+TODO: switch this over to switch case
 
-# GeneralSpawnUnitsOnShopCoreSpawn
+If(`BattleGroupToSpawnTag` == hogdog_snowtag):
+  `GV_ShopCoreToSpawn` = HogDog_ShopCore
+If ... etc
+ShopCore_Spawn(`GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, `ShopPositionKeyToSaveToBlackboard`)
 
-Trigger: ShopCore being birthed
+---
 
-1. Set `ShopPositionToSpawnAt` to triggering ShopCore
-2. If (triggering unit, shop core) has tag = E.g. HogDog (Entity_HasAllTags)
-    1. Then run E.g. HogDogSpawn trigger
-3. If (triggering unit, shop core) has tag... etc
+GeneralSpawnUnitsOnShopCoreSpawn
+
+Trigger: On ShopCore being birthed
+
+Set `ShopPositionToSpawnAt` to triggering ShopCore
+If (triggering unit, shop core) has tag = E.g. HogDog (Entity_HasAllTags)
+  Then run E.g. HogDogSpawn trigger
+If (triggering unit, shop core) has tag... etc

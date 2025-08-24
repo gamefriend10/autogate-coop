@@ -1,21 +1,34 @@
-# SpawnShop
-
-1. Set input/prereq vars for GeneralShopCoreSpawn
-  1. (set `ShopPositionToSpawnAt`)
-  2. (set `BattleGroupToSpawnTag` via running PickBattleGroupToSpawn())
-  3. (set `ShopPositionKeyToSaveToBlackboard`)
-2. run GeneralShopCoreSpawn
-3. repeat for all shop positions
-
-# RemoveShopCoreAtPlayerPosition(Player PlayerToRemoveShopCoreFor, String BlackboardKeyForShopCoreShopPosition)
+RemoveShopCoreAtPlayerPosition(
+  Player PlayerToRemoveShopCoreFor,
+  String BlackboardKeyForShopCoreShopPosition
+):
 
 1. Set local var `shop_core_to_remove` to `PlayerToRemoveShopCoreFor`'s blackboard value at `BlackboardKeyForShopCoreShopPosition` e.g. "shop_core_at_shop_position_0"
 2. Remove all units in `shop_core_to_remove`'s blackboard `units`
 3. Remove `shop_core_to_remove`
-4. Repeat for all shop positions...
 
-# RemoveShopCoresForPlayer(Player PlayerToRemoveShopCoreFor)
+---
+
+RemoveShopCoresForPlayer(Player PlayerToRemoveShopCoreFor):
 
 1. Set `BlackboardKeyForShopCoreShopPosition` to `shop_core_at_shop_position_0`
 2. RemoveShopCoreAtPlayerPosition(PlayerToRemoveShopCoreFor, BlackboardKeyForShopCoreShopPosition)
 3. Repeat for all shop positions...
+
+---
+
+SpawnShop(`GV_PlayerToSpawnShopFor`, `ShopPositions`):
+
+`GV_PlayerToSpawnShopCoreFor` = `GV_PlayerToSpawnShopFor`
+`ShopPositionToSpawnAt` = `ShopPositions`[0]
+`BattleGroupToSpawnTag` = PickBattleGroupToSpawn()
+`ShopPositionKeyToSaveToBlackboard` = "shop_core_at_shop_position_0"
+GeneralShopCoreSpawn(
+  `GV_PlayerToSpawnShopCoreFor`,
+  `ShopPositionToSpawnAt`,
+  `BattleGroupToSpawnTag`,
+  `ShopPositionKeyToSaveToBlackboard`
+)
+
+repeat for all shop positions 0-2...
+TODO: increase # of positions when tiered up
