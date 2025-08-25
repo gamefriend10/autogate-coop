@@ -2,6 +2,7 @@ ShopCore_Spawn(`GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositio
 
 // Creates shop core
 Unit_CreateUnit(1, `GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, true)
+`GV_ShopCoreToAttachUnitsTo` = Unit_GetLastCreatedUnit()
 // Assigns shop core to player's blackboard
 Blackboard_SetValue_Unit(
   Blackboard_GetBlackboardOfPlayer(`GV_PlayerToSpawnShopCoreFor`),
@@ -14,17 +15,20 @@ Blackboard_SetValue_String(
   "shop_position_key",
   `ShopPositionKeyToSaveToBlackboard`
 )
+// Set vars for this shop core to spawn its units
+(`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) =
+  SetVarsForShopCoreSpawnUnits(`GV_ShopCoreToSpawn`)
+// Spawn corresponding units for the shop
+ShopCore_SpawnUnits(
+  `GV_LengthOfUnitDataToSpawnArray`,
+  `GV_UnitDataToSpawnArray`,
+  `GV_NumOfUnitsToSpawnForEachUnitDataArray`,
+  `GV_PlayerToSpawnShopCoreFor`,
+  `ShopPositionToSpawnAt`,
+  `GV_ShopCoreToAttachUnitsTo`
+)
 
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "1"
-              }
-
----
+----------------------------------------
 
 ShopToHandCoreTransitionTrigger
 

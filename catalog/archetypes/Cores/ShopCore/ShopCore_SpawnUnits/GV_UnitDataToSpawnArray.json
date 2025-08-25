@@ -1,0 +1,15 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 5,
+  "based_on": "GlobalVariable",
+  "id": "GV_UnitDataToSpawnArray",
+  "initial_values": [],
+  "is_array": true,
+  "is_constant": false,
+  "name": "GV_UnitDataToSpawnArray",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "TypeRef",
+    "type": "UnitData"
+  }
+}

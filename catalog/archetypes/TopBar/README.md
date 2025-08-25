@@ -7,9 +7,8 @@ triggers when: anyone's topbar casts ability
   2. set tier2 ability to disabled for triggering player
 
 1. if triggering ability was refresh
-  1. set `PlayerToRemoveShopCoreFor` to triggering player
-  3. RemoveShopCoresForPlayer(`PlayerToRemoveShopCoreFor`)
-  4. SpawnShopForPlayer1 TODO: change this to triggering player?
+  `GV_PlayerToRefreshFor` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
+  RefreshForPlayer(`GV_PlayerToRefreshFor`)
 
 If triggering ability was ReadyUp
   Trigger_Run(ReadyUp_Trigger)

@@ -1,5 +1,5 @@
-GauntFather_Spawn
+(`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) SetVarsFor_GauntFather_ShopCore_SpawnUnits():
 
-1. spawn gaunts
-2. add to local var `units_spawned`
-5. add `units_spawned` to shopCore's blackboard `units`
+`GV_LengthOfUnitDataToSpawnArray` = 1
+`GV_UnitDataToSpawnArray`[0] = Gaunt_Uncommandable
+`GV_NumOfUnitsToSpawnForEachUnitDataArray`[0] = 5

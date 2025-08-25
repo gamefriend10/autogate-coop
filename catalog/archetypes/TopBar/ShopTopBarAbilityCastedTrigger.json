@@ -259,7 +259,7 @@
                     {
                       "type": "Variable",
                       "variable": {
-                        "variable_id": "PlayerToRemoveShopCoreFor"
+                        "variable_id": "GV_PlayerToRefreshFor"
                       }
                     }
                   ],
@@ -303,27 +303,7 @@
                           "directive": "TypeRef",
                           "type": "Trigger"
                         },
-                        "value": "RemoveShopCoresForPlayer"
-                      }
-                    }
-                  ],
-                  "id": "trigger"
-                }
-              ]
-            },
-            {
-              "function_id": "Trigger_Run",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "Trigger"
-                        },
-                        "value": "SpawnShopForPlayer1"
+                        "value": "RefreshForPlayer"
                       }
                     }
                   ],
