@@ -8,6 +8,60 @@
       1056472
     ]
   },
+  "00B8AAB6-4FE0-0869-2560-499A354069D1": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition21",
+    "player": 0,
+    "position": [
+      648780,
+      -985965
+    ]
+  },
+  "00FEB85F-47B7-3B06-3A4A-3B8C214BB4FA": {
+    "facing": 0,
+    "kind": "Player3_HandPosition5",
+    "player": 0,
+    "position": [
+      190582,
+      -1385569
+    ]
+  },
+  "02A09FBB-42A4-FFC2-1F6A-C38A714F57EB": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition00",
+    "player": 0,
+    "position": [
+      469600,
+      -1346572
+    ]
+  },
+  "040DA2EF-4CC5-2D5E-CAC7-61A6C3CCC087": {
+    "facing": 0,
+    "kind": "Player4_HandPosition1",
+    "player": 0,
+    "position": [
+      2429269,
+      -855923
+    ]
+  },
+  "043B13E3-4A4B-957F-6F34-099FD57C2486": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition12",
+    "player": 0,
+    "position": [
+      3072211,
+      -1168717
+    ]
+  },
+  "06528CAD-41F0-95F5-D2DE-8CA74C34885F": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition2",
+    "player": 0,
+    "position": [
+      329270,
+      -720963
+    ]
+  },
   "122568EB-4AFA-90A2-D762-32992E0930F4": {
     "facing": 0,
     "kind": "Player2_StagingPosition11",
@@ -17,6 +71,33 @@
       1060437
     ]
   },
+  "126E527D-43E4-70D6-0DD5-D583E6215968": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition12",
+    "player": 0,
+    "position": [
+      833733,
+      -1170617
+    ]
+  },
+  "1952E1AF-4827-2910-4408-D0BEBAF79972": {
+    "facing": 0,
+    "kind": "Player4_HandPosition3",
+    "player": 0,
+    "position": [
+      2429085,
+      -1120175
+    ]
+  },
+  "195861E0-4878-A3BA-AB35-958B399DBF6E": {
+    "facing": 0,
+    "kind": "Player3_HandPosition3",
+    "player": 0,
+    "position": [
+      190607,
+      -1122075
+    ]
+  },
   "1BE9789B-4320-53C2-F9FA-B9BD901CACF0": {
     "facing": 0,
     "kind": "Player1_StagingPosition00",
@@ -24,6 +105,24 @@
     "position": [
       468010,
       881719
+    ]
+  },
+  "1D999B05-40E9-47DA-DA55-01808DB1A2E1": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition10",
+    "player": 0,
+    "position": [
+      2710111,
+      -1166873
+    ]
+  },
+  "2369BA5F-4F86-4F54-9985-DC9B16C35AD5": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition02",
+    "player": 0,
+    "position": [
+      831695,
+      -1347638
     ]
   },
   "28CECFBC-4574-2D4A-1A52-BFB2DCF5BF5E": {
@@ -53,6 +152,24 @@
       1068428
     ]
   },
+  "39F77C0E-4C63-D8C0-B6B0-AF8F8A4815BF": {
+    "facing": 0,
+    "kind": "Player4_HandPosition5",
+    "player": 0,
+    "position": [
+      2429060,
+      -1383669
+    ]
+  },
+  "3A36BC86-4094-6671-EB5C-26905086D3FE": {
+    "facing": 0,
+    "kind": "Player4_HandPosition2",
+    "player": 0,
+    "position": [
+      2429447,
+      -988703
+    ]
+  },
   "3E343E4F-48A7-4CD3-0A42-C499064E4DF0": {
     "facing": 0,
     "kind": "Player1_ShopPosition7",
@@ -60,6 +177,33 @@
     "position": [
       983040,
       1507328
+    ]
+  },
+  "3EAE3D3D-4B69-225E-ABD7-01844BF4083C": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition3",
+    "player": 0,
+    "position": [
+      460342,
+      -720963
+    ]
+  },
+  "45776D2B-4093-7831-8939-20A0B71ECDA9": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition6",
+    "player": 0,
+    "position": [
+      3092036,
+      -719064
+    ]
+  },
+  "472B82D2-4306-ABD3-B91A-4CABB8F0DC78": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition6",
+    "player": 0,
+    "position": [
+      853558,
+      -720963
     ]
   },
   "47D5D6D8-4A52-2C46-653C-7AA2EE111A00": {
@@ -78,6 +222,15 @@
     "position": [
       830105,
       880653
+    ]
+  },
+  "4B40126C-45E8-2184-46DD-85BF97FD8423": {
+    "facing": 0,
+    "kind": "Player3_HandPosition1",
+    "player": 0,
+    "position": [
+      190791,
+      -857823
     ]
   },
   "4EAFEABE-4430-48BF-F92C-FA948481215B": {
@@ -105,6 +258,15 @@
     "position": [
       196608,
       1507328
+    ]
+  },
+  "5429B271-4BD8-39C0-7699-188BD6363643": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition00",
+    "player": 0,
+    "position": [
+      2708078,
+      -1344672
     ]
   },
   "55698E63-4EE7-8DC2-5168-AC82769D7029": {
@@ -152,6 +314,15 @@
       880517
     ]
   },
+  "70DE8660-40B7-7B0E-EC06-EDB4280E3EC7": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition4",
+    "player": 0,
+    "position": [
+      591414,
+      -720963
+    ]
+  },
   "71546EBF-4966-F533-493B-C9BE39426DC7": {
     "facing": 0,
     "kind": "Player1_StagingPosition10",
@@ -170,6 +341,15 @@
       751105
     ]
   },
+  "73231BC0-4DAF-1913-AEF6-B1A4C0EEDD66": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition01",
+    "player": 0,
+    "position": [
+      652584,
+      -1342958
+    ]
+  },
   "73BA7C28-4E21-9FD0-009A-9B872A4E4B61": {
     "facing": 0,
     "kind": "Player2_HandPosition1",
@@ -179,6 +359,15 @@
       1369266
     ]
   },
+  "7973D522-4DAE-646F-B1C6-B9B02E483369": {
+    "facing": 0,
+    "kind": "ArcshipTier1Flying",
+    "player": 4,
+    "position": [
+      2989187,
+      -1156761
+    ]
+  },
   "7A93864B-467D-2F00-E8ED-259636C5AC78": {
     "facing": 0,
     "kind": "Player2_StagingPosition21",
@@ -186,6 +375,15 @@
     "position": [
       2886184,
       1241124
+    ]
+  },
+  "7AB3384E-48DB-F280-2674-58AD85E2E858": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition01",
+    "player": 0,
+    "position": [
+      2891062,
+      -1341058
     ]
   },
   "7B3F7CD9-470D-62F9-D594-7DAB2E600C63": {
@@ -206,6 +404,24 @@
       1281606
     ]
   },
+  "7F1D6C0E-45A1-A586-B78A-B59AAD5D7929": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition20",
+    "player": 0,
+    "position": [
+      2710460,
+      -985250
+    ]
+  },
+  "7F55F5D2-424E-DA40-2FB1-29A8D0D10A27": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition5",
+    "player": 0,
+    "position": [
+      722486,
+      -720963
+    ]
+  },
   "825E724A-40BD-A99E-EB28-E5B5F2F80155": {
     "facing": 0,
     "kind": "Player1_StagingPosition11",
@@ -215,6 +431,15 @@
       1061639
     ]
   },
+  "829D90F6-40A8-8D15-5D38-548D4563C4A6": {
+    "facing": 1770902344,
+    "kind": "locationMarkerPlayerStart",
+    "player": 3,
+    "position": [
+      591414,
+      -1212483
+    ]
+  },
   "83802226-4D57-697A-B7BE-49BBC0AC0921": {
     "facing": 0,
     "kind": "Player2_ShopPosition7",
@@ -222,6 +447,24 @@
     "position": [
       3222034,
       1506126
+    ]
+  },
+  "87016D43-4935-9EBD-419D-2EB7D122E1B6": {
+    "facing": 0,
+    "kind": "Player3_HandPosition6",
+    "player": 0,
+    "position": [
+      191105,
+      -1515789
+    ]
+  },
+  "87DADC6D-4ECE-965F-0233-E1AB91CDD784": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition7",
+    "player": 0,
+    "position": [
+      3223108,
+      -719064
     ]
   },
   "8BB2D357-4DDA-D1AC-30F5-ACA8F95F20EB": {
@@ -242,6 +485,15 @@
       1506126
     ]
   },
+  "8F389CE0-44C8-6561-FB7D-A8B14E5FB61F": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition7",
+    "player": 0,
+    "position": [
+      984630,
+      -720963
+    ]
+  },
   "937BFF8E-4BF0-4048-27EC-34A790562746": {
     "facing": 0,
     "kind": "Player1_StagingPosition12",
@@ -260,6 +512,15 @@
       884131
     ]
   },
+  "94BA5B0E-462C-E54D-40F3-A3A53353183A": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition22",
+    "player": 0,
+    "position": [
+      3072278,
+      -982893
+    ]
+  },
   "98CB40D5-46A4-67CD-076F-068EA26DDB8F": {
     "facing": 0,
     "kind": "Player2_ShopPosition4",
@@ -267,6 +528,33 @@
     "position": [
       2828818,
       1506126
+    ]
+  },
+  "9B34C517-4E95-D12A-26E0-80AAFA6CB6E7": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition5",
+    "player": 0,
+    "position": [
+      2960964,
+      -719064
+    ]
+  },
+  "9D6CE734-4A04-5D99-5EFB-35B2E6CB41D0": {
+    "facing": 0,
+    "kind": "Player3_HandPosition4",
+    "player": 0,
+    "position": [
+      190927,
+      -1253325
+    ]
+  },
+  "9D811BF8-461B-4D4F-1D37-82A6D98375CC": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition3",
+    "player": 0,
+    "position": [
+      2698820,
+      -719064
     ]
   },
   "9DC6B766-499A-11AC-091F-2199BF6AEA44": {
@@ -305,6 +593,24 @@
       1370468
     ]
   },
+  "AE84E253-4E97-2F52-3810-12B92B4807AC": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition20",
+    "player": 0,
+    "position": [
+      471982,
+      -987150
+    ]
+  },
+  "AF00161E-4EC7-6292-28AA-2A85370F2E7D": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition21",
+    "player": 0,
+    "position": [
+      2887258,
+      -984065
+    ]
+  },
   "AFBFEC73-4A32-CC2C-48D4-158FA8E4511F": {
     "facing": 0,
     "kind": "Player1_HandPosition2",
@@ -312,6 +618,15 @@
     "position": [
       189379,
       1237688
+    ]
+  },
+  "B2609C2A-4200-C04C-B1C3-59AB7330CA6F": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition02",
+    "player": 0,
+    "position": [
+      3070173,
+      -1345738
     ]
   },
   "B3DBE22C-4B7A-A390-F9C5-2BB925043520": {
@@ -341,6 +656,15 @@
       0
     ]
   },
+  "C2887DE0-46D6-C971-6B93-BC8F3DF9A83D": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition1",
+    "player": 0,
+    "position": [
+      2436676,
+      -719064
+    ]
+  },
   "C5B6A2C3-4FAA-41ED-CC2E-8297CCA17F30": {
     "facing": 0,
     "kind": "Player1_HandPosition4",
@@ -348,6 +672,15 @@
     "position": [
       189337,
       974966
+    ]
+  },
+  "C7C731D2-4761-6090-06CE-5697F954C57D": {
+    "facing": 0,
+    "kind": "Player4_StagingPosition11",
+    "player": 0,
+    "position": [
+      2887149,
+      -1164752
     ]
   },
   "C9359385-46AF-D985-A8DD-508635EF3EE2": {
@@ -377,6 +710,42 @@
       1058316
     ]
   },
+  "CCAA6BB2-48F9-A92D-B0E1-E499B8569E1B": {
+    "facing": 0,
+    "kind": "Player4_HandPosition6",
+    "player": 0,
+    "position": [
+      2429583,
+      -1513889
+    ]
+  },
+  "CE3BCEAF-46A5-4C14-6534-9384F63BAE76": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition4",
+    "player": 0,
+    "position": [
+      2829892,
+      -719064
+    ]
+  },
+  "D2183DB4-4440-2BDA-834F-6CAD6EF0FB26": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition11",
+    "player": 0,
+    "position": [
+      648671,
+      -1166652
+    ]
+  },
+  "DAA5AABF-40E0-C4E9-E274-C58271208C1D": {
+    "facing": 0,
+    "kind": "Player4_HandPosition4",
+    "player": 0,
+    "position": [
+      2429405,
+      -1251425
+    ]
+  },
   "DB9B1A34-4A43-FF9C-1F9B-5EBF02522684": {
     "facing": 0,
     "kind": "Player1_ShopPosition6",
@@ -384,6 +753,15 @@
     "position": [
       851968,
       1507328
+    ]
+  },
+  "DC50FA50-45F5-6E98-6D12-AA873B0141D0": {
+    "facing": 0,
+    "kind": "Player3_HandPosition2",
+    "player": 0,
+    "position": [
+      190969,
+      -990603
     ]
   },
   "DE5444EA-4D5E-92F4-F388-B0B43268E5FA": {
@@ -431,6 +809,15 @@
       1507328
     ]
   },
+  "EA006BDC-4ABA-A75A-39BF-9EA726CF2596": {
+    "facing": 0,
+    "kind": "Player4_ShopPosition2",
+    "player": 0,
+    "position": [
+      2567748,
+      -719064
+    ]
+  },
   "ED8CD851-4C45-7682-E359-31A2CB8AE25E": {
     "facing": 0,
     "kind": "Player2_HandPosition5",
@@ -440,6 +827,15 @@
       841520
     ]
   },
+  "EDD9A812-4B28-2BEF-9E62-1FADD4DB8F1C": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition22",
+    "player": 0,
+    "position": [
+      833800,
+      -984793
+    ]
+  },
   "F009DEA5-46A6-2357-90E9-A2B7F06FD3EF": {
     "facing": 0,
     "kind": "Player2_HandPosition3",
@@ -447,6 +843,24 @@
     "position": [
       2428011,
       1105014
+    ]
+  },
+  "F0C1FB05-41F8-6FD3-638F-5685BBAA36C4": {
+    "facing": 0,
+    "kind": "Player3_ShopPosition1",
+    "player": 0,
+    "position": [
+      198198,
+      -720963
+    ]
+  },
+  "F39FA202-40E7-A0A5-6D98-A5AABA7CF3D6": {
+    "facing": 0,
+    "kind": "ArcshipTier1Flying",
+    "player": 3,
+    "position": [
+      750709,
+      -1158661
     ]
   },
   "F6B3E27D-4B27-936B-3C10-1DA81DF18E05": {
@@ -467,6 +881,15 @@
       1506126
     ]
   },
+  "FCA879AD-4682-D855-D9DA-DD9E247038E2": {
+    "facing": 0,
+    "kind": "Player3_StagingPosition10",
+    "player": 0,
+    "position": [
+      471633,
+      -1168773
+    ]
+  },
   "FE0793F2-4C75-F793-B7FB-3F967610E0B1": {
     "facing": 0,
     "kind": "Player1_StagingPosition22",
@@ -474,6 +897,15 @@
     "position": [
       832210,
       1243498
+    ]
+  },
+  "FF833A81-4A26-BFC9-A7D6-A9950D7AEB60": {
+    "facing": 1770902384,
+    "kind": "locationMarkerPlayerStart",
+    "player": 4,
+    "position": [
+      2807630,
+      -1134662
     ]
   },
   "version": 1
