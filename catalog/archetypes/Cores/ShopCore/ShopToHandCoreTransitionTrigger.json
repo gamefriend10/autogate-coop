@@ -100,7 +100,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "GetVectorForPlayer1HandPosition"
+                "value": "GetVectorForHandPositionOfTriggeringPlayer"
               }
             }
           ],
