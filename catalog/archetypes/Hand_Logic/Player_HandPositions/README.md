@@ -10,7 +10,8 @@ returns: Vector for TriggeringPlayer's `GV_OpenHandPositionToSpawnAt` via `GV_Ha
 
 switch(`GV_OpenHandPositionToSpawnAt`)
   case "hand_position_0": `position_number_as_string` = "HandPosition1"
-  repeat for "hand_position_1-5": `position_number_as_string` = "HandPosition2-6"... 
+  repeat for "hand_position_1-5": `position_number_as_string` = "HandPosition2-6"...
+// `placed_name_of_position` e.g. Player1_HandPosition1
 `placed_name_of_position` = String_Concat(
   `player_number_as_string`,
   "_",

@@ -1,0 +1,585 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "GetNearestStagingPositionForTriggeringPlayer"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_ForEachInteger",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "row"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "0"
+              }
+            }
+          ],
+          "id": "start"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "2"
+              }
+            }
+          ],
+          "id": "end"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_ForEachInteger",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "col"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "0"
+                      }
+                    }
+                  ],
+                  "id": "start"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "end"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "rowcol"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "String_Concat",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "row"
+                                        }
+                                      },
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "col"
+                                        }
+                                      }
+                                    ],
+                                    "id": "strings"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "placed_name_of_position"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "String_Concat",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "player_number_as_string"
+                                        }
+                                      },
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "String"
+                                          },
+                                          "value": "_StagingPosition"
+                                        }
+                                      },
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "rowcol"
+                                        }
+                                      }
+                                    ],
+                                    "id": "strings"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Vector_GetDistance",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "triggering_unit_pos"
+                                                }
+                                              }
+                                            ],
+                                            "id": "a"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Actor_GetPosition",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "function": {
+                                                            "function_id": "Point_GetPointFromPlacedName",
+                                                            "parameters": [
+                                                              {
+                                                                "expressions": [
+                                                                  {
+                                                                    "type": "Value",
+                                                                    "value": {
+                                                                      "type": {
+                                                                        "directive": "FunctionType",
+                                                                        "type": "String"
+                                                                      },
+                                                                      "value": "placed_name_of_position"
+                                                                    }
+                                                                  }
+                                                                ],
+                                                                "id": "name"
+                                                              }
+                                                            ]
+                                                          },
+                                                          "type": "Function"
+                                                        }
+                                                      ],
+                                                      "id": "actor"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "b"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "lt"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "GV_AcceptableDistanceFromPosition"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "GV_ClosestStagingPosition"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "rowcol"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_SkipRemainingActions"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [],
+  "id": "GetNearestStagingPositionForTriggeringPlayer",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "player_number_as_string",
+      "initial_values": [
+        {
+          "function": {
+            "function_id": "String_Concat",
+            "parameters": [
+              {
+                "expressions": [
+                  {
+                    "type": "Value",
+                    "value": {
+                      "type": {
+                        "directive": "FunctionType",
+                        "type": "String"
+                      },
+                      "value": "Player"
+                    }
+                  },
+                  {
+                    "function": {
+                      "function_id": "String_ToString",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Unit_GetOwningPlayer",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Unit_GetTriggeringUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "unit"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "id": "strings"
+              }
+            ]
+          },
+          "type": "Function"
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "player_number_as_string",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "String"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "triggering_unit_pos",
+      "initial_values": [
+        {
+          "function": {
+            "function_id": "Actor_GetPosition",
+            "parameters": [
+              {
+                "expressions": [
+                  {
+                    "function": {
+                      "function_id": "Unit_GetTriggeringUnit"
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "id": "actor"
+              }
+            ]
+          },
+          "type": "Function"
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "triggering_unit_pos",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Vector"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "row",
+      "initial_values": [
+        {
+          "type": "Value",
+          "value": {
+            "type": {
+              "directive": "FunctionType",
+              "type": "Integer"
+            },
+            "value": "0"
+          }
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "row",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "col",
+      "initial_values": [
+        {
+          "type": "Value",
+          "value": {
+            "type": {
+              "directive": "FunctionType",
+              "type": "Integer"
+            },
+            "value": "0"
+          }
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "col",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "rowcol",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "rowcol",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "String"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "placed_name_of_position",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "placed_name_of_position",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "String"
+      }
+    }
+  ]
+}

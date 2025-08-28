@@ -1,16 +1,18 @@
-# StagingCoreBirthTrigger
+StagingCoreBirthTrigger
 
 Trigger: stagingCore is birthed (expected to be from the HandCore constructing into the StagingCore)
 
-1. Wait for 0.1 seconds, because this trigger seems to run in parallel with HandCoreBuildTrigger and `HandCoreUnitsToMove` could be empty or the prev value
-2. set stagingCore's `units` (tracked by blackboard) to `HandCoreUnitsToMove` (tracked by player's blackboard)
-3. move stagingCore's `units` (tracked by blackboard) to Actor's current position
-1. `GV_ClosestStagingPosition` = GetNearestStagingPositionForPlayer1()
-1. AddStagingCoreToPlayerBlackboard(`GV_ClosestStagingPosition`)
+// Wait for 0.1 seconds, because this trigger seems to run in parallel with HandCoreBuildTrigger and `HandCoreUnitsToMove` could be empty or the prev value
+// set stagingCore's `units` (tracked by blackboard) to `HandCoreUnitsToMove` (tracked by player's blackboard)
+// move stagingCore's `units` (tracked by blackboard) to Actor's current position
+// `GV_ClosestStagingPosition` = GetNearestStagingPositionForTriggeringPlayer()
+// AddStagingCoreToPlayerBlackboard(`GV_ClosestStagingPosition`)
 
-# StagingCoreAbilityUsedTrigger
+--------------------
+
+StagingCoreAbilityUsedTrigger
 
 Trigger: stagingCore uses an ability
 
-1. if ability is Sell OR SellFor2
-  1. delete stagingCore's `units` (tracked by blackboard)
+// if ability is Sell OR SellFor2
+  // delete stagingCore's `units` (tracked by blackboard)
