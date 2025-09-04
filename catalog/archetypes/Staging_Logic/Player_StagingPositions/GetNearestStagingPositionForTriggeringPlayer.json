@@ -286,13 +286,9 @@
                                                               {
                                                                 "expressions": [
                                                                   {
-                                                                    "type": "Value",
-                                                                    "value": {
-                                                                      "type": {
-                                                                        "directive": "FunctionType",
-                                                                        "type": "String"
-                                                                      },
-                                                                      "value": "placed_name_of_position"
+                                                                    "type": "Variable",
+                                                                    "variable": {
+                                                                      "variable_id": "placed_name_of_position"
                                                                     }
                                                                   }
                                                                 ],
