@@ -62,6 +62,15 @@
       -720963
     ]
   },
+  "0D960627-4AF6-3CCC-019E-D4A40AB45A58": {
+    "facing": 0,
+    "kind": "BlockadeUnit_Uncommandable",
+    "player": 3,
+    "position": [
+      1571035,
+      -129865
+    ]
+  },
   "122568EB-4AFA-90A2-D762-32992E0930F4": {
     "facing": 0,
     "kind": "Player2_StagingPosition11",
@@ -240,6 +249,15 @@
     "position": [
       2709386,
       1239939
+    ]
+  },
+  "50C84D68-4B33-E728-A3C5-03B1720951BB": {
+    "facing": 0,
+    "kind": "BlockadeUnit_Uncommandable",
+    "player": 2,
+    "position": [
+      1833347,
+      133110
     ]
   },
   "50D68952-4E91-D7D9-50DF-80B7716A1A5F": {
@@ -467,6 +485,15 @@
       -719064
     ]
   },
+  "89A92E6A-402D-922A-BD78-EBB9A43ABC21": {
+    "facing": 0,
+    "kind": "BlockadeUnit_Uncommandable",
+    "player": 1,
+    "position": [
+      1573132,
+      131904
+    ]
+  },
   "8BB2D357-4DDA-D1AC-30F5-ACA8F95F20EB": {
     "facing": 0,
     "kind": "Player1_ShopPosition2",
@@ -528,6 +555,15 @@
     "position": [
       2828818,
       1506126
+    ]
+  },
+  "9A511ABA-48F5-F06C-250D-B4A2271BD3F0": {
+    "facing": 0,
+    "kind": "BlockadeUnit_Uncommandable",
+    "player": 4,
+    "position": [
+      1832103,
+      -130504
     ]
   },
   "9B34C517-4E95-D12A-26E0-80AAFA6CB6E7": {

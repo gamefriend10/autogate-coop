@@ -1,0 +1,742 @@
+{
+  "__base_type": "UnitData",
+  "abilityList": [
+    "attackData",
+    "moveData",
+    "stopData",
+    "holdPositionData",
+    "Revitalize",
+    "HeroicCharge",
+    "HammerTime",
+    "JusticeJump",
+    "structureProductionQueueAbilityData",
+    "BarclayHero_Research",
+    "BaseInventory",
+    "AllyPortal"
+  ],
+  "additional_black_mask_vision_radius": 5.0,
+  "alias_tech": [
+    "_Hero"
+  ],
+  "armor": 20.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Heavy.UI_Icons_Armor_Vanguard_Infantry_Heavy'",
+  "armor_name": "pegasus_core|ArmorName_VanguardHeroicArmor",
+  "attack_target_priority": 20,
+  "based_on": "BaseUnit_VanguardHero",
+  "behaviors": [],
+  "buffs": [
+    "HeartOfTheVanguard_BuffAura"
+  ],
+  "build_cost": {
+    "resource_a": 0.0,
+    "resource_b": 0.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "build_time": 10.0,
+  "cargo_size": "Four",
+  "cascade_field_radius": 0,
+  "commandList": [
+    {
+      "ability": "attackData",
+      "button": "AttackButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "stopData",
+      "button": "StopButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "MoveButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "PatrolButton",
+      "commandIndex": 1,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Revitalize",
+      "button": "Revitalize_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HeroicCharge",
+      "button": "HeroicCharge_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HammerTime",
+      "button": "HammerTime_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "JusticeJump",
+      "button": "JusticeJump_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "DummyHeroResearch",
+      "button": "LevelUp_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": 1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "RevitalizeLevel1Upgrade_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "RevitalizeLevel2Upgrade_Button",
+      "commandIndex": 1,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "RevitalizeLevel3Upgrade_Button",
+      "commandIndex": 2,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HeroicChargeLevel1Upgrade_Button",
+      "commandIndex": 3,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HeroicChargeLevel2Upgrade_Button",
+      "commandIndex": 4,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HeroicChargeLevel3Upgrade_Button",
+      "commandIndex": 5,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HammerTimeLevel1Upgrade_Button",
+      "commandIndex": 6,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HammerTimeLevel2Upgrade_Button",
+      "commandIndex": 7,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "HammerTimeLevel3Upgrade_Button",
+      "commandIndex": 8,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "JusticeJumpLevel1Upgrade_Button",
+      "commandIndex": 9,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 4,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "BarclayHero_Research",
+      "button": "JusticeJumpLevel2Upgrade_Button",
+      "commandIndex": 10,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 4,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "DummyBuild",
+      "button": "CancelSubMenu_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 5,
+      "submenu": 1,
+      "targetSubmenu": 0
+    }
+  ],
+  "construction_set_sfx": "OnConstructionSet",
+  "damage_response": "Acquire_or_Flee",
+  "default_acquire_level": "Offensive",
+  "default_control_groups": [
+    0,
+    10
+  ],
+  "effects": {
+    "birth": "SetHeroLevelToOne",
+    "constructed": "emptyRef",
+    "creation": "emptyRef",
+    "death": "emptyRef",
+    "revenge": "emptyRef"
+  },
+  "enabled_unit_tech": [],
+  "energy_type": "Energy",
+  "expiration_time": -1.0,
+  "faction": "Vanguard",
+  "fidget": {
+    "delay_maximum": 30.0,
+    "delay_minimum": 10.0,
+    "turning_angle": 90.0,
+    "turning_duration": 1.0,
+    "weights": {
+      "animate": 33.0,
+      "idle": 66.0,
+      "turn": 0.0
+    }
+  },
+  "flags": {
+    "alert_when_attacked": true,
+    "award_victory_points_to_other_team": false,
+    "detector": false,
+    "display_ui_description": false,
+    "has_prime_structure": false,
+    "hologram": false,
+    "overlap_resource_a": false,
+    "receives_veterancy_from_kills": true,
+    "requires_cascade_field": false,
+    "requires_cascade_field_to_morph": true,
+    "seek_and_destroy": false,
+    "stealth": false,
+    "uncommandable": true,
+    "unselectable": false,
+    "untargetable": false,
+    "victory_expansion": false
+  },
+  "fog_visibility": "Hidden",
+  "footprint": {
+    "angled": false,
+    "clumpable": false,
+    "snap": true,
+    "unbuildable": false,
+    "vision_block_height": 0,
+    "x": 0.0,
+    "y": 0.0
+  },
+  "global_energy": "emptyRef",
+  "global_resource_overrides": [],
+  "height": 0.0,
+  "id": "BlockadeUnit_Uncommandable",
+  "inner_radius": 0.5,
+  "minimap_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Minimap/UI_Icons_Minimap_Hero_Default.UI_Icons_Minimap_Hero_Default'",
+  "minimap_icon_custom_color": "FFFFFFFF",
+  "minimap_icon_no_color_override": false,
+  "minimap_icon_size": 40.0,
+  "minimap_icon_upper_layer": true,
+  "minimap_icon_use_heading": true,
+  "minimap_icon_use_team_color": true,
+  "minimap_material_instance": "MaterialInterface'/Game/Pegasus/UI/Assets/Materials/MI_UI_MinimapCharacterPortraitMask_Barclay.MI_UI_MinimapCharacterPortraitMask_Barclay'",
+  "minimap_widget": "/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Pegasus/UI/Minimap/WBP_Minimap_Icon_Hero.WBP_Minimap_Icon_Hero_C'",
+  "movement": {
+    "acceleration_time": 0.0,
+    "collision": {
+      "air": false,
+      "burrowed": false,
+      "ground": true,
+      "ground_tall": false,
+      "item": false,
+      "worker": false
+    },
+    "deceleration_time": 0.0,
+    "flocking": {
+      "separation_delay": 0.5,
+      "separation_radius": 0,
+      "separation_strength": 1.5
+    },
+    "idle_pushable": false,
+    "lock_facing": false,
+    "moving_turn_period": 0.13,
+    "pathing_mode": "Ground",
+    "push_priority": 0,
+    "push_priority_same_team": 3,
+    "speed": 5.5,
+    "stationary_turn_period": 0.18,
+    "turn_radius": 0.0,
+    "turn_without_slowing": false,
+    "unpushable": false
+  },
+  "name": "pegasus_core|UnitData_name_Unit_Barclay",
+  "num_corpses": 1,
+  "outer_radius": 1.0,
+  "placed_name": "",
+  "power_consumed": 0.0,
+  "power_produced": 0.0,
+  "responses": [],
+  "sb_id": "barclay",
+  "selection_alias": "",
+  "show_name_on_hover": false,
+  "shroud_radius": 0.0,
+  "sound_cooldown_data_list": [
+    "BaseSoundCooldownData_Unit_Attack",
+    "BaseSoundCooldownData_Unit_AttackGround",
+    "BaseSoundCooldownData_Unit_AttackMove",
+    "BaseSoundCooldownData_Unit_AttackStructure",
+    "BaseSoundCooldownData_Unit_Build",
+    "BaseSoundCooldownData_Unit_Follow",
+    "BaseSoundCooldownData_Unit_Harvest",
+    "BaseSoundCooldownData_Unit_Hold",
+    "BaseSoundCooldownData_Unit_Morph",
+    "BaseSoundCooldownData_Unit_Move",
+    "BaseSoundCooldownData_Unit_Patrol",
+    "BaseSoundCooldownData_Unit_Rally",
+    "BaseSoundCooldownData_Unit_Selection",
+    "BaseSoundCooldownData_Unit_Stop",
+    "BaseSoundCooldownData_Unit_Trained",
+    "BaseSoundCooldownData_Unit_UnderConstruction"
+  ],
+  "starting_snowtags": [
+    "entity_unit",
+    "heightplane_ground",
+    "attribute_heavy",
+    "attribute_biological",
+    "attribute_hero",
+    "attribute_melee"
+  ],
+  "subgroup_priority": 200,
+  "supply_add": 0.0,
+  "supply_cost": 0.0,
+  "targeting_participation_alias": [],
+  "traits": [
+    "HeartOfTheVanguard_Trait",
+    "SuperiorFortification_Trait",
+    "OperationalEfficiency_Trait"
+  ],
+  "turret_list": [],
+  "ui_flags": {
+    "callout_attacks_air": false,
+    "callout_attacks_ground": true
+  },
+  "ui_kind": "unit",
+  "unit_button": "Barclay_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Barclay.UI_Portrait_Human_Default_Barclay'",
+  "unit_name_list": "emptyRef",
+  "unreal_actor": "BP_UH_Hero_Barclay",
+  "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
+  "veterancy_data": "HeroVanguardVeterancyData",
+  "veterancy_given_on_death": 1000,
+  "veterancy_starting_tier": 0,
+  "veterancy_tiers": [
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 1000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 0,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 3000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 0,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 6000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 500,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 10000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 1000,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageUnscaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 15000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 1500,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 21000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 2000,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 28000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 2500,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 36000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 3000,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 47000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 3500,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 15.0,
+          "stat": "HealthMaxPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "AttackDamageScaledBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "HealthRegenPercentageAdditiveMultiplier"
+        },
+        {
+          "amount": 5.0,
+          "stat": "EnergyRegenPercentageBonus"
+        }
+      ],
+      "threshold": 57000,
+      "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
+      "veterancy_given_on_death_tier_bonus": 4000,
+      "visual_fx": "BP_FX_HeroLevelUp"
+    }
+  ],
+  "veterancy_vxp_weight": 1,
+  "victory_points": 0.0,
+  "vision_height": 0.0,
+  "vision_radius": 12.0,
+  "vital_energy": {
+    "maximum": 100.0,
+    "regen": 2.0,
+    "starting": 100.0
+  },
+  "vital_health": {
+    "maximum": 650.0,
+    "regen": 1.2,
+    "starting": 650.0
+  },
+  "vital_out_shroud_deduction_energy_flat": 0.0,
+  "vital_out_shroud_deduction_energy_multiplier": 0.0,
+  "vital_out_shroud_deduction_health_flat": 0.0,
+  "vital_out_shroud_deduction_health_multiplier": 0.0,
+  "vital_out_shroud_deduction_shield_flat": 0.0,
+  "vital_out_shroud_deduction_shield_multiplier": 0.0,
+  "vital_shield": {
+    "maximum": 0.0,
+    "regen": 0.0,
+    "starting": 0.0
+  },
+  "vital_shroud_bonus_energy_flat": 0.0,
+  "vital_shroud_bonus_energy_multiplier": 0.0,
+  "vital_shroud_bonus_health_flat": 0.0,
+  "vital_shroud_bonus_health_multiplier": 0.0,
+  "vital_shroud_bonus_shield_flat": 0.0,
+  "vital_shroud_bonus_shield_multiplier": 0.0,
+  "vital_shroud_combat_delay": 5.0,
+  "vitals_force_hide": false,
+  "weaponList": [
+    "Barclay_WeaponGround"
+  ]
+}
