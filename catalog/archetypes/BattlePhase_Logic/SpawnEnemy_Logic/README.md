@@ -1,4 +1,7 @@
-# SpawnEnemy
+# SpawnEnemy_Logic
 
-Unit_CreateUnit(`GV_BattleNumber`, BruiserCopy, 5, `GV_BattleCenterPointPosition`)
-Unit_CreateUnit(`GV_BattleNumber`, PiperCopy, 5, `GV_BattleCenterPointPosition`)
+SpawnEnemy():
+  Switch(`GV_Opponent`):
+    case "MajorGalt": SpawnMajorGaltWave(`GV_BattleRound`)
+    repeat for any new opponents
+  `GV_BattleRound` += 1

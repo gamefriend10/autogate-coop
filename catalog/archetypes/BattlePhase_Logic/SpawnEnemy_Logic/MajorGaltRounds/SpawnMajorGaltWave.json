@@ -23,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "SpawnEnemy"
+                          "value": "SpawnMajorGaltWave"
                         }
                       }
                     ],
@@ -57,7 +57,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_Opponent"
+                "variable_id": "GV_BattleRound"
               }
             }
           ],
@@ -77,9 +77,9 @@
                       "value": {
                         "type": {
                           "directive": "FunctionType",
-                          "type": "String"
+                          "type": "Integer"
                         },
-                        "value": "MajorGalt"
+                        "value": "1"
                       }
                     }
                   ],
@@ -101,7 +101,54 @@
                                   "directive": "TypeRef",
                                   "type": "Trigger"
                                 },
-                                "value": "SpawnMajorGaltWave"
+                                "value": "SpawnMajorGaltWave1"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave2"
                               }
                             }
                           ],
@@ -125,6 +172,6 @@
   "dev_only": false,
   "enabled": true,
   "events": [],
-  "id": "SpawnEnemy",
+  "id": "SpawnMajorGaltWave",
   "variables": []
 }
