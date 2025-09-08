@@ -109,6 +109,33 @@
           "id": "position"
         }
       ]
+    },
+    {
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "destination"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "UnitGroup_GetLastCreatedUnits"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "source"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",
