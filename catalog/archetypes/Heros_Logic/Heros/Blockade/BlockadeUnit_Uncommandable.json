@@ -713,9 +713,9 @@
     "starting": 100.0
   },
   "vital_health": {
-    "maximum": 650.0,
-    "regen": 1.2,
-    "starting": 650.0
+    "maximum": 100.0,
+    "regen": 0.0,
+    "starting": 100.0
   },
   "vital_out_shroud_deduction_energy_flat": 0.0,
   "vital_out_shroud_deduction_energy_multiplier": 0.0,

@@ -1,0 +1,434 @@
+﻿{
+  "__base_type": "Trigger",
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "OnExitBattlePhaseTrigger"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "percent_of_enemy_units_alive"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Arithmetic_Value",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "UnitGroup_CountAliveUnits",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "GV_EnemyUnitGroup"
+                                  }
+                                }
+                              ],
+                              "id": "group"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "div"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "GV_EnemyUnitCountAtBeginningOfRound"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "hp_to_deduct"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Arithmetic_Value",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "GV_BattleRound"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "mult"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Math_Arithmetic_Value",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "Integer"
+                                    },
+                                    "value": "10"
+                                  }
+                                }
+                              ],
+                              "id": "value1"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "mult"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "op"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "percent_of_enemy_units_alive"
+                                  }
+                                }
+                              ],
+                              "id": "value2"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_Heros_UnitGroup"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Unit_SetHealth",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "unit"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Math_Arithmetic_Value",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetHealth",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "function": {
+                                            "function_id": "UnitGroup_GetCurrentUnit"
+                                          },
+                                          "type": "Function"
+                                        }
+                                      ],
+                                      "id": "unit"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value1"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Math_ArithmeticOperator",
+                                  "value_id": "minus"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "hp_to_deduct"
+                                }
+                              }
+                            ],
+                            "id": "value2"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "health"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_BattleRound"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Arithmetic_Integer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "GV_BattleRound"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "plus"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "OnExitBattlePhaseTrigger",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "percent_of_enemy_units_alive",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "percent_of_enemy_units_alive",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Value"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "hp_to_deduct",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "hp_to_deduct",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Value"
+      }
+    }
+  ]
+}

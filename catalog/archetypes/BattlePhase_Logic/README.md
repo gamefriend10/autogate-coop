@@ -7,7 +7,8 @@ Orders units to attack BattleCenterPoint
 
 Q: what happens when the units in the unitgroup die...? do they get auto removed? will it crash? spam errors?
 
-----
+--------------------
+
 OnEnterBattlePhaseTrigger
 
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
@@ -18,7 +19,8 @@ PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
 SpawnEnemy()
 OrderToBattle()
 
----
+--------------------
+
 CreateBattleUnitsForPlayer(Player `GV_PlayerToCreateBattleUnitsFor`)
 
 Set row = 0
@@ -28,16 +30,17 @@ General_ForEachInteger(row, 0, 2):
   General_ForEachInteger(col, 0, 2):
     Set `GV_StagingCoreToDuplicateTheBattleUnitsOf` = player `GV_PlayerToCreateBattleUnitsFor` 's blackboard[[row][col]] stagingCore
     DuplicateUnitsAndMoveToBattleArea(`GV_StagingCoreToDuplicateTheBattleUnitsOf`, `GV_BattlePositionForPlayer`)
-    
 
----
+--------------------
+
 Vector GetBattlePositionForPlayer(Player `GV_PlayerToCreateBattleUnitsFor`)
 
 If `GV_PlayerToCreateBattleUnitsFor` == 1:
   Set `GV_BattlePositionForPlayer` to Actor_GetPosition(Player1_BattlePoint)
 repeat for player 2-4
 
----
+--------------------
+
 DuplicateUnitsAndMoveToBattleArea(
   Player `GV_PlayerToCreateBattleUnitsFor`,
   Unit `GV_StagingCoreToDuplicateTheBattleUnitsOf`,
@@ -57,3 +60,26 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
     General_DoDoNot.do_not
   )
   UnitGroup_AddUnit(`UnitsToOrderToBattle`)
+
+--------------------
+
+// Executes every 5 seconds via Timer_OnPeriodicEvent(5)
+CheckBattlePhaseOver():
+  if UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
+    OnExitBattlePhaseTrigger()
+
+--------------------
+
+OnExitBattlePhaseTrigger():
+  `percent_of_enemy_units_alive` = UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) / `GV_EnemyUnitCountAtBeginningOfRound`
+  `hp_to_deduct` = `GV_BattleRound` * 10 * `percent_of_enemy_units_alive`
+  UnitGroup_ForEachUnitInGroup(`GV_Heros_UnitGroup`):
+    Unit_SetHealth(
+      UnitGroup_GetCurrentUnit(),
+      Unit_GetHealth(UnitGroup_GetCurrentUnit()) - `hp_to_deduct`
+    )
+  `GV_BattleRound` += 1
+  TODO: kill remaining player/enemy units
+  TODO: transition back to shop
+  TODO: add 1 max lum
+  TODO: reset everyone's lum
