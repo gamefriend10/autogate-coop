@@ -65,7 +65,7 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
 
 // Executes every 5 seconds via Timer_OnPeriodicEvent(5)
 CheckBattlePhaseOver():
-  if UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
+  If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
     OnExitBattlePhaseTrigger()
 
 --------------------
@@ -78,6 +78,8 @@ OnExitBattlePhaseTrigger():
       UnitGroup_GetCurrentUnit(),
       Unit_GetHealth(UnitGroup_GetCurrentUnit()) - `hp_to_deduct`
     )
+    If Unit_GetHealth(UnitGroup_GetCurrentUnit()) <= 0:
+      Unit_Kill(UnitGroup_GetCurrentUnit())
   `GV_BattleRound` += 1
   TODO: kill remaining player/enemy units
   TODO: transition back to shop
