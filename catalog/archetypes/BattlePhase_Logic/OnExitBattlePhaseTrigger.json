@@ -476,6 +476,292 @@
       ]
     },
     {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_CountAliveUnits",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "GV_EnemyUnitGroup"
+                                }
+                              }
+                            ],
+                            "id": "group"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "0"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "UI_SendChatMessage",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Text_ToText",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "String_FormatString",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Value",
+                                          "value": {
+                                            "type": {
+                                              "directive": "FunctionType",
+                                              "type": "String"
+                                            },
+                                            "value": "You beat round {0}."
+                                          }
+                                        }
+                                      ],
+                                      "id": "format"
+                                    },
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "GV_BattleRound"
+                                          }
+                                        }
+                                      ],
+                                      "id": "args"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "message"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetAllPlayers"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "group"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_CountAliveUnits",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "UnitsToOrderToBattle"
+                                }
+                              }
+                            ],
+                            "id": "group"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "0"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "UI_SendChatMessage",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Text_ToText",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "String_FormatString",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Value",
+                                          "value": {
+                                            "type": {
+                                              "directive": "FunctionType",
+                                              "type": "String"
+                                            },
+                                            "value": "You lost round {0}. You lose {1} hp."
+                                          }
+                                        }
+                                      ],
+                                      "id": "format"
+                                    },
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "GV_BattleRound"
+                                          }
+                                        },
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "hp_to_deduct"
+                                          }
+                                        }
+                                      ],
+                                      "id": "args"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "message"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetAllPlayers"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "group"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
       "function_id": "Variable_SetVariable",
       "parameters": [
         {
@@ -539,6 +825,84 @@
             }
           ],
           "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "UnitsToOrderToBattle"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Unit_Kill",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "unit"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Unit_Kill",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "unit"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
         }
       ]
     }

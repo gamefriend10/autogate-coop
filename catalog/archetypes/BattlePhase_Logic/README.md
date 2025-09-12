@@ -89,5 +89,25 @@ OnExitBattlePhaseTrigger():
     )
     If Unit_GetHealth(UnitGroup_GetCurrentUnit()) <= 0:
       Unit_Kill(UnitGroup_GetCurrentUnit())
+
+  If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0:
+    UI_SendChatMessage(String_FormatString(
+      "You beat round {0}.",
+      `GV_BattleRound`
+    ))
+  If UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
+    UI_SendChatMessage(String_FormatString(
+      "You lost round {0}. You lose {1} hp.",
+      `GV_BattleRound`,
+      `hp_to_deduct`
+    ))
+
   `GV_BattleRound` += 1
-  TODO: kill remaining player/enemy units
+
+  // Remove remaining player units from game
+  UnitGroup_ForEachUnitInGroup(`UnitsToOrderToBattle`):
+    Unit_Kill(UnitGroup_GetCurrentUnit())
+
+  // Remove remaining enemy units from game
+  UnitGroup_ForEachUnitInGroup(`GV_EnemyUnitGroup`):
+    Unit_Kill(UnitGroup_GetCurrentUnit())
