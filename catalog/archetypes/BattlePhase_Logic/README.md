@@ -65,7 +65,7 @@ OnEnterBattlePhaseTrigger
 
 `GV_CurrentGameState` = Preset_GameState.battle
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
-  TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1) // Stops rdy up
+  TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1) // Stops top bar
   `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
   CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
   TODO: Set camera to player's corner

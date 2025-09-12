@@ -2,7 +2,14 @@
 
 Requirements: GameStateIsBattleStateDummyUpgrade is not researched
 
-## ReadyUp_Trigger
+ReadyUp_Trigger():
+  If(
+    Blackboard_GetValue_Boolean(
+      Blackboard_GetBlackboardOfPlayer(), // defaults to triggering player's
+      "ready"
+    ) == true
+  ):
+    SkipRemainingActions()
 
 Set triggering player's blackboard `ready` to true
 Add 1 to `GV_NumPlayersReady`

@@ -2,10 +2,21 @@
 
 Requirements: GameStateIsBattleStateDummyUpgrade is not researched
 
-## UnreadyUp_Trigger
-
-Set triggering player's blackboard `ready` to false
-Subtract 1 from `GV_NumPlayersReady`
-UpdateReadyUpObjective_Trigger()
-TechTree_SetAbilityAllowed(triggering player, ReadyUp, add)
-TechTree_SetAbilityAllowed(triggering player, UnreadyUp, remove)
+UnreadyUp_Trigger(`GV_PlayerToUnreadyUp`):
+  If(
+    Blackboard_GetValue_Boolean(
+      Blackboard_GetBlackboardOfPlayer(`GV_PlayerToUnreadyUp`),
+      "ready"
+    ) == false
+  ):
+    SkipRemainingActions()
+  
+  Blackboard_SetValue_Boolean(
+    Blackboard_GetBlackboardOfPlayer(`GV_PlayerToUnreadyUp`),
+    "ready",
+    false
+  )
+  Subtract 1 from `GV_NumPlayersReady`
+  UpdateReadyUpObjective_Trigger()
+  TechTree_SetAbilityAllowed(`GV_PlayerToUnreadyUp`, ReadyUp, add)
+  TechTree_SetAbilityAllowed(`GV_PlayerToUnreadyUp`, UnreadyUp, remove)

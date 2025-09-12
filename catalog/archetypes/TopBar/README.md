@@ -13,6 +13,7 @@ triggers when: anyone's topbar casts ability
 If triggering ability was ReadyUp
   Trigger_Run(ReadyUp_Trigger)
 
-If triggering ability was UnreadyUp
-  Trigger_Run(UnreadyUp_Trigger)
+If triggering ability was UnreadyUp:
+  `GV_PlayerToUnreadyUp` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
+  UnreadyUp_Trigger(`GV_PlayerToUnreadyUp`)
 

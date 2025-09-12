@@ -4,7 +4,9 @@ OnEnterBuyPhaseTrigger():
   `active_players_minus_enemy_ai_at_slot_5` = PlayerGroup_GetActivePlayers()
   PlayerGroup_RemovePlayer(`active_players_minus_enemy_ai_at_slot_5`, 5)
   PlayerGroup_ForEachPlayerInGroup(`active_players_minus_enemy_ai_at_slot_5`):
-    TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 0) // Allows rdy up
+    TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 0) // Allows top bar
+    `GV_PlayerToUnreadyUp` = PlayerGroup_GetCurrentPlayer()
+    UnreadyUp_Trigger(`GV_PlayerToUnreadyUp`)
     TODO: add 1 max lum
     TODO: reset everyone's lum
     `GV_PlayerToRefreshFor` = PlayerGroup_GetCurrentPlayer()
