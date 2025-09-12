@@ -73,18 +73,55 @@
                     "expressions": [
                       {
                         "function": {
-                          "function_id": "UnitGroup_CountAliveUnits",
+                          "function_id": "Random_Value",
                           "parameters": [
                             {
                               "expressions": [
                                 {
-                                  "type": "Variable",
-                                  "variable": {
-                                    "variable_id": "GV_EnemyUnitGroup"
-                                  }
+                                  "function": {
+                                    "function_id": "UnitGroup_CountAliveUnits",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "GV_EnemyUnitGroup"
+                                            }
+                                          }
+                                        ],
+                                        "id": "group"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
                                 }
                               ],
-                              "id": "group"
+                              "id": "min"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "UnitGroup_CountAliveUnits",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "GV_EnemyUnitGroup"
+                                            }
+                                          }
+                                        ],
+                                        "id": "group"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "max"
                             }
                           ]
                         },
@@ -108,10 +145,34 @@
                   {
                     "expressions": [
                       {
-                        "type": "Variable",
-                        "variable": {
-                          "variable_id": "GV_EnemyUnitCountAtBeginningOfRound"
-                        }
+                        "function": {
+                          "function_id": "Random_Value",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "GV_EnemyUnitCountAtBeginningOfRound"
+                                  }
+                                }
+                              ],
+                              "id": "min"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "GV_EnemyUnitCountAtBeginningOfRound"
+                                  }
+                                }
+                              ],
+                              "id": "max"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value2"

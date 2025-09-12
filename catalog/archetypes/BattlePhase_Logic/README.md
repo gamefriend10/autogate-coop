@@ -76,7 +76,11 @@ OrderToBattle()
 --------------------
 
 OnExitBattlePhaseTrigger():
-  `percent_of_enemy_units_alive` = UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) / `GV_EnemyUnitCountAtBeginningOfRound`
+  // Using Random_Value to cast Integer->Value
+  `percent_of_enemy_units_alive` = (
+    Random_Value(UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`), UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`)) /
+    Random_Value(`GV_EnemyUnitCountAtBeginningOfRound`, `GV_EnemyUnitCountAtBeginningOfRound`)
+  )
   `hp_to_deduct` = `GV_BattleRound` * 10 * `percent_of_enemy_units_alive`
   UnitGroup_ForEachUnitInGroup(`GV_Heros_UnitGroup`):
     Unit_SetHealth(
