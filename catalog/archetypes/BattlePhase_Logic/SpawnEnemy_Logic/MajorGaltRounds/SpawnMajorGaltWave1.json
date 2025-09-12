@@ -76,7 +76,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "Worker"
+                "value": "Worker_AttacksBack_GivesNoXP"
               }
             }
           ],

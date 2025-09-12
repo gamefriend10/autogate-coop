@@ -9,7 +9,7 @@ SpawnMajorGaltWave(`GV_BattleRound`):
 
 SpawnMajorGaltWave1():
   // Create 10 Servos for player 5 at GV_BattleCenterPointPosition
-  Unit_CreateUnit(10, Worker, 5, GV_BattleCenterPointPosition)
+  Unit_CreateUnit(10, Worker_AttacksBack_GivesNoXP, 5, GV_BattleCenterPointPosition)
   UnitGroup_AddUnits(`GV_EnemyUnitGroup`, UnitGroup_GetLastCreatedUnits())
 
   // Return `GV_EnemyUnitGroup`
