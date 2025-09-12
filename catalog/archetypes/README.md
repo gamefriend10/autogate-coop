@@ -1,9 +1,14 @@
 # AutoGateInitialization 
 
+Game_SpawnTopBar(PlayerGroup_GetAllPlayers())
 Set camera zoom limit
 Set everyone's camera to 100 zoom over 5 secs
 InitReadyUpObjective_Trigger()
 SpawnHeros()
+PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+  `IV_NumberOfMaxLumToSet` = 3
+  `IV_PlayerToSetMaxLumFor` = PlayerGroup_GetCurrentPlayer()
+  SetMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToSet`, `IV_PlayerToSetMaxLumFor`)
 OnEnterBuyPhaseTrigger()
 
 # AutoGateInitializationWhenFSMWorks (TODO When state machines work)

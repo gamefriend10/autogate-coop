@@ -86,7 +86,7 @@
   "based_on": "Trigger",
   "conditions": [],
   "dev_only": false,
-  "enabled": true,
+  "enabled": false,
   "events": [
     {
       "function_id": "Game_OnMapInitialization",

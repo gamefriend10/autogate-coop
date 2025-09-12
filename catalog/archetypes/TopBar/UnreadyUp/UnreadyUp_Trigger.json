@@ -2,7 +2,7 @@
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
-      "is_enabled": true,
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [

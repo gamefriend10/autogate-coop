@@ -76,6 +76,7 @@ OrderToBattle()
 --------------------
 
 OnExitBattlePhaseTrigger():
+  // Deduct hero hp
   // Using Random_Value to cast Integer->Value
   `percent_of_enemy_units_alive` = (
     Random_Value(UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`), UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`)) /
@@ -90,6 +91,7 @@ OnExitBattlePhaseTrigger():
     If Unit_GetHealth(UnitGroup_GetCurrentUnit()) <= 0:
       Unit_Kill(UnitGroup_GetCurrentUnit())
 
+  // Print status msg
   If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0:
     UI_SendChatMessage(String_FormatString(
       "You beat round {0}.",
@@ -111,3 +113,9 @@ OnExitBattlePhaseTrigger():
   // Remove remaining enemy units from game
   UnitGroup_ForEachUnitInGroup(`GV_EnemyUnitGroup`):
     Unit_Kill(UnitGroup_GetCurrentUnit())
+
+  PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+    // Add 1 max lum to everyone
+    `IV_NumberOfMaxLumToAdd` = 1
+    `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
+    AddMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToAdd`, `IV_PlayerToAddMaxLumTo`)
