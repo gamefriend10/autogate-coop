@@ -11,6 +11,5 @@ UpdateReadyUpObjective_Trigger()
 TechTree_SetAbilityAllowed(triggering player, ReadyUp, remove)
 TechTree_SetAbilityAllowed(triggering player, UnreadyUp, add)
 If `GV_NumPlayersReady` == `GV_NumActivePlayers`:
-  PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
-    TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1)
-  TriggerRun(OnEnterBattlePhaseTrigger)
+  TriggerRun(OnExitBuyPhaseTrigger())
+  TriggerRun(OnEnterBattlePhaseTrigger())

@@ -1,0 +1,22 @@
+﻿{
+  "based_on": "Preset",
+  "id": "Preset_GameState",
+  "name": "AutoGate Game States",
+  "type": {
+    "directive": "FunctionType",
+    "type": "String"
+  },
+  "values": [
+    {
+      "id": "buy",
+      "is_default": true,
+      "name": "Buy",
+      "script": "\"buy\""
+    },
+    {
+      "id": "battle",
+      "name": "Battle",
+      "script": "\"battle\""
+    }
+  ]
+}

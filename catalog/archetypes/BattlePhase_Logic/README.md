@@ -9,18 +9,6 @@ Q: what happens when the units in the unitgroup die...? do they get auto removed
 
 --------------------
 
-OnEnterBattlePhaseTrigger
-
-PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers())
-  Set `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
-  CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
-  TODO: Set camera to player's corner
-  TODO: Pan camera to battle center
-SpawnEnemy()
-OrderToBattle()
-
---------------------
-
 CreateBattleUnitsForPlayer(Player `GV_PlayerToCreateBattleUnitsFor`)
 
 Set row = 0
@@ -65,8 +53,25 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
 
 // Executes every 5 seconds via Timer_OnPeriodicEvent(5)
 CheckBattlePhaseOver():
+  If `GV_CurrentGameState` != Preset_GameState.battle:
+    SkipRemainingActions()
   If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
-    OnExitBattlePhaseTrigger()
+    TriggerRun(OnExitBattlePhaseTrigger())
+    TriggerRun(OnEnterBuyPhaseTrigger())
+
+--------------------
+
+OnEnterBattlePhaseTrigger
+
+`GV_CurrentGameState` = Preset_GameState.battle
+PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+  TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1) // Stops rdy up
+  `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
+  CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
+  TODO: Set camera to player's corner
+  TODO: Pan camera to battle center
+`GV_EnemyUnitCountAtBeginningOfRound` = SpawnEnemy()
+OrderToBattle()
 
 --------------------
 
@@ -82,6 +87,3 @@ OnExitBattlePhaseTrigger():
       Unit_Kill(UnitGroup_GetCurrentUnit())
   `GV_BattleRound` += 1
   TODO: kill remaining player/enemy units
-  TODO: transition back to shop
-  TODO: add 1 max lum
-  TODO: reset everyone's lum

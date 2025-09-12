@@ -2,7 +2,7 @@
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
-      "is_enabled": true,
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -423,71 +423,22 @@
         {
           "functions": [
             {
-              "function_id": "PlayerGroup_ForEachPlayerInGroup",
+              "function_id": "Trigger_Run",
               "parameters": [
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "PlayerGroup_GetActivePlayers"
-                      },
-                      "type": "Function"
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "OnExitBuyPhaseTrigger"
+                      }
                     }
                   ],
-                  "id": "players"
-                }
-              ],
-              "sub_functions": [
-                {
-                  "functions": [
-                    {
-                      "function_id": "TechTree_SetUpgradeLevel",
-                      "parameters": [
-                        {
-                          "expressions": [
-                            {
-                              "function": {
-                                "function_id": "PlayerGroup_GetCurrentPlayer"
-                              },
-                              "type": "Function"
-                            }
-                          ],
-                          "id": "player"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "UpgradeData"
-                                },
-                                "value": "GameStateIsBattleStateDummyUpgrade"
-                              }
-                            }
-                          ],
-                          "id": "upgrade_data"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "FunctionType",
-                                  "type": "Integer"
-                                },
-                                "value": "1"
-                              }
-                            }
-                          ],
-                          "id": "level"
-                        }
-                      ]
-                    }
-                  ],
-                  "id": "actions"
+                  "id": "trigger"
                 }
               ]
             },

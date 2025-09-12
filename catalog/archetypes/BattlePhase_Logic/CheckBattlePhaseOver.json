@@ -54,6 +54,64 @@
         {
           "functions": [
             {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_CurrentGameState"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "ne"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Preset_GameState",
+                        "value_id": "battle"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
               "function_id": "Logic_AndOrConditions",
               "parameters": [
                 {
@@ -207,6 +265,26 @@
                           "type": "Trigger"
                         },
                         "value": "OnExitBattlePhaseTrigger"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "OnEnterBuyPhaseTrigger"
                       }
                     }
                   ],

@@ -1,0 +1,23 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "GV_CurrentGameState",
+  "initial_values": [
+    {
+      "preset": {
+        "preset_id": "Preset_GameState",
+        "value_id": "buy"
+      },
+      "type": "Preset"
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "GV_CurrentGameState",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "String"
+  }
+}

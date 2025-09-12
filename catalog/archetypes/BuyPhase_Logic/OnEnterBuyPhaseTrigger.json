@@ -57,6 +57,34 @@
             {
               "type": "Variable",
               "variable": {
+                "variable_id": "GV_CurrentGameState"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "Preset_GameState",
+                "value_id": "buy"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
                 "variable_id": "active_players_minus_enemy_ai_at_slot_5"
               }
             }
@@ -125,6 +153,52 @@
       "sub_functions": [
         {
           "functions": [
+            {
+              "function_id": "TechTree_SetUpgradeLevel",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UpgradeData"
+                        },
+                        "value": "GameStateIsBattleStateDummyUpgrade"
+                      }
+                    }
+                  ],
+                  "id": "upgrade_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "0"
+                      }
+                    }
+                  ],
+                  "id": "level"
+                }
+              ]
+            },
             {
               "function_id": "Variable_SetVariable",
               "parameters": [
