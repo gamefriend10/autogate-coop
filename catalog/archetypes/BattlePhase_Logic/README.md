@@ -90,6 +90,11 @@ OnExitBattlePhaseTrigger():
     )
     If Unit_GetHealth(UnitGroup_GetCurrentUnit()) <= 0:
       Unit_Kill(UnitGroup_GetCurrentUnit())
+      Game_EndGameForPlayer(
+        Unit_GetOwningPlayer(UnitGroup_GetCurrentUnit()),
+        Game_GameOverType.defeat,
+        Game_KickDontKick.nokick
+      )
 
   // Print status msg
   If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0:

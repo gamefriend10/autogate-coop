@@ -244,7 +244,7 @@
                                       "directive": "FunctionType",
                                       "type": "Integer"
                                     },
-                                    "value": "10"
+                                    "value": "910"
                                   }
                                 }
                               ],
@@ -462,6 +462,59 @@
                             }
                           ],
                           "id": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "Game_EndGameForPlayer",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Unit_GetOwningPlayer",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "unit"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "player"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Game_GameOverType",
+                                "value_id": "defeat"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "outcome"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Game_KickDontKick",
+                                "value_id": "kick"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "kick"
                         }
                       ]
                     }
