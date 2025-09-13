@@ -160,6 +160,617 @@
                   "id": "actions"
                 }
               ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "3"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave3"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave4"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "5"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave5"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "6"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave6"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "7"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave7"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "8"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave8"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "9"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave9"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "10"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave10"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "11"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave11"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "12"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave12"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "13"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave13"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "14"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave14"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "15"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltWave15"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
             }
           ],
           "id": "cases"
