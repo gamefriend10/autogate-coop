@@ -1,32 +1,41 @@
-ShopCore_Spawn(`GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, `ShopPositionKeyToSaveToBlackboard`):
-
-// Creates shop core
-Unit_CreateUnit(1, `GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, true)
-`GV_ShopCoreToAttachUnitsTo` = Unit_GetLastCreatedUnit()
-// Assigns shop core to player's blackboard
-Blackboard_SetValue_Unit(
-  Blackboard_GetBlackboardOfPlayer(`GV_PlayerToSpawnShopCoreFor`),
-  `ShopPositionKeyToSaveToBlackboard`,
-  Unit_GetLastCreatedUnit()
-)
-// Saves shop position to shop core's blackboard
-Blackboard_SetValue_String(
-  Blackboard_GetBlackboardOfEntity(Unit_GetLastCreatedUnit()),
-  "shop_position_key",
-  `ShopPositionKeyToSaveToBlackboard`
-)
-// Set vars for this shop core to spawn its units
-(`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) =
-  SetVarsForShopCoreSpawnUnits(`GV_ShopCoreToSpawn`)
-// Spawn corresponding units for the shop
-ShopCore_SpawnUnits(
-  `GV_LengthOfUnitDataToSpawnArray`,
-  `GV_UnitDataToSpawnArray`,
-  `GV_NumOfUnitsToSpawnForEachUnitDataArray`,
+ShopCore_Spawn(
+  `GV_ShopCoreToSpawn`,
   `GV_PlayerToSpawnShopCoreFor`,
   `ShopPositionToSpawnAt`,
-  `GV_ShopCoreToAttachUnitsTo`
-)
+  `ShopPositionKeyToSaveToBlackboard
+):
+  // Creates shop core
+  Unit_CreateUnit(1, `GV_ShopCoreToSpawn`, `GV_PlayerToSpawnShopCoreFor`, `ShopPositionToSpawnAt`, true)
+  `IV_Core_SpawnUnits_CoreToAttachUnitsTo` = Unit_GetLastCreatedUnit()
+
+  // Assigns shop core to player's blackboard
+  Blackboard_SetValue_Unit(
+    Blackboard_GetBlackboardOfPlayer(`GV_PlayerToSpawnShopCoreFor`),
+    `ShopPositionKeyToSaveToBlackboard`,
+    Unit_GetLastCreatedUnit()
+  )
+
+  // Saves shop position to shop core's blackboard
+  Blackboard_SetValue_String(
+    Blackboard_GetBlackboardOfEntity(Unit_GetLastCreatedUnit()),
+    "shop_position_key",
+    `ShopPositionKeyToSaveToBlackboard`
+  )
+
+  // Set vars for this shop core to spawn its units
+  `IV_Core_SpawnUnits_CoreToSpawn` = `GV_ShopCoreToSpawn`
+  (`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) =
+    SetVarsForCoreSpawnUnits(`IV_Core_SpawnUnits_CoreToSpawn`)
+
+  // Spawn corresponding units for the shop
+  `IV_Core_SpawnUnits_PlayerToSpawnFor` = `GV_PlayerToSpawnShopCoreFor`
+  Core_SpawnUnits(
+    `GV_LengthOfUnitDataToSpawnArray`,
+    `GV_UnitDataToSpawnArray`,
+    `GV_NumOfUnitsToSpawnForEachUnitDataArray`,
+    `IV_Core_SpawnUnits_PlayerToSpawnFor`,
+    `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
+  )
 
 ----------------------------------------
 

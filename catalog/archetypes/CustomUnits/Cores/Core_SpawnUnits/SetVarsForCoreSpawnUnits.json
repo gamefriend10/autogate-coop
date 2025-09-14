@@ -23,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "SetVarsForShopCoreSpawnUnits"
+                          "value": "SetVarsForCoreSpawnUnits"
                         }
                       }
                     ],
@@ -57,7 +57,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ShopCoreToSpawn"
+                "variable_id": "IV_Core_SpawnUnits_CoreToSpawn"
               }
             }
           ],
@@ -219,6 +219,6 @@
   "dev_only": false,
   "enabled": true,
   "events": [],
-  "id": "SetVarsForShopCoreSpawnUnits",
+  "id": "SetVarsForCoreSpawnUnits",
   "variables": []
 }

@@ -23,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "ShopCore_SpawnUnits"
+                          "value": "Core_SpawnUnits"
                         }
                       }
                     ],
@@ -179,7 +179,7 @@
                     {
                       "type": "Variable",
                       "variable": {
-                        "variable_id": "GV_PlayerToSpawnShopCoreFor"
+                        "variable_id": "IV_Core_SpawnUnits_PlayerToSpawnFor"
                       }
                     }
                   ],
@@ -188,10 +188,23 @@
                 {
                   "expressions": [
                     {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "ShopPositionToSpawnAt"
-                      }
+                      "function": {
+                        "function_id": "Actor_GetPosition",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
+                                }
+                              }
+                            ],
+                            "id": "actor"
+                          }
+                        ]
+                      },
+                      "type": "Function"
                     }
                   ],
                   "id": "position"
@@ -259,7 +272,7 @@
                       {
                         "type": "Variable",
                         "variable": {
-                          "variable_id": "GV_ShopCoreToAttachUnitsTo"
+                          "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
                         }
                       }
                     ],
@@ -319,7 +332,7 @@
   "dev_only": false,
   "enabled": true,
   "events": [],
-  "id": "ShopCore_SpawnUnits",
+  "id": "Core_SpawnUnits",
   "variables": [
     {
       "array_size": 1,

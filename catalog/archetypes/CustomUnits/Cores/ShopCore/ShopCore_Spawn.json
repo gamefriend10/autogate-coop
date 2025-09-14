@@ -125,7 +125,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ShopCoreToAttachUnitsTo"
+                "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
               }
             }
           ],
@@ -251,22 +251,29 @@
       ]
     },
     {
-      "function_id": "Trigger_Run",
+      "function_id": "Variable_SetVariable",
       "parameters": [
         {
           "expressions": [
             {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "SetVarsForShopCoreSpawnUnits"
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_CoreToSpawn"
               }
             }
           ],
-          "id": "trigger"
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_ShopCoreToSpawn"
+              }
+            }
+          ],
+          "id": "value"
         }
       ]
     },
@@ -282,7 +289,54 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "ShopCore_SpawnUnits"
+                "value": "SetVarsForCoreSpawnUnits"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_PlayerToSpawnFor"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_PlayerToSpawnShopCoreFor"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "Core_SpawnUnits"
               }
             }
           ],
