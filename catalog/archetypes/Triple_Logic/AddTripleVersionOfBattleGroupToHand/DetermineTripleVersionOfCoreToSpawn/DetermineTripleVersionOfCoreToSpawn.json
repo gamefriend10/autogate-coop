@@ -1,0 +1,176 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "DetermineTripleVersionOfCoreToSpawn"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Entity_HasAllTags",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore"
+                                }
+                              }
+                            ],
+                            "id": "who"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SnowTag"
+                                  },
+                                  "value": "lancerarmstrong_snowtag"
+                                }
+                              }
+                            ],
+                            "id": "tags"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Boolean"
+                        },
+                        "value": "true"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Variable_SetVariable",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "LancerArmstrongTriple_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [],
+  "id": "DetermineTripleVersionOfCoreToSpawn",
+  "variables": []
+}

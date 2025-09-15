@@ -1,0 +1,15 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn",
+  "initial_values": [],
+  "is_array": false,
+  "is_constant": false,
+  "name": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "TypeRef",
+    "type": "UnitData"
+  }
+}
