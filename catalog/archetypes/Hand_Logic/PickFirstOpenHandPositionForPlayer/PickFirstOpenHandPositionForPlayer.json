@@ -49,6 +49,46 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player_blackboard"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfPlayer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
+                        }
+                      }
+                    ],
+                    "id": "player"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "General_IfThenElse",
       "sub_functions": [
         {
@@ -680,14 +720,7 @@
     {
       "array_size": 1,
       "id": "player_blackboard",
-      "initial_values": [
-        {
-          "function": {
-            "function_id": "Blackboard_GetBlackboardOfPlayer"
-          },
-          "type": "Function"
-        }
-      ],
+      "initial_values": [],
       "is_array": false,
       "is_constant": false,
       "is_id_based_on_name": true,

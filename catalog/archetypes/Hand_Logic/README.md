@@ -1,12 +1,10 @@
-String PickFirstOpenHandPositionForPlayer()
-
-returns: String "hand_position_X" via `GV_OpenHandPositionToSpawnAt`
-
-// init local `player_blackboard` to Blackboard_GetBlackboardOfPlayer (defaults to triggering player)
-// if Logic_NotConditions `player_blackboard` Blackboard_HasValue("hand_core_at_hand_position_0")
-  // then set `GV_OpenHandPositionToSpawnAt` to "hand_position_0"
-  // General_SkipRemainingActions
-// repeat for the rest of the 5 hand positions...
+// Returns String "hand_position_X" via `GV_OpenHandPositionToSpawnAt`
+String PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`):
+  `player_blackboard` = Blackboard_GetBlackboardOfPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
+  If(!Blackboard_HasValue(`player_blackboard`, "hand_core_at_hand_position_0")):
+    `GV_OpenHandPositionToSpawnAt` = "hand_position_0"
+    General_SkipRemainingActions()
+  repeat for the rest of the 5 hand positions...
 
 --------------------
 

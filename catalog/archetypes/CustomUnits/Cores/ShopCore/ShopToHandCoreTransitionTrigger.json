@@ -49,6 +49,46 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetOwningPlayer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
       "parameters": [
         {
@@ -360,6 +400,7 @@
     },
     {
       "function_id": "Variable_SetVariable",
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -387,6 +428,7 @@
     },
     {
       "function_id": "Trigger_Run",
+      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -397,7 +439,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "DetermineTripleVersionOfCoreToSpawn"
+                "value": "AddTripleVersionOfBattleGroupToHand"
               }
             }
           ],

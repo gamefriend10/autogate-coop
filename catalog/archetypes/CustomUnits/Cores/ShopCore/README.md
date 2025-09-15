@@ -43,7 +43,8 @@ ShopToHandCoreTransitionTrigger
 
 Trigger: shopCore uses ability (expected to only be Buy, which morphs ShopCore into HandCore)
 
-`GV_OpenHandPositionToSpawnAt` = PickFirstOpenHandPositionForPlayer()
+`IV_PickFirstOpenHandPositionForPlayer_Player` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
+`GV_OpenHandPositionToSpawnAt` = PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
 SetHandCoreBlackboardHandPosition(`GV_OpenHandPositionToSpawnAt`)
 `GV_HandPositionToSpawnAt` = GetVectorForHandPositionOfTriggeringPlayer(`GV_OpenHandPositionToSpawnAt`)
 Set position to `GV_HandPositionToSpawnAt`
