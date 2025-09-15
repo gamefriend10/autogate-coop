@@ -1,0 +1,15 @@
+{
+  "based_on": "ShopCore_Morph",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "requirement": "Requirement_ShopCore_Morph",
+      "unit": "LancerArmstrong_HandCore"
+    }
+  ],
+  "id": "LancerArmstrong_ShopCore_Morph"
+}

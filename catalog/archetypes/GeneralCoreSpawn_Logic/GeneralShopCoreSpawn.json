@@ -142,7 +142,7 @@
                           "directive": "TypeRef",
                           "type": "SnowTag"
                         },
-                        "value": "hogdog_snowtag"
+                        "value": "lancerarmstrong_snowtag"
                       }
                     }
                   ],
@@ -178,7 +178,7 @@
                           "directive": "TypeRef",
                           "type": "UnitData"
                         },
-                        "value": "HogDog_ShopCore"
+                        "value": "LancerArmstrong_ShopCore"
                       }
                     }
                   ],
