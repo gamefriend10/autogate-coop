@@ -45,10 +45,16 @@ Trigger: shopCore uses ability (expected to only be Buy, which morphs ShopCore i
 
 `IV_PickFirstOpenHandPositionForPlayer_Player` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
 `GV_OpenHandPositionToSpawnAt` = PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
+
 SetHandCoreBlackboardHandPosition(`GV_OpenHandPositionToSpawnAt`)
 `GV_HandPositionToSpawnAt` = GetVectorForHandPositionOfTriggeringPlayer(`GV_OpenHandPositionToSpawnAt`)
 Set position to `GV_HandPositionToSpawnAt`
 move shopCore's `units` (tracked by blackboard) to Actor's current position
 Remove this shopCore from the player's blackboard
   (the player blackboard key to use should be saved to `shop_position_key` in this core's blackboard)
-AddHandCoreToOpenHandPositionInPlayerBlackboard(`GV_OpenHandPositionToSpawnAt`)
+
+`IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
+AddHandCoreToOpenHandPositionInPlayerBlackboard(
+  `GV_OpenHandPositionToSpawnAt`,
+  `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player`
+)

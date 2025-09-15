@@ -49,8 +49,47 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player_blackboard"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfPlayer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player"
+                        }
+                      }
+                    ],
+                    "id": "player"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "General_Switch",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
@@ -95,10 +134,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -164,10 +203,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -233,10 +272,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -302,10 +341,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -371,10 +410,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -423,10 +462,10 @@
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "Blackboard_GetBlackboardOfPlayer"
-                      },
-                      "type": "Function"
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "player_blackboard"
+                      }
                     }
                   ],
                   "id": "blackboard"
@@ -468,5 +507,20 @@
   "based_on": "Trigger",
   "events": [],
   "id": "AddHandCoreToOpenHandPositionInPlayerBlackboard",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "player_blackboard",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "player_blackboard",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Blackboard"
+      }
+    }
+  ]
 }
