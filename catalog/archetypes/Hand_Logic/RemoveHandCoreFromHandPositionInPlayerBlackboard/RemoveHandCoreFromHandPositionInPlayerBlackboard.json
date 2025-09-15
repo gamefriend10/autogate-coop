@@ -49,8 +49,55 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player_blackboard"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfPlayer",
+                "parameters": [
+                  {
+                    "function": {
+                      "function_id": "Unit_GetOwningPlayer",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore"
+                              }
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    },
+                    "type": "Function"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "General_Switch",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
@@ -67,10 +114,10 @@
                             {
                               "expressions": [
                                 {
-                                  "function": {
-                                    "function_id": "Unit_GetTriggeringUnit"
-                                  },
-                                  "type": "Function"
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore"
+                                  }
                                 }
                               ],
                               "id": "entity"
@@ -136,10 +183,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -194,10 +241,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -252,10 +299,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -310,10 +357,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -368,10 +415,10 @@
                         {
                           "expressions": [
                             {
-                              "function": {
-                                "function_id": "Blackboard_GetBlackboardOfPlayer"
-                              },
-                              "type": "Function"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player_blackboard"
+                              }
                             }
                           ],
                           "id": "blackboard"
@@ -409,10 +456,10 @@
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "Blackboard_GetBlackboardOfPlayer"
-                      },
-                      "type": "Function"
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "player_blackboard"
+                      }
                     }
                   ],
                   "id": "blackboard"
@@ -443,5 +490,20 @@
   "based_on": "Trigger",
   "events": [],
   "id": "RemoveHandCoreFromHandPositionInPlayerBlackboard",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "player_blackboard",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "player_blackboard",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Blackboard"
+      }
+    }
+  ]
 }
