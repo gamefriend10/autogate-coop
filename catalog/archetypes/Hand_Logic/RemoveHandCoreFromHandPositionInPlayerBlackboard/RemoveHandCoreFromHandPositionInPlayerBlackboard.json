@@ -488,6 +488,39 @@
     }
   ],
   "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore"
+              }
+            }
+          ],
+          "id": "who"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "handcore_snowtag"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ]
+    }
+  ],
   "events": [],
   "id": "RemoveHandCoreFromHandPositionInPlayerBlackboard",
   "variables": [

@@ -36,6 +36,7 @@ SetHandCoreBlackboardHandPosition(String `GV_OpenHandPositionToSpawnAt`)
 
 // Use this handcore's blackboard value at `hand_position` e.g. "hand_position_0" to rm itself from
 // the handcore's owning player's PlayerBlackboard key e.g. `hand_core_at_hand_position_0`
+// Conditions: Entity_HasAllTags(`IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore`, handcore_snowtag)
 RemoveHandCoreFromHandPositionInPlayerBlackboard(
   Unit `IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore`
 ):
