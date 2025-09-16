@@ -1,5 +1,6 @@
 {
   "based_on": "BaseTripleCore",
   "id": "LancerArmstrongTriple_BaseCore",
+  "placed_name": "LancerArmstrongTriple",
   "name": "=== Lancer Armstrong (Triple) ===\nWhen placed, Gain 2 Veterancy Levels."
 }

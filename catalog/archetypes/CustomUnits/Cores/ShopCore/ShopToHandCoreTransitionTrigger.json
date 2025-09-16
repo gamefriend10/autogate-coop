@@ -440,14 +440,13 @@
     },
     {
       "function_id": "Variable_SetVariable",
-      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore"
+                "variable_id": "trigger_unit_core_before_wait"
               }
             }
           ],
@@ -467,8 +466,54 @@
       ]
     },
     {
+      "function_id": "General_Wait",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Time"
+                },
+                "value": "0.1"
+              }
+            }
+          ],
+          "id": "duration"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "trigger_unit_core_before_wait"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
-      "is_enabled": false,
       "parameters": [
         {
           "expressions": [
@@ -479,7 +524,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "AddTripleVersionOfBattleGroupToHand"
+                "value": "Triple_TriplifyCoreIfThreeArePresent"
               }
             }
           ],
@@ -522,5 +567,20 @@
     }
   ],
   "id": "ShopToHandCoreTransitionTrigger",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "trigger_unit_core_before_wait",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "trigger_unit_core_before_wait",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Unit"
+      }
+    }
+  ]
 }

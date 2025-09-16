@@ -3,9 +3,9 @@
   "commands": [
     {
       "cooldown": {
-        "duration": 0.0,
-        "name": "",
-        "scope": "Ability"
+        "duration": 0.2,
+        "name": "ShopCore_Morph",
+        "scope": "Player"
       },
       "requirement": "Requirement_ShopCore_Morph",
       "unit": "GauntFather_HandCore"

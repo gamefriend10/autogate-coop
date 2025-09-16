@@ -3,7 +3,7 @@
 SpawnMajorGaltWave(`GV_BattleRound`):
   Switch(`GV_BattleRound`):
     case 1: `GV_EnemyUnitGroup` = SpawnMajorGaltWave1()
-    TODO: repeat 2-15...
+    repeat 2-15...
 
   // Return `GV_EnemyUnitGroup`
 
