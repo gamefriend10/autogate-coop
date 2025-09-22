@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "HandCoreBuildTrigger"
+                          "value": "PrepHandCoreUnitsForStagingAndRemoveHandCore"
                         }
                       }
                     ],
@@ -82,14 +82,12 @@
             {
               "function": {
                 "function_id": "Blackboard_GetValue_UnitGroup",
-                "is_enabled": true,
                 "parameters": [
                   {
                     "expressions": [
                       {
                         "function": {
                           "function_id": "Blackboard_GetBlackboardOfEntity",
-                          "is_enabled": true,
                           "parameters": [
                             {
                               "expressions": [
@@ -185,38 +183,8 @@
     }
   ],
   "based_on": "Trigger",
-  "conditions": [
-    {
-      "function_id": "Entity_HasAllTags",
-      "is_enabled": true,
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "handcore_snowtag"
-              }
-            }
-          ],
-          "id": "tags"
-        }
-      ],
-      "sub_functions": []
-    }
-  ],
-  "events": [
-    {
-      "function_id": "Unit_OnAbilityUsed",
-      "is_enabled": true,
-      "parameters": [],
-      "sub_functions": []
-    }
-  ],
-  "id": "HandCoreBuildTrigger",
+  "conditions": [],
+  "events": [],
+  "id": "PrepHandCoreUnitsForStagingAndRemoveHandCore",
   "variables": []
 }
