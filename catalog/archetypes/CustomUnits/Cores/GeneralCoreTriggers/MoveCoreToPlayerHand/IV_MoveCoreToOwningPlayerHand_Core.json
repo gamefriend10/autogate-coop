@@ -1,0 +1,15 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "IV_MoveCoreToOwningPlayerHand_Core",
+  "initial_values": [],
+  "is_array": false,
+  "is_constant": false,
+  "name": "IV_MoveCoreToOwningPlayerHand_Core",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Unit"
+  }
+}
