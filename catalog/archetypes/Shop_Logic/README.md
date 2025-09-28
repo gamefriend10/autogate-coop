@@ -20,9 +20,12 @@ RemoveShopCoresForPlayer(Player PlayerToRemoveShopCoreFor):
 SpawnShop(`GV_PlayerToSpawnShopFor`, `ShopPositions`):
   set `GV_PlayerToSpawnShopCoreFor` = `GV_PlayerToSpawnShopFor`
   set `IV_PickBattleGroupToSpawnForPlayer_Player` = `GV_PlayerToSpawnShopFor`
-  set `num_shop_positions_to_spawn` = 2 + Blackboard_GetValue_Integer(
-    Blackboard_GetBlackboardOfPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`),
-    "shop_tier"
+  set `num_shop_positions_to_spawn` = Math_Min(
+    2 + Blackboard_GetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`),
+      "shop_tier"
+    ),
+    7
   )
 
   General_ForEachInteger(`i`, 0, `num_shop_positions_to_spawn`-1):

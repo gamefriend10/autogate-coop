@@ -44,7 +44,7 @@
       },
       "cooldown": {
         "duration": 0.1,
-        "name": "Tier2Upgrade",
+        "name": "",
         "scope": "Player"
       },
       "cost_power": 0.0,

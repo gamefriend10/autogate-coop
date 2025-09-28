@@ -1,0 +1,6 @@
+{
+  "based_on": "Tier2Upgrade_Button",
+  "id": "Tier5Upgrade_Button",
+  "name": "Unlock Tier 5",
+  "tooltip": "Allows Tier 5 Battle Groups to be randomly chosen when Refreshing the shop."
+}

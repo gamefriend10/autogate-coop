@@ -55,6 +55,331 @@
           "functions": [
             {
               "function_id": "Logic_Comparison",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Refresh"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ],
+              "sub_functions": []
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Variable_SetVariable",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_PlayerToRefreshFor"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "RefreshForPlayer"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "ReadyUp"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "ReadyUp_Trigger"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "UnreadyUp"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Variable_SetVariable",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_PlayerToUnreadyUp"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "UnreadyUp_Trigger"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
               "parameters": [
                 {
                   "expressions": [
@@ -202,81 +527,10 @@
                   "id": "state"
                 }
               ]
-            }
-          ],
-          "id": "then"
-        }
-      ]
-    },
-    {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
-        {
-          "functions": [
+            },
             {
-              "function_id": "Logic_Comparison",
-              "is_enabled": true,
+              "function_id": "TechTree_SetAbilityAllowed",
               "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Ability_GetTriggeringAbility"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "preset": {
-                        "preset_id": "Logic_ComparisonOperator",
-                        "value_id": "eq"
-                      },
-                      "type": "Preset"
-                    }
-                  ],
-                  "id": "op"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "StagedAbilityData"
-                        },
-                        "value": "Refresh"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ],
-              "sub_functions": []
-            }
-          ],
-          "id": "if"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "Variable_SetVariable",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "GV_PlayerToRefreshFor"
-                      }
-                    }
-                  ],
-                  "id": "variable"
-                },
                 {
                   "expressions": [
                     {
@@ -299,180 +553,147 @@
                       "type": "Function"
                     }
                   ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier3Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "add"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier3Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "3"
+                      }
+                    }
+                  ],
                   "id": "value"
                 }
               ]
             },
             {
-              "function_id": "Trigger_Run",
+              "function_id": "TechTree_SetAbilityAllowed",
               "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "Trigger"
-                        },
-                        "value": "RefreshForPlayer"
-                      }
-                    }
-                  ],
-                  "id": "trigger"
-                }
-              ]
-            }
-          ],
-          "id": "then"
-        }
-      ]
-    },
-    {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
-        {
-          "functions": [
-            {
-              "function_id": "Logic_Comparison",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Ability_GetTriggeringAbility"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "preset": {
-                        "preset_id": "Logic_ComparisonOperator",
-                        "value_id": "eq"
-                      },
-                      "type": "Preset"
-                    }
-                  ],
-                  "id": "op"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "StagedAbilityData"
-                        },
-                        "value": "ReadyUp"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
-            }
-          ],
-          "id": "if"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "Trigger_Run",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "Trigger"
-                        },
-                        "value": "ReadyUp_Trigger"
-                      }
-                    }
-                  ],
-                  "id": "trigger"
-                }
-              ]
-            }
-          ],
-          "id": "then"
-        }
-      ]
-    },
-    {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
-        {
-          "functions": [
-            {
-              "function_id": "Logic_Comparison",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Ability_GetTriggeringAbility"
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "preset": {
-                        "preset_id": "Logic_ComparisonOperator",
-                        "value_id": "eq"
-                      },
-                      "type": "Preset"
-                    }
-                  ],
-                  "id": "op"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "StagedAbilityData"
-                        },
-                        "value": "UnreadyUp"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
-            }
-          ],
-          "id": "if"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "Variable_SetVariable",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "GV_PlayerToUnreadyUp"
-                      }
-                    }
-                  ],
-                  "id": "variable"
-                },
                 {
                   "expressions": [
                     {
@@ -495,13 +716,8 @@
                       "type": "Function"
                     }
                   ],
-                  "id": "value"
-                }
-              ]
-            },
-            {
-              "function_id": "Trigger_Run",
-              "parameters": [
+                  "id": "player"
+                },
                 {
                   "expressions": [
                     {
@@ -509,15 +725,687 @@
                       "value": {
                         "type": {
                           "directive": "TypeRef",
-                          "type": "Trigger"
+                          "type": "StagedAbilityData"
                         },
-                        "value": "UnreadyUp_Trigger"
+                        "value": "Tier3Upgrade"
                       }
                     }
                   ],
-                  "id": "trigger"
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
                 }
               ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier4Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "add"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier4Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier4Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier5Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "add"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier5Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "5"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier5Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier6Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "add"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Ability_GetTriggeringAbility"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier6Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "6"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetTriggeringUnit"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier6Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SkipRemainingActions"
             }
           ],
           "id": "then"

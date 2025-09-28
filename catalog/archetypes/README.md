@@ -20,6 +20,28 @@ PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     "shop_tier",
     1
   )
+
+  // Disable tiers3-6 for all players
+  TechTree_SetAbilityAllowed(
+    PlayerGroup_GetCurrentPlayer(),
+    Tier3Upgrade,
+    remove
+  )
+  TechTree_SetAbilityAllowed(
+    PlayerGroup_GetCurrentPlayer(),
+    Tier4Upgrade,
+    remove
+  )
+  TechTree_SetAbilityAllowed(
+    PlayerGroup_GetCurrentPlayer(),
+    Tier5Upgrade,
+    remove
+  )
+  TechTree_SetAbilityAllowed(
+    PlayerGroup_GetCurrentPlayer(),
+    Tier6Upgrade,
+    remove
+  )
 OnEnterBuyPhaseTrigger()
 
 # AutoGateInitializationWhenFSMWorks (TODO When state machines work)

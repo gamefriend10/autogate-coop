@@ -276,6 +276,178 @@
                   "id": "value"
                 }
               ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier3Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier4Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier5Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
+            },
+            {
+              "function_id": "TechTree_SetAbilityAllowed",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "Tier6Upgrade"
+                      }
+                    }
+                  ],
+                  "id": "ability_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_AddRemove",
+                        "value_id": "remove"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "state"
+                }
+              ]
             }
           ],
           "id": "actions"

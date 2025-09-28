@@ -3,6 +3,10 @@
   "abilityList": [
     "Refresh",
     "Tier2Upgrade",
+    "Tier3Upgrade",
+    "Tier4Upgrade",
+    "Tier5Upgrade",
+    "Tier6Upgrade",
     "ReadyUp",
     "UnreadyUp"
   ],
@@ -25,6 +29,54 @@
   "cargo_size": "One",
   "cascade_field_radius": 0,
   "commandList": [
+    {
+      "ability": "Tier6Upgrade",
+      "button": "Tier6Upgrade_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Tier5Upgrade",
+      "button": "Tier5Upgrade_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Tier4Upgrade",
+      "button": "Tier4Upgrade_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Tier3Upgrade",
+      "button": "Tier3Upgrade_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
     {
       "ability": "Tier2Upgrade",
       "button": "Tier2Upgrade_Button",

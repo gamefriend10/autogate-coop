@@ -120,65 +120,14 @@
           "expressions": [
             {
               "function": {
-                "function_id": "Math_Arithmetic_Integer",
+                "function_id": "Math_Min",
                 "parameters": [
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "type": "Integer"
-                          },
-                          "value": "2"
-                        }
-                      }
-                    ],
-                    "id": "value1"
-                  },
-                  {
-                    "expressions": [
-                      {
-                        "preset": {
-                          "preset_id": "Math_ArithmeticOperator",
-                          "value_id": "plus"
-                        },
-                        "type": "Preset"
-                      }
-                    ],
-                    "id": "op"
-                  },
-                  {
-                    "expressions": [
-                      {
                         "function": {
-                          "function_id": "Blackboard_GetValue_Integer",
+                          "function_id": "Math_Arithmetic_Integer",
                           "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "function": {
-                                    "function_id": "Blackboard_GetBlackboardOfPlayer",
-                                    "parameters": [
-                                      {
-                                        "expressions": [
-                                          {
-                                            "type": "Variable",
-                                            "variable": {
-                                              "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
-                                            }
-                                          }
-                                        ],
-                                        "id": "player"
-                                      }
-                                    ]
-                                  },
-                                  "type": "Function"
-                                }
-                              ],
-                              "id": "blackboard"
-                            },
                             {
                               "expressions": [
                                 {
@@ -186,20 +135,94 @@
                                   "value": {
                                     "type": {
                                       "directive": "FunctionType",
-                                      "type": "String"
+                                      "type": "Integer"
                                     },
-                                    "value": "shop_tier"
+                                    "value": "2"
                                   }
                                 }
                               ],
-                              "id": "key"
+                              "id": "value1"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "plus"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "op"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetValue_Integer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "function": {
+                                              "function_id": "Blackboard_GetBlackboardOfPlayer",
+                                              "parameters": [
+                                                {
+                                                  "expressions": [
+                                                    {
+                                                      "type": "Variable",
+                                                      "variable": {
+                                                        "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "id": "player"
+                                                }
+                                              ]
+                                            },
+                                            "type": "Function"
+                                          }
+                                        ],
+                                        "id": "blackboard"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Value",
+                                            "value": {
+                                              "type": {
+                                                "directive": "FunctionType",
+                                                "type": "String"
+                                              },
+                                              "value": "shop_tier"
+                                            }
+                                          }
+                                        ],
+                                        "id": "key"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "value2"
                             }
                           ]
                         },
                         "type": "Function"
+                      },
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "7"
+                        }
                       }
                     ],
-                    "id": "value2"
+                    "id": "values"
                   }
                 ]
               },
