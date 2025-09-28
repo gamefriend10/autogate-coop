@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "PickBattleGroupToSpawn"
+                          "value": "PickBattleGroupToSpawnForPlayer"
                         }
                       }
                     ],
@@ -50,15 +50,55 @@
     },
     {
       "function_id": "General_Switch",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
             {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "Tier"
-              }
+              "function": {
+                "function_id": "Blackboard_GetValue_Integer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfPlayer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
+                                  }
+                                }
+                              ],
+                              "id": "player"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "shop_tier"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
             }
           ],
           "id": "value"
@@ -147,6 +187,6 @@
   ],
   "based_on": "Trigger",
   "events": [],
-  "id": "PickBattleGroupToSpawn",
+  "id": "PickBattleGroupToSpawnForPlayer",
   "variables": []
 }

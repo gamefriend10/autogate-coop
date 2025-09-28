@@ -55,7 +55,6 @@
           "functions": [
             {
               "function_id": "Logic_Comparison",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -95,8 +94,7 @@
                   ],
                   "id": "value2"
                 }
-              ],
-              "sub_functions": []
+              ]
             }
           ],
           "id": "if"
@@ -104,19 +102,33 @@
         {
           "functions": [
             {
-              "function_id": "Variable_SetVariable",
-              "is_enabled": true,
+              "function_id": "Blackboard_SetValue_Integer",
               "parameters": [
                 {
                   "expressions": [
                     {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "Tier"
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
                       }
                     }
                   ],
-                  "id": "variable"
+                  "id": "key"
                 },
                 {
                   "expressions": [

@@ -83,6 +83,33 @@
             {
               "type": "Variable",
               "variable": {
+                "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_PlayerToSpawnShopFor"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
                 "variable_id": "ShopPositionToSpawnAt"
               }
             }
@@ -126,7 +153,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "PickBattleGroupToSpawn"
+                "value": "PickBattleGroupToSpawnForPlayer"
               }
             }
           ],
@@ -236,7 +263,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "PickBattleGroupToSpawn"
+                "value": "PickBattleGroupToSpawnForPlayer"
               }
             }
           ],
@@ -346,7 +373,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "PickBattleGroupToSpawn"
+                "value": "PickBattleGroupToSpawnForPlayer"
               }
             }
           ],

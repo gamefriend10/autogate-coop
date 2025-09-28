@@ -1,22 +1,16 @@
-PickBattleGroupToSpawn():
-  switch(`Tier`)
-    case 2: PickTier2AndBelowBattleGroupToSpawn
-    default: PickTier1BattleGroupToSpawn
-
-TODO: refactor^ into
-PickBattleGroupToSpawnForPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`):
+PickBattleGroupToSpawnForPlayer(Player `IV_PickBattleGroupToSpawnForPlayer_Player`):
   Switch(
     Blackboard_GetValue_Integer(
       Blackboard_GetBlackboardOfPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`),
       "shop_tier"
     )
   ):
-    case 1: PickTier1BattleGroupToSpawn
     case 2: PickTier2AndBelowBattleGroupToSpawn
-    case 3: PickTier3AndBelowBattleGroupToSpawn
-    case 4: PickTier4AndBelowBattleGroupToSpawn
-    case 5: PickTier5AndBelowBattleGroupToSpawn
-    case 6: PickTier6AndBelowBattleGroupToSpawn
+    case 3: PickTier3AndBelowBattleGroupToSpawn // TODO
+    case 4: PickTier4AndBelowBattleGroupToSpawn // TODO
+    case 5: PickTier5AndBelowBattleGroupToSpawn // TODO
+    case 6: PickTier6AndBelowBattleGroupToSpawn // TODO
+    default: PickTier1BattleGroupToSpawn
 
 --------------------
 

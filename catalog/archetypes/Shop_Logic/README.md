@@ -18,17 +18,19 @@ RemoveShopCoresForPlayer(Player PlayerToRemoveShopCoreFor):
 ---
 
 SpawnShop(`GV_PlayerToSpawnShopFor`, `ShopPositions`):
+  set `GV_PlayerToSpawnShopCoreFor` = `GV_PlayerToSpawnShopFor`
+  set `IV_PickBattleGroupToSpawnForPlayer_Player` = `GV_PlayerToSpawnShopFor`
 
-`GV_PlayerToSpawnShopCoreFor` = `GV_PlayerToSpawnShopFor`
-`ShopPositionToSpawnAt` = `ShopPositions`[0]
-`BattleGroupToSpawnTag` = PickBattleGroupToSpawn()
-`ShopPositionKeyToSaveToBlackboard` = "shop_core_at_shop_position_0"
-GeneralShopCoreSpawn(
-  `GV_PlayerToSpawnShopCoreFor`,
-  `ShopPositionToSpawnAt`,
-  `BattleGroupToSpawnTag`,
-  `ShopPositionKeyToSaveToBlackboard`
-)
+  // repeat for all shop positions 0-2...
+  // TODO: increase # of positions when tiered up
+  set `ShopPositionToSpawnAt` = `ShopPositions`[0]
 
-repeat for all shop positions 0-2...
-TODO: increase # of positions when tiered up
+  `BattleGroupToSpawnTag` = PickBattleGroupToSpawnForPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`)
+
+  set `ShopPositionKeyToSaveToBlackboard` = "shop_core_at_shop_position_0"
+  GeneralShopCoreSpawn(
+    `GV_PlayerToSpawnShopCoreFor`,
+    `ShopPositionToSpawnAt`,
+    `BattleGroupToSpawnTag`,
+    `ShopPositionKeyToSaveToBlackboard`
+  )
