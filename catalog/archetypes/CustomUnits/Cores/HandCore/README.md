@@ -22,7 +22,7 @@ PrepHandCoreUnitsForStagingAndRemoveHandCore():
 --------------------
 
 OnHandCoreAbilityUsed():
-  // TODO If(Ability_GetTriggeringAbility == HandCore_PassToPlayer1 ||
+  If(Ability_GetTriggeringAbility == HandCore_PassToPlayer1 ||
     Ability_GetTriggeringAbility == HandCore_PassToPlayer2 ||
     Ability_GetTriggeringAbility == HandCore_PassToPlayer3 ||
     Ability_GetTriggeringAbility == HandCore_PassToPlayer4 ||

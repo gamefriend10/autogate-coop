@@ -1,0 +1,10 @@
+﻿{
+  "based_on": "GameEffectSet",
+  "effect_location": {
+    "effect_parent": "none",
+    "entity_or_point": "EntityOrPoint",
+    "target": "Caster"
+  },
+  "id": "HandCore_PassToPlayer_SetDummy",
+  "impact_fx": "BP_FXS_InfernalTeleport_TeleportIn"
+}

@@ -1,0 +1,14 @@
+﻿{
+  "based_on": "GameEffectPersistent",
+  "effect_expire_delay": 1.0,
+  "effect_location": {
+    "effect_parent": "none",
+    "entity_or_point": "EntityOrPoint",
+    "target": "Caster"
+  },
+  "flags": {
+    "channeling": true
+  },
+  "id": "HandCore_PassToPlayer_PersistentCaster",
+  "unreal_actor": "BP_EBFX_InfernalTeleport_ChannelTarget"
+}

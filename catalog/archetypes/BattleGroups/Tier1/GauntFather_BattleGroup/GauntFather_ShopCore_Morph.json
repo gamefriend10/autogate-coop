@@ -7,7 +7,7 @@
         "name": "ShopCore_Morph",
         "scope": "Player"
       },
-      "requirement": "Requirement_ShopCore_Morph",
+      "requirement": "Requirement_HandHasSpace",
       "unit": "GauntFather_HandCore"
     }
   ],

@@ -7,15 +7,37 @@
       "check": {
         "root": {
           "left": {
+            "name": "ExpressionApi::Player::self",
+            "node": "FunctionCall",
+            "parameters": [],
+            "type": "Player"
+          },
+          "node": "Logical",
+          "operator": "!=",
+          "right": {
+            "node": "Literal",
+            "type": "Player",
+            "value": 2
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "You are not player 2.",
+      "reason_announcement": "None"
+    },
+    {
+      "check": {
+        "root": {
+          "left": {
             "name": "ExpressionApi::count_completed_units_of_alias",
             "node": "FunctionCall",
             "parameters": [
               {
                 "argument": {
-                  "name": "ExpressionApi::Player::self",
-                  "node": "FunctionCall",
-                  "parameters": [],
-                  "type": "Player"
+                  "node": "Literal",
+                  "type": "Player",
+                  "value": 2
                 },
                 "name": "player",
                 "type": "Player"
@@ -43,9 +65,9 @@
         },
         "type": "Bool"
       },
-      "reason": "Your hand must have space (6 is the max). Place your hand cores down (Z by default) to free up space.",
+      "reason": "Player 2's hand must have space (6 is the max).",
       "reason_announcement": "None"
     }
   ],
-  "id": "Requirement_ShopCore_Morph"
+  "id": "Requirement_PassToPlayer2"
 }

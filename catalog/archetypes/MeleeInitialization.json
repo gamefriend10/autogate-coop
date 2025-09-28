@@ -29,7 +29,7 @@
   "based_on": "Trigger",
   "conditions": [],
   "dev_only": false,
-  "enabled": false,
+  "enabled": true,
   "events": [
     {
       "function_id": "Game_OnMapInitialization",

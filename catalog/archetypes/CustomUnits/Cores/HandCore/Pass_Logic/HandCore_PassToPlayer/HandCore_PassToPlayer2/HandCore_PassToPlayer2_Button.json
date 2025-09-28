@@ -1,0 +1,7 @@
+{
+  "based_on": "Button",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_Move.UI_Icons_BasicCommands_Move'",
+  "id": "HandCore_PassToPlayer2_Button",
+  "name": "Pass To Player 2",
+  "tooltip": "Pass this Battle Group to Player 2."
+}

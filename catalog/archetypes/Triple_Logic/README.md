@@ -4,7 +4,6 @@ When a player has 3 of a kind, they should be replaced with a triple version.
 
 --------------------
 
-// Returns `OV_BattleGroupCoreUnitGroupForTriple`
 Triple_TriplifyCoreIfThreeArePresent(Unit `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`):
   set `GV_Triple_TriplifyCoreIfThreeArePresent_BattleGroupCountForTriple` = 0
   set `GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple` = UnitGroup_GetNewUnitGroup()

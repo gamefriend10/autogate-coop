@@ -13,17 +13,51 @@
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "tags": [
-                              "to_text"
-                            ],
-                            "type": "String"
-                          },
-                          "value": "CheckHandForTripleHelper"
-                        }
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "CheckHandForTripleHelper: {0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Unit_GetOwningPlayer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor"
+                                            }
+                                          }
+                                        ],
+                                        "id": "unit"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value"

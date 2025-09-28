@@ -50,6 +50,22 @@
       ]
     },
     {
+      "function_id": "UnitGroup_Clear",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_PlayerStagingCoresAsUnitGroup"
+              }
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
       "function_id": "General_ForEachInteger",
       "parameters": [
         {

@@ -13,17 +13,51 @@
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "tags": [
-                              "to_text"
-                            ],
-                            "type": "String"
-                          },
-                          "value": "MoveCoreToOwningPlayerHand"
-                        }
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "MoveCoreToOwningPlayerHand: {0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Unit_GetOwningPlayer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "IV_MoveCoreToOwningPlayerHand_Core"
+                                            }
+                                          }
+                                        ],
+                                        "id": "unit"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value"

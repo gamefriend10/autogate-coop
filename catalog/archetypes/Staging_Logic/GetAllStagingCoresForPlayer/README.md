@@ -1,5 +1,6 @@
 // Returns `OV_PlayerStagingCoresAsUnitGroup`
 GetAllStagingCoresForPlayer(`IV_PlayerToGetStagingCoresFor`):
+  UnitGroup_Clear(`OV_PlayerStagingCoresAsUnitGroup`)
   row = 0
   col = 0
   General_ForEachInteger(row, 0, 2):

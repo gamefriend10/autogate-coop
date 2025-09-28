@@ -1,0 +1,73 @@
+{
+  "__base_type": "Requirement",
+  "based_on": "Requirement",
+  "can_show": {},
+  "can_use": [
+    {
+      "check": {
+        "root": {
+          "left": {
+            "name": "ExpressionApi::Player::self",
+            "node": "FunctionCall",
+            "parameters": [],
+            "type": "Player"
+          },
+          "node": "Logical",
+          "operator": "!=",
+          "right": {
+            "node": "Literal",
+            "type": "Player",
+            "value": 4
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "You are not player 4.",
+      "reason_announcement": "None"
+    },
+    {
+      "check": {
+        "root": {
+          "left": {
+            "name": "ExpressionApi::count_completed_units_of_alias",
+            "node": "FunctionCall",
+            "parameters": [
+              {
+                "argument": {
+                  "node": "Literal",
+                  "type": "Player",
+                  "value": 4
+                },
+                "name": "player",
+                "type": "Player"
+              },
+              {
+                "argument": {
+                  "node": "Literal",
+                  "type": "Alias",
+                  "value": "_HandCore"
+                },
+                "name": "alias",
+                "type": "Alias"
+              }
+            ],
+            "type": "Count"
+          },
+          "node": "Logical",
+          "operator": "<",
+          "right": {
+            "node": "Literal",
+            "type": "Count",
+            "value": 6
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "Player 4's hand must have space (6 is the max).",
+      "reason_announcement": "None"
+    }
+  ],
+  "id": "Requirement_PassToPlayer4"
+}

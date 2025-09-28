@@ -14,17 +14,38 @@
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "tags": [
-                              "to_text"
-                            ],
-                            "type": "String"
-                          },
-                          "value": "GetAllHandCoresForPlayer"
-                        }
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "GetAllHandCoresForPlayer: {0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_GetAllHandCoresForPlayer_Player"
+                                  }
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value"
@@ -43,6 +64,22 @@
                 "function_id": "PlayerGroup_GetAllPlayers"
               },
               "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_Clear",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_GetAllHandCoresForPlayer_HandCoreUnitGroup"
+              }
             }
           ],
           "id": "group"

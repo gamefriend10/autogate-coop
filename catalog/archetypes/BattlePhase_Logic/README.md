@@ -113,7 +113,6 @@ OnExitBattlePhaseTrigger():
 
   `GV_BattleRound` += 1
 
-  // TODO: End game in victory if we passed round 15
   If `GV_BattleRound` > 15:
     PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
       Game_EndGameForPlayer(

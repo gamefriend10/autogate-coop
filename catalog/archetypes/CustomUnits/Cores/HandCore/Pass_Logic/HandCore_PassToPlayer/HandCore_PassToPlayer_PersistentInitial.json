@@ -1,0 +1,16 @@
+﻿{
+  "based_on": "GameEffectPersistent",
+  "effect_expire": "HandCore_PassToPlayer_SetDummy",
+  "effect_expire_delay": 0.1,
+  "effect_initial": "HandCore_PassToPlayer_PersistentCaster",
+  "effect_location": {
+    "effect_parent": "none",
+    "entity_or_point": "EntityOrPoint",
+    "target": "Caster"
+  },
+  "expire_fx": "BP_FXS_InfernalTeleport_TeleportOut",
+  "flags": {
+    "channeling": true
+  },
+  "id": "HandCore_PassToPlayer_PersistentInitial"
+}

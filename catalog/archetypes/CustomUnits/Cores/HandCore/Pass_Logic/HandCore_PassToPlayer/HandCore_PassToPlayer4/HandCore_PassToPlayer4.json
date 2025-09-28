@@ -1,0 +1,35 @@
+{
+  "based_on": "HandCore_PassToPlayer1",
+  "commands": [
+    {
+      "charges": {
+        "max_count": 0,
+        "name": "",
+        "recharge_duration": 0,
+        "starting_count": 0
+      },
+      "cooldown": {
+        "duration": 0.1,
+        "name": "HandCore_PassToPlayer",
+        "scope": "Player"
+      },
+      "cost_power": 0.0,
+      "cost_resources": {
+        "resource_a": 1.0,
+        "resource_b": 0.0,
+        "resource_c": 0.0,
+        "resource_d": 0.0
+      },
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "requirement": "Requirement_PassToPlayer4"
+    }
+  ],
+  "id": "HandCore_PassToPlayer4"
+}
