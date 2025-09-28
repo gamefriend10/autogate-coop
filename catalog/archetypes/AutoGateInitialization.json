@@ -37,6 +37,46 @@
       ]
     },
     {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "InitReadyUpObjective_Trigger"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "SpawnHeros"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
       "function_id": "PlayerGroup_ForEachPlayerInGroup",
       "parameters": [
         {
@@ -99,70 +139,7 @@
                   "id": "duration"
                 }
               ]
-            }
-          ],
-          "id": "actions"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "InitReadyUpObjective_Trigger"
-              }
-            }
-          ],
-          "id": "trigger"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "SpawnHeros"
-              }
-            }
-          ],
-          "id": "trigger"
-        }
-      ]
-    },
-    {
-      "function_id": "PlayerGroup_ForEachPlayerInGroup",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "PlayerGroup_GetActivePlayers"
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "players"
-        }
-      ],
-      "sub_functions": [
-        {
-          "functions": [
+            },
             {
               "function_id": "Variable_SetVariable",
               "parameters": [
@@ -238,6 +215,65 @@
                     }
                   ],
                   "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetCurrentPlayer"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "player"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "shop_tier"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "1"
+                      }
+                    }
+                  ],
+                  "id": "value"
                 }
               ]
             }
