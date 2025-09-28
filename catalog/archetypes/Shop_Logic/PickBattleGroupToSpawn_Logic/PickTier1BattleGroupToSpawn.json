@@ -50,7 +50,6 @@
     },
     {
       "function_id": "Variable_SetVariable",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
@@ -72,7 +71,6 @@
                   {
                     "function": {
                       "function_id": "Random_Integer",
-                      "is_enabled": true,
                       "parameters": [
                         {
                           "expressions": [
@@ -92,17 +90,55 @@
                         {
                           "expressions": [
                             {
-                              "type": "Variable",
-                              "variable": {
-                                "indices": [],
-                                "variable_id": "LengthOfTier1BattleGroupsMinus1"
-                              }
+                              "function": {
+                                "function_id": "Math_Arithmetic_Value",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "LengthOfTier1BattleGroups"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value1"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "preset": {
+                                          "preset_id": "Math_ArithmeticOperator",
+                                          "value_id": "minus"
+                                        },
+                                        "type": "Preset"
+                                      }
+                                    ],
+                                    "id": "op"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value2"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
                             }
                           ],
                           "id": "max"
                         }
-                      ],
-                      "sub_functions": []
+                      ]
                     },
                     "type": "Function"
                   }
