@@ -61,182 +61,6 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "10"
-              }
-            }
-          ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "Scout"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "5"
-              }
-            }
-          ],
-          "id": "player"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_BattleCenterPointPosition"
-              }
-            }
-          ],
-          "id": "position"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_AddUnits",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_EnemyUnitGroup"
-              }
-            }
-          ],
-          "id": "destination"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "UnitGroup_GetLastCreatedUnits"
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "source"
-        }
-      ]
-    },
-    {
-      "function_id": "Unit_CreateUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
-                "value": "5"
-              }
-            }
-          ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "Lancer"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "5"
-              }
-            }
-          ],
-          "id": "player"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_BattleCenterPointPosition"
-              }
-            }
-          ],
-          "id": "position"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_AddUnits",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_EnemyUnitGroup"
-              }
-            }
-          ],
-          "id": "destination"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "UnitGroup_GetLastCreatedUnits"
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "source"
-        }
-      ]
-    },
-    {
-      "function_id": "Unit_CreateUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
                 "value": "5"
               }
             }
@@ -605,6 +429,182 @@
                   "type": "UnitData"
                 },
                 "value": "ArtilleryMechDeployed"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "5"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_BattleCenterPointPosition"
+              }
+            }
+          ],
+          "id": "position"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "destination"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "UnitGroup_GetLastCreatedUnits"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "source"
+        }
+      ]
+    },
+    {
+      "function_id": "Unit_CreateUnit",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "10"
+              }
+            }
+          ],
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "Scout"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Player"
+                },
+                "value": "5"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_BattleCenterPointPosition"
+              }
+            }
+          ],
+          "id": "position"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_AddUnits",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "destination"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "UnitGroup_GetLastCreatedUnits"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "source"
+        }
+      ]
+    },
+    {
+      "function_id": "Unit_CreateUnit",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "5"
+              }
+            }
+          ],
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "Lancer"
               }
             }
           ],

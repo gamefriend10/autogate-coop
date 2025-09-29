@@ -76,7 +76,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "Scout"
+                "value": "MissileJeep"
               }
             }
           ],
@@ -164,7 +164,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "MissileJeep"
+                "value": "Scout"
               }
             }
           ],

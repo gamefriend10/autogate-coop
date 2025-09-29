@@ -28,10 +28,10 @@ SpawnMajorGaltWave4:
   20 Gunner 2000
 
 SpawnMajorGaltWave5:
-  10 Lancer, 10 Gunner, 5 MedTech 2750
+  10 Gunner, 5 MedTech, 10 Lancer 2750
 
 SpawnMajorGaltWave6:
-  15 Scout, 15 MissileJeep 3000
+  15 MissileJeep, 15 Scout 3000
 
 SpawnMajorGaltWave7:
   12 Vulcan 3600
@@ -43,7 +43,7 @@ SpawnMajorGaltWave9:
   10 MissileJeep, 5 Vulcan, 2 ArtilleryMechDeployed, 6 MedTech 4700
 
 SpawnMajorGaltWave10:
-  10 Scout, 5 Lancer, 5 Gunner, 4 MedTech, 3 MissileJeep, 2 Vulcan, 1 ArtilleryMechDeployed ~5500
+  5 Gunner, 4 MedTech, 3 MissileJeep, 2 Vulcan, 1 ArtilleryMechDeployed, 10 Scout, 5 Lancer ~5500
 
 SpawnMajorGaltWave11:
   24 Jet 6000
