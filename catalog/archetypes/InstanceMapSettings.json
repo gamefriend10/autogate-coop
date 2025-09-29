@@ -14,7 +14,7 @@
         ],
         "slot_type": {
           "locked": true,
-          "value": "ai"
+          "value": "human"
         },
         "team": {
           "locked": true,

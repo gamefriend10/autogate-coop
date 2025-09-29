@@ -131,6 +131,6 @@ OnExitBattlePhaseTrigger():
 
   PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     // Add 1 max lum to everyone
-    `IV_NumberOfMaxLumToAdd` = 1
-    `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
+    set `IV_NumberOfMaxLumToAdd` = 1
+    set `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
     AddMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToAdd`, `IV_PlayerToAddMaxLumTo`)
