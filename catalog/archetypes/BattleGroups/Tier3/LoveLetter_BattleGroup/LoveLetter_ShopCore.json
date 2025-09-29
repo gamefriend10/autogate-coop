@@ -6,7 +6,7 @@
   "commandList": [
     {
       "ability": "LoveLetter_ShopCore_Morph",
-      "button": "MorphToPowerBank_Button",
+      "button": "ShopCoreBuy_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",

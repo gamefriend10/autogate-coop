@@ -1,0 +1,8 @@
+﻿{
+  "UseUITint": true,
+  "based_on": "Button",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/BasicCommands/UI_Icons_BasicCommands_CargoLoad.UI_Icons_BasicCommands_CargoLoad'",
+  "id": "ShopCoreBuy_Button",
+  "name": "Buy",
+  "tooltip": "Buy this Battle Group and add it to your hand."
+}

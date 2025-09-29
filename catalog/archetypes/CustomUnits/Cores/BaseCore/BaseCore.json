@@ -154,9 +154,7 @@
   "supply_add": 0.0,
   "supply_cost": 0.0,
   "targeting_participation_alias": [],
-  "traits": [
-    "ArcshipSpeedUpgrade_Trait"
-  ],
+  "traits": [],
   "turret_list": [],
   "ui_flags": {
     "callout_attacks_air": false,

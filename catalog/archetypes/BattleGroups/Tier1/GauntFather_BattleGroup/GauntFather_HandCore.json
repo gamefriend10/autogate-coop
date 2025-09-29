@@ -15,7 +15,7 @@
   "commandList": [
     {
       "ability": "GauntFather_HandCore_Construct",
-      "button": "MorphToCreationChamber_Button",
+      "button": "HandCorePlaceInStaging_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",

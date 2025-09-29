@@ -1,0 +1,8 @@
+﻿{
+  "UseUITint": true,
+  "based_on": "Button",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_EnhanceCollectionArray.UI_Icons_Abilities_EnhanceCollectionArray'",
+  "id": "HandCorePlaceInStaging_Button",
+  "name": "Place In Staging",
+  "tooltip": "Place this Battle Group in one square in the staging 3x3."
+}
