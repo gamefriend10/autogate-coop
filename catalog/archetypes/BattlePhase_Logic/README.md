@@ -51,10 +51,11 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
 
 --------------------
 
-// Executes every 5 seconds via Timer_OnPeriodicEvent(5)
+// Executes every 3 seconds via Timer_OnPeriodicEvent()
 CheckBattlePhaseOver():
   If `GV_CurrentGameState` != Preset_GameState.battle:
     SkipRemainingActions()
+  // Print(UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`))
   If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
     TriggerRun(OnExitBattlePhaseTrigger())
     TriggerRun(OnEnterBuyPhaseTrigger())

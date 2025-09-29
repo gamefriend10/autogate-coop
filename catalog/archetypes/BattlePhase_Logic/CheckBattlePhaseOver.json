@@ -107,6 +107,88 @@
       ]
     },
     {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "Enemies alive: {0}."
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "UnitGroup_CountAliveUnits",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "GV_EnemyUnitGroup"
+                                            }
+                                          }
+                                        ],
+                                        "id": "group"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
       "function_id": "General_IfThenElse",
       "sub_functions": [
         {
@@ -314,7 +396,7 @@
                   "directive": "FunctionType",
                   "type": "Time"
                 },
-                "value": "5"
+                "value": "3"
               }
             }
           ],

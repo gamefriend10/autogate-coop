@@ -1,0 +1,26 @@
+{
+  "abilityList": [
+    "LoveLetter_ShopCore_Morph"
+  ],
+  "based_on": "LoveLetter_BaseCore",
+  "commandList": [
+    {
+      "ability": "LoveLetter_ShopCore_Morph",
+      "button": "MorphToPowerBank_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "LoveLetter_ShopCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag",
+    "loveletter_snowtag"
+  ]
+}
