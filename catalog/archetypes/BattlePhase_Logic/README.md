@@ -55,6 +55,7 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
 CheckBattlePhaseOver():
   If `GV_CurrentGameState` != Preset_GameState.battle:
     SkipRemainingActions()
+  OrderToBattle()
   // Print(UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`))
   If UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`) == 0 || UnitGroup_CountAliveUnits(`UnitsToOrderToBattle`) == 0:
     TriggerRun(OnExitBattlePhaseTrigger())

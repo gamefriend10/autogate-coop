@@ -107,6 +107,26 @@
       ]
     },
     {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "OrderToBattle"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
       "function_id": "UI_SendChatMessage",
       "is_enabled": false,
       "parameters": [
