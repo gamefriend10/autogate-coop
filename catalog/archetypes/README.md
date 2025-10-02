@@ -20,6 +20,11 @@ PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     "shop_tier",
     1
   )
+  Blackboard_SetValue_Integer(
+    Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+    "next_shop_tier_cost",
+    5
+  )
 
   // Disable tiers3-6 for all players
   TechTree_SetAbilityAllowed(
@@ -42,6 +47,7 @@ PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     Tier6Upgrade,
     remove
   )
+InitTierUpCostObjective_Trigger()
 OnEnterBuyPhaseTrigger()
 
 # AutoGateInitializationWhenFSMWorks (TODO When state machines work)

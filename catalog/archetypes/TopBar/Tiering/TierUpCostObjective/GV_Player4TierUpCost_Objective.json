@@ -1,0 +1,80 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "GV_Player4TierUpCost_Objective",
+  "initial_values": [
+    {
+      "function": {
+        "function_id": "Objectives_Objective_Create",
+        "parameters": [
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Text_ToText",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "type": "String"
+                            },
+                            "value": "Player 4's Current Tier | Next Tier Cost:"
+                          }
+                        }
+                      ],
+                      "id": "value"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "text"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Text_ToText",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "type": "String"
+                            },
+                            "value": "1 | 5"
+                          }
+                        }
+                      ],
+                      "id": "value"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "details"
+          }
+        ]
+      },
+      "type": "Function"
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "GV_Player4TierUpCost_Objective",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "Objective"
+  }
+}

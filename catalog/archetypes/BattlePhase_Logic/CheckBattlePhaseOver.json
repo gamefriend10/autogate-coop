@@ -2,7 +2,7 @@
   "actions": [
     {
       "function_id": "UI_SendChatMessage",
-      "is_enabled": false,
+      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
@@ -13,17 +13,38 @@
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "tags": [
-                              "to_text"
-                            ],
-                            "type": "String"
-                          },
-                          "value": "CheckBattlePhaseOver"
-                        }
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "CheckBattlePhaseOver: {0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Player_GetPropertyValue"
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value"
@@ -45,6 +66,26 @@
             }
           ],
           "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "UpdateTierUpCostObjective_Trigger"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     },

@@ -1,0 +1,92 @@
+﻿{
+  "based_on": "Requirement",
+  "can_use": [
+    {
+      "check": {
+        "root": {
+          "left": {
+            "name": "ExpressionApi::Player::get_property_value",
+            "node": "FunctionCall",
+            "parameters": [
+              {
+                "argument": {
+                  "name": "ExpressionApi::Player::self",
+                  "node": "FunctionCall",
+                  "parameters": [],
+                  "type": "Player"
+                },
+                "name": "player",
+                "type": "Player"
+              },
+              {
+                "argument": {
+                  "node": "Literal",
+                  "type": "PlayerProperty",
+                  "value": "PlayerProperty_ResourceA"
+                },
+                "name": "property",
+                "type": "PlayerProperty"
+              }
+            ],
+            "type": "Value"
+          },
+          "node": "Logical",
+          "operator": ">",
+          "right": {
+            "node": "Literal",
+            "type": "Value",
+            "value": 1.0
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "You must have enough Luminite to upgrade your shop to the next tier (see objectives on the top left).",
+      "reason_announcement": "None"
+    },
+    {
+      "check": {
+        "root": {
+          "left": {
+            "name": "ExpressionApi::count_completed_upgrade_of_type",
+            "node": "FunctionCall",
+            "parameters": [
+              {
+                "argument": {
+                  "name": "ExpressionApi::Player::self",
+                  "node": "FunctionCall",
+                  "parameters": [],
+                  "type": "Player"
+                },
+                "name": "player",
+                "type": "Player"
+              },
+              {
+                "argument": {
+                  "node": "Literal",
+                  "type": "UpgradeData",
+                  "value": "GameStateIsBattleStateDummyUpgrade"
+                },
+                "name": "upgrade",
+                "type": "UpgradeData"
+              }
+            ],
+            "type": "Count"
+          },
+          "node": "Logical",
+          "operator": "!=",
+          "right": {
+            "node": "Literal",
+            "type": "Count",
+            "value": 1
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "You must be in the Buy phase to use any Top Bar Abilities.",
+      "reason_announcement": "None"
+    }
+  ],
+  "id": "Requirement_Tier2"
+}

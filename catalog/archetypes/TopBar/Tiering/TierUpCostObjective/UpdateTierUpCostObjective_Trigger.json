@@ -1,0 +1,221 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "UpdateTierUpCostObjective_Trigger"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Objectives_Objective_SetDetails",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_Player1TierUpCost_Objective"
+              }
+            }
+          ],
+          "id": "objective"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "{0} | {1}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetValue_Integer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "function": {
+                                              "function_id": "Blackboard_GetBlackboardOfPlayer",
+                                              "parameters": [
+                                                {
+                                                  "expressions": [
+                                                    {
+                                                      "type": "Value",
+                                                      "value": {
+                                                        "type": {
+                                                          "directive": "FunctionType",
+                                                          "type": "Player"
+                                                        },
+                                                        "value": "1"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "id": "player"
+                                                }
+                                              ]
+                                            },
+                                            "type": "Function"
+                                          }
+                                        ],
+                                        "id": "blackboard"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Value",
+                                            "value": {
+                                              "type": {
+                                                "directive": "FunctionType",
+                                                "type": "String"
+                                              },
+                                              "value": "shop_tier"
+                                            }
+                                          }
+                                        ],
+                                        "id": "key"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                },
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetValue_Integer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "function": {
+                                              "function_id": "Blackboard_GetBlackboardOfPlayer",
+                                              "parameters": [
+                                                {
+                                                  "expressions": [
+                                                    {
+                                                      "type": "Value",
+                                                      "value": {
+                                                        "type": {
+                                                          "directive": "FunctionType",
+                                                          "type": "Player"
+                                                        },
+                                                        "value": "1"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "id": "player"
+                                                }
+                                              ]
+                                            },
+                                            "type": "Function"
+                                          }
+                                        ],
+                                        "id": "blackboard"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Value",
+                                            "value": {
+                                              "type": {
+                                                "directive": "FunctionType",
+                                                "type": "String"
+                                              },
+                                              "value": "next_shop_tier_cost"
+                                            }
+                                          }
+                                        ],
+                                        "id": "key"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "details"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "events": [],
+  "id": "UpdateTierUpCostObjective_Trigger",
+  "variables": []
+}

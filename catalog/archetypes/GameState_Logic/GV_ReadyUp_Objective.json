@@ -2,7 +2,7 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "GV_ReadyUpObjective",
+  "id": "GV_ReadyUp_Objective",
   "initial_values": [
     {
       "function": {
@@ -71,7 +71,7 @@
   ],
   "is_array": false,
   "is_constant": false,
-  "name": "GV_ReadyUpObjective",
+  "name": "GV_ReadyUp_Objective",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",

@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "InitReadyUpObjective_Trigger"
+                          "value": "InitTierUpCostObjective_Trigger"
                         }
                       }
                     ],
@@ -56,7 +56,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ReadyUp_ObjectiveList"
+                "variable_id": "GV_TierUpCost_ObjectiveList"
               }
             }
           ],
@@ -67,7 +67,88 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ReadyUp_Objective"
+                "variable_id": "GV_Player1TierUpCost_Objective"
+              }
+            }
+          ],
+          "id": "objective"
+        }
+      ]
+    },
+    {
+      "function_id": "Objectives_List_AddObjective",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_TierUpCost_ObjectiveList"
+              }
+            }
+          ],
+          "id": "list"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_Player2TierUpCost_Objective"
+              }
+            }
+          ],
+          "id": "objective"
+        }
+      ]
+    },
+    {
+      "function_id": "Objectives_List_AddObjective",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_TierUpCost_ObjectiveList"
+              }
+            }
+          ],
+          "id": "list"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_Player3TierUpCost_Objective"
+              }
+            }
+          ],
+          "id": "objective"
+        }
+      ]
+    },
+    {
+      "function_id": "Objectives_List_AddObjective",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_TierUpCost_ObjectiveList"
+              }
+            }
+          ],
+          "id": "list"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_Player4TierUpCost_Objective"
               }
             }
           ],
@@ -83,31 +164,11 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ReadyUp_ObjectiveList"
+                "variable_id": "GV_TierUpCost_ObjectiveList"
               }
             }
           ],
           "id": "list"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "UpdateReadyUpObjective_Trigger"
-              }
-            }
-          ],
-          "id": "trigger"
         }
       ]
     }
@@ -115,6 +176,6 @@
   "based_on": "Trigger",
   "conditions": [],
   "events": [],
-  "id": "InitReadyUpObjective_Trigger",
+  "id": "InitTierUpCostObjective_Trigger",
   "variables": []
 }

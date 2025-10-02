@@ -278,6 +278,65 @@
               ]
             },
             {
+              "function_id": "Blackboard_SetValue_Integer",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetBlackboardOfPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "PlayerGroup_GetCurrentPlayer"
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "player"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "blackboard"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "next_shop_tier_cost"
+                      }
+                    }
+                  ],
+                  "id": "key"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "5"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ]
+            },
+            {
               "function_id": "TechTree_SetAbilityAllowed",
               "parameters": [
                 {
@@ -451,6 +510,26 @@
             }
           ],
           "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "InitTierUpCostObjective_Trigger"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     },
