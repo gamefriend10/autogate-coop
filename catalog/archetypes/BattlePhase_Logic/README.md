@@ -78,7 +78,7 @@ OrderToBattle()
 --------------------
 
 OnExitBattlePhaseTrigger():
-  // Deduct hero hp
+  // Calculate HP to deduct from hero
   // Using Random_Value to cast Integer->Value
   `percent_of_enemy_units_alive` = (
     Random_Value(UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`), UnitGroup_CountAliveUnits(`GV_EnemyUnitGroup`)) /
@@ -99,6 +99,7 @@ OnExitBattlePhaseTrigger():
       `hp_to_deduct`
     ))
 
+  // Deduct HP from hero
   UnitGroup_ForEachUnitInGroup(`GV_Heros_UnitGroup`):
     Unit_SetHealth(
       UnitGroup_GetCurrentUnit(),
@@ -136,3 +137,14 @@ OnExitBattlePhaseTrigger():
     set `IV_NumberOfMaxLumToAdd` = 1
     set `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
     AddMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToAdd`, `IV_PlayerToAddMaxLumTo`)
+
+    TODO
+    // Decrease current next tier cost
+    Blackboard_SetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+      "next_shop_tier_cost",
+      Blackboard_GetValue_Integer(
+        Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+        "next_shop_tier_cost"
+      ) - 1
+    )

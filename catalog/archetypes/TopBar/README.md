@@ -32,6 +32,11 @@ ShopTopBarAbilityCastedTrigger():
       Tier3Upgrade,
       add
     )
+    Blackboard_SetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+      "next_shop_tier_cost",
+      7
+    )
     SkipRemainingActions()
 
   If(Ability_GetTriggeringAbility == Tier3Upgrade):
@@ -51,6 +56,11 @@ ShopTopBarAbilityCastedTrigger():
       Unit_GetOwningPlayer(Unit_GetTriggeringUnit()),
       Tier4Upgrade,
       add
+    )
+    Blackboard_SetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+      "next_shop_tier_cost",
+      8
     )
     SkipRemainingActions()
 
@@ -72,6 +82,11 @@ ShopTopBarAbilityCastedTrigger():
       Tier5Upgrade,
       add
     )
+    Blackboard_SetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+      "next_shop_tier_cost",
+      9
+    )
     SkipRemainingActions()
 
   If(Ability_GetTriggeringAbility == Tier5Upgrade):
@@ -91,6 +106,11 @@ ShopTopBarAbilityCastedTrigger():
       Unit_GetOwningPlayer(Unit_GetTriggeringUnit()),
       Tier6Upgrade,
       add
+    )
+    Blackboard_SetValue_Integer(
+      Blackboard_GetBlackboardOfPlayer(PlayerGroup_GetCurrentPlayer()),
+      "next_shop_tier_cost",
+      11
     )
     SkipRemainingActions()
 

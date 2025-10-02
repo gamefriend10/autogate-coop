@@ -2,11 +2,11 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "GV_ObjectiveList",
+  "id": "GV_Player3TierUpCost_Objective",
   "initial_values": [
     {
       "function": {
-        "function_id": "Objectives_List_Create",
+        "function_id": "Objectives_Objective_Create",
         "parameters": [
           {
             "expressions": [
@@ -21,12 +21,9 @@
                           "value": {
                             "type": {
                               "directive": "FunctionType",
-                              "tags": [
-                                "to_text"
-                              ],
                               "type": "String"
                             },
-                            "value": "Objectives"
+                            "value": "Player 3's Current Tier | Next Tier Cost:"
                           }
                         }
                       ],
@@ -37,7 +34,35 @@
                 "type": "Function"
               }
             ],
-            "id": "title"
+            "id": "text"
+          },
+          {
+            "expressions": [
+              {
+                "function": {
+                  "function_id": "Text_ToText",
+                  "parameters": [
+                    {
+                      "expressions": [
+                        {
+                          "type": "Value",
+                          "value": {
+                            "type": {
+                              "directive": "FunctionType",
+                              "type": "String"
+                            },
+                            "value": "1 | 5"
+                          }
+                        }
+                      ],
+                      "id": "value"
+                    }
+                  ]
+                },
+                "type": "Function"
+              }
+            ],
+            "id": "details"
           }
         ]
       },
@@ -46,10 +71,10 @@
   ],
   "is_array": false,
   "is_constant": false,
-  "name": "GV_ObjectiveList",
+  "name": "GV_Player3TierUpCost_Objective",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",
-    "type": "ObjectivesList"
+    "type": "Objective"
   }
 }

@@ -56,7 +56,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_ReadyUpObjective"
+                "variable_id": "GV_ReadyUp_Objective"
               }
             }
           ],
