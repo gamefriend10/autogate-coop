@@ -28,8 +28,8 @@
   "default_control_groups": [],
   "effects": {
     "birth": "CelestialWarpBuffApplier",
-    "constructed": "emptyRef",
-    "creation": "emptyRef",
+    "constructed": "CelestialWarpBuffApplier",
+    "creation": "CelestialWarpBuffApplier",
     "death": "emptyRef",
     "revenge": "emptyRef"
   },
@@ -109,7 +109,7 @@
     "idle_pushable": false,
     "lock_facing": true,
     "moving_turn_period": 0.0,
-    "pathing_mode": "Ground",
+    "pathing_mode": "Flying",
     "push_priority": 0,
     "push_priority_same_team": 0,
     "speed": 0.0,
