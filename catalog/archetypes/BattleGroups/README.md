@@ -16,6 +16,8 @@
   2. the var keeping track of the length e.g. LengthOfTier2AndBelowBattleGroups
 2. add/remove the battleGroup's ShopCore to/from GeneralShopCoreSpawn 
 3. add/remove the battleGroup's ShopCore to/from SetVarsForCoreSpawnUnits
+4. add/rm tag to General_GetNumberOfUnitsWithTag
+5. if there's a PerformEndOfBuyPhase, add/rm to BuyPhase_PerformEndOfBuyPhase
 
 ## When adding a triple
 1. copy the battle group + rename all the files
@@ -23,3 +25,5 @@
 3. double the units spawned in the SetVarsFor trigger
 4. add/remove the battleGroup's HandCore to/from SetVarsForCoreSpawnUnits
 5. add/remove the snowtag and HandCore to/from DetermineTripleVersionOfCoreToSpawn
+6. add/rm tag to General_GetNumberOfUnitsWithTag
+5. if there's a PerformEndOfBuyPhase, add/rm to BuyPhase_PerformEndOfBuyPhase

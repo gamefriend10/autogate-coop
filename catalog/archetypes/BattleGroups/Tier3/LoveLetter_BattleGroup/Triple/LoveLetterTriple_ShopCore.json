@@ -21,6 +21,7 @@
   "starting_snowtags": [
     "entity_unit",
     "shopcore_snowtag",
-    "lovelettertriple_snowtag"
+    "lovelettertriple_snowtag",
+    "vanguard_snowtag"
   ]
 }

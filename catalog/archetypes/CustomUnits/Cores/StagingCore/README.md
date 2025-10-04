@@ -8,6 +8,18 @@ Trigger: stagingCore is birthed (expected to be from the HandCore constructing i
 // `GV_ClosestStagingPosition` = GetNearestStagingPositionForTriggeringPlayer()
 // AddStagingCoreToPlayerBlackboard(`GV_ClosestStagingPosition`)
 
+// Set position coords of core to that position in its blackboard
+Blackboard_SetValue_Integer(
+  Blackboard_GetBlackboardOfEntity(Unit_GetTriggeringUnit()),
+  "row",
+  `OV_GetNearestStagingPositionForTriggeringPlayer_Row`
+)
+Blackboard_SetValue_Integer(
+  Blackboard_GetBlackboardOfEntity(Unit_GetTriggeringUnit()),
+  "col",
+  `OV_GetNearestStagingPositionForTriggeringPlayer_Col`
+)
+
 --------------------
 
 StagingCoreAbilityUsedTrigger

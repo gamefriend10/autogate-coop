@@ -1,0 +1,438 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "LoveLetterTriple_PerformEndOfBuyPhase"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Staging_GetAdjacentStagingCores_Core"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "Staging_GetAdjacentStagingCores"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Units"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_Staging_GetAdjacentStagingCores_Cores"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "vanguard_snowtag"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "General_GetNumberOfUnitsWithTag"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "gre"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "Unit_CreateUnit",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "count"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "Gunner_Autogate"
+                      }
+                    }
+                  ],
+                  "id": "unit_data"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetOwningPlayer",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                }
+                              }
+                            ],
+                            "id": "unit"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Actor_GetPosition",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                }
+                              }
+                            ],
+                            "id": "actor"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "position"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Boolean"
+                        },
+                        "value": "true"
+                      }
+                    }
+                  ],
+                  "id": "force_position"
+                }
+              ]
+            },
+            {
+              "function_id": "UnitGroup_AddUnits",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetValue_UnitGroup",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Blackboard_GetBlackboardOfEntity",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                          }
+                                        }
+                                      ],
+                                      "id": "entity"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "blackboard"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "String"
+                                  },
+                                  "value": "units"
+                                }
+                              }
+                            ],
+                            "id": "key"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "destination"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetLastCreatedUnits"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "source"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+              }
+            }
+          ],
+          "id": "who"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "lovelettertriple_snowtag"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "id": "LoveLetterTriple_PerformEndOfBuyPhase",
+  "variables": []
+}

@@ -82,6 +82,7 @@
   "starting_snowtags": [
     "entity_unit",
     "handcore_snowtag",
-    "loveletter_snowtag"
+    "loveletter_snowtag",
+    "vanguard_snowtag"
   ]
 }

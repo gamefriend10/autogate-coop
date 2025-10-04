@@ -36,6 +36,7 @@
   "starting_snowtags": [
     "entity_unit",
     "lovelettertriple_snowtag",
-    "stagingcore_snowtag"
+    "stagingcore_snowtag",
+    "vanguard_snowtag"
   ]
 }

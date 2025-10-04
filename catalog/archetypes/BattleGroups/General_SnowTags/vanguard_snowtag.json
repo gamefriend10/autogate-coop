@@ -1,0 +1,9 @@
+{
+  "based_on": "SnowTag",
+  "display_name": "Vanguard",
+  "display_name_noun_phrase": "a Vanguard unit",
+  "flags": {
+    "display_as_attribute": true
+  },
+  "id": "vanguard_snowtag"
+}

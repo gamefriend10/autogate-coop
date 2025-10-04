@@ -373,6 +373,60 @@
                               ]
                             },
                             {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_GetNearestStagingPositionForTriggeringPlayer_Row"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "row"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_GetNearestStagingPositionForTriggeringPlayer_Col"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "col"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
                               "function_id": "General_SkipRemainingActions"
                             }
                           ],

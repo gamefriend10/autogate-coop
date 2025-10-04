@@ -1,0 +1,1249 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "General_GetNumberOfUnitsWithTag"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "0"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Units"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "SnowTag"
+                                },
+                                "value": "lancerarmstrong_snowtag"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "UnitGroup_GetCurrentUnit"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "lancerarmstrong_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Math_Arithmetic_Integer",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value1"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value2"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "SnowTag"
+                                },
+                                "value": "lancerarmstrongtriple_snowtag"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "UnitGroup_GetCurrentUnit"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "lancerarmstrongtriple_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Math_Arithmetic_Integer",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value1"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value2"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "SnowTag"
+                                },
+                                "value": "loveletter_snowtag"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "UnitGroup_GetCurrentUnit"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "loveletter_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Math_Arithmetic_Integer",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value1"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value2"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "SnowTag"
+                                },
+                                "value": "lovelettertriple_snowtag"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "UnitGroup_GetCurrentUnit"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "lovelettertriple_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Math_Arithmetic_Integer",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value1"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value2"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "SnowTag"
+                                },
+                                "value": "vanguard_snowtag"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "UnitGroup_GetCurrentUnit"
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "vanguard_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Math_Arithmetic_Integer",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value1"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "preset": {
+                                                  "preset_id": "Math_ArithmeticOperator",
+                                                  "value_id": "plus"
+                                                },
+                                                "type": "Preset"
+                                              }
+                                            ],
+                                            "id": "op"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "FunctionType",
+                                                    "type": "Integer"
+                                                  },
+                                                  "value": "1"
+                                                }
+                                              }
+                                            ],
+                                            "id": "value2"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "{0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                  }
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [],
+  "id": "General_GetNumberOfUnitsWithTag",
+  "variables": []
+}

@@ -48,6 +48,26 @@
           "id": "group"
         }
       ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "BuyPhase_PerformEndOfBuyPhase"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",

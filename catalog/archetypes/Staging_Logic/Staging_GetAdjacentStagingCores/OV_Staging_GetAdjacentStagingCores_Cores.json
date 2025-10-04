@@ -1,0 +1,22 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 0,
+  "based_on": "GlobalVariable",
+  "id": "OV_Staging_GetAdjacentStagingCores_Cores",
+  "initial_values": [
+    {
+      "function": {
+        "function_id": "UnitGroup_GetNewUnitGroup"
+      },
+      "type": "Function"
+    }
+  ],
+  "is_array": false,
+  "is_constant": false,
+  "name": "OV_Staging_GetAdjacentStagingCores_Cores",
+  "per_element_initial_values": false,
+  "type": {
+    "directive": "FunctionType",
+    "type": "UnitGroup"
+  }
+}

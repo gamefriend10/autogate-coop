@@ -16,4 +16,4 @@ OnEnterBuyPhaseTrigger():
     RefreshForPlayer(`GV_PlayerToRefreshFor`)
 
 OnExitBuyPhaseTrigger():
-  TODO: do end of buy phase effects
+  BuyPhase_PerformEndOfBuyPhase()

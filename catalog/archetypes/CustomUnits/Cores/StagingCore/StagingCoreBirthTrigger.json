@@ -77,7 +77,6 @@
             {
               "function": {
                 "function_id": "Blackboard_GetBlackboardOfEntity",
-                "is_enabled": true,
                 "parameters": [
                   {
                     "expressions": [
@@ -117,7 +116,6 @@
             {
               "function": {
                 "function_id": "Blackboard_GetValue_UnitGroup",
-                "is_enabled": true,
                 "parameters": [
                   {
                     "expressions": [
@@ -156,21 +154,18 @@
     },
     {
       "function_id": "UnitGroup_ForEachUnitInGroup",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
             {
               "function": {
                 "function_id": "Blackboard_GetValue_UnitGroup",
-                "is_enabled": true,
                 "parameters": [
                   {
                     "expressions": [
                       {
                         "function": {
                           "function_id": "Blackboard_GetBlackboardOfEntity",
-                          "is_enabled": true,
                           "parameters": [
                             {
                               "expressions": [
@@ -218,7 +213,6 @@
           "functions": [
             {
               "function_id": "Actor_SetPosition",
-              "is_enabled": true,
               "parameters": [
                 {
                   "expressions": [
@@ -236,7 +230,6 @@
                     {
                       "function": {
                         "function_id": "Actor_GetPosition",
-                        "is_enabled": true,
                         "parameters": [],
                         "sub_functions": []
                       },
@@ -339,13 +332,122 @@
           "id": "trigger"
         }
       ]
+    },
+    {
+      "function_id": "Blackboard_SetValue_Integer",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "row"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_GetNearestStagingPositionForTriggeringPlayer_Row"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Blackboard_SetValue_Integer",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "col"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_GetNearestStagingPositionForTriggeringPlayer_Col"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",
   "conditions": [
     {
       "function_id": "Entity_HasAllTags",
-      "is_enabled": true,
       "parameters": [
         {
           "expressions": [
@@ -362,16 +464,12 @@
           ],
           "id": "tags"
         }
-      ],
-      "sub_functions": []
+      ]
     }
   ],
   "events": [
     {
-      "function_id": "Unit_OnBirthed",
-      "is_enabled": true,
-      "parameters": [],
-      "sub_functions": []
+      "function_id": "Unit_OnBirthed"
     }
   ],
   "id": "StagingCoreBirthTrigger",

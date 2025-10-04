@@ -1,0 +1,1164 @@
+{
+  "__base_type": "Trigger",
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "Staging_GetAdjacentStagingCores"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_Clear",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_Staging_GetAdjacentStagingCores_Cores"
+              }
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "core_row"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_Integer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_Staging_GetAdjacentStagingCores_Core"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "row"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "core_col"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_Integer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_Staging_GetAdjacentStagingCores_Core"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "col"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetOwningPlayer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "IV_Staging_GetAdjacentStagingCores_Core"
+                        }
+                      }
+                    ],
+                    "id": "unit"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "General_ForEachInteger",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "row"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Arithmetic_Value",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "core_row"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "minus"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "start"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Arithmetic_Value",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "core_row"
+                        }
+                      }
+                    ],
+                    "id": "value1"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "preset": {
+                          "preset_id": "Math_ArithmeticOperator",
+                          "value_id": "plus"
+                        },
+                        "type": "Preset"
+                      }
+                    ],
+                    "id": "op"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "1"
+                        }
+                      }
+                    ],
+                    "id": "value2"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "end"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_AndOrConditions",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_AndOrOperator",
+                                "value_id": "or"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        }
+                      ],
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "row"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "lt"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Integer"
+                                        },
+                                        "value": "0"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "row"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "gr"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Integer"
+                                        },
+                                        "value": "2"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "conditions"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_Continue"
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_ForEachInteger",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "col"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Math_Arithmetic_Value",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "core_col"
+                                }
+                              }
+                            ],
+                            "id": "value1"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Math_ArithmeticOperator",
+                                  "value_id": "minus"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "value2"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "start"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Math_Arithmetic_Value",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "core_col"
+                                }
+                              }
+                            ],
+                            "id": "value1"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "preset": {
+                                  "preset_id": "Math_ArithmeticOperator",
+                                  "value_id": "plus"
+                                },
+                                "type": "Preset"
+                              }
+                            ],
+                            "id": "op"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "Integer"
+                                  },
+                                  "value": "1"
+                                }
+                              }
+                            ],
+                            "id": "value2"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "end"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_AndOrConditions",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_AndOrOperator",
+                                        "value_id": "or"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                }
+                              ],
+                              "sub_functions": [
+                                {
+                                  "functions": [
+                                    {
+                                      "function_id": "Logic_Comparison",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "col"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value1"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "preset": {
+                                                "preset_id": "Logic_ComparisonOperator",
+                                                "value_id": "lt"
+                                              },
+                                              "type": "Preset"
+                                            }
+                                          ],
+                                          "id": "op"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value2"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "function_id": "Logic_Comparison",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "col"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value1"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "preset": {
+                                                "preset_id": "Logic_ComparisonOperator",
+                                                "value_id": "gr"
+                                              },
+                                              "type": "Preset"
+                                            }
+                                          ],
+                                          "id": "op"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "2"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value2"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "conditions"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_AndOrConditions",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_AndOrOperator",
+                                        "value_id": "and"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                }
+                              ],
+                              "sub_functions": [
+                                {
+                                  "functions": [
+                                    {
+                                      "function_id": "Logic_Comparison",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "row"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value1"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "preset": {
+                                                "preset_id": "Logic_ComparisonOperator",
+                                                "value_id": "eq"
+                                              },
+                                              "type": "Preset"
+                                            }
+                                          ],
+                                          "id": "op"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "core_row"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value2"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "function_id": "Logic_Comparison",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "col"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value1"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "preset": {
+                                                "preset_id": "Logic_ComparisonOperator",
+                                                "value_id": "eq"
+                                              },
+                                              "type": "Preset"
+                                            }
+                                          ],
+                                          "id": "op"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Variable",
+                                              "variable": {
+                                                "variable_id": "core_col"
+                                              }
+                                            }
+                                          ],
+                                          "id": "value2"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "id": "conditions"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "UnitGroup_AddUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "OV_Staging_GetAdjacentStagingCores_Cores"
+                              }
+                            }
+                          ],
+                          "id": "group"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Blackboard_GetValue_Unit",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Blackboard_GetBlackboardOfPlayer",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "player"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "player"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "blackboard"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "String_Concat",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "row"
+                                                  }
+                                                },
+                                                {
+                                                  "type": "Variable",
+                                                  "variable": {
+                                                    "variable_id": "col"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "strings"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "key"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "UnitGroup_CountUnits",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "OV_Staging_GetAdjacentStagingCores_Cores"
+                                  }
+                                }
+                              ],
+                              "id": "group"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_PlayerStagingCoresAsUnitGroup"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "UI_SendChatMessage",
+              "is_enabled": true,
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Text_ToText",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Unit_GetPlacedName",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "function": {
+                                            "function_id": "UnitGroup_GetCurrentUnit"
+                                          },
+                                          "type": "Function"
+                                        }
+                                      ],
+                                      "id": "unit"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "value"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "message"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetAllPlayers"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "group"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "Staging_GetAdjacentStagingCores",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "row",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "row",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "col",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "col",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "core_row",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "core_row",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "core_col",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "core_col",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "player",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "player",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Player"
+      }
+    }
+  ]
+}
