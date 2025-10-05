@@ -62,6 +62,15 @@
       -720963
     ]
   },
+  "07C0325D-46B6-4E74-1BC1-02B851BC632E": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 2,
+    "position": [
+      2785790,
+      1148856
+    ]
+  },
   "122568EB-4AFA-90A2-D762-32992E0930F4": {
     "facing": 0,
     "kind": "Player2_StagingPosition11",
@@ -78,6 +87,15 @@
     "position": [
       833733,
       -1170617
+    ]
+  },
+  "17B746ED-471C-8795-DD55-B09CC45799D4": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 4,
+    "position": [
+      2961451,
+      -1083302
     ]
   },
   "1952E1AF-4827-2910-4408-D0BEBAF79972": {
@@ -134,6 +152,15 @@
       885333
     ]
   },
+  "2941652F-4E43-677C-24DE-D1A64FBB59A0": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 3,
+    "position": [
+      741491,
+      -1257762
+    ]
+  },
   "31B341AF-4A7D-BE62-7342-37AF5CF0CB1A": {
     "facing": 0,
     "kind": "Player2_ShopPosition1",
@@ -145,11 +172,11 @@
   },
   "3786FD57-408A-AD94-4967-D6AA5D8AD3FF": {
     "facing": 0,
-    "kind": "ArcshipTier1Flying",
+    "kind": "CascadeDummy",
     "player": 2,
     "position": [
-      2988113,
-      1068428
+      2967140,
+      1151199
     ]
   },
   "39F77C0E-4C63-D8C0-B6B0-AF8F8A4815BF": {
@@ -208,11 +235,11 @@
   },
   "47D5D6D8-4A52-2C46-653C-7AA2EE111A00": {
     "facing": 0,
-    "kind": "ArcshipTier1Flying",
+    "kind": "CascadeDummy",
     "player": 1,
     "position": [
-      749119,
-      1069630
+      556798,
+      1153844
     ]
   },
   "496FC2C9-4464-7E5F-DF65-6A9A5BA5DA80": {
@@ -270,12 +297,12 @@
     ]
   },
   "55698E63-4EE7-8DC2-5168-AC82769D7029": {
-    "facing": 1770902324,
+    "facing": 1770902344,
     "kind": "locationMarkerPlayerStart",
     "player": 1,
     "position": [
-      589824,
-      1015808
+      646509,
+      1060203
     ]
   },
   "567D4CBD-4ADA-3E80-5FD2-DCBF7B045D2C": {
@@ -285,6 +312,15 @@
     "position": [
       1573092,
       130958
+    ]
+  },
+  "57A0F480-4249-4BB8-0BD6-22969213A300": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 4,
+    "position": [
+      2956357,
+      -1263352
     ]
   },
   "64802B1A-4832-D4D3-42D5-BEBEE06BAE91": {
@@ -379,11 +415,11 @@
   },
   "7973D522-4DAE-646F-B1C6-B9B02E483369": {
     "facing": 0,
-    "kind": "ArcshipTier1Flying",
+    "kind": "CascadeDummy",
     "player": 4,
     "position": [
-      2989187,
-      -1156761
+      2785617,
+      -1075946
     ]
   },
   "7A93864B-467D-2F00-E8ED-259636C5AC78": {
@@ -440,6 +476,15 @@
       -720963
     ]
   },
+  "80BA3582-4AE9-4D27-4AC1-5C93E5CA8C52": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 4,
+    "position": [
+      2784819,
+      -1267809
+    ]
+  },
   "825E724A-40BD-A99E-EB28-E5B5F2F80155": {
     "facing": 0,
     "kind": "Player1_StagingPosition11",
@@ -450,12 +495,12 @@
     ]
   },
   "829D90F6-40A8-8D15-5D38-548D4563C4A6": {
-    "facing": 1770902344,
+    "facing": 1770902364,
     "kind": "locationMarkerPlayerStart",
     "player": 3,
     "position": [
-      591414,
-      -1212483
+      638976,
+      -1179648
     ]
   },
   "83802226-4D57-697A-B7BE-49BBC0AC0921": {
@@ -474,6 +519,15 @@
     "position": [
       191105,
       -1515789
+    ]
+  },
+  "873BB284-4DD2-0FA9-280E-799D07FE8FA5": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 1,
+    "position": [
+      560272,
+      963096
     ]
   },
   "87DADC6D-4ECE-965F-0233-E1AB91CDD784": {
@@ -510,6 +564,15 @@
     "position": [
       984630,
       -720963
+    ]
+  },
+  "912D72BF-4A5C-61D3-2A52-8F896E524A7D": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 3,
+    "position": [
+      557361,
+      -1273519
     ]
   },
   "937BFF8E-4BF0-4048-27EC-34A790562746": {
@@ -584,13 +647,40 @@
       -708250
     ]
   },
+  "9F35ED93-49C0-923B-0C92-91B5AD299F94": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 1,
+    "position": [
+      736901,
+      956614
+    ]
+  },
   "A1CC9486-4C1C-CAEF-EC8B-EFAF9B9ECE1E": {
-    "facing": 1770902354,
+    "facing": 1770902374,
     "kind": "locationMarkerPlayerStart",
     "player": 2,
     "position": [
-      2806556,
-      1090527
+      2867200,
+      1048576
+    ]
+  },
+  "A8C4CA7D-4946-CD72-0150-FB91312414EF": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 1,
+    "position": [
+      746778,
+      1146321
+    ]
+  },
+  "AA265A90-415A-298F-400C-EC84BEF1157B": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 3,
+    "position": [
+      743950,
+      -1074593
     ]
   },
   "AB943F54-4A4F-6DB7-7729-9AA64FDD4C96": {
@@ -854,6 +944,15 @@
       -719064
     ]
   },
+  "EAF3A6B2-4EDA-CBA6-1E5F-F897D3DBE41F": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 2,
+    "position": [
+      2967413,
+      964165
+    ]
+  },
   "ED8CD851-4C45-7682-E359-31A2CB8AE25E": {
     "facing": 0,
     "kind": "Player2_HandPosition5",
@@ -890,13 +989,22 @@
       -720963
     ]
   },
+  "F198A706-4230-7DD5-1E67-1BAB58B49B52": {
+    "facing": 0,
+    "kind": "CascadeDummy",
+    "player": 2,
+    "position": [
+      2789390,
+      968238
+    ]
+  },
   "F39FA202-40E7-A0A5-6D98-A5AABA7CF3D6": {
     "facing": 0,
-    "kind": "ArcshipTier1Flying",
+    "kind": "CascadeDummy",
     "player": 3,
     "position": [
-      750709,
-      -1158661
+      560290,
+      -1075138
     ]
   },
   "F6B3E27D-4B27-936B-3C10-1DA81DF18E05": {
@@ -936,12 +1044,12 @@
     ]
   },
   "FF833A81-4A26-BFC9-A7D6-A9950D7AEB60": {
-    "facing": 1770902384,
+    "facing": 1770902404,
     "kind": "locationMarkerPlayerStart",
     "player": 4,
     "position": [
-      2807630,
-      -1134662
+      2867200,
+      -1179648
     ]
   },
   "version": 1

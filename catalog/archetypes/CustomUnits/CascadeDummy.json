@@ -1,0 +1,16 @@
+﻿{
+  "based_on": "BaseUnit_CelestialS",
+  "cascade_field_radius": 15,
+  "flags": {
+    "uncommandable": true,
+    "unselectable": true,
+    "untargetable": true
+  },
+  "id": "CascadeDummy",
+  "name": "CascadeDummy",
+  "starting_snowtags": [
+    "status_invulnerable"
+  ],
+  "unreal_actor": "BP_LocationMarkerPlayerStart",
+  "vision_radius": 20.0
+}
