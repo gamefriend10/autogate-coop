@@ -7,7 +7,7 @@ SpawnHeros()
 PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
   Camera_ZoomCameraToDistance(
     PlayerGroup_GetCurrentPlayer(),
-    100.0,
+    120.0,
     5.0
   )
 

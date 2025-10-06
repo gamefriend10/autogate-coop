@@ -4,8 +4,8 @@
     "kind": "Player2_StagingPosition12",
     "player": 0,
     "position": [
-      3071137,
-      1056472
+      3220500,
+      1181326
     ]
   },
   "00B8AAB6-4FE0-0869-2560-499A354069D1": {
@@ -13,8 +13,8 @@
     "kind": "Player3_StagingPosition21",
     "player": 0,
     "position": [
-      648780,
-      -985965
+      798381,
+      -873070
     ]
   },
   "00FEB85F-47B7-3B06-3A4A-3B8C214BB4FA": {
@@ -22,8 +22,8 @@
     "kind": "Player3_HandPosition5",
     "player": 0,
     "position": [
-      190582,
-      -1385569
+      189823,
+      -1123270
     ]
   },
   "02A09FBB-42A4-FFC2-1F6A-C38A714F57EB": {
@@ -31,8 +31,8 @@
     "kind": "Player3_StagingPosition00",
     "player": 0,
     "position": [
-      469600,
-      -1346572
+      614620,
+      -1234411
     ]
   },
   "040DA2EF-4CC5-2D5E-CAC7-61A6C3CCC087": {
@@ -49,8 +49,8 @@
     "kind": "Player4_StagingPosition12",
     "player": 0,
     "position": [
-      3072211,
-      -1168717
+      3219319,
+      -1056617
     ]
   },
   "06528CAD-41F0-95F5-D2DE-8CA74C34885F": {
@@ -67,8 +67,8 @@
     "kind": "CascadeDummy",
     "player": 2,
     "position": [
-      2785790,
-      1148856
+      2947027,
+      1262783
     ]
   },
   "122568EB-4AFA-90A2-D762-32992E0930F4": {
@@ -76,8 +76,8 @@
     "kind": "Player2_StagingPosition11",
     "player": 0,
     "position": [
-      2886075,
-      1060437
+      3039898,
+      1176738
     ]
   },
   "126E527D-43E4-70D6-0DD5-D583E6215968": {
@@ -85,8 +85,8 @@
     "kind": "Player3_StagingPosition12",
     "player": 0,
     "position": [
-      833733,
-      -1170617
+      978946,
+      -1053944
     ]
   },
   "17B746ED-471C-8795-DD55-B09CC45799D4": {
@@ -94,8 +94,8 @@
     "kind": "CascadeDummy",
     "player": 4,
     "position": [
-      2961451,
-      -1083302
+      3131155,
+      -962305
     ]
   },
   "1952E1AF-4827-2910-4408-D0BEBAF79972": {
@@ -103,8 +103,8 @@
     "kind": "Player4_HandPosition3",
     "player": 0,
     "position": [
-      2429085,
-      -1120175
+      2431103,
+      -989859
     ]
   },
   "195861E0-4878-A3BA-AB35-958B399DBF6E": {
@@ -112,8 +112,8 @@
     "kind": "Player3_HandPosition3",
     "player": 0,
     "position": [
-      190607,
-      -1122075
+      189082,
+      -994259
     ]
   },
   "1BE9789B-4320-53C2-F9FA-B9BD901CACF0": {
@@ -121,8 +121,8 @@
     "kind": "Player1_StagingPosition00",
     "player": 0,
     "position": [
-      468010,
-      881719
+      613727,
+      993297
     ]
   },
   "1D999B05-40E9-47DA-DA55-01808DB1A2E1": {
@@ -130,8 +130,8 @@
     "kind": "Player4_StagingPosition10",
     "player": 0,
     "position": [
-      2710111,
-      -1166873
+      2863401,
+      -1052797
     ]
   },
   "2369BA5F-4F86-4F54-9985-DC9B16C35AD5": {
@@ -139,8 +139,8 @@
     "kind": "Player3_StagingPosition02",
     "player": 0,
     "position": [
-      831695,
-      -1347638
+      974118,
+      -1231984
     ]
   },
   "28CECFBC-4574-2D4A-1A52-BFB2DCF5BF5E": {
@@ -148,8 +148,8 @@
     "kind": "Player1_StagingPosition01",
     "player": 0,
     "position": [
-      650994,
-      885333
+      796825,
+      993561
     ]
   },
   "2941652F-4E43-677C-24DE-D1A64FBB59A0": {
@@ -157,8 +157,8 @@
     "kind": "CascadeDummy",
     "player": 3,
     "position": [
-      741491,
-      -1257762
+      888707,
+      -1156833
     ]
   },
   "31B341AF-4A7D-BE62-7342-37AF5CF0CB1A": {
@@ -175,8 +175,8 @@
     "kind": "CascadeDummy",
     "player": 2,
     "position": [
-      2967140,
-      1151199
+      3123242,
+      1263698
     ]
   },
   "39F77C0E-4C63-D8C0-B6B0-AF8F8A4815BF": {
@@ -184,8 +184,8 @@
     "kind": "Player4_HandPosition5",
     "player": 0,
     "position": [
-      2429060,
-      -1383669
+      2433446,
+      -1123839
     ]
   },
   "3A36BC86-4094-6671-EB5C-26905086D3FE": {
@@ -193,8 +193,8 @@
     "kind": "Player4_HandPosition2",
     "player": 0,
     "position": [
-      2429447,
-      -988703
+      2560995,
+      -857042
     ]
   },
   "3E343E4F-48A7-4CD3-0A42-C499064E4DF0": {
@@ -238,8 +238,8 @@
     "kind": "CascadeDummy",
     "player": 1,
     "position": [
-      556798,
-      1153844
+      699215,
+      1259445
     ]
   },
   "496FC2C9-4464-7E5F-DF65-6A9A5BA5DA80": {
@@ -247,8 +247,8 @@
     "kind": "Player1_StagingPosition02",
     "player": 0,
     "position": [
-      830105,
-      880653
+      980544,
+      994643
     ]
   },
   "4B40126C-45E8-2184-46DD-85BF97FD8423": {
@@ -265,8 +265,8 @@
     "kind": "Player2_StagingPosition20",
     "player": 0,
     "position": [
-      2709386,
-      1239939
+      2860010,
+      1359726
     ]
   },
   "50D68952-4E91-D7D9-50DF-80B7716A1A5F": {
@@ -292,17 +292,17 @@
     "kind": "Player4_StagingPosition00",
     "player": 0,
     "position": [
-      2708078,
-      -1344672
+      2863509,
+      -1235577
     ]
   },
   "55698E63-4EE7-8DC2-5168-AC82769D7029": {
-    "facing": 1770902344,
+    "facing": 1770902404,
     "kind": "locationMarkerPlayerStart",
     "player": 1,
     "position": [
-      646509,
-      1060203
+      588234,
+      1300783
     ]
   },
   "567D4CBD-4ADA-3E80-5FD2-DCBF7B045D2C": {
@@ -319,8 +319,8 @@
     "kind": "CascadeDummy",
     "player": 4,
     "position": [
-      2956357,
-      -1263352
+      3136012,
+      -1144160
     ]
   },
   "64802B1A-4832-D4D3-42D5-BEBEE06BAE91": {
@@ -328,8 +328,8 @@
     "kind": "Player2_HandPosition6",
     "player": 0,
     "position": [
-      2428509,
-      711300
+      2562208,
+      1108331
     ]
   },
   "68E4E84C-4167-4FF6-3F7A-30917ADD09F8": {
@@ -337,8 +337,8 @@
     "kind": "Player2_StagingPosition02",
     "player": 0,
     "position": [
-      3069099,
-      879451
+      3226028,
+      1000777
     ]
   },
   "699306C2-44C1-8FC0-4C5D-BA984EFB0D86": {
@@ -346,8 +346,8 @@
     "kind": "Player2_StagingPosition22",
     "player": 0,
     "position": [
-      3071204,
-      1242296
+      3221921,
+      1356383
     ]
   },
   "6E4D6810-40CA-E792-EDCD-F39922B99F23": {
@@ -355,8 +355,8 @@
     "kind": "Player2_StagingPosition00",
     "player": 0,
     "position": [
-      2707004,
-      880517
+      2865635,
+      989353
     ]
   },
   "70DE8660-40B7-7B0E-EC06-EDB4280E3EC7": {
@@ -373,8 +373,8 @@
     "kind": "Player1_StagingPosition10",
     "player": 0,
     "position": [
-      470043,
-      1059518
+      616567,
+      1176636
     ]
   },
   "715B6BFE-46E1-7BDF-1C2C-E8B701ADFE5E": {
@@ -382,8 +382,8 @@
     "kind": "Player1_BattlePoint",
     "player": 1,
     "position": [
-      -2419022,
-      751105
+      -2196441,
+      491890
     ]
   },
   "73231BC0-4DAF-1913-AEF6-B1A4C0EEDD66": {
@@ -391,8 +391,8 @@
     "kind": "Player3_StagingPosition01",
     "player": 0,
     "position": [
-      652584,
-      -1342958
+      794464,
+      -1236516
     ]
   },
   "73BA7C28-4E21-9FD0-009A-9B872A4E4B61": {
@@ -418,8 +418,8 @@
     "kind": "CascadeDummy",
     "player": 4,
     "position": [
-      2785617,
-      -1075946
+      2950796,
+      -964091
     ]
   },
   "7A93864B-467D-2F00-E8ED-259636C5AC78": {
@@ -427,8 +427,8 @@
     "kind": "Player2_StagingPosition21",
     "player": 0,
     "position": [
-      2886184,
-      1241124
+      3039870,
+      1356095
     ]
   },
   "7AB3384E-48DB-F280-2674-58AD85E2E858": {
@@ -436,8 +436,8 @@
     "kind": "Player4_StagingPosition01",
     "player": 0,
     "position": [
-      2891062,
-      -1341058
+      3042092,
+      -1230923
     ]
   },
   "7B3F7CD9-470D-62F9-D594-7DAB2E600C63": {
@@ -445,8 +445,8 @@
     "kind": "Player2_HandPosition2",
     "player": 0,
     "position": [
-      2428373,
-      1236486
+      2564136,
+      1370876
     ]
   },
   "7B5FFC7A-48F4-81C2-210B-A9A8AB808B0C": {
@@ -454,8 +454,8 @@
     "kind": "Player2_BattlePoint",
     "player": 1,
     "position": [
-      -990325,
-      739475
+      -1212220,
+      492210
     ]
   },
   "7F1D6C0E-45A1-A586-B78A-B59AAD5D7929": {
@@ -463,8 +463,8 @@
     "kind": "Player4_StagingPosition20",
     "player": 0,
     "position": [
-      2710460,
-      -985250
+      2859393,
+      -876318
     ]
   },
   "7F55F5D2-424E-DA40-2FB1-29A8D0D10A27": {
@@ -481,8 +481,8 @@
     "kind": "CascadeDummy",
     "player": 4,
     "position": [
-      2784819,
-      -1267809
+      2946746,
+      -1149446
     ]
   },
   "825E724A-40BD-A99E-EB28-E5B5F2F80155": {
@@ -490,17 +490,17 @@
     "kind": "Player1_StagingPosition11",
     "player": 0,
     "position": [
-      647081,
-      1061639
+      793936,
+      1176584
     ]
   },
   "829D90F6-40A8-8D15-5D38-548D4563C4A6": {
-    "facing": 1770902364,
+    "facing": 1770902404,
     "kind": "locationMarkerPlayerStart",
     "player": 3,
     "position": [
-      638976,
-      -1179648
+      589824,
+      -933888
     ]
   },
   "83802226-4D57-697A-B7BE-49BBC0AC0921": {
@@ -517,8 +517,8 @@
     "kind": "Player3_HandPosition6",
     "player": 0,
     "position": [
-      191105,
-      -1515789
+      323860,
+      -1122555
     ]
   },
   "873BB284-4DD2-0FA9-280E-799D07FE8FA5": {
@@ -526,8 +526,8 @@
     "kind": "CascadeDummy",
     "player": 1,
     "position": [
-      560272,
-      963096
+      698924,
+      1077623
     ]
   },
   "87DADC6D-4ECE-965F-0233-E1AB91CDD784": {
@@ -571,8 +571,8 @@
     "kind": "CascadeDummy",
     "player": 3,
     "position": [
-      557361,
-      -1273519
+      709201,
+      -1155394
     ]
   },
   "937BFF8E-4BF0-4048-27EC-34A790562746": {
@@ -580,8 +580,8 @@
     "kind": "Player1_StagingPosition12",
     "player": 0,
     "position": [
-      832143,
-      1057674
+      979456,
+      1172824
     ]
   },
   "938288D9-4A0A-B82F-6057-1CBB45BEB1BF": {
@@ -589,8 +589,8 @@
     "kind": "Player2_StagingPosition01",
     "player": 0,
     "position": [
-      2889988,
-      884131
+      3039412,
+      997841
     ]
   },
   "94BA5B0E-462C-E54D-40F3-A3A53353183A": {
@@ -598,8 +598,8 @@
     "kind": "Player4_StagingPosition22",
     "player": 0,
     "position": [
-      3072278,
-      -982893
+      3223950,
+      -875325
     ]
   },
   "98CB40D5-46A4-67CD-076F-068EA26DDB8F": {
@@ -625,8 +625,8 @@
     "kind": "Player3_HandPosition4",
     "player": 0,
     "position": [
-      190927,
-      -1253325
+      322026,
+      -993011
     ]
   },
   "9D811BF8-461B-4D4F-1D37-82A6D98375CC": {
@@ -643,8 +643,8 @@
     "kind": "Player3_BattlePoint",
     "player": 1,
     "position": [
-      -2409434,
-      -708250
+      -2195817,
+      -490904
     ]
   },
   "9F35ED93-49C0-923B-0C92-91B5AD299F94": {
@@ -652,17 +652,17 @@
     "kind": "CascadeDummy",
     "player": 1,
     "position": [
-      736901,
-      956614
+      886522,
+      1079553
     ]
   },
   "A1CC9486-4C1C-CAEF-EC8B-EFAF9B9ECE1E": {
-    "facing": 1770902374,
+    "facing": 1770902414,
     "kind": "locationMarkerPlayerStart",
     "player": 2,
     "position": [
-      2867200,
-      1048576
+      2818048,
+      1294336
     ]
   },
   "A8C4CA7D-4946-CD72-0150-FB91312414EF": {
@@ -670,8 +670,8 @@
     "kind": "CascadeDummy",
     "player": 1,
     "position": [
-      746778,
-      1146321
+      889066,
+      1263913
     ]
   },
   "AA265A90-415A-298F-400C-EC84BEF1157B": {
@@ -679,8 +679,8 @@
     "kind": "CascadeDummy",
     "player": 3,
     "position": [
-      743950,
-      -1074593
+      888132,
+      -966676
     ]
   },
   "AB943F54-4A4F-6DB7-7729-9AA64FDD4C96": {
@@ -688,8 +688,8 @@
     "kind": "Player4_BattlePoint",
     "player": 1,
     "position": [
-      -994331,
-      -703086
+      -1211829,
+      -492572
     ]
   },
   "AC9B8A96-4361-3241-DCFC-B885130EF484": {
@@ -706,8 +706,8 @@
     "kind": "Player3_StagingPosition20",
     "player": 0,
     "position": [
-      471982,
-      -987150
+      615063,
+      -873660
     ]
   },
   "AF00161E-4EC7-6292-28AA-2A85370F2E7D": {
@@ -715,8 +715,8 @@
     "kind": "Player4_StagingPosition21",
     "player": 0,
     "position": [
-      2887258,
-      -984065
+      3040505,
+      -873812
     ]
   },
   "AFBFEC73-4A32-CC2C-48D4-158FA8E4511F": {
@@ -724,8 +724,8 @@
     "kind": "Player1_HandPosition2",
     "player": 0,
     "position": [
-      189379,
-      1237688
+      320994,
+      1370644
     ]
   },
   "B2609C2A-4200-C04C-B1C3-59AB7330CA6F": {
@@ -733,8 +733,8 @@
     "kind": "Player4_StagingPosition02",
     "player": 0,
     "position": [
-      3070173,
-      -1345738
+      3225772,
+      -1232388
     ]
   },
   "B3DBE22C-4B7A-A390-F9C5-2BB925043520": {
@@ -751,8 +751,8 @@
     "kind": "Player1_HandPosition3",
     "player": 0,
     "position": [
-      189017,
-      1106216
+      186552,
+      1233942
     ]
   },
   "B87160A1-4E77-2BE9-7067-988E3C04BE64": {
@@ -787,8 +787,8 @@
     "kind": "Player1_HandPosition4",
     "player": 0,
     "position": [
-      189337,
-      974966
+      323148,
+      1237693
     ]
   },
   "C7C731D2-4761-6090-06CE-5697F954C57D": {
@@ -796,8 +796,8 @@
     "kind": "Player4_StagingPosition11",
     "player": 0,
     "position": [
-      2887149,
-      -1164752
+      3041869,
+      -1051106
     ]
   },
   "C9359385-46AF-D985-A8DD-508635EF3EE2": {
@@ -805,8 +805,8 @@
     "kind": "Player1_HandPosition5",
     "player": 0,
     "position": [
-      188992,
-      842722
+      188453,
+      1109467
     ]
   },
   "CB811D24-4993-88A0-D26B-40B6BBADEE0A": {
@@ -814,8 +814,8 @@
     "kind": "Player1_StagingPosition20",
     "player": 0,
     "position": [
-      470392,
-      1241141
+      615876,
+      1355522
     ]
   },
   "CB98BCF8-426C-8B70-C61F-B8A0B003CA0E": {
@@ -823,8 +823,8 @@
     "kind": "Player2_StagingPosition10",
     "player": 0,
     "position": [
-      2709037,
-      1058316
+      2857669,
+      1175102
     ]
   },
   "CCAA6BB2-48F9-A92D-B0E1-E499B8569E1B": {
@@ -832,8 +832,8 @@
     "kind": "Player4_HandPosition6",
     "player": 0,
     "position": [
-      2429583,
-      -1513889
+      2564089,
+      -1122022
     ]
   },
   "CE3BCEAF-46A5-4C14-6534-9384F63BAE76": {
@@ -850,8 +850,8 @@
     "kind": "Player3_StagingPosition11",
     "player": 0,
     "position": [
-      648671,
-      -1166652
+      795682,
+      -1053900
     ]
   },
   "DAA5AABF-40E0-C4E9-E274-C58271208C1D": {
@@ -859,8 +859,8 @@
     "kind": "Player4_HandPosition4",
     "player": 0,
     "position": [
-      2429405,
-      -1251425
+      2567969,
+      -987738
     ]
   },
   "DB9B1A34-4A43-FF9C-1F9B-5EBF02522684": {
@@ -877,8 +877,8 @@
     "kind": "Player3_HandPosition2",
     "player": 0,
     "position": [
-      190969,
-      -990603
+      321446,
+      -860014
     ]
   },
   "DE5444EA-4D5E-92F4-F388-B0B43268E5FA": {
@@ -886,8 +886,8 @@
     "kind": "Player1_HandPosition6",
     "player": 0,
     "position": [
-      189515,
-      712502
+      325970,
+      1110770
     ]
   },
   "E046443F-4668-22EA-CD2A-578F42359F80": {
@@ -904,8 +904,8 @@
     "kind": "Player1_StagingPosition21",
     "player": 0,
     "position": [
-      647190,
-      1242326
+      798262,
+      1355512
     ]
   },
   "E3641CA3-4B3A-3305-386E-65BD8258A9A7": {
@@ -913,8 +913,8 @@
     "kind": "Player2_HandPosition4",
     "player": 0,
     "position": [
-      2428331,
-      973764
+      2566170,
+      1240855
     ]
   },
   "E36E4646-4B37-DFE7-0E84-60B0958D3FBE": {
@@ -949,8 +949,8 @@
     "kind": "CascadeDummy",
     "player": 2,
     "position": [
-      2967413,
-      964165
+      3128270,
+      1078603
     ]
   },
   "ED8CD851-4C45-7682-E359-31A2CB8AE25E": {
@@ -958,8 +958,8 @@
     "kind": "Player2_HandPosition5",
     "player": 0,
     "position": [
-      2427986,
-      841520
+      2434012,
+      1105941
     ]
   },
   "EDD9A812-4B28-2BEF-9E62-1FADD4DB8F1C": {
@@ -967,8 +967,8 @@
     "kind": "Player3_StagingPosition22",
     "player": 0,
     "position": [
-      833800,
-      -984793
+      977708,
+      -875678
     ]
   },
   "F009DEA5-46A6-2357-90E9-A2B7F06FD3EF": {
@@ -976,8 +976,8 @@
     "kind": "Player2_HandPosition3",
     "player": 0,
     "position": [
-      2428011,
-      1105014
+      2432146,
+      1235525
     ]
   },
   "F0C1FB05-41F8-6FD3-638F-5685BBAA36C4": {
@@ -994,8 +994,8 @@
     "kind": "CascadeDummy",
     "player": 2,
     "position": [
-      2789390,
-      968238
+      2948948,
+      1082086
     ]
   },
   "F39FA202-40E7-A0A5-6D98-A5AABA7CF3D6": {
@@ -1003,8 +1003,8 @@
     "kind": "CascadeDummy",
     "player": 3,
     "position": [
-      560290,
-      -1075138
+      696075,
+      -965151
     ]
   },
   "F6B3E27D-4B27-936B-3C10-1DA81DF18E05": {
@@ -1030,8 +1030,8 @@
     "kind": "Player3_StagingPosition10",
     "player": 0,
     "position": [
-      471633,
-      -1168773
+      613862,
+      -1056457
     ]
   },
   "FE0793F2-4C75-F793-B7FB-3F967610E0B1": {
@@ -1039,17 +1039,17 @@
     "kind": "Player1_StagingPosition22",
     "player": 0,
     "position": [
-      832210,
-      1243498
+      976737,
+      1350591
     ]
   },
   "FF833A81-4A26-BFC9-A7D6-A9950D7AEB60": {
-    "facing": 1770902404,
+    "facing": 1770902424,
     "kind": "locationMarkerPlayerStart",
     "player": 4,
     "position": [
-      2867200,
-      -1179648
+      2818048,
+      -933888
     ]
   },
   "version": 1
