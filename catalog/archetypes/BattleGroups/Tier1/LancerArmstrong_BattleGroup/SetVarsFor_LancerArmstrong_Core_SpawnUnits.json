@@ -1,0 +1,177 @@
+{
+  "__base_type": "Trigger",
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "SetVarsFor_LancerArmstrong_Core_SpawnUnits"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_LengthOfUnitDataToSpawnArray"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "type": "Value",
+                    "value": {
+                      "type": {
+                        "directive": "FunctionType",
+                        "type": "Integer"
+                      },
+                      "value": "0"
+                    }
+                  }
+                ],
+                "variable_id": "GV_UnitDataToSpawnArray"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "Lancer_Uncommandable"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "type": "Value",
+                    "value": {
+                      "type": {
+                        "directive": "FunctionType",
+                        "type": "Integer"
+                      },
+                      "value": "0"
+                    }
+                  }
+                ],
+                "variable_id": "GV_NumOfUnitsToSpawnForEachUnitDataArray"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "5"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "dev_only": false,
+  "enabled": true,
+  "events": [],
+  "id": "SetVarsFor_LancerArmstrong_Core_SpawnUnits",
+  "variables": []
+}

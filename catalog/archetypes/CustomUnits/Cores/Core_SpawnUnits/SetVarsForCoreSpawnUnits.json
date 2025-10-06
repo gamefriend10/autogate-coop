@@ -101,7 +101,7 @@
                                   "directive": "TypeRef",
                                   "type": "Trigger"
                                 },
-                                "value": "SetVarsFor_LancerArmstrong_ShopCore_SpawnUnits"
+                                "value": "SetVarsFor_LancerArmstrong_Core_SpawnUnits"
                               }
                             }
                           ],
@@ -337,6 +337,100 @@
                                   "type": "Trigger"
                                 },
                                 "value": "SetVarsFor_LoveLetterTriple_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "BedTech_ShopCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_BedTech_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "BedTechTriple_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_BedTechTriple_Core_SpawnUnits"
                               }
                             }
                           ],

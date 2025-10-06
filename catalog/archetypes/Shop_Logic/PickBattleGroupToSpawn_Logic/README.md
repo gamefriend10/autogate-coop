@@ -7,7 +7,7 @@ PickBattleGroupToSpawnForPlayer(Player `IV_PickBattleGroupToSpawnForPlayer_Playe
   ):
     case 2: PickTier2AndBelowBattleGroupToSpawn
     case 3: PickTier3AndBelowBattleGroupToSpawn
-    case 4: PickTier4AndBelowBattleGroupToSpawn // TODO
+    case 4: PickTier4AndBelowBattleGroupToSpawn
     case 5: PickTier5AndBelowBattleGroupToSpawn // TODO
     case 6: PickTier6AndBelowBattleGroupToSpawn // TODO
     default: PickTier1BattleGroupToSpawn
@@ -26,3 +26,8 @@ PickTier2AndBelowBattleGroupToSpawn():
 
 PickTier3AndBelowBattleGroupToSpawn():
   set `BattleGroupToSpawnTag` = `Tier3AndBelowBattleGroups`[Random_Integer(0, LengthOfTier3AndBelowBattleGroups-1)]
+
+--------------------
+
+PickTier4AndBelowBattleGroupToSpawn():
+  set `BattleGroupToSpawnTag` = `Tier4AndBelowBattleGroups`[Random_Integer(0, LengthOfTier4AndBelowBattleGroups-1)]

@@ -6,5 +6,8 @@ BuyPhase_PerformEndOfBuyPhase():
     `OV_PlayerStagingCoresAsUnitGroup` = GetAllStagingCoresForPlayer(`IV_PlayerToGetStagingCoresFor`)
     UnitGroup_ForEachUnitInGroup(`OV_PlayerStagingCoresAsUnitGroup`):
       set `IV_REUSABLE_PerformEndOfBuyPhase_StagingCore` = UnitGroup_GetCurrentUnit()
+      // TODO refactor the checks to happen here so we can return early
       LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
       LoveLetterTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+      BedTech_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+      BedTechTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)

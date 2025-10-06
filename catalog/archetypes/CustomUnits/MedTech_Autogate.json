@@ -1,0 +1,249 @@
+﻿{
+  "abilityList": [
+    "attackData",
+    "moveData",
+    "stopData",
+    "holdPositionData",
+    "MedPatch",
+    "Nanoswarm",
+    "SystemShock"
+  ],
+  "alias_tech": [
+    "_MedTech"
+  ],
+  "armor": 5.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Heavy.UI_Icons_Armor_Vanguard_Infantry_Heavy'",
+  "armor_name": "pegasus_core|ArmorName_VanguardInfantryArmor",
+  "based_on": "BaseUnit_VanguardU",
+  "build_cost": {
+    "resource_a": 100.0,
+    "resource_b": 50.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "build_time": 30.0,
+  "cargo_size": "Two",
+  "commandList": [
+    {
+      "ability": "attackData",
+      "button": "AttackButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "stopData",
+      "button": "StopButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "MoveButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "PatrolButton",
+      "commandIndex": 1,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "MedPatch",
+      "button": "MedPatch_Button",
+      "commandIndex": 0,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "Nanoswarm",
+      "button": "Nanoswarm_Button",
+      "commandIndex": 0,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "SystemShock",
+      "button": "SystemShock_Button",
+      "commandIndex": 0,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "default_control_groups": [
+    10
+  ],
+  "effects": {
+    "birth": "emptyRef",
+    "constructed": "emptyRef",
+    "creation": "emptyRef",
+    "death": "emptyRef",
+    "revenge": "emptyRef"
+  },
+  "expiration_time": 60.0,
+  "flags": {
+    "alert_when_attacked": true,
+    "award_victory_points_to_other_team": false,
+    "detector": false,
+    "display_ui_description": false,
+    "has_prime_structure": false,
+    "hologram": false,
+    "overlap_resource_a": false,
+    "receives_veterancy_from_kills": false,
+    "requires_cascade_field": false,
+    "requires_cascade_field_to_morph": true,
+    "seek_and_destroy": false,
+    "stealth": false,
+    "uncommandable": true,
+    "unselectable": false,
+    "untargetable": false,
+    "victory_expansion": false
+  },
+  "id": "MedTech_Autogate",
+  "minimap_icon_size": 20.0,
+  "movement": {
+    "acceleration_time": 0.0,
+    "collision": {
+      "air": false,
+      "burrowed": false,
+      "ground": true,
+      "ground_tall": false,
+      "item": false,
+      "worker": false
+    },
+    "deceleration_time": 0.0,
+    "flocking": {
+      "separation_delay": 0.5,
+      "separation_radius": 0,
+      "separation_strength": 1.5
+    },
+    "idle_pushable": false,
+    "lock_facing": false,
+    "moving_turn_period": 0.13,
+    "pathing_mode": "Ground",
+    "push_priority": 0,
+    "push_priority_same_team": 0,
+    "speed": 5.0,
+    "stationary_turn_period": 0.13,
+    "turn_radius": 0.0,
+    "turn_without_slowing": false,
+    "unpushable": false
+  },
+  "name": "pegasus_core|UnitData_Name_MedTech",
+  "outer_radius": 0.85,
+  "sb_id": "med_tech",
+  "starting_snowtags": [
+    "entity_unit",
+    "attribute_heavy",
+    "attribute_mechanical",
+    "heightplane_ground",
+    "attribute_biological",
+    "attribute_ranged"
+  ],
+  "subgroup_priority": 130,
+  "supply_cost": 3.0,
+  "unit_button": "MedTech_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_MedTech.UI_Portrait_Human_Default_MedTech'",
+  "unit_name_list": "VanInfantryF",
+  "unreal_actor": "BP_UH_MedTech_00",
+  "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
+  "veterancy_given_on_death": 300,
+  "veterancy_tiers": [
+    {
+      "stat_modifiers": [
+        {
+          "amount": 40.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 40.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 1500,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 40.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 2700,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    }
+  ],
+  "veterancy_vxp_weight": 1,
+  "vision_radius": 11.0,
+  "vital_energy": {
+    "maximum": 100.0,
+    "regen": 0.5,
+    "starting": 25.0
+  },
+  "vital_health": {
+    "maximum": 200.0,
+    "regen": 0.0,
+    "starting": 200.0
+  },
+  "weaponList": [
+    "MedTech_Weapon"
+  ]
+}

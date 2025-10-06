@@ -22,6 +22,14 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), lovelettertriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == bedtech_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bedtech_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == bedtechtriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bedtechtriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == vanguard_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), vanguard_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1

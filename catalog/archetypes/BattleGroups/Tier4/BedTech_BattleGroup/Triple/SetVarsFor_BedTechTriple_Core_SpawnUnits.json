@@ -23,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "SetVarsFor_LancerArmstrong_ShopCore_SpawnUnits"
+                          "value": "SetVarsFor_BedTechTriple_Core_SpawnUnits"
                         }
                       }
                     ],
@@ -72,7 +72,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "1"
+                "value": "2"
               }
             }
           ],
@@ -115,7 +115,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "Lancer_Uncommandable"
+                "value": "Gunner_Autogate"
               }
             }
           ],
@@ -158,7 +158,93 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "5"
+                "value": "10"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "type": "Value",
+                    "value": {
+                      "type": {
+                        "directive": "FunctionType",
+                        "type": "Integer"
+                      },
+                      "value": "1"
+                    }
+                  }
+                ],
+                "variable_id": "GV_UnitDataToSpawnArray"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UnitData"
+                },
+                "value": "MedTech_Autogate"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "type": "Value",
+                    "value": {
+                      "type": {
+                        "directive": "FunctionType",
+                        "type": "Integer"
+                      },
+                      "value": "1"
+                    }
+                  }
+                ],
+                "variable_id": "GV_NumOfUnitsToSpawnForEachUnitDataArray"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "8"
               }
             }
           ],
@@ -172,6 +258,6 @@
   "dev_only": false,
   "enabled": true,
   "events": [],
-  "id": "SetVarsFor_LancerArmstrong_ShopCore_SpawnUnits",
+  "id": "SetVarsFor_BedTechTriple_Core_SpawnUnits",
   "variables": []
 }

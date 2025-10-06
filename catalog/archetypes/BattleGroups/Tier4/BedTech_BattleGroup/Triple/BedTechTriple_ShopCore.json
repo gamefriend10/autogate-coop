@@ -1,0 +1,27 @@
+{
+  "abilityList": [
+    "BedTechTriple_ShopCore_Morph"
+  ],
+  "based_on": "BedTechTriple_BaseCore",
+  "commandList": [
+    {
+      "ability": "BedTechTriple_ShopCore_Morph",
+      "button": "ShopCoreBuy_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "BedTechTriple_ShopCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag",
+    "bedtechtriple_snowtag",
+    "vanguard_snowtag"
+  ]
+}

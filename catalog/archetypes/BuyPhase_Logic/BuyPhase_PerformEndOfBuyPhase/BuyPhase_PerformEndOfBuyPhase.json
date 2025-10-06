@@ -197,6 +197,46 @@
                           "id": "trigger"
                         }
                       ]
+                    },
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "BedTech_PerformEndOfBuyPhase"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "BedTechTriple_PerformEndOfBuyPhase"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
                     }
                   ],
                   "id": "actions"
