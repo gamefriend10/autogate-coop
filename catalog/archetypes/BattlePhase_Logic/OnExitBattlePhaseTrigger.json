@@ -1084,6 +1084,38 @@
       ]
     },
     {
+      "function_id": "UnitGroup_Clear",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_Clear",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "UnitsToOrderToBattle"
+              }
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
       "function_id": "PlayerGroup_ForEachPlayerInGroup",
       "parameters": [
         {

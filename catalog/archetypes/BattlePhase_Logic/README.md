@@ -130,6 +130,9 @@ OnExitBattlePhaseTrigger():
   // Remove remaining enemy units from game
   UnitGroup_ForEachUnitInGroup(`GV_EnemyUnitGroup`):
     Unit_Kill(UnitGroup_GetCurrentUnit())
+  
+  UnitGroup_Clear(`GV_EnemyUnitGroup`)
+  UnitGroup_Clear(`UnitsToOrderToBattle`)
 
   PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     // Add 1 max lum to everyone
