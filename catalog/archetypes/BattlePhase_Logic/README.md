@@ -1,11 +1,22 @@
-OrderToBattle
-
-prereqs:
-1. `UnitsToOrderToBattle` has all the appropriate units added to it
-
-Orders units to attack BattleCenterPoint
-
-Q: what happens when the units in the unitgroup die...? do they get auto removed? will it crash? spam errors?
+OrderToBattle(`UnitsToOrderToBattle`):
+  UnitGroup_IssueOrderTargetingPos(
+    `UnitsToOrderToBattle`,
+    Actor_GetPosition(
+      Point_GetPointFromPlacedName(
+        "BattleCenterPoint"
+      )
+    ),
+    attackData
+  )
+  UnitGroup_IssueOrderTargetingPos(
+    `GV_EnemyUnitGroup`,
+    Actor_GetPosition(
+      Point_GetPointFromPlacedName(
+        "BattleCenterPoint"
+      )
+    ),
+    attackData
+  )
 
 --------------------
 
@@ -111,7 +122,6 @@ OnExitBattlePhaseTrigger():
         Game_GameOverType.defeat,
         Game_KickDontKick.nokick
       )
-      SkipRemainingActions()
 
   `GV_BattleRound` += 1
 
@@ -130,9 +140,6 @@ OnExitBattlePhaseTrigger():
   // Remove remaining enemy units from game
   UnitGroup_ForEachUnitInGroup(`GV_EnemyUnitGroup`):
     Unit_Kill(UnitGroup_GetCurrentUnit())
-  
-  UnitGroup_Clear(`GV_EnemyUnitGroup`)
-  UnitGroup_Clear(`UnitsToOrderToBattle`)
 
   PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     // Add 1 max lum to everyone

@@ -90,7 +90,7 @@
         ],
         "slot_type": {
           "locked": true,
-          "value": "ai"
+          "value": "closed"
         },
         "team": {
           "locked": true,

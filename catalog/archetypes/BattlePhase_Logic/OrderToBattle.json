@@ -125,6 +125,78 @@
           "id": "order"
         }
       ]
+    },
+    {
+      "function_id": "UnitGroup_IssueOrderTargetingPos",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_EnemyUnitGroup"
+              }
+            }
+          ],
+          "id": "unit_group"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Actor_GetPosition",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Point_GetPointFromPlacedName",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "BattleCenterPoint"
+                                  }
+                                }
+                              ],
+                              "id": "name"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "actor"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "target_pos"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "implements": "ability_data"
+                },
+                "value": "attackData"
+              }
+            }
+          ],
+          "id": "order"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",

@@ -268,58 +268,18 @@
           "expressions": [
             {
               "function": {
-                "function_id": "Math_Arithmetic_Integer",
+                "function_id": "PlayerGroup_CountPlayers",
                 "parameters": [
                   {
                     "expressions": [
                       {
                         "function": {
-                          "function_id": "PlayerGroup_CountPlayers",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "function": {
-                                    "function_id": "PlayerGroup_GetActivePlayers"
-                                  },
-                                  "type": "Function"
-                                }
-                              ],
-                              "id": "group"
-                            }
-                          ]
+                          "function_id": "PlayerGroup_GetActivePlayers"
                         },
                         "type": "Function"
                       }
                     ],
-                    "id": "value1"
-                  },
-                  {
-                    "expressions": [
-                      {
-                        "preset": {
-                          "preset_id": "Math_ArithmeticOperator",
-                          "value_id": "minus"
-                        },
-                        "type": "Preset"
-                      }
-                    ],
-                    "id": "op"
-                  },
-                  {
-                    "expressions": [
-                      {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "type": "Integer"
-                          },
-                          "value": "1"
-                        }
-                      }
-                    ],
-                    "id": "value2"
+                    "id": "group"
                   }
                 ]
               },
