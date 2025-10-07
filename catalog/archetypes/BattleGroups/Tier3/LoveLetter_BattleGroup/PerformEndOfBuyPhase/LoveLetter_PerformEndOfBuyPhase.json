@@ -399,39 +399,7 @@
     }
   ],
   "based_on": "Trigger",
-  "conditions": [
-    {
-      "function_id": "Entity_HasAllTags",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
-              }
-            }
-          ],
-          "id": "who"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "loveletter_snowtag"
-              }
-            }
-          ],
-          "id": "tags"
-        }
-      ]
-    }
-  ],
+  "conditions": [],
   "events": [],
   "id": "LoveLetter_PerformEndOfBuyPhase",
   "variables": []

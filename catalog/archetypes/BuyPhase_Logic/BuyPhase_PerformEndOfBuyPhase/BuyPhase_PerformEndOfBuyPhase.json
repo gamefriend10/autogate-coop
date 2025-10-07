@@ -159,82 +159,438 @@
                       ]
                     },
                     {
-                      "function_id": "Trigger_Run",
-                      "parameters": [
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
                         {
-                          "expressions": [
+                          "functions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "loveletter_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
                                 },
-                                "value": "LoveLetter_PerformEndOfBuyPhase"
-                              }
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
                             }
                           ],
-                          "id": "trigger"
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "LoveLetter_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
                         }
                       ]
                     },
                     {
-                      "function_id": "Trigger_Run",
-                      "parameters": [
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
                         {
-                          "expressions": [
+                          "functions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "lovelettertriple_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
                                 },
-                                "value": "LoveLetterTriple_PerformEndOfBuyPhase"
-                              }
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
                             }
                           ],
-                          "id": "trigger"
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "LoveLetterTriple_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
                         }
                       ]
                     },
                     {
-                      "function_id": "Trigger_Run",
-                      "parameters": [
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
                         {
-                          "expressions": [
+                          "functions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "bedtech_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
                                 },
-                                "value": "BedTech_PerformEndOfBuyPhase"
-                              }
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
                             }
                           ],
-                          "id": "trigger"
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "BedTech_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
                         }
                       ]
                     },
                     {
-                      "function_id": "Trigger_Run",
-                      "parameters": [
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
                         {
-                          "expressions": [
+                          "functions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "bedtechtriple_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
                                 },
-                                "value": "BedTechTriple_PerformEndOfBuyPhase"
-                              }
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
                             }
                           ],
-                          "id": "trigger"
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "BedTechTriple_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
                         }
                       ]
                     }

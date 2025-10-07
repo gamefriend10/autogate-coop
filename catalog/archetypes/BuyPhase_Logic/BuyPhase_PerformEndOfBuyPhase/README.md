@@ -6,8 +6,15 @@ BuyPhase_PerformEndOfBuyPhase():
     `OV_PlayerStagingCoresAsUnitGroup` = GetAllStagingCoresForPlayer(`IV_PlayerToGetStagingCoresFor`)
     UnitGroup_ForEachUnitInGroup(`OV_PlayerStagingCoresAsUnitGroup`):
       set `IV_REUSABLE_PerformEndOfBuyPhase_StagingCore` = UnitGroup_GetCurrentUnit()
-      // TODO refactor the checks to happen here so we can return early
-      LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
-      LoveLetterTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
-      BedTech_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
-      BedTechTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, loveletter_snowtag)):
+        LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+        General_Continue()
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, lovelettertriple_snowtag)):
+        LoveLetterTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+        General_Continue()
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, bedtech_snowtag)):
+        BedTech_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+        General_Continue()
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, bedtechtriple_snowtag)):
+        BedTechTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+        General_Continue()

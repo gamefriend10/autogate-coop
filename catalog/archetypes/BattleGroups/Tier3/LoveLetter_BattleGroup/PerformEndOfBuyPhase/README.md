@@ -1,8 +1,6 @@
 // End of Buy Phase: If adjacent to (diagonal included)
 // at least 2 Vanguard Battle Groups, add 2 Exos to
 // this Battle Group.
-// Conditions:
-//  Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, loveletter_snowtag)
 LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`):
   set `IV_Staging_GetAdjacentStagingCores_Core` = `IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`
   `OV_Staging_GetAdjacentStagingCores_Cores` = Staging_GetAdjacentStagingCores(`IV_Staging_GetAdjacentStagingCores_Core`)

@@ -565,39 +565,7 @@
     }
   ],
   "based_on": "Trigger",
-  "conditions": [
-    {
-      "function_id": "Entity_HasAllTags",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
-              }
-            }
-          ],
-          "id": "who"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "bedtech_snowtag"
-              }
-            }
-          ],
-          "id": "tags"
-        }
-      ]
-    }
-  ],
+  "conditions": [],
   "events": [],
   "id": "BedTech_PerformEndOfBuyPhase",
   "variables": []
