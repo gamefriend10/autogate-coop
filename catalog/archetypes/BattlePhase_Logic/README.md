@@ -123,8 +123,16 @@ OnExitBattlePhaseTrigger():
         Game_KickDontKick.nokick
       )
 
+  // Only add max lum up after completing rounds 1-7
+  If `GV_BattleRound` <= 7: 
+    set `IV_NumberOfMaxLumToAdd` = 1
+    PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+      set `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
+      AddMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToAdd`, `IV_PlayerToAddMaxLumTo`)
+
   `GV_BattleRound` += 1
 
+  // Win the game after beating 15 rounds
   If `GV_BattleRound` > 15:
     PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
       Game_EndGameForPlayer(
@@ -140,9 +148,3 @@ OnExitBattlePhaseTrigger():
   // Remove remaining enemy units from game
   UnitGroup_ForEachUnitInGroup(`GV_EnemyUnitGroup`):
     Unit_Kill(UnitGroup_GetCurrentUnit())
-
-  PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
-    // Add 1 max lum to everyone
-    set `IV_NumberOfMaxLumToAdd` = 1
-    set `IV_PlayerToAddMaxLumTo` = PlayerGroup_GetCurrentPlayer()
-    AddMaxLumForPlayer_Trigger(`IV_NumberOfMaxLumToAdd`, `IV_PlayerToAddMaxLumTo`)
