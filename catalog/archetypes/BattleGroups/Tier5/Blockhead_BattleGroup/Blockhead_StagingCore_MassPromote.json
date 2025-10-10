@@ -1,0 +1,40 @@
+﻿{
+  "alignment": "Helpful",
+  "based_on": "StagedAbilityData",
+  "commands": [
+    {
+      "charges": {
+        "max_count": 200,
+        "name": "Blockhead_StagingCore_MassPromote",
+        "recharge_duration": 0.0,
+        "starting_count": 1
+      },
+      "cooldown": {
+        "duration": 0.0,
+        "name": "",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_resources": {
+        "resource_a": 0.0,
+        "resource_b": 0.0,
+        "resource_c": 0.0,
+        "resource_d": 0.0
+      },
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "requirement": "NoRequirement"
+    }
+  ],
+  "id": "Blockhead_StagingCore_MassPromote",
+  "range_maximum": 0.0,
+  "target_actor": "/Script/Engine.BlueprintGeneratedClass'/Game/Pegasus/Blueprints/Targeting/BP_InstantTargetActor.BP_InstantTargetActor_C'",
+  "targeting_type": "Unit",
+  "transient": true
+}

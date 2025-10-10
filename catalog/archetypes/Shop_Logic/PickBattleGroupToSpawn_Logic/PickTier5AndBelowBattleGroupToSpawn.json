@@ -1,0 +1,159 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "PickTier5AndBelowBattleGroupToSpawn"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "BattleGroupToSpawnTag"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "indices": [
+                  {
+                    "function": {
+                      "function_id": "Random_Integer",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "0"
+                              }
+                            }
+                          ],
+                          "id": "min"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Math_Arithmetic_Value",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "LengthOfTier5AndBelowBattleGroups"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value1"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "preset": {
+                                          "preset_id": "Math_ArithmeticOperator",
+                                          "value_id": "minus"
+                                        },
+                                        "type": "Preset"
+                                      }
+                                    ],
+                                    "id": "op"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "Integer"
+                                          },
+                                          "value": "1"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value2"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "max"
+                        }
+                      ]
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "variable_id": "Tier5AndBelowBattleGroups"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "events": [],
+  "id": "PickTier5AndBelowBattleGroupToSpawn",
+  "variables": []
+}

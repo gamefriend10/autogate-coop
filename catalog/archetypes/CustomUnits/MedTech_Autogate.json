@@ -174,7 +174,7 @@
   "unit_name_list": "VanInfantryF",
   "unreal_actor": "BP_UH_MedTech_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
-  "veterancy_given_on_death": 300,
+  "veterancy_given_on_death": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
@@ -191,7 +191,7 @@
           "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
-      "threshold": 600,
+      "threshold": 100,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
     {
@@ -209,7 +209,7 @@
           "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
-      "threshold": 1500,
+      "threshold": 200,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
     {
@@ -227,7 +227,7 @@
           "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
-      "threshold": 2700,
+      "threshold": 300,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }
   ],

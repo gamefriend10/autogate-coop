@@ -1,5 +1,5 @@
 // Returns `OV_PlayerStagingCoresAsUnitGroup`
-GetAllStagingCoresForPlayer(`IV_PlayerToGetStagingCoresFor`):
+GetAllStagingCoresForPlayer(Player `IV_PlayerToGetStagingCoresFor`):
   UnitGroup_Clear(`OV_PlayerStagingCoresAsUnitGroup`)
   row = 0
   col = 0

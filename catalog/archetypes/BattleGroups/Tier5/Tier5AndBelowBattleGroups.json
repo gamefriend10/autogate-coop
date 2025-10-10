@@ -1,0 +1,76 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 6,
+  "based_on": "GlobalVariable",
+  "id": "Tier5AndBelowBattleGroups",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "lancerarmstrong_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "gauntfather_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "bunkerrush_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "loveletter_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "bedtech_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "blockhead_snowtag"
+      }
+    }
+  ],
+  "is_array": true,
+  "is_constant": false,
+  "name": "Tier5AndBelowBattleGroups",
+  "per_element_initial_values": true,
+  "type": {
+    "directive": "TypeRef",
+    "type": "SnowTag"
+  }
+}

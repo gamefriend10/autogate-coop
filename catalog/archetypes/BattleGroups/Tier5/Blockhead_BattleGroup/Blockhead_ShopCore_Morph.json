@@ -1,0 +1,15 @@
+{
+  "based_on": "ShopCore_Morph",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.2,
+        "name": "ShopCore_Morph",
+        "scope": "Player"
+      },
+      "requirement": "Requirement_HandHasSpace",
+      "unit": "Blockhead_HandCore"
+    }
+  ],
+  "id": "Blockhead_ShopCore_Morph"
+}

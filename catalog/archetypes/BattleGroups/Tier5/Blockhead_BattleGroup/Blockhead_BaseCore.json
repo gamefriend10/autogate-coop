@@ -1,0 +1,6 @@
+{
+  "based_on": "BaseCore",
+  "id": "Blockhead_BaseCore",
+  "placed_name": "Blockhead",
+  "name": "=== [5] Blockhead ===\nCan Cast: Give 1 Veterancy Level to all Vanguard Battle Groups.\nEnd of Buy Phase: Gain 1 Ability Charge."
+}

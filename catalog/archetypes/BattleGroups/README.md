@@ -3,15 +3,13 @@
 ## Adding a battle group
 
 1. copy/paste existing battle group
-2. run `scripts\replace_string_recursive.py <dir> <old-name> <new-name>`
+2. run `python scripts\replace_string_recursive.py <dir> <old-name> <new-name>`
   1. e.g. `python scripts/replace_string_recursive.py catalog/archetypes/BattleGroups/Tier4/BedTech_BattleGroup LoveLetter BedTech`
 3. adjust the name in base core and triple base core. This controls the name for all.
 4. Create units for the battle group. Copy over flags from other groups (uncommandable) and rename the ID.
 5. adjust SetVarsFor_XXX_ShopCore_SpawnUnits function.
   1. double unit counts for the triple
-6. adjust any effects it has e.g. PerformEndOfBuyPhase
 
-1. add PerformEndOfBuyPhase to BuyPhase_PerformEndOfBuyPhase
 7. add to battlegroup arrays (its own tier AND up)
   1. add snowtag to array e.g. Tier2AndBelowBattleGroups
   1. update length of array var e.g. Tier2AndBelowBattleGroups
@@ -20,7 +18,10 @@
 3. add/remove the battleGroup's regular ShopCore and Triple_HandCore to/from SetVarsForCoreSpawnUnits
 4. add/remove the regular snowtag + Triple_HandCore to/from DetermineTripleVersionOfCoreToSpawn
 5. add/rm tag to General_GetNumberOfUnitsWithTag
-6. if there's a PerformEndOfBuyPhase, add/rm to BuyPhase_PerformEndOfBuyPhase
+
+1. if there's a PerformEndOfBuyPhase
+  1. adjust any effects it has e.g. PerformEndOfBuyPhase
+  2. add/rm to BuyPhase_PerformEndOfBuyPhase
 
 ## (manually)
 

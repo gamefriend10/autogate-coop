@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "BaseGameEffectModifyCharges",
+  "id": "StagingCoreRestoreOneCharge_ModifyCharges",
+  "impact_fx": "BP_FXS_HellspawnResurgence",
+  "modify_amount": 1,
+  "validator": "Valid_TargetIsStagingCore"
+}

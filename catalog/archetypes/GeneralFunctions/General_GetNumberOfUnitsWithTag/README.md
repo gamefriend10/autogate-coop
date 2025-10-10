@@ -30,6 +30,14 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bedtechtriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == blockhead_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), blockhead_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == blockheadtriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), blockheadtriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == vanguard_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), vanguard_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1

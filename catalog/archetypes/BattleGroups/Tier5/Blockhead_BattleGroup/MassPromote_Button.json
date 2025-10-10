@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "Button",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_Promote.UI_Icons_Abilities_Promote'",
+  "id": "MassPromote_Button",
+  "name": "Mass Promote",
+  "tooltip": "Give 1 Veterancy Level to all Vanguard Battle Groups."
+}

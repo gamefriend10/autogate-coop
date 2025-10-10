@@ -154,7 +154,7 @@
   "unit_name_list": "VanInfantryM",
   "unreal_actor": "BP_UH_HeavyMelee_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
-  "veterancy_given_on_death": 200,
+  "veterancy_given_on_death": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
@@ -171,7 +171,7 @@
           "stat": "ArmorScaledAdditiveBonus"
         }
       ],
-      "threshold": 400,
+      "threshold": 100,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
     {
@@ -189,7 +189,7 @@
           "stat": "ArmorScaledAdditiveBonus"
         }
       ],
-      "threshold": 1000,
+      "threshold": 200,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
     {
@@ -207,7 +207,7 @@
           "stat": "ArmorScaledAdditiveBonus"
         }
       ],
-      "threshold": 1800,
+      "threshold": 300,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }
   ],

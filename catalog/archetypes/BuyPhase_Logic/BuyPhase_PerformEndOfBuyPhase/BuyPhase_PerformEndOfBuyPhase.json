@@ -593,6 +593,224 @@
                           "id": "then"
                         }
                       ]
+                    },
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "blockhead_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "Blockhead_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_IfThenElse",
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Logic_Comparison",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Entity_HasAllTags",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Variable",
+                                                "variable": {
+                                                  "variable_id": "IV_REUSABLE_PerformEndOfBuyPhase_StagingCore"
+                                                }
+                                              }
+                                            ],
+                                            "id": "who"
+                                          },
+                                          {
+                                            "expressions": [
+                                              {
+                                                "type": "Value",
+                                                "value": {
+                                                  "type": {
+                                                    "directive": "TypeRef",
+                                                    "type": "SnowTag"
+                                                  },
+                                                  "value": "blockheadtriple_snowtag"
+                                                }
+                                              }
+                                            ],
+                                            "id": "tags"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value1"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "preset": {
+                                        "preset_id": "Logic_ComparisonOperator",
+                                        "value_id": "eq"
+                                      },
+                                      "type": "Preset"
+                                    }
+                                  ],
+                                  "id": "op"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "FunctionType",
+                                          "type": "Boolean"
+                                        },
+                                        "value": "true"
+                                      }
+                                    }
+                                  ],
+                                  "id": "value2"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "if"
+                        },
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "BlockheadTriple_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "General_Continue"
+                            }
+                          ],
+                          "id": "then"
+                        }
+                      ]
                     }
                   ],
                   "id": "actions"
