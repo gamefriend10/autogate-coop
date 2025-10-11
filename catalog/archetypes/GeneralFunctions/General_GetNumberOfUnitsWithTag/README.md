@@ -38,6 +38,14 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), blockheadtriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == sdfvanguard_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), sdfvanguard_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == sdfvanguardtriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), sdfvanguardtriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == vanguard_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), vanguard_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1

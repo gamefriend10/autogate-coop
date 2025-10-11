@@ -31,6 +31,8 @@ If(Entity_HasAllTags(Unit_GetTriggeringUnit(), vanguard_snowtag)):
     General_DoDoNot.do_not
   )
 
+Trigger_Run(PerformWhenXIsPlaced)
+
 --------------------
 
 StagingCoreAbilityUsedTrigger

@@ -595,6 +595,26 @@
           "id": "then"
         }
       ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "PerformWhenXIsPlaced"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",

@@ -1,0 +1,6 @@
+{
+  "based_on": "BaseTripleCore",
+  "id": "SDFVanguardTriple_BaseCore",
+  "placed_name": "SDFVanguardTriple",
+  "name": "=== [6] SDF Vanguard (Triple) ===\nWhen a Vanguard Battle Group is placed, add 2 Exos\nto every Battle Group (including this one)."
+}

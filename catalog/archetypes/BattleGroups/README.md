@@ -3,10 +3,10 @@
 ## Adding a battle group
 
 1. copy/paste existing battle group
-2. run `python scripts\replace_string_recursive.py <dir> <old-name> <new-name>`
+2. run `python scripts/replace_string_recursive.py <dir> <old-name> <new-name>`
   1. e.g. `python scripts/replace_string_recursive.py catalog/archetypes/BattleGroups/Tier4/BedTech_BattleGroup LoveLetter BedTech`
 3. adjust the name in base core and triple base core. This controls the name for all.
-4. Create units for the battle group. Copy over flags from other groups (uncommandable) and rename the ID.
+4. Create units for the battle group. Copy over things from other groups (uncommandable, vet) and rename the ID.
 5. adjust SetVarsFor_XXX_ShopCore_SpawnUnits function.
   1. double unit counts for the triple
 
@@ -22,6 +22,10 @@
 1. if there's a PerformEndOfBuyPhase
   1. adjust any effects it has e.g. PerformEndOfBuyPhase
   2. add/rm to BuyPhase_PerformEndOfBuyPhase
+
+1. if there's a PeformWhenXIsPlaced
+  1. adjust any effects it has e.g. PerformWhenXIsPlaced
+  2. add/rm to StagingCore_PerformWhenXIsPlaced
 
 ## (manually)
 

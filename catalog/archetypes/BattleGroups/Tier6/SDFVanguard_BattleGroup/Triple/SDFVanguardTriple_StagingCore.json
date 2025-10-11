@@ -1,0 +1,42 @@
+{
+  "abilityList": [
+    "StagingCore_Sell"
+  ],
+  "based_on": "SDFVanguardTriple_BaseCore",
+  "build_cost": {
+    "resource_a": 3.0,
+    "resource_b": 0.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "commandList": [
+    {
+      "ability": "StagingCore_Sell",
+      "button": "StagingCore_Sell_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "footprint": {
+    "angled": false,
+    "clumpable": true,
+    "snap": true,
+    "unbuildable": false,
+    "vision_block_height": 0,
+    "x": 7.0,
+    "y": 7.0
+  },
+  "id": "SDFVanguardTriple_StagingCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "sdfvanguardtriple_snowtag",
+    "stagingcore_snowtag",
+    "vanguard_snowtag"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "based_on": "BaseCore",
+  "id": "SDFVanguard_BaseCore",
+  "placed_name": "SDFVanguard",
+  "name": "=== [6] SDF Vanguard ===\nWhen a Vanguard Battle Group is placed, add 1 Exo\nto every Battle Group (including this one)."
+}

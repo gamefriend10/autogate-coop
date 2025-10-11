@@ -1,0 +1,27 @@
+{
+  "abilityList": [
+    "SDFVanguard_ShopCore_Morph"
+  ],
+  "based_on": "SDFVanguard_BaseCore",
+  "commandList": [
+    {
+      "ability": "SDFVanguard_ShopCore_Morph",
+      "button": "ShopCoreBuy_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "SDFVanguard_ShopCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag",
+    "sdfvanguard_snowtag",
+    "vanguard_snowtag"
+  ]
+}
