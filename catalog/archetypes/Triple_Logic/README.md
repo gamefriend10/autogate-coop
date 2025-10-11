@@ -87,9 +87,28 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
   UnitGroup_ForEachUnitInGroup(`GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple`):
     `IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore` = UnitGroup_GetCurrentUnit
     RemoveHandCoreFromHandPositionInPlayerBlackboard(`IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore`)
+
+  // If vanguard, add up the non-triple core veterancy
+  If(Entity_HasAllTags(`IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`, vanguard_snowtag)):
+    UnitGroup_ForEachUnitInGroup(`GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple`):
+      Variable_SetVariable(
+        `nontriple_veterancy`,
+        Math_Arithmetic_Value(
+          `nontriple_veterancy`,
+          plus,
+          Unit_GetVeterancyXP(UnitGroup_GetCurrentUnit())
+        )
+      )
   
-  `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore` = `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`
-  AddTripleVersionOfBattleGroupToHand(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
+  Variable_SetVariable(
+    `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`,
+    `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`
+  )
+  Variable_SetVariable(
+    `IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP`,
+    `nontriple_veterancy`
+  )
+  Trigger_Run(AddTripleVersionOfBattleGroupToHand)
 
   // Delete non-triple cores and their units
   UnitGroup_ForEachUnitInGroup(`GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple`):
@@ -104,7 +123,10 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
 
 --------------------
 
-AddTripleVersionOfBattleGroupToHand(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`):
+AddTripleVersionOfBattleGroupToHand(
+  Unit `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`,
+  Value `IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP`
+):
   `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn` = 
     DetermineTripleVersionOfCoreToSpawn(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
 
@@ -146,6 +168,26 @@ AddTripleVersionOfBattleGroupToHand(`IV_AddTripleVersionOfBattleGroupToHand_NonT
     `IV_Core_SpawnUnits_PlayerToSpawnFor`,
     `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
   )
+
+  // Set veterancy for core
+  Unit_SetVeterancyXP(
+    `IV_Core_SpawnUnits_CoreToAttachUnitsTo`,
+    `IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP`,
+    General_DoDoNot.do_not
+  )
+
+  // Set veterancy for units
+  UnitGroup_ForEachUnitInGroup(
+    Blackboard_GetValue_UnitGroup(
+      Blackboard_GetBlackboardOfEntity(`IV_Core_SpawnUnits_CoreToAttachUnitsTo`),
+      `units`
+    )
+  ):
+    Unit_SetVeterancyXP(
+      UnitGroup_GetCurrentUnit(),
+      `IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP`,
+      General_DoDoNot.do_not
+    )
 
 --------------------
 

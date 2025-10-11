@@ -252,6 +252,191 @@
       ]
     },
     {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Entity_HasAllTags",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor"
+                                }
+                              }
+                            ],
+                            "id": "who"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "TypeRef",
+                                    "type": "SnowTag"
+                                  },
+                                  "value": "vanguard_snowtag"
+                                }
+                              }
+                            ],
+                            "id": "tags"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Boolean"
+                        },
+                        "value": "true"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "UnitGroup_ForEachUnitInGroup",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple"
+                      }
+                    }
+                  ],
+                  "id": "units"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "nontriple_veterancy"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Math_Arithmetic_Value",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Variable",
+                                        "variable": {
+                                          "variable_id": "nontriple_veterancy"
+                                        }
+                                      }
+                                    ],
+                                    "id": "value1"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "preset": {
+                                          "preset_id": "Math_ArithmeticOperator",
+                                          "value_id": "plus"
+                                        },
+                                        "type": "Preset"
+                                      }
+                                    ],
+                                    "id": "op"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Unit_GetVeterancyXP",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "function": {
+                                                    "function_id": "UnitGroup_GetCurrentUnit"
+                                                  },
+                                                  "type": "Function"
+                                                }
+                                              ],
+                                              "id": "unit"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "value2"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
       "function_id": "Variable_SetVariable",
       "parameters": [
         {
@@ -271,6 +456,33 @@
               "type": "Variable",
               "variable": {
                 "variable_id": "IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "nontriple_veterancy"
               }
             }
           ],
@@ -422,5 +634,20 @@
   "conditions": [],
   "events": [],
   "id": "CheckForAndReplaceNonTriplesWithTripleHelper",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "nontriple_veterancy",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "nontriple_veterancy",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Value"
+      }
+    }
+  ]
 }
