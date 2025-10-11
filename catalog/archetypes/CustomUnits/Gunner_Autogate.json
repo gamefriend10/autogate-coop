@@ -204,6 +204,132 @@
       ],
       "threshold": 300,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 400,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 500,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 700,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 800,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 900,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 1000,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }
   ],
   "veterancy_vxp_weight": 1,

@@ -439,7 +439,7 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
-      "threshold": 200,
+      "threshold": 100,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
@@ -458,7 +458,7 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
-      "threshold": 500,
+      "threshold": 200,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
@@ -477,7 +477,140 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
+      "threshold": 300,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 400,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 500,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 700,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 800,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
       "threshold": 900,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
+        }
+      ],
+      "threshold": 1000,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }

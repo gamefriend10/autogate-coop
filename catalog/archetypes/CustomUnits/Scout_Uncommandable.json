@@ -289,7 +289,7 @@
           "stat": "VisionRadiusScaledAdditiveBonus"
         }
       ],
-      "threshold": 200,
+      "threshold": 100,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
@@ -308,7 +308,7 @@
           "stat": "VisionRadiusScaledAdditiveBonus"
         }
       ],
-      "threshold": 500,
+      "threshold": 200,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
@@ -327,7 +327,140 @@
           "stat": "VisionRadiusScaledAdditiveBonus"
         }
       ],
+      "threshold": 300,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 400,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 500,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 700,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 800,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
       "threshold": 900,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 24.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 2.0,
+          "stat": "VisionRadiusScaledAdditiveBonus"
+        }
+      ],
+      "threshold": 1000,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }

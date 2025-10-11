@@ -458,7 +458,7 @@
       ],
       "threshold": 300,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 500,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -480,9 +480,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 10000,
+      "threshold": 400,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 1000,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -504,9 +504,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 15000,
+      "threshold": 500,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 1500,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -528,9 +528,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 21000,
+      "threshold": 600,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 2000,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -552,9 +552,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 28000,
+      "threshold": 700,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 2500,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -576,9 +576,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 36000,
+      "threshold": 800,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 3000,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -600,9 +600,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 47000,
+      "threshold": 900,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 3500,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     },
     {
@@ -624,9 +624,9 @@
           "stat": "EnergyRegenPercentageBonus"
         }
       ],
-      "threshold": 57000,
+      "threshold": 1000,
       "tier_up_effect": "HeroRespawnCostLevelUpPlayerBuffApplier",
-      "veterancy_given_on_death_tier_bonus": 4000,
+      "veterancy_given_on_death_tier_bonus": 0,
       "visual_fx": "BP_FX_HeroLevelUp"
     }
   ],

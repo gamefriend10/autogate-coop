@@ -252,7 +252,7 @@
   "unreal_actor": "BP_UH_HedgehogV2_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
   "veterancy_data": "BaseVeterancyData",
-  "veterancy_given_on_death": 300,
+  "veterancy_given_on_death": 0,
   "veterancy_starting_tier": 0,
   "veterancy_tiers": [
     {
@@ -270,7 +270,7 @@
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
-      "threshold": 600,
+      "threshold": 100,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
@@ -289,7 +289,7 @@
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
-      "threshold": 1500,
+      "threshold": 200,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
@@ -308,7 +308,140 @@
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
-      "threshold": 2700,
+      "threshold": 300,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 400,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 500,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 700,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 800,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 900,
+      "tier_up_effect": "emptyRef",
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 46.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 1000,
       "tier_up_effect": "emptyRef",
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }

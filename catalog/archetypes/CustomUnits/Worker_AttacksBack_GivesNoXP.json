@@ -333,7 +333,7 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
-      "threshold": 200,
+      "threshold": 100,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
     },
     {
@@ -351,7 +351,7 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
-      "threshold": 500,
+      "threshold": 200,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
     },
     {
@@ -369,7 +369,7 @@
           "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
-      "threshold": 900,
+      "threshold": 300,
       "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
     }
   ],
