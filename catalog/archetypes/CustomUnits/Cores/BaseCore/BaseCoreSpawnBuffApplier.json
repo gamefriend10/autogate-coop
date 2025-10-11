@@ -1,0 +1,12 @@
+﻿{
+  "data": {
+    "based_on": "BaseGameEffectApplyBuff",
+    "buff": "BaseCoreSpawnBuff",
+    "effect_target": {
+      "effect_parent": "none",
+      "target": "Caster"
+    },
+    "id": "BaseCoreSpawnBuffApplier"
+  },
+  "meta": {}
+}

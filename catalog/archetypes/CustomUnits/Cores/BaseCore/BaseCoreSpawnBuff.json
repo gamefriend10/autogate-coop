@@ -1,0 +1,22 @@
+﻿{
+  "data": {
+    "based_on": "BaseBuff",
+    "buff_visuals": "BP_BVA_CelestialTrainingWarp",
+    "duration": 1.0,
+    "flags": {
+      "change_owner_on_polymorph": false,
+      "disable_on_attacking": false,
+      "disable_on_damage_taken": false,
+      "hidden": false,
+      "hide_timer": false,
+      "override_source": false,
+      "pause_while_disabled": false,
+      "persist_on_dead": false,
+      "remove_on_attacking": false,
+      "remove_on_damage_taken": false,
+      "show_progress": false
+    },
+    "id": "BaseCoreSpawnBuff"
+  },
+  "meta": {}
+}

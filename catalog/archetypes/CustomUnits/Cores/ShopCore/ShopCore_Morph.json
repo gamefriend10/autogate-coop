@@ -28,7 +28,7 @@
   "height_transition_initial_delay": 0.0,
   "id": "ShopCore_Morph",
   "morph_duration": 0.0,
-  "morph_finish_effect": "CelestialWarpBuffApplier",
+  "morph_finish_effect": "BaseCoreSpawnBuffApplier",
   "morph_finish_fx": "",
   "morph_start_fx": "",
   "placement_range": 0.0,

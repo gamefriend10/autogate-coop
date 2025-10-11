@@ -27,9 +27,9 @@
   "default_acquire_level": "Offensive",
   "default_control_groups": [],
   "effects": {
-    "birth": "CelestialWarpBuffApplier",
-    "constructed": "CelestialWarpBuffApplier",
-    "creation": "CelestialWarpBuffApplier",
+    "birth": "BaseCoreSpawnBuffApplier",
+    "constructed": "BaseCoreSpawnBuffApplier",
+    "creation": "BaseCoreSpawnBuffApplier",
     "death": "emptyRef",
     "revenge": "emptyRef"
   },
