@@ -166,10 +166,61 @@
   "unreal_actor": "BP_UA_MorphCore_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
   "veterancy_data": "BaseVeterancyData",
-  "veterancy_given_on_death": 200,
+  "veterancy_given_on_death": 0,
   "veterancy_starting_tier": 0,
-  "veterancy_tiers": [],
-  "veterancy_vxp_weight": 0,
+  "veterancy_tiers": [
+    {
+      "stat_modifiers": [],
+      "threshold": 100,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 200,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 300,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 400,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 500,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 600,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 700,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 800,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 900,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [],
+      "threshold": 1000,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    }
+  ],
+  "veterancy_vxp_weight": 1,
   "victory_points": 0.0,
   "vision_height": 0.0,
   "vision_radius": 12.0,

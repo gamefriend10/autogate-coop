@@ -216,6 +216,49 @@
               ]
             },
             {
+              "function_id": "Unit_AdjustVeterancyXP",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "unit"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Value"
+                        },
+                        "value": "100.0"
+                      }
+                    }
+                  ],
+                  "id": "veterancy"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_DoDoNot",
+                        "value_id": "do_not"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "adjust_player_score"
+                }
+              ]
+            },
+            {
               "function_id": "UnitGroup_ForEachUnitInGroup",
               "parameters": [
                 {
