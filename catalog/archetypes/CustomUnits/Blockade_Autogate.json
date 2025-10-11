@@ -308,6 +308,7 @@
     "death": "emptyRef",
     "revenge": "emptyRef"
   },
+  "expiration_time": 60.0,
   "faction": "Vanguard",
   "flags": {
     "alert_when_attacked": true,
