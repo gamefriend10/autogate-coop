@@ -1,0 +1,135 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "LancerArmstrong_PerformWhenXIsPlaced"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetTriggeringUnit"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Value"
+                },
+                "value": "100"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "GiveCoreAndUnitsVeterancy"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "events": [],
+  "id": "LancerArmstrong_PerformWhenXIsPlaced",
+  "variables": []
+}

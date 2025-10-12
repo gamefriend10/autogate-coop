@@ -1,0 +1,199 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "GiveCoreAndUnitsVeterancy"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Unit_AdjustVeterancyXP",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
+              }
+            }
+          ],
+          "id": "unit"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
+              }
+            }
+          ],
+          "id": "veterancy"
+        },
+        {
+          "expressions": [
+            {
+              "preset": {
+                "preset_id": "General_DoDoNot",
+                "value_id": "do_not"
+              },
+              "type": "Preset"
+            }
+          ],
+          "id": "adjust_player_score"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_UnitGroup",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "units"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Unit_AdjustVeterancyXP",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "unit"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
+                      }
+                    }
+                  ],
+                  "id": "veterancy"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "General_DoDoNot",
+                        "value_id": "do_not"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "adjust_player_score"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [],
+  "events": [],
+  "id": "GiveCoreAndUnitsVeterancy",
+  "variables": []
+}
