@@ -39,5 +39,5 @@ StagingCoreAbilityUsedTrigger
 
 Trigger: stagingCore uses an ability
 
-// if ability is Sell OR SellFor2
+// if ability is Sell OR SellFor2 OR SellFor4
   // delete stagingCore's `units` (tracked by blackboard)

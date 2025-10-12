@@ -113,8 +113,7 @@
                           ],
                           "id": "value2"
                         }
-                      ],
-                      "sub_functions": []
+                      ]
                     },
                     {
                       "function_id": "Logic_Comparison",
@@ -157,8 +156,50 @@
                           ],
                           "id": "value2"
                         }
-                      ],
-                      "sub_functions": []
+                      ]
+                    },
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Ability_GetTriggeringAbility"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "StagedAbilityData"
+                                },
+                                "value": "StagingCore_SellFor4"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
                     }
                   ],
                   "id": "conditions"

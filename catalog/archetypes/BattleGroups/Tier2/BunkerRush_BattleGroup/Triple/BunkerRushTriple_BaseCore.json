@@ -1,7 +1,8 @@
 {
-  "based_on": "BaseCore",
-  "id": "BunkerRush_BaseCore",
-  "name": "=== [2] Bunker Rush ===\nSells for 2.",
+  "based_on": "BaseTripleCore",
+  "id": "BunkerRushTriple_BaseCore",
+  "placed_name": "BunkerRushTriple",
+  "name": "=== [2] Bunker Rush (Triple) ===\nSells for 4.",
   "unit_button": "SentryPost_Button",
   "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_SentryPost.UI_Portrait_Human_Default_SentryPost'"
 }

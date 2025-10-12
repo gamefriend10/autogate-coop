@@ -1,0 +1,5 @@
+{
+  "based_on": "StagingCore_SellFor2_Button",
+  "id": "StagingCore_SellFor4_Button",
+  "tooltip": "Remove this Battle Group and gain <d ref=\"StagingCore_SellFor4.commands[0].cost_resources.resource_a * (-1)\" style=\"Yellow\"/> Luminite."
+}

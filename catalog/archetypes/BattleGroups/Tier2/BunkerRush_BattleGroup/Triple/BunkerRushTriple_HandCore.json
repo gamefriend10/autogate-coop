@@ -1,0 +1,88 @@
+{
+  "abilityList": [
+    "BunkerRushTriple_HandCore_Construct",
+    "HandCore_PassToPlayer1",
+    "HandCore_PassToPlayer2",
+    "HandCore_PassToPlayer3",
+    "HandCore_PassToPlayer4"
+  ],
+  "alias_tech": [
+    "_HandCore"
+  ],
+  "based_on": "BunkerRushTriple_BaseCore",
+  "build_cost": {
+    "resource_a": 3.0,
+    "resource_b": 0.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "commandList": [
+    {
+      "ability": "BunkerRushTriple_HandCore_Construct",
+      "button": "HandCorePlaceInStaging_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HandCore_PassToPlayer1",
+      "button": "HandCore_PassToPlayer1_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HandCore_PassToPlayer2",
+      "button": "HandCore_PassToPlayer2_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HandCore_PassToPlayer3",
+      "button": "HandCore_PassToPlayer3_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "HandCore_PassToPlayer4",
+      "button": "HandCore_PassToPlayer4_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "BunkerRushTriple_HandCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "handcore_snowtag",
+    "bunkerrushtriple_snowtag",
+    "vanguard_snowtag"
+  ]
+}

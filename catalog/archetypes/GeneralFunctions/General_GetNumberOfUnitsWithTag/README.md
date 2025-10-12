@@ -14,6 +14,14 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), lancerarmstrongtriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == bunkerrush_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bunkerrush_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == bunkerrushtriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bunkerrushtriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == loveletter_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), loveletter_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
