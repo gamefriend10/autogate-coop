@@ -1,0 +1,9 @@
+{
+  "based_on": "SnowTag",
+  "display_name": "Triple",
+  "display_name_noun_phrase": "a Triple version of a Battle Group",
+  "flags": {
+    "display_as_attribute": true
+  },
+  "id": "triple_snowtag"
+}

@@ -51,6 +51,7 @@
     "entity_unit",
     "blockheadtriple_snowtag",
     "stagingcore_snowtag",
-    "vanguard_snowtag"
+    "vanguard_snowtag",
+    "triple_snowtag"
   ]
 }
