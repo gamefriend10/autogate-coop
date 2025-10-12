@@ -2,5 +2,7 @@
   "based_on": "BaseCore",
   "id": "LancerArmstrong_BaseCore",
   "placed_name": "LancerArmstrong",
-  "name": "=== [1] Lancer Armstrong ===\nWhen placed, Gain 1 Veterancy Level."
+  "name": "=== [1] Lancer Armstrong ===\nWhen placed, Gain 1 Veterancy Level.",
+  "unit_button": "Lancer_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Lancer.UI_Portrait_Human_Default_Lancer'"
 }

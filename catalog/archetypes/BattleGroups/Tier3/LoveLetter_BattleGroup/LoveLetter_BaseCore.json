@@ -2,5 +2,7 @@
   "based_on": "BaseCore",
   "id": "LoveLetter_BaseCore",
   "placed_name": "LoveLetter",
-  "name": "=== [3] Love Letter ===\nEnd of Buy Phase: If adjacent to (diagonal included)\nat least 2 Vanguard Battle Groups, add 2 Exos to\nthis Battle Group."
+  "name": "=== [3] Love Letter ===\nEnd of Buy Phase: If adjacent to (diagonal included)\nat least 2 Vanguard Battle Groups, add 2 Exos to\nthis Battle Group.",
+  "unit_button": "Gunner_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Exo.UI_Portrait_Human_Default_Exo'"
 }

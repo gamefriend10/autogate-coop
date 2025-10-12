@@ -2,5 +2,7 @@
   "based_on": "BaseCore",
   "id": "BedTech_BaseCore",
   "placed_name": "BedTech",
-  "name": "=== [4] BedTech ===\nEnd of Buy Phase: If adjacent to (diagonal included)\nat least 2 Vanguard Battle Groups, add 1 Exo and\n1 Medtech to this Battle Group."
+  "name": "=== [4] BedTech ===\nEnd of Buy Phase: If adjacent to (diagonal included)\nat least 2 Vanguard Battle Groups, add 1 Exo and\n1 Medtech to this Battle Group.",
+  "unit_button": "MedTech_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_MedTech.UI_Portrait_Human_Default_MedTech'"
 }

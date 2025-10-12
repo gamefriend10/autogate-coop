@@ -2,5 +2,7 @@
   "based_on": "BaseTripleCore",
   "id": "LancerArmstrongTriple_BaseCore",
   "placed_name": "LancerArmstrongTriple",
-  "name": "=== [1] Lancer Armstrong (Triple) ===\nWhen placed, Gain 2 Veterancy Levels."
+  "name": "=== [1] Lancer Armstrong (Triple) ===\nWhen placed, Gain 2 Veterancy Levels.",
+  "unit_button": "Lancer_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Lancer.UI_Portrait_Human_Default_Lancer'"
 }
