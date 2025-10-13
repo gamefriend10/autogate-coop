@@ -1,0 +1,26 @@
+{
+  "__base_type": "GlobalVariable",
+  "array_size": 1,
+  "based_on": "GlobalVariable",
+  "id": "Tier3BattleGroups",
+  "initial_values": [
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "loveletter_snowtag"
+      }
+    }
+  ],
+  "is_array": true,
+  "is_constant": false,
+  "name": "Tier3BattleGroups",
+  "per_element_initial_values": true,
+  "type": {
+    "directive": "TypeRef",
+    "type": "SnowTag"
+  }
+}

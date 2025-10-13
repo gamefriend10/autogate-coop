@@ -3,6 +3,7 @@ AutoGateInitialization():
   Set camera zoom limit
   InitReadyUpObjective_Trigger()
   SpawnHeros()
+  InitLengthOfTierXAndBelowBattleGroups()
   PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
     Camera_ZoomCameraToDistance(
       PlayerGroup_GetCurrentPlayer(),

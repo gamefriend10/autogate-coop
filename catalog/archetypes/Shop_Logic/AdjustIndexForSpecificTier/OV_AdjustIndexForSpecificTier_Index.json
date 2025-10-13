@@ -2,14 +2,14 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "IV_PickBattleGroupToSpawnForPlayer_Player",
+  "id": "OV_AdjustIndexForSpecificTier_Index",
   "initial_values": [],
   "is_array": false,
-  "is_constant": false,
-  "name": "IV_PickBattleGroupToSpawnForPlayer_Player",
+  "is_constant": true,
+  "name": "OV_AdjustIndexForSpecificTier_Index",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",
-    "type": "Player"
+    "type": "Integer"
   }
 }

@@ -83,7 +83,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
+                "variable_id": "IV_DetermineBattleGroupMaxIndex_Tier"
               }
             }
           ],
@@ -92,10 +92,51 @@
         {
           "expressions": [
             {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_PlayerToSpawnShopFor"
-              }
+              "function": {
+                "function_id": "Blackboard_GetValue_Integer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfPlayer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "GV_PlayerToSpawnShopFor"
+                                  }
+                                }
+                              ],
+                              "id": "player"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "shop_tier"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
             }
           ],
           "id": "value"
@@ -158,51 +199,10 @@
                             {
                               "expressions": [
                                 {
-                                  "function": {
-                                    "function_id": "Blackboard_GetValue_Integer",
-                                    "parameters": [
-                                      {
-                                        "expressions": [
-                                          {
-                                            "function": {
-                                              "function_id": "Blackboard_GetBlackboardOfPlayer",
-                                              "parameters": [
-                                                {
-                                                  "expressions": [
-                                                    {
-                                                      "type": "Variable",
-                                                      "variable": {
-                                                        "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
-                                                      }
-                                                    }
-                                                  ],
-                                                  "id": "player"
-                                                }
-                                              ]
-                                            },
-                                            "type": "Function"
-                                          }
-                                        ],
-                                        "id": "blackboard"
-                                      },
-                                      {
-                                        "expressions": [
-                                          {
-                                            "type": "Value",
-                                            "value": {
-                                              "type": {
-                                                "directive": "FunctionType",
-                                                "type": "String"
-                                              },
-                                              "value": "shop_tier"
-                                            }
-                                          }
-                                        ],
-                                        "id": "key"
-                                      }
-                                    ]
-                                  },
-                                  "type": "Function"
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "IV_DetermineBattleGroupMaxIndex_Tier"
+                                  }
                                 }
                               ],
                               "id": "value2"
@@ -230,6 +230,26 @@
             }
           ],
           "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "DetermineBattleGroupMaxIndex"
+              }
+            }
+          ],
+          "id": "trigger"
         }
       ]
     },

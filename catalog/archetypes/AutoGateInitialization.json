@@ -77,6 +77,26 @@
       ]
     },
     {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "InitLengthOfTierXAndBelowBattleGroups"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
       "function_id": "PlayerGroup_ForEachPlayerInGroup",
       "parameters": [
         {

@@ -3,18 +3,7 @@
   "array_size": 0,
   "based_on": "GlobalVariable",
   "id": "LengthOfTier5AndBelowBattleGroups",
-  "initial_values": [
-    {
-      "type": "Value",
-      "value": {
-        "type": {
-          "directive": "FunctionType",
-          "type": "Integer"
-        },
-        "value": "6"
-      }
-    }
-  ],
+  "initial_values": [],
   "is_array": false,
   "is_constant": true,
   "name": "LengthOfTier5AndBelowBattleGroups",

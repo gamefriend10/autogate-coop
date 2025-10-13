@@ -1,43 +1,22 @@
-PickBattleGroupToSpawnForPlayer(Player `IV_PickBattleGroupToSpawnForPlayer_Player`):
-  Switch(
-    Blackboard_GetValue_Integer(
-      Blackboard_GetBlackboardOfPlayer(`IV_PickBattleGroupToSpawnForPlayer_Player`),
-      "shop_tier"
-    )
-  ):
-    case 2: PickTier2AndBelowBattleGroupToSpawn
-    case 3: PickTier3AndBelowBattleGroupToSpawn
-    case 4: PickTier4AndBelowBattleGroupToSpawn
-    case 5: PickTier5AndBelowBattleGroupToSpawn
-    case 6: PickTier6AndBelowBattleGroupToSpawn
-    default: PickTier1BattleGroupToSpawn
+// Reuses: Integer `GV_DetermineBattleGroupMaxIndex_Index`
+// Returns: `BattleGroupToSpawnTag`
+PickBattleGroupToSpawnForPlayer():
+  // Pick random index
+  Set `IV_AdjustIndexForSpecificTier_Index` = Random_Integer(0, `GV_DetermineBattleGroupMaxIndex_Index`)
 
---------------------
+  (`OV_AdjustIndexForSpecificTier_Tier`, `OV_AdjustIndexForSpecificTier_Index`) =
+    AdjustIndexForSpecificTier(`IV_AdjustIndexForSpecificTier_Index`)
 
-PickTier1BattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier1BattleGroups`[Random_Integer(0, LengthOfTier1BattleGroups-1)]
-
---------------------
-
-PickTier2AndBelowBattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier2AndBelowBattleGroups`[Random_Integer(0, LengthOfTier2AndBelowBattleGroups-1)]
-
---------------------
-
-PickTier3AndBelowBattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier3AndBelowBattleGroups`[Random_Integer(0, LengthOfTier3AndBelowBattleGroups-1)]
-
---------------------
-
-PickTier4AndBelowBattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier4AndBelowBattleGroups`[Random_Integer(0, LengthOfTier4AndBelowBattleGroups-1)]
-
---------------------
-
-PickTier5AndBelowBattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier5AndBelowBattleGroups`[Random_Integer(0, LengthOfTier5AndBelowBattleGroups-1)]
-
---------------------
-
-PickTier6AndBelowBattleGroupToSpawn():
-  set `BattleGroupToSpawnTag` = `Tier6AndBelowBattleGroups`[Random_Integer(0, LengthOfTier6AndBelowBattleGroups-1)]
+  Switch(`OV_AdjustIndexForSpecificTier_Tier`):
+    case 1:
+      Set `BattleGroupToSpawnTag` = `Tier1BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]
+    case 2:
+      Set `BattleGroupToSpawnTag` = `Tier2BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]
+    case 3:
+      Set `BattleGroupToSpawnTag` = `Tier3BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]
+    case 4:
+      Set `BattleGroupToSpawnTag` = `Tier4BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]
+    case 5:
+      Set `BattleGroupToSpawnTag` = `Tier5BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]
+    case 6:
+      Set `BattleGroupToSpawnTag` = `Tier6BattleGroups`[`OV_AdjustIndexForSpecificTier_Index`]

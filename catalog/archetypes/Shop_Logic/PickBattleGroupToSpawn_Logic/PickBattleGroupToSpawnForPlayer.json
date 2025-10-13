@@ -49,38 +49,25 @@
       ]
     },
     {
-      "function_id": "General_Switch",
+      "function_id": "Variable_SetVariable",
       "parameters": [
         {
           "expressions": [
             {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AdjustIndexForSpecificTier_Index"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
               "function": {
-                "function_id": "Blackboard_GetValue_Integer",
+                "function_id": "Random_Integer",
                 "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Blackboard_GetBlackboardOfPlayer",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Variable",
-                                  "variable": {
-                                    "variable_id": "IV_PickBattleGroupToSpawnForPlayer_Player"
-                                  }
-                                }
-                              ],
-                              "id": "player"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "blackboard"
-                  },
                   {
                     "expressions": [
                       {
@@ -88,13 +75,24 @@
                         "value": {
                           "type": {
                             "directive": "FunctionType",
-                            "type": "String"
+                            "type": "Integer"
                           },
-                          "value": "shop_tier"
+                          "value": "0"
                         }
                       }
                     ],
-                    "id": "key"
+                    "id": "min"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "GV_DetermineBattleGroupMaxIndex_Index"
+                        }
+                      }
+                    ],
+                    "id": "max"
                   }
                 ]
               },
@@ -103,10 +101,108 @@
           ],
           "id": "value"
         }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "AdjustIndexForSpecificTier"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "General_Switch",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_AdjustIndexForSpecificTier_Tier"
+              }
+            }
+          ],
+          "id": "value"
+        }
       ],
       "sub_functions": [
         {
           "functions": [
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "1"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier1BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
             {
               "function_id": "General_SwitchCase",
               "parameters": [
@@ -130,22 +226,37 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Trigger_Run",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
-                                },
-                                "value": "PickTier2AndBelowBattleGroupToSpawn"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
                               }
                             }
                           ],
-                          "id": "trigger"
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier2BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
                         }
                       ]
                     }
@@ -177,22 +288,37 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Trigger_Run",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
-                                },
-                                "value": "PickTier3AndBelowBattleGroupToSpawn"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
                               }
                             }
                           ],
-                          "id": "trigger"
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier3BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
                         }
                       ]
                     }
@@ -224,22 +350,37 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Trigger_Run",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
-                                },
-                                "value": "PickTier4AndBelowBattleGroupToSpawn"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
                               }
                             }
                           ],
-                          "id": "trigger"
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier4BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
                         }
                       ]
                     }
@@ -271,22 +412,37 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Trigger_Run",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
-                                },
-                                "value": "PickTier5AndBelowBattleGroupToSpawn"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
                               }
                             }
                           ],
-                          "id": "trigger"
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier5BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
                         }
                       ]
                     }
@@ -318,22 +474,37 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Trigger_Run",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "TypeRef",
-                                  "type": "Trigger"
-                                },
-                                "value": "PickTier6AndBelowBattleGroupToSpawn"
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "BattleGroupToSpawnTag"
                               }
                             }
                           ],
-                          "id": "trigger"
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "type": "Variable",
+                                    "variable": {
+                                      "variable_id": "OV_AdjustIndexForSpecificTier_Index"
+                                    }
+                                  }
+                                ],
+                                "variable_id": "Tier6BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
                         }
                       ]
                     }
@@ -344,31 +515,6 @@
             }
           ],
           "id": "cases"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "Trigger_Run",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "Trigger"
-                        },
-                        "value": "PickTier1BattleGroupToSpawn"
-                      }
-                    }
-                  ],
-                  "id": "trigger"
-                }
-              ]
-            }
-          ],
-          "id": "default"
         }
       ]
     }

@@ -10,10 +10,10 @@
 5. adjust SetVarsFor_XXX_ShopCore_SpawnUnits function.
   1. double unit counts for the triple
 
-7. add to battlegroup arrays (its own tier AND up)
-  1. add snowtag to array e.g. Tier2AndBelowBattleGroups
-  1. update length of array var e.g. Tier2AndBelowBattleGroups
-  3. update the var keeping track of the length e.g. LengthOfTier2AndBelowBattleGroups
+7. add to battlegroup's tier's array
+  1. add snowtag to array e.g. Tier2BattleGroups
+  1. update length of array var e.g. Tier2BattleGroups
+  3. update the var keeping track of the length e.g. LengthOfTier2BattleGroups
 2. add/remove the battleGroup's regular ShopCore to/from GeneralShopCoreSpawn 
 3. add/remove the battleGroup's regular ShopCore and Triple_HandCore to/from SetVarsForCoreSpawnUnits
 4. add/remove the regular snowtag + Triple_HandCore to/from DetermineTripleVersionOfCoreToSpawn
