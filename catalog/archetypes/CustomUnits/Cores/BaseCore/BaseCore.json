@@ -54,7 +54,7 @@
     "detector": false,
     "display_ui_description": false,
     "has_prime_structure": false,
-    "hologram": true,
+    "hologram": false,
     "overlap_resource_a": false,
     "receives_veterancy_from_kills": true,
     "requires_cascade_field": true,
