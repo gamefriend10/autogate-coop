@@ -21,7 +21,7 @@ SDFVanguard_PerformWhenXIsPlaced():
     `IV_General_GetNumberOfUnitsWithTag_Units`,
     `IV_General_GetNumberOfUnitsWithTag_Tag`
   )
-  set `num_to_spawn` += `OV_General_GetNumberOfUnitsWithTag_Num`
+  set `num_to_spawn` += (`OV_General_GetNumberOfUnitsWithTag_Num` * 2)
 
   If(`num_to_spawn` == 0):
     General_SkipRemainingActions()

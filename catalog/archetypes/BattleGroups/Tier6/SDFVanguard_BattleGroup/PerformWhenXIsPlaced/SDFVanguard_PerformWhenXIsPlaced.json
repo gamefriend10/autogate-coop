@@ -399,10 +399,50 @@
                   {
                     "expressions": [
                       {
-                        "type": "Variable",
-                        "variable": {
-                          "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
-                        }
+                        "function": {
+                          "function_id": "Math_Arithmetic_Integer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
+                                  }
+                                }
+                              ],
+                              "id": "value1"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "mult"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "op"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "Integer"
+                                    },
+                                    "value": "2"
+                                  }
+                                }
+                              ],
+                              "id": "value2"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value2"

@@ -25,8 +25,10 @@ MoveCoreToOwningPlayerHand(Unit `IV_MoveCoreToOwningPlayerHand_Core`):
     Actor_SetPosition(UnitGroup_GetCurrentUnit(), `GV_HandPositionToSpawnAt`)
 
   // Add core to player's blackboard
-  `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player` = `player`
+  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore` = Unit_GetTriggeringUnit()
+  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player` = `player`
   AddHandCoreToOpenHandPositionInPlayerBlackboard(
+    `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`,
     `GV_OpenHandPositionToSpawnAt`,
     `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player`
   )

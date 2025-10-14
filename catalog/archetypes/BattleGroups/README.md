@@ -15,7 +15,8 @@
   1. update length of array var e.g. Tier2BattleGroups
   3. update the var keeping track of the length e.g. LengthOfTier2BattleGroups
 2. add/remove the battleGroup's regular ShopCore to/from GeneralShopCoreSpawn 
-3. add/remove the battleGroup's regular ShopCore and Triple_HandCore to/from SetVarsForCoreSpawnUnits
+3. add/remove the battleGroup's regular tag and HandCore to/from DetermineHandCoreFromTag
+3. add/remove the battleGroup's regular ShopCore, regular HandCore, and Triple_HandCore to/from SetVarsForCoreSpawnUnits
 4. add/remove the regular snowtag + Triple_HandCore to/from DetermineTripleVersionOfCoreToSpawn
 5. add/rm tag to General_GetNumberOfUnitsWithTag
 

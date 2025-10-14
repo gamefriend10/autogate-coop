@@ -1,0 +1,949 @@
+{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "tags": [
+                              "to_text"
+                            ],
+                            "type": "String"
+                          },
+                          "value": "Triple_PickAndAddRandomNextTierBattleGroupToHand"
+                        }
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "General_Switch",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Math_Min",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Math_Arithmetic_Integer",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetValue_Integer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "function": {
+                                              "function_id": "Blackboard_GetBlackboardOfPlayer"
+                                            },
+                                            "type": "Function"
+                                          }
+                                        ],
+                                        "id": "blackboard"
+                                      },
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Value",
+                                            "value": {
+                                              "type": {
+                                                "directive": "FunctionType",
+                                                "type": "String"
+                                              },
+                                              "value": "shop_tier"
+                                            }
+                                          }
+                                        ],
+                                        "id": "key"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "value1"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "preset": {
+                                    "preset_id": "Math_ArithmeticOperator",
+                                    "value_id": "plus"
+                                  },
+                                  "type": "Preset"
+                                }
+                              ],
+                              "id": "op"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "Integer"
+                                    },
+                                    "value": "1"
+                                  }
+                                }
+                              ],
+                              "id": "value2"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      },
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "Integer"
+                          },
+                          "value": "6"
+                        }
+                      }
+                    ],
+                    "id": "values"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "function": {
+                                      "function_id": "Random_Integer",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "min"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "function": {
+                                                "function_id": "Math_Arithmetic_Integer",
+                                                "parameters": [
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Variable",
+                                                        "variable": {
+                                                          "variable_id": "LengthOfTier2BattleGroups"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value1"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "preset": {
+                                                          "preset_id": "Math_ArithmeticOperator",
+                                                          "value_id": "minus"
+                                                        },
+                                                        "type": "Preset"
+                                                      }
+                                                    ],
+                                                    "id": "op"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Value",
+                                                        "value": {
+                                                          "type": {
+                                                            "directive": "FunctionType",
+                                                            "type": "Integer"
+                                                          },
+                                                          "value": "1"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value2"
+                                                  }
+                                                ]
+                                              },
+                                              "type": "Function"
+                                            }
+                                          ],
+                                          "id": "max"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Function"
+                                  }
+                                ],
+                                "variable_id": "Tier2BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "3"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "function": {
+                                      "function_id": "Random_Integer",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "min"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "function": {
+                                                "function_id": "Math_Arithmetic_Integer",
+                                                "parameters": [
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Variable",
+                                                        "variable": {
+                                                          "variable_id": "LengthOfTier3BattleGroups"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value1"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "preset": {
+                                                          "preset_id": "Math_ArithmeticOperator",
+                                                          "value_id": "minus"
+                                                        },
+                                                        "type": "Preset"
+                                                      }
+                                                    ],
+                                                    "id": "op"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Value",
+                                                        "value": {
+                                                          "type": {
+                                                            "directive": "FunctionType",
+                                                            "type": "Integer"
+                                                          },
+                                                          "value": "1"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value2"
+                                                  }
+                                                ]
+                                              },
+                                              "type": "Function"
+                                            }
+                                          ],
+                                          "id": "max"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Function"
+                                  }
+                                ],
+                                "variable_id": "Tier3BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "function": {
+                                      "function_id": "Random_Integer",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "min"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "function": {
+                                                "function_id": "Math_Arithmetic_Integer",
+                                                "parameters": [
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Variable",
+                                                        "variable": {
+                                                          "variable_id": "LengthOfTier4BattleGroups"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value1"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "preset": {
+                                                          "preset_id": "Math_ArithmeticOperator",
+                                                          "value_id": "minus"
+                                                        },
+                                                        "type": "Preset"
+                                                      }
+                                                    ],
+                                                    "id": "op"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Value",
+                                                        "value": {
+                                                          "type": {
+                                                            "directive": "FunctionType",
+                                                            "type": "Integer"
+                                                          },
+                                                          "value": "1"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value2"
+                                                  }
+                                                ]
+                                              },
+                                              "type": "Function"
+                                            }
+                                          ],
+                                          "id": "max"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Function"
+                                  }
+                                ],
+                                "variable_id": "Tier4BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "5"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "function": {
+                                      "function_id": "Random_Integer",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "min"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "function": {
+                                                "function_id": "Math_Arithmetic_Integer",
+                                                "parameters": [
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Variable",
+                                                        "variable": {
+                                                          "variable_id": "LengthOfTier5BattleGroups"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value1"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "preset": {
+                                                          "preset_id": "Math_ArithmeticOperator",
+                                                          "value_id": "minus"
+                                                        },
+                                                        "type": "Preset"
+                                                      }
+                                                    ],
+                                                    "id": "op"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Value",
+                                                        "value": {
+                                                          "type": {
+                                                            "directive": "FunctionType",
+                                                            "type": "Integer"
+                                                          },
+                                                          "value": "1"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value2"
+                                                  }
+                                                ]
+                                              },
+                                              "type": "Function"
+                                            }
+                                          ],
+                                          "id": "max"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Function"
+                                  }
+                                ],
+                                "variable_id": "Tier5BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Integer"
+                        },
+                        "value": "6"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "indices": [
+                                  {
+                                    "function": {
+                                      "function_id": "Random_Integer",
+                                      "parameters": [
+                                        {
+                                          "expressions": [
+                                            {
+                                              "type": "Value",
+                                              "value": {
+                                                "type": {
+                                                  "directive": "FunctionType",
+                                                  "type": "Integer"
+                                                },
+                                                "value": "0"
+                                              }
+                                            }
+                                          ],
+                                          "id": "min"
+                                        },
+                                        {
+                                          "expressions": [
+                                            {
+                                              "function": {
+                                                "function_id": "Math_Arithmetic_Integer",
+                                                "parameters": [
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Variable",
+                                                        "variable": {
+                                                          "variable_id": "LengthOfTier6BattleGroups"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value1"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "preset": {
+                                                          "preset_id": "Math_ArithmeticOperator",
+                                                          "value_id": "minus"
+                                                        },
+                                                        "type": "Preset"
+                                                      }
+                                                    ],
+                                                    "id": "op"
+                                                  },
+                                                  {
+                                                    "expressions": [
+                                                      {
+                                                        "type": "Value",
+                                                        "value": {
+                                                          "type": {
+                                                            "directive": "FunctionType",
+                                                            "type": "Integer"
+                                                          },
+                                                          "value": "1"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "id": "value2"
+                                                  }
+                                                ]
+                                              },
+                                              "type": "Function"
+                                            }
+                                          ],
+                                          "id": "max"
+                                        }
+                                      ]
+                                    },
+                                    "type": "Function"
+                                  }
+                                ],
+                                "variable_id": "Tier6BattleGroups"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "cases"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "DetermineHandCoreFromTag"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AddBattleGroupToHand_HandCoreType"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AddBattleGroupToHand_Player"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetOwningPlayer",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Unit_GetTriggeringUnit"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "unit"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "AddBattleGroupToHand"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "triple_snowtag"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "id": "Triple_PickAndAddRandomNextTierBattleGroupToHand",
+  "variables": []
+}

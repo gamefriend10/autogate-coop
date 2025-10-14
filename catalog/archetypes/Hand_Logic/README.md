@@ -9,6 +9,7 @@ String PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer
 --------------------
 
 AddHandCoreToOpenHandPositionInPlayerBlackboard(
+  Unit `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`
   String `GV_OpenHandPositionToSpawnAt`
   Player `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player`
 ):
@@ -17,13 +18,13 @@ AddHandCoreToOpenHandPositionInPlayerBlackboard(
     case "hand_position_1": Blackboard_SetValue_Unit(
       `player_blackboard`,
       "hand_core_at_hand_position_1",
-      Unit_GetTriggeringUnit()
+      `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`
     )
     repeat for "hand_position_2-5" `hand_core_at_hand_position_2-5`... 
     default: Blackboard_SetValue_Unit(
       `player_blackboard`,
       "hand_core_at_hand_position_0",
-      Unit_GetTriggeringUnit()
+      `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`
     )
 
 --------------------

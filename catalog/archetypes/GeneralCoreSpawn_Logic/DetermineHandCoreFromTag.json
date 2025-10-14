@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "AddHandCoreToOpenHandPositionInPlayerBlackboard"
+                          "value": "DetermineHandCoreFromTag"
                         }
                       }
                     ],
@@ -49,46 +49,6 @@
       ]
     },
     {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "player_blackboard"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Blackboard_GetBlackboardOfPlayer",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "type": "Variable",
-                        "variable": {
-                          "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player"
-                        }
-                      }
-                    ],
-                    "id": "player"
-                  }
-                ]
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
       "function_id": "General_Switch",
       "parameters": [
         {
@@ -96,7 +56,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "GV_OpenHandPositionToSpawnAt"
+                "variable_id": "IV_DetermineHandCoreFromTag_Tag"
               }
             }
           ],
@@ -115,10 +75,10 @@
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "hand_position_1"
+                        "value": "lancerarmstrong_snowtag"
                       }
                     }
                   ],
@@ -129,18 +89,18 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Blackboard_SetValue_Unit",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "player_blackboard"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
                               }
                             }
                           ],
-                          "id": "blackboard"
+                          "id": "variable"
                         },
                         {
                           "expressions": [
@@ -148,21 +108,10 @@
                               "type": "Value",
                               "value": {
                                 "type": {
-                                  "directive": "FunctionType",
-                                  "type": "String"
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
                                 },
-                                "value": "hand_core_at_hand_position_1"
-                              }
-                            }
-                          ],
-                          "id": "key"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Variable",
-                              "variable": {
-                                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+                                "value": "LancerArmstrong_HandCore"
                               }
                             }
                           ],
@@ -184,10 +133,10 @@
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "hand_position_2"
+                        "value": "bunkerrush_snowtag"
                       }
                     }
                   ],
@@ -198,18 +147,18 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Blackboard_SetValue_Unit",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "player_blackboard"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
                               }
                             }
                           ],
-                          "id": "blackboard"
+                          "id": "variable"
                         },
                         {
                           "expressions": [
@@ -217,21 +166,10 @@
                               "type": "Value",
                               "value": {
                                 "type": {
-                                  "directive": "FunctionType",
-                                  "type": "String"
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
                                 },
-                                "value": "hand_core_at_hand_position_2"
-                              }
-                            }
-                          ],
-                          "id": "key"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Variable",
-                              "variable": {
-                                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+                                "value": "BunkerRush_HandCore"
                               }
                             }
                           ],
@@ -253,10 +191,10 @@
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "hand_position_3"
+                        "value": "loveletter_snowtag"
                       }
                     }
                   ],
@@ -267,18 +205,18 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Blackboard_SetValue_Unit",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "player_blackboard"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
                               }
                             }
                           ],
-                          "id": "blackboard"
+                          "id": "variable"
                         },
                         {
                           "expressions": [
@@ -286,21 +224,10 @@
                               "type": "Value",
                               "value": {
                                 "type": {
-                                  "directive": "FunctionType",
-                                  "type": "String"
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
                                 },
-                                "value": "hand_core_at_hand_position_3"
-                              }
-                            }
-                          ],
-                          "id": "key"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Variable",
-                              "variable": {
-                                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+                                "value": "LoveLetter_HandCore"
                               }
                             }
                           ],
@@ -322,10 +249,10 @@
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "hand_position_4"
+                        "value": "bedtech_snowtag"
                       }
                     }
                   ],
@@ -336,18 +263,18 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Blackboard_SetValue_Unit",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "player_blackboard"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
                               }
                             }
                           ],
-                          "id": "blackboard"
+                          "id": "variable"
                         },
                         {
                           "expressions": [
@@ -355,21 +282,10 @@
                               "type": "Value",
                               "value": {
                                 "type": {
-                                  "directive": "FunctionType",
-                                  "type": "String"
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
                                 },
-                                "value": "hand_core_at_hand_position_4"
-                              }
-                            }
-                          ],
-                          "id": "key"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Variable",
-                              "variable": {
-                                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+                                "value": "BedTech_HandCore"
                               }
                             }
                           ],
@@ -391,10 +307,10 @@
                       "type": "Value",
                       "value": {
                         "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
-                        "value": "hand_position_5"
+                        "value": "blockhead_snowtag"
                       }
                     }
                   ],
@@ -405,18 +321,18 @@
                 {
                   "functions": [
                     {
-                      "function_id": "Blackboard_SetValue_Unit",
+                      "function_id": "Variable_SetVariable",
                       "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "player_blackboard"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
                               }
                             }
                           ],
-                          "id": "blackboard"
+                          "id": "variable"
                         },
                         {
                           "expressions": [
@@ -424,21 +340,68 @@
                               "type": "Value",
                               "value": {
                                 "type": {
-                                  "directive": "FunctionType",
-                                  "type": "String"
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
                                 },
-                                "value": "hand_core_at_hand_position_5"
+                                "value": "Blockhead_HandCore"
                               }
                             }
                           ],
-                          "id": "key"
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "SnowTag"
                         },
+                        "value": "sdfvanguard_snowtag"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
                         {
                           "expressions": [
                             {
                               "type": "Variable",
                               "variable": {
-                                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+                                "variable_id": "OV_DetermineHandCoreFromTag_HandCoreType"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
+                                },
+                                "value": "SDFVanguard_HandCore"
                               }
                             }
                           ],
@@ -453,74 +416,12 @@
             }
           ],
           "id": "cases"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "Blackboard_SetValue_Unit",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "player_blackboard"
-                      }
-                    }
-                  ],
-                  "id": "blackboard"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "FunctionType",
-                          "type": "String"
-                        },
-                        "value": "hand_core_at_hand_position_0"
-                      }
-                    }
-                  ],
-                  "id": "key"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
-                      }
-                    }
-                  ],
-                  "id": "value"
-                }
-              ]
-            }
-          ],
-          "id": "default"
         }
       ]
     }
   ],
   "based_on": "Trigger",
   "events": [],
-  "id": "AddHandCoreToOpenHandPositionInPlayerBlackboard",
-  "variables": [
-    {
-      "array_size": 1,
-      "id": "player_blackboard",
-      "initial_values": [],
-      "is_array": false,
-      "is_constant": false,
-      "is_id_based_on_name": true,
-      "name": "player_blackboard",
-      "per_element_initial_values": false,
-      "type": {
-        "directive": "FunctionType",
-        "type": "Blackboard"
-      }
-    }
-  ]
+  "id": "DetermineHandCoreFromTag",
+  "variables": []
 }

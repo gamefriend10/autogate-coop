@@ -287,18 +287,46 @@
                             "expressions": [
                               {
                                 "function": {
-                                  "function_id": "Unit_GetPlacedName",
+                                  "function_id": "String_FormatString",
                                   "parameters": [
                                     {
                                       "expressions": [
                                         {
+                                          "type": "Value",
+                                          "value": {
+                                            "type": {
+                                              "directive": "FunctionType",
+                                              "type": "String"
+                                            },
+                                            "value": "GetAllStagingCoresForPlayer: {0}."
+                                          }
+                                        }
+                                      ],
+                                      "id": "format"
+                                    },
+                                    {
+                                      "expressions": [
+                                        {
                                           "function": {
-                                            "function_id": "UnitGroup_GetCurrentUnit"
+                                            "function_id": "Unit_GetPlacedName",
+                                            "parameters": [
+                                              {
+                                                "expressions": [
+                                                  {
+                                                    "function": {
+                                                      "function_id": "UnitGroup_GetCurrentUnit"
+                                                    },
+                                                    "type": "Function"
+                                                  }
+                                                ],
+                                                "id": "unit"
+                                              }
+                                            ]
                                           },
                                           "type": "Function"
                                         }
                                       ],
-                                      "id": "unit"
+                                      "id": "args"
                                     }
                                   ]
                                 },

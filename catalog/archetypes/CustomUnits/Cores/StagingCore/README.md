@@ -33,6 +33,8 @@ If(Entity_HasAllTags(Unit_GetTriggeringUnit(), vanguard_snowtag)):
 
 Trigger_Run(PerformWhenXIsPlaced)
 
+Trigger_Run(Triple_PickAndAddRandomNextTierBattleGroupToHand)
+
 --------------------
 
 StagingCoreAbilityUsedTrigger
