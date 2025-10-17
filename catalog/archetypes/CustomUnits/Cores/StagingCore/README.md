@@ -5,7 +5,14 @@ Trigger: stagingCore is birthed (expected to be from the HandCore constructing i
 // Wait for 0.1 seconds, because this trigger seems to run in parallel with OnHandCoreAbilityUsed and `HandCoreUnitsToMove` could be empty or the prev value
 // set stagingCore's `units` (tracked by blackboard) to `HandCoreUnitsToMove` (tracked by player's blackboard)
 // move stagingCore's `units` (tracked by blackboard) to Actor's current position
-// `GV_ClosestStagingPosition` = GetNearestStagingPositionForTriggeringPlayer()
+
+(
+  `GV_ClosestStagingPosition`,
+  `OV_GetNearestStagingPositionForTriggeringPlayer_Row`,
+  `OV_GetNearestStagingPositionForTriggeringPlayer_Col`
+)
+  = GetNearestStagingPositionForTriggeringPlayer()
+
 // AddStagingCoreToPlayerBlackboard(`GV_ClosestStagingPosition`)
 
 // Set position coords of core to that position in its blackboard
@@ -31,9 +38,9 @@ If(Entity_HasAllTags(Unit_GetTriggeringUnit(), vanguard_snowtag)):
     General_DoDoNot.do_not
   )
 
-Trigger_Run(PerformWhenXIsPlaced)
-
 Trigger_Run(Triple_PickAndAddRandomNextTierBattleGroupToHand)
+
+Trigger_Run(PerformWhenXIsPlaced)
 
 --------------------
 

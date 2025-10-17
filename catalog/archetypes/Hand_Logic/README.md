@@ -1,10 +1,12 @@
 // Returns String "hand_position_X" via `GV_OpenHandPositionToSpawnAt`
+//  or "NO_OPEN_POSITION_FOUND" if no open pos found
 String PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`):
   `player_blackboard` = Blackboard_GetBlackboardOfPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
   If(!Blackboard_HasValue(`player_blackboard`, "hand_core_at_hand_position_0")):
     `GV_OpenHandPositionToSpawnAt` = "hand_position_0"
     General_SkipRemainingActions()
   repeat for the rest of the 5 hand positions...
+  `GV_OpenHandPositionToSpawnAt` = "NO_OPEN_POSITION_FOUND"
 
 --------------------
 

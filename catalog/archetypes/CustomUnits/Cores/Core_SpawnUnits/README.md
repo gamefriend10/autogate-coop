@@ -2,7 +2,9 @@
 
 // Returns (`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) SetVarsForCoreSpawnUnits(`IV_Core_SpawnUnits_CoreToSpawn`):
   Switch(`IV_Core_SpawnUnits_CoreToSpawn`):
-    case HogDog_ShopCore: SetVarsFor_HogDog_ShopCore_SpawnUnits()
+    case DogPack_ShopCore: SetVarsFor_DogPack_Core_SpawnUnits()
+    case DogPack_HandCore: SetVarsFor_DogPack_Core_SpawnUnits()
+    case DogPackTriple_HandCore: SetVarsFor_DogPackTriple_ShopCore_SpawnUnits()
     repeat for all battle groups...
 
 ----------------------------------------

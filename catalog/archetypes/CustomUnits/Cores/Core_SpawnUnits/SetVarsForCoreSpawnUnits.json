@@ -220,7 +220,7 @@
                           "directive": "TypeRef",
                           "type": "UnitData"
                         },
-                        "value": "GauntFather_ShopCore"
+                        "value": "DogPack_ShopCore"
                       }
                     }
                   ],
@@ -242,7 +242,242 @@
                                   "directive": "TypeRef",
                                   "type": "Trigger"
                                 },
-                                "value": "SetVarsFor_GauntFather_ShopCore_SpawnUnits"
+                                "value": "SetVarsFor_DogPack_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "DogPack_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_DogPack_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "DogPackTriple_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_DogPackTriple_ShopCore_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "DogPackBeta_ShopCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_DogPackBeta_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "DogPackBeta_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_DogPackBeta_Core_SpawnUnits"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "UnitData"
+                        },
+                        "value": "DogPackBetaTriple_HandCore"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SetVarsFor_DogPackBetaTriple_ShopCore_SpawnUnits"
                               }
                             }
                           ],

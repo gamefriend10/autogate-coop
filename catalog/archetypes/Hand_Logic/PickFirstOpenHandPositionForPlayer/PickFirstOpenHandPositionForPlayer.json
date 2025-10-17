@@ -711,6 +711,37 @@
           "id": "then"
         }
       ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_OpenHandPositionToSpawnAt"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "NO_OPEN_POSITION_FOUND"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
     }
   ],
   "based_on": "Trigger",

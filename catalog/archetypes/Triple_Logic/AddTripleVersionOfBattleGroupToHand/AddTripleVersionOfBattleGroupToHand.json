@@ -76,34 +76,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_AddBattleGroupToHand_HandCoreType"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn"
-              }
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_AddBattleGroupToHand_Player"
+                "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
               }
             }
           ],
@@ -147,7 +120,406 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "AddBattleGroupToHand"
+                "value": "PickFirstOpenHandPositionForPlayer"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_OpenHandPositionToSpawnAt"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "NO_OPEN_POSITION_FOUND"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "GetVectorForHandPositionOfTriggeringPlayer"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Unit_CreateUnit",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Integer"
+                },
+                "value": "1"
+              }
+            }
+          ],
+          "id": "count"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn"
+              }
+            }
+          ],
+          "id": "unit_data"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_HandPositionToSpawnAt"
+              }
+            }
+          ],
+          "id": "position"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Boolean"
+                },
+                "value": "true"
+              }
+            }
+          ],
+          "id": "force_position"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetLastCreatedUnit"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Blackboard_SetValue_String",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
+                        }
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "hand_position"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "GV_OpenHandPositionToSpawnAt"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "AddHandCoreToOpenHandPositionInPlayerBlackboard"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_CoreToSpawn"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "SetVarsForCoreSpawnUnits"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Core_SpawnUnits_PlayerToSpawnFor"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_PickFirstOpenHandPositionForPlayer_Player"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "Core_SpawnUnits"
               }
             }
           ],
@@ -163,7 +535,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "OV_AddBattleGroupToHand_HandCore"
+                "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
               }
             }
           ],
@@ -214,7 +586,7 @@
                                 {
                                   "type": "Variable",
                                   "variable": {
-                                    "variable_id": "OV_AddBattleGroupToHand_HandCore"
+                                    "variable_id": "IV_Core_SpawnUnits_CoreToAttachUnitsTo"
                                   }
                                 }
                               ],

@@ -14,6 +14,22 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), lancerarmstrongtriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == dogpack_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), dogpack_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == dogpacktriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), dogpacktriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == dogpackbeta_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), dogpackbeta_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == dogpackbetatriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), dogpackbetatriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == bunkerrush_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bunkerrush_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1

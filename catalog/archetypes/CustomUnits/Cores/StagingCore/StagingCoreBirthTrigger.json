@@ -608,7 +608,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "PerformWhenXIsPlaced"
+                "value": "Triple_PickAndAddRandomNextTierBattleGroupToHand"
               }
             }
           ],
@@ -628,7 +628,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "Triple_PickAndAddRandomNextTierBattleGroupToHand"
+                "value": "PerformWhenXIsPlaced"
               }
             }
           ],

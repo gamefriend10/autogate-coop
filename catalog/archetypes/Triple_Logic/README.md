@@ -81,12 +81,16 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
 
   `GV_Triple_TriplifyCoreIfThreeArePresent_TripleFound` = true
 
-  // If any are hand cores (condition on RemoveHandCoreFromHandPositionInPlayerBlackboard),
-  // rm from player's blackboard, so the triple can fit in one of the newly open slots.
-  // Note: okay to not rm from staging, bc deleting will rm anyway and the triple goes to the hand.
   UnitGroup_ForEachUnitInGroup(`GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple`):
+    // If any are hand cores (condition on RemoveHandCoreFromHandPositionInPlayerBlackboard),
+    // rm from player's blackboard, so the triple can fit in one of the newly open slots.
     `IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore` = UnitGroup_GetCurrentUnit
     RemoveHandCoreFromHandPositionInPlayerBlackboard(`IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore`)
+    // If any are staging cores (condition on RemoveStagingCoreFromPlayerBlackboard),
+    // rm from player's blackboard, so they no longer count towards triples. This is bc ig
+    // deleting from staging doesnt happen inbetween our synchronous triggers here(?)
+    `IV_RemoveStagingCoreFromPlayerBlackboard_Core` = UnitGroup_GetCurrentUnit
+    RemoveStagingCoreFromPlayerBlackboard(`IV_RemoveStagingCoreFromPlayerBlackboard_Core`)
 
   // If vanguard, add up the non-triple core veterancy
   If(Entity_HasAllTags(`IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`, vanguard_snowtag)):
@@ -130,13 +134,51 @@ AddTripleVersionOfBattleGroupToHand(
   `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn` = 
     DetermineTripleVersionOfCoreToSpawn(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
 
-  Set `IV_AddBattleGroupToHand_HandCoreType` = `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn`
-  Set `IV_AddBattleGroupToHand_Player` = Unit_GetOwningPlayer(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
-  `OV_AddBattleGroupToHand_HandCore` = AddBattleGroupToHand(`IV_AddBattleGroupToHand_HandCoreType`, `IV_AddBattleGroupToHand_Player`)
+  Set `IV_PickFirstOpenHandPositionForPlayer_Player` = Unit_GetOwningPlayer(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
+  `GV_OpenHandPositionToSpawnAt` = PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
+  If(`GV_OpenHandPositionToSpawnAt` == "NO_OPEN_POSITION_FOUND"):
+    General_SkipRemainingActions()
+  `GV_HandPositionToSpawnAt` = GetVectorForHandPositionOfTriggeringPlayer(`GV_OpenHandPositionToSpawnAt`)
+
+  Unit_CreateUnit(
+    1,
+    `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn`,
+    `IV_PickFirstOpenHandPositionForPlayer_Player`,
+    `GV_HandPositionToSpawnAt`,
+    true
+  )
+  Set `IV_Core_SpawnUnits_CoreToAttachUnitsTo` = Unit_GetLastCreatedUnit()
+
+  // Save to HandCore's Blackboard its own index position in the hand
+  Blackboard_SetValue_String(
+    Blackboard_GetBlackboardOfEntity(`IV_Core_SpawnUnits_CoreToAttachUnitsTo`),
+    "hand_position",
+    `GV_OpenHandPositionToSpawnAt`
+  )
+
+  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore` = `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
+  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player` = `IV_PickFirstOpenHandPositionForPlayer_Player`
+  AddHandCoreToOpenHandPositionInPlayerBlackboard(
+    `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`,
+    `GV_OpenHandPositionToSpawnAt`,
+    `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player`
+  )
+
+  Set `IV_Core_SpawnUnits_CoreToSpawn` = `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn`
+  (`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) = 
+    SetVarsForCoreSpawnUnits(`IV_Core_SpawnUnits_CoreToSpawn`)
+  Set `IV_Core_SpawnUnits_PlayerToSpawnFor` = `IV_PickFirstOpenHandPositionForPlayer_Player`
+  Core_SpawnUnits(
+    `GV_LengthOfUnitDataToSpawnArray`,
+    `GV_UnitDataToSpawnArray`,
+    `GV_NumOfUnitsToSpawnForEachUnitDataArray`,
+    `IV_Core_SpawnUnits_PlayerToSpawnFor`,
+    `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
+  )
 
   // Set veterancy for core
   Unit_SetVeterancyXP(
-    `OV_AddBattleGroupToHand_HandCore`,
+    `IV_Core_SpawnUnits_CoreToAttachUnitsTo`,
     `IV_AddTripleVersionOfBattleGroupToHand_VeterancyXP`,
     General_DoDoNot.do_not
   )
@@ -144,7 +186,7 @@ AddTripleVersionOfBattleGroupToHand(
   // Set veterancy for units
   UnitGroup_ForEachUnitInGroup(
     Blackboard_GetValue_UnitGroup(
-      Blackboard_GetBlackboardOfEntity(`OV_AddBattleGroupToHand_HandCore`),
+      Blackboard_GetBlackboardOfEntity(`IV_Core_SpawnUnits_CoreToAttachUnitsTo`),
       `units`
     )
   ):

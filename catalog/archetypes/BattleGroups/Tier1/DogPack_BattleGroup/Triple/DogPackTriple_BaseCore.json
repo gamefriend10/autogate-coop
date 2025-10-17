@@ -1,0 +1,8 @@
+{
+  "based_on": "BaseTripleCore",
+  "id": "DogPackTriple_BaseCore",
+  "placed_name": "DogPackTriple",
+  "name": "=== [1] Dog Pack Alpha (Triple) ===\nWhen placed, add 2 Dog Pack Beta's to hand.",
+  "unit_button": "Scout_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Scout.UI_Portrait_Human_Default_Scout'"
+}

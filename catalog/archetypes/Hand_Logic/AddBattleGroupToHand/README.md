@@ -1,4 +1,4 @@
-// Note: assumes open spot
+// Note: Skips if no open pos
 // Returns: Unit `OV_AddBattleGroupToHand_HandCore`
 AddBattleGroupToHand(
   UnitData `IV_AddBattleGroupToHand_HandCoreType`,
@@ -6,6 +6,8 @@ AddBattleGroupToHand(
 ):
   Set `IV_PickFirstOpenHandPositionForPlayer_Player` = `IV_AddBattleGroupToHand_Player`
   `GV_OpenHandPositionToSpawnAt` = PickFirstOpenHandPositionForPlayer(`IV_PickFirstOpenHandPositionForPlayer_Player`)
+  If(`GV_OpenHandPositionToSpawnAt` == "NO_OPEN_POSITION_FOUND"):
+    General_SkipRemainingActions()
   `GV_HandPositionToSpawnAt` = GetVectorForHandPositionOfTriggeringPlayer(`GV_OpenHandPositionToSpawnAt`)
 
   Unit_CreateUnit(
@@ -44,3 +46,6 @@ AddBattleGroupToHand(
     `IV_Core_SpawnUnits_PlayerToSpawnFor`,
     `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
   )
+
+  set `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor` = `OV_AddBattleGroupToHand_HandCore`
+  Triple_TriplifyCoreIfThreeArePresent(`IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`)

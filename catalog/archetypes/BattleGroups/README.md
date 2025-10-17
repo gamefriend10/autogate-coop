@@ -5,12 +5,12 @@
 1. copy/paste existing battle group
 2. run `python scripts/replace_string_recursive.py <dir> <old-name> <new-name>`
   1. e.g. `python scripts/replace_string_recursive.py catalog/archetypes/BattleGroups/Tier4/BedTech_BattleGroup LoveLetter BedTech`
-3. adjust the name in base core and triple base core. This controls the name for all.
+3. adjust the name and visuals in base core and triple base core. This propagates to the other cores.
 4. Create units for the battle group. Copy over things from other groups (uncommandable, vet) and rename the ID.
 5. adjust SetVarsFor_XXX_ShopCore_SpawnUnits function.
   1. double unit counts for the triple
 
-7. add to battlegroup's tier's array
+7. add to tier's battlegroup array
   1. add snowtag to array e.g. Tier2BattleGroups
   1. update length of array var e.g. Tier2BattleGroups
   3. update the var keeping track of the length e.g. LengthOfTier2BattleGroups
@@ -26,7 +26,7 @@
 
 1. if there's a PeformWhenXIsPlaced
   1. adjust any effects it has e.g. PerformWhenXIsPlaced
-  2. add/rm to StagingCore_PerformWhenXIsPlaced
+  2. add/rm to PerformWhenXIsPlaced
 
 ## (manually)
 

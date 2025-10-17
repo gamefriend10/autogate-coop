@@ -1,0 +1,8 @@
+{
+  "based_on": "BaseTripleCore",
+  "id": "DogPackBetaTriple_BaseCore",
+  "placed_name": "DogPackBetaTriple",
+  "name": "=== [1] Dog Pack Beta (Triple) ===",
+  "unit_button": "Scout_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Scout.UI_Portrait_Human_Default_Scout'"
+}

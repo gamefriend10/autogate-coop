@@ -1,0 +1,15 @@
+{
+  "based_on": "ShopCore_Morph",
+  "commands": [
+    {
+      "cooldown": {
+        "duration": 0.2,
+        "name": "ShopCore_Morph",
+        "scope": "Player"
+      },
+      "requirement": "Requirement_HandHasSpace",
+      "unit": "DogPackTriple_HandCore"
+    }
+  ],
+  "id": "DogPackTriple_ShopCore_Morph"
+}

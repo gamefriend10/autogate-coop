@@ -1,0 +1,314 @@
+﻿{
+  "actions": [
+    {
+      "function_id": "UI_SendChatMessage",
+      "is_enabled": false,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Text_ToText",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "RemoveStagingCoreFromPlayerBlackboard: {0}"
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Unit_GetOwningPlayer",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "IV_RemoveStagingCoreFromPlayerBlackboard_Core"
+                                            }
+                                          }
+                                        ],
+                                        "id": "unit"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "value"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "message"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetAllPlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "group"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "rowcol"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "String_Concat",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetValue_String",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetBlackboardOfEntity",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "IV_RemoveStagingCoreFromPlayerBlackboard_Core"
+                                            }
+                                          }
+                                        ],
+                                        "id": "entity"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "blackboard"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "row"
+                                  }
+                                }
+                              ],
+                              "id": "key"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      },
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetValue_String",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "function": {
+                                    "function_id": "Blackboard_GetBlackboardOfEntity",
+                                    "parameters": [
+                                      {
+                                        "expressions": [
+                                          {
+                                            "type": "Variable",
+                                            "variable": {
+                                              "variable_id": "IV_RemoveStagingCoreFromPlayerBlackboard_Core"
+                                            }
+                                          }
+                                        ],
+                                        "id": "entity"
+                                      }
+                                    ]
+                                  },
+                                  "type": "Function"
+                                }
+                              ],
+                              "id": "blackboard"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "col"
+                                  }
+                                }
+                              ],
+                              "id": "key"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "strings"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Blackboard_RemoveValue",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfPlayer",
+                "parameters": [
+                  {
+                    "function": {
+                      "function_id": "Unit_GetOwningPlayer",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "IV_RemoveStagingCoreFromPlayerBlackboard_Core"
+                              }
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    },
+                    "type": "Function"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "rowcol"
+              }
+            }
+          ],
+          "id": "key"
+        }
+      ]
+    }
+  ],
+  "based_on": "Trigger",
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_RemoveStagingCoreFromPlayerBlackboard_Core"
+              }
+            }
+          ],
+          "id": "who"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "stagingcore_snowtag"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "id": "RemoveStagingCoreFromPlayerBlackboard",
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "rowcol",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "rowcol",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "String"
+      }
+    }
+  ]
+}

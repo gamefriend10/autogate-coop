@@ -1,0 +1,27 @@
+{
+  "abilityList": [
+    "DogPackBeta_ShopCore_Morph"
+  ],
+  "based_on": "DogPackBeta_BaseCore",
+  "commandList": [
+    {
+      "ability": "DogPackBeta_ShopCore_Morph",
+      "button": "ShopCoreBuy_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "id": "DogPackBeta_ShopCore",
+  "starting_snowtags": [
+    "entity_unit",
+    "shopcore_snowtag",
+    "dogpackbeta_snowtag",
+    "vanguard_snowtag"
+  ]
+}

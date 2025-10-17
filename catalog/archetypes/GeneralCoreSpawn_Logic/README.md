@@ -21,6 +21,10 @@ DetermineHandCoreFromTag(
   Switch(`IV_DetermineHandCoreFromTag_Tag`):
     case lancerarmstrong_snowtag:
       Set `OV_DetermineHandCoreFromTag_HandCoreType` = LancerArmstrong_HandCore
+    case dogpack_snowtag:
+      Set `OV_DetermineHandCoreFromTag_HandCoreType` = DogPack_HandCore
+    case dogpackbeta_snowtag:
+      Set `OV_DetermineHandCoreFromTag_HandCoreType` = DogPackBeta_HandCore
     case bunkerrush_snowtag:
       Set `OV_DetermineHandCoreFromTag_HandCoreType` = BunkerRush_HandCore
     case loveletter_snowtag:

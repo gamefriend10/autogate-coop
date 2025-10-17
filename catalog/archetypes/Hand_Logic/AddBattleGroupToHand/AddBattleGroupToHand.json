@@ -13,17 +13,38 @@
                   {
                     "expressions": [
                       {
-                        "type": "Value",
-                        "value": {
-                          "type": {
-                            "directive": "FunctionType",
-                            "tags": [
-                              "to_text"
-                            ],
-                            "type": "String"
-                          },
-                          "value": "AddBattleGroupToHand"
-                        }
+                        "function": {
+                          "function_id": "String_FormatString",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Value",
+                                  "value": {
+                                    "type": {
+                                      "directive": "FunctionType",
+                                      "type": "String"
+                                    },
+                                    "value": "AddBattleGroupToHand: {0}."
+                                  }
+                                }
+                              ],
+                              "id": "format"
+                            },
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "DEBUG_VAR"
+                                  }
+                                }
+                              ],
+                              "id": "args"
+                            }
+                          ]
+                        },
+                        "type": "Function"
                       }
                     ],
                     "id": "value"
@@ -92,6 +113,67 @@
             }
           ],
           "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "General_IfThenElse",
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Logic_Comparison",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_OpenHandPositionToSpawnAt"
+                      }
+                    }
+                  ],
+                  "id": "value1"
+                },
+                {
+                  "expressions": [
+                    {
+                      "preset": {
+                        "preset_id": "Logic_ComparisonOperator",
+                        "value_id": "eq"
+                      },
+                      "type": "Preset"
+                    }
+                  ],
+                  "id": "op"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "NO_OPEN_POSITION_FOUND"
+                      }
+                    }
+                  ],
+                  "id": "value2"
+                }
+              ]
+            }
+          ],
+          "id": "if"
+        },
+        {
+          "functions": [
+            {
+              "function_id": "General_SkipRemainingActions"
+            }
+          ],
+          "id": "then"
         }
       ]
     },
@@ -453,6 +535,55 @@
                   "type": "Trigger"
                 },
                 "value": "Core_SpawnUnits"
+              }
+            }
+          ],
+          "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "Variable_SetVariable",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "OV_AddBattleGroupToHand_HandCore"
+              }
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Trigger_Run",
+      "is_enabled": true,
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "Trigger"
+                },
+                "value": "Triple_TriplifyCoreIfThreeArePresent"
               }
             }
           ],
