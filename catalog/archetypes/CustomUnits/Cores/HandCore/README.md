@@ -14,14 +14,6 @@ PrepHandCoreUnitsForStagingAndRemoveHandCore():
     )
   )
 
-  // If vanguard, set `HandCoreVeterancyToCopy` (tracked by player's blackboard) to this core's veterancy
-  If(Entity_HasAllTags(Unit_GetTriggeringUnit(), vanguard_snowtag)):
-    Blackboard_SetValue_Value(
-      Blackboard_GetBlackboardOfPlayer(),
-      `HandCoreVeterancyToCopy`,
-      Unit_GetVeterancyXP(Unit_GetTriggeringUnit())
-    )
-
   set `IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore` = Unit_GetTriggeringUnit()
   RemoveHandCoreFromHandPositionInPlayerBlackboard(`IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore`)
   

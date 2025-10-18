@@ -27,17 +27,6 @@ Blackboard_SetValue_Integer(
   `OV_GetNearestStagingPositionForTriggeringPlayer_Col`
 )
 
-// If vanguard, set veterancy of core
-If(Entity_HasAllTags(Unit_GetTriggeringUnit(), vanguard_snowtag)):
-  Unit_SetVeterancyXP(
-    Unit_GetTriggeringUnit(),
-    Blackboard_GetValue_Value(
-      Blackboard_GetBlackboardOfPlayer(),
-      `HandCoreVeterancyToCopy`
-    ),
-    General_DoDoNot.do_not
-  )
-
 Trigger_Run(Triple_PickAndAddRandomNextTierBattleGroupToHand)
 
 Trigger_Run(PerformWhenXIsPlaced)

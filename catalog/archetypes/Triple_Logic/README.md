@@ -92,25 +92,44 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
     `IV_RemoveStagingCoreFromPlayerBlackboard_Core` = UnitGroup_GetCurrentUnit
     RemoveStagingCoreFromPlayerBlackboard(`IV_RemoveStagingCoreFromPlayerBlackboard_Core`)
   
-  Variable_SetVariable(
-    `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`,
-    `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`
-  )
-  Trigger_Run(AddTripleVersionOfBattleGroupToHand)
+  Set `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore` = `IV_Triple_TriplifyCoreIfThreeArePresent_CoreToCheckFor`
+  `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore` = 
+    AddTripleVersionOfBattleGroupToHand(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
 
-  // Delete non-triple cores and their units
+  // Transfer ownership of non-triple units to triple, and delete non-triple
+  Blackboard_SetValue_UnitGroup(
+    Blackboard_GetBlackboardOfEntity(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`),
+    "units",
+    UnitGroup_GetNewUnitGroup()
+  )
   UnitGroup_ForEachUnitInGroup(`GV_Triple_TriplifyCoreIfThreeArePresent_CoreUnitGroupForTriple`):
-    UnitGroup_ForEachUnitInGroup(
+    UnitGroup_AddUnits(
       Blackboard_GetValue_UnitGroup(
-        Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit),
+        Blackboard_GetBlackboardOfEntity(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`),
+        "units"
+      ),
+      Blackboard_GetValue_UnitGroup(
+        Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit()),
         "units"
       )
-    ):
-      Unit_Remove(UnitGroup_GetCurrentUnit)
+    )
     Unit_Remove(UnitGroup_GetCurrentUnit)
+  
+  // Phsyically move non-triple units to triple
+  UnitGroup_ForEachUnitInGroup(
+    Blackboard_GetValue_UnitGroup(
+      Blackboard_GetBlackboardOfEntity(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`),
+      "units"
+    )
+  ):
+    Actor_SetPosition(
+      UnitGroup_GetCurrentUnit(),
+      Actor_GetPosition(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`)
+    )
 
 --------------------
 
+// Returns `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`
 AddTripleVersionOfBattleGroupToHand(Unit `IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`):
   `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn` = 
     DetermineTripleVersionOfCoreToSpawn(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
@@ -128,33 +147,21 @@ AddTripleVersionOfBattleGroupToHand(Unit `IV_AddTripleVersionOfBattleGroupToHand
     `GV_HandPositionToSpawnAt`,
     true
   )
-  Set `IV_Core_SpawnUnits_CoreToAttachUnitsTo` = Unit_GetLastCreatedUnit()
+  Set `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore` = Unit_GetLastCreatedUnit()
 
   // Save to HandCore's Blackboard its own index position in the hand
   Blackboard_SetValue_String(
-    Blackboard_GetBlackboardOfEntity(`IV_Core_SpawnUnits_CoreToAttachUnitsTo`),
+    Blackboard_GetBlackboardOfEntity(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`),
     "hand_position",
     `GV_OpenHandPositionToSpawnAt`
   )
 
-  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore` = `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
+  Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore` = `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`
   Set `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player` = `IV_PickFirstOpenHandPositionForPlayer_Player`
   AddHandCoreToOpenHandPositionInPlayerBlackboard(
     `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_HandCore`,
     `GV_OpenHandPositionToSpawnAt`,
     `IV_AddHandCoreToOpenHandPositionInPlayerBlackboard_Player`
-  )
-
-  Set `IV_Core_SpawnUnits_CoreToSpawn` = `OV_DetermineTripleVersionOfCoreToSpawn_TripleCoreToSpawn`
-  (`GV_LengthOfUnitDataToSpawnArray`, `GV_UnitDataToSpawnArray`, `GV_NumOfUnitsToSpawnForEachUnitDataArray`) = 
-    SetVarsForCoreSpawnUnits(`IV_Core_SpawnUnits_CoreToSpawn`)
-  Set `IV_Core_SpawnUnits_PlayerToSpawnFor` = `IV_PickFirstOpenHandPositionForPlayer_Player`
-  Core_SpawnUnits(
-    `GV_LengthOfUnitDataToSpawnArray`,
-    `GV_UnitDataToSpawnArray`,
-    `GV_NumOfUnitsToSpawnForEachUnitDataArray`,
-    `IV_Core_SpawnUnits_PlayerToSpawnFor`,
-    `IV_Core_SpawnUnits_CoreToAttachUnitsTo`
   )
 
 --------------------

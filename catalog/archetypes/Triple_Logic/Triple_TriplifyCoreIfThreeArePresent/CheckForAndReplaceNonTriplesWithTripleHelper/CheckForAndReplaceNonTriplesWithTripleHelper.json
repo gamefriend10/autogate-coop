@@ -346,6 +346,61 @@
       ]
     },
     {
+      "function_id": "Blackboard_SetValue_UnitGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetBlackboardOfEntity",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "type": "Variable",
+                        "variable": {
+                          "variable_id": "OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore"
+                        }
+                      }
+                    ],
+                    "id": "entity"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "blackboard"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "String"
+                },
+                "value": "units"
+              }
+            }
+          ],
+          "id": "key"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "UnitGroup_GetNewUnitGroup"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
       "function_id": "UnitGroup_ForEachUnitInGroup",
       "parameters": [
         {
@@ -364,8 +419,60 @@
         {
           "functions": [
             {
-              "function_id": "UnitGroup_ForEachUnitInGroup",
+              "function_id": "UnitGroup_AddUnits",
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Blackboard_GetValue_UnitGroup",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Blackboard_GetBlackboardOfEntity",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Variable",
+                                          "variable": {
+                                            "variable_id": "OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore"
+                                          }
+                                        }
+                                      ],
+                                      "id": "entity"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "blackboard"
+                          },
+                          {
+                            "expressions": [
+                              {
+                                "type": "Value",
+                                "value": {
+                                  "type": {
+                                    "directive": "FunctionType",
+                                    "type": "String"
+                                  },
+                                  "value": "units"
+                                }
+                              }
+                            ],
+                            "id": "key"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "destination"
+                },
                 {
                   "expressions": [
                     {
@@ -416,30 +523,7 @@
                       "type": "Function"
                     }
                   ],
-                  "id": "units"
-                }
-              ],
-              "sub_functions": [
-                {
-                  "functions": [
-                    {
-                      "function_id": "Unit_Remove",
-                      "parameters": [
-                        {
-                          "expressions": [
-                            {
-                              "function": {
-                                "function_id": "UnitGroup_GetCurrentUnit"
-                              },
-                              "type": "Function"
-                            }
-                          ],
-                          "id": "unit"
-                        }
-                      ]
-                    }
-                  ],
-                  "id": "actions"
+                  "id": "source"
                 }
               ]
             },
@@ -456,6 +540,110 @@
                     }
                   ],
                   "id": "unit"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_UnitGroup",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                          "parameters": [
+                            {
+                              "expressions": [
+                                {
+                                  "type": "Variable",
+                                  "variable": {
+                                    "variable_id": "OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore"
+                                  }
+                                }
+                              ],
+                              "id": "entity"
+                            }
+                          ]
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "units"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Actor_SetPosition",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "actor"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Actor_GetPosition",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "type": "Variable",
+                                "variable": {
+                                  "variable_id": "OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore"
+                                }
+                              }
+                            ],
+                            "id": "actor"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "pos"
                 }
               ]
             }
