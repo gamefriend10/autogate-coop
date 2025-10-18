@@ -528,6 +528,33 @@
               ]
             },
             {
+              "function_id": "Actor_CopyBuffsFromActor",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore"
+                      }
+                    }
+                  ],
+                  "id": "to"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "UnitGroup_GetCurrentUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "from"
+                }
+              ]
+            },
+            {
               "function_id": "Unit_Remove",
               "parameters": [
                 {

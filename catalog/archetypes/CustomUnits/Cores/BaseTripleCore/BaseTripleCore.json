@@ -1,8 +1,6 @@
 {
   "based_on": "BaseCore",
-  "buffs": [
-    "ImbueAvatar_VisualBuff"
-  ],
+  "buffs": [],
   "flags": {
     "alert_when_attacked": true,
     "award_victory_points_to_other_team": false,

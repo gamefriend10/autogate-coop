@@ -6,6 +6,17 @@ Trigger: stagingCore is birthed (expected to be from the HandCore constructing i
 // set stagingCore's `units` (tracked by blackboard) to `HandCoreUnitsToMove` (tracked by player's blackboard)
 // move stagingCore's `units` (tracked by blackboard) to Actor's current position
 
+// Copy buffs from HandCoreBuffDummyToCopy (tracked by player's blackboard)
+`buff_dummy` = Blackboard_GetValue_Unit(
+  Blackboard_GetBlackboardOfPlayer(),
+  "HandCoreBuffDummyToCopy"
+)
+Actor_CopyBuffsFromActor(
+  Unit_GetTriggeringUnit(),
+  `buff_dummy`
+)
+Unit_Remove(`buff_dummy`)
+
 (
   `GV_ClosestStagingPosition`,
   `OV_GetNearestStagingPositionForTriggeringPlayer_Row`,

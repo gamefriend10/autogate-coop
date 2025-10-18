@@ -294,6 +294,104 @@
       ]
     },
     {
+      "function_id": "Variable_SetVariable",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buff_dummy"
+              }
+            }
+          ],
+          "id": "variable"
+        },
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Blackboard_GetValue_Unit",
+                "parameters": [
+                  {
+                    "expressions": [
+                      {
+                        "function": {
+                          "function_id": "Blackboard_GetBlackboardOfPlayer"
+                        },
+                        "type": "Function"
+                      }
+                    ],
+                    "id": "blackboard"
+                  },
+                  {
+                    "expressions": [
+                      {
+                        "type": "Value",
+                        "value": {
+                          "type": {
+                            "directive": "FunctionType",
+                            "type": "String"
+                          },
+                          "value": "HandCoreBuffDummyToCopy"
+                        }
+                      }
+                    ],
+                    "id": "key"
+                  }
+                ]
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "value"
+        }
+      ]
+    },
+    {
+      "function_id": "Actor_CopyBuffsFromActor",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "Unit_GetTriggeringUnit"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "to"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buff_dummy"
+              }
+            }
+          ],
+          "id": "from"
+        }
+      ]
+    },
+    {
+      "function_id": "Unit_Remove",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "buff_dummy"
+              }
+            }
+          ],
+          "id": "unit"
+        }
+      ]
+    },
+    {
       "function_id": "Trigger_Run",
       "parameters": [
         {
@@ -513,5 +611,20 @@
     }
   ],
   "id": "StagingCoreBirthTrigger",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "buff_dummy",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "buff_dummy",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Unit"
+      }
+    }
+  ]
 }

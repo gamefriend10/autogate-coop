@@ -622,6 +622,26 @@
                           "directive": "TypeRef",
                           "type": "Trigger"
                         },
+                        "value": "PerformBlockadeHeroPowerPassive"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
                         "value": "Pass_PassHandCoreToPlayer"
                       }
                     }

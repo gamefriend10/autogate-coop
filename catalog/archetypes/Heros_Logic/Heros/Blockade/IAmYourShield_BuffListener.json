@@ -1,0 +1,23 @@
+﻿{
+  "alignment": "Helpful",
+  "based_on": "Buff",
+  "flags": {
+    "change_owner_on_polymorph": false,
+    "disable_on_attacking": false,
+    "disable_on_damage_taken": false,
+    "hidden": false,
+    "hide_timer": false,
+    "override_source": false,
+    "pause_while_disabled": false,
+    "remove_on_attacking": false,
+    "remove_on_damage_taken": true,
+    "show_progress": false
+  },
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_MitigativeGuard.UI_Icons_Abilities_MitigativeGuard'",
+  "id": "IAmYourShield_BuffListener",
+  "name": "I Am Your Shield",
+  "responses": [
+    "IAmYourShield_ResponseDamage"
+  ],
+  "tooltip": "Nullifies the first damage taken."
+}

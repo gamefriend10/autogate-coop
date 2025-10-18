@@ -96,7 +96,7 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
   `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore` = 
     AddTripleVersionOfBattleGroupToHand(`IV_AddTripleVersionOfBattleGroupToHand_NonTripleCore`)
 
-  // Transfer ownership of non-triple units to triple, and delete non-triple
+  // Transfer ownership of non-triple units to triple, copy buffs, and delete non-triple
   Blackboard_SetValue_UnitGroup(
     Blackboard_GetBlackboardOfEntity(`OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`),
     "units",
@@ -112,6 +112,10 @@ CheckForAndReplaceNonTriplesWithTripleHelper():
         Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit()),
         "units"
       )
+    )
+    Actor_CopyBuffsFromActor(
+      `OV_AddTripleVersionOfBattleGroupToHand_TripleHandCore`,
+      UnitGroup_GetCurrentUnit()
     )
     Unit_Remove(UnitGroup_GetCurrentUnit)
   

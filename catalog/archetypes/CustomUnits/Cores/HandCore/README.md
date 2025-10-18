@@ -7,11 +7,29 @@ PrepHandCoreUnitsForStagingAndRemoveHandCore():
   // set `HandCoreUnitsToMove` (tracked by player's blackboard) to this core's `units`
   Blackboard_SetValue_UnitGroup(
     Blackboard_GetBlackboardOfPlayer(),
-    `HandCoreUnitsToMove`,
+    "HandCoreUnitsToMove",
     Blackboard_GetValue_UnitGroup(
       Blackboard_GetBlackboardOfEntity(Unit_GetTriggeringUnit()),
       "units"
     )
+  )
+
+  // Copy buffs to dummy actor (tracked by player's blackboard)
+  Unit_CreateUnit(
+    1,
+    BuffDummy,
+    Unit_GetOwningPlayer(Unit_GetTriggeringUnit()),
+    Actor_GetPosition(Unit_GetTriggeringUnit()),
+    true
+  )
+  Actor_CopyBuffsFromActor(
+    Unit_GetLastCreatedUnit(),
+    Unit_GetTriggeringUnit()
+  )
+  Blackboard_SetValue_Unit(
+    Blackboard_GetBlackboardOfPlayer(),
+    "HandCoreBuffDummyToCopy",
+    Unit_GetLastCreatedUnit()
   )
 
   set `IV_RemoveHandCoreFromHandPositionInPlayerBlackboard_HandCore` = Unit_GetTriggeringUnit()
@@ -35,6 +53,7 @@ OnHandCoreAbilityUsed():
       set `IV_Pass_PassHandCoreToPlayer_Player` = 3
     If(Ability_GetTriggeringAbility == HandCore_PassToPlayer4):
       set `IV_Pass_PassHandCoreToPlayer_Player` = 4
+    PerformBlockadeHeroPowerPassive()
     Pass_PassHandCoreToPlayer(`IV_Pass_PassHandCoreToPlayer_Player`)
     SkipRemainingActions()
 

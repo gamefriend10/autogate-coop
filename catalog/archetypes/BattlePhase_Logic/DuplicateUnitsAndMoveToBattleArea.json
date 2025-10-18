@@ -227,6 +227,33 @@
               ]
             },
             {
+              "function_id": "Actor_CopyBuffsFromActor",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Unit_GetLastCreatedUnit"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "to"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_StagingCoreToDuplicateTheBattleUnitsOf"
+                      }
+                    }
+                  ],
+                  "id": "from"
+                }
+              ]
+            },
+            {
               "function_id": "UnitGroup_AddUnit",
               "parameters": [
                 {

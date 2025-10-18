@@ -58,6 +58,10 @@ UnitGroup_ForEachUnitInGroup(`units` from `GV_StagingCoreToDuplicateTheBattleUni
     Unit_GetVeterancyTier(UnitGroup_GetCurrentUnit)
     General_DoDoNot.do_not
   )
+  Actor_CopyBuffsFromActor(
+    Unit_GetLastCreatedUnit(),
+    `GV_StagingCoreToDuplicateTheBattleUnitsOf`
+  )
   UnitGroup_AddUnit(`UnitsToOrderToBattle`)
 
 --------------------

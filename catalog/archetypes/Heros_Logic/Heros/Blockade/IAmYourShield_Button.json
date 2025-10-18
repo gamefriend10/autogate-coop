@@ -1,0 +1,9 @@
+{
+  "UseUITint": false,
+  "based_on": "Button",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_MitigativeGuard.UI_Icons_Abilities_MitigativeGuard'",
+  "id": "IAmYourShield_Button",
+  "name": "I Am Your Shield (Passive)",
+  "tooltip": "Passing a Battle Group permanently applies a shield to its units that nullifies the first damage taken each Battle Phase."
+}

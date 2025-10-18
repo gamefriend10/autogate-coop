@@ -8,7 +8,8 @@
     "Tier5Upgrade",
     "Tier6Upgrade",
     "ReadyUp",
-    "UnreadyUp"
+    "UnreadyUp",
+    "IAmYourShield"
   ],
   "additional_black_mask_vision_radius": 5.0,
   "alias_tech": [],
@@ -122,6 +123,18 @@
       "repeatable": false,
       "row": 1,
       "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "IAmYourShield",
+      "button": "IAmYourShield_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "TopBar",
+      "repeatable": false,
+      "row": 1,
+      "slot": 6,
       "submenu": 0,
       "targetSubmenu": -1
     }

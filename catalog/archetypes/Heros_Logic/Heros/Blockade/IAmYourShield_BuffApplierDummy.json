@@ -1,0 +1,9 @@
+﻿{
+  "based_on": "GameEffectApplyBuff",
+  "effect_target": {
+    "effect_parent": "none",
+    "target": "Source"
+  },
+  "id": "IAmYourShield_BuffApplierDummy",
+  "impact_fx": "BP_FXS_KineticRedirection_Impact"
+}

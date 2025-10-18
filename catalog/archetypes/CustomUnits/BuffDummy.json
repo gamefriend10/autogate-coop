@@ -1,0 +1,15 @@
+﻿{
+  "based_on": "BaseUnit",
+  "flags": {
+    "uncommandable": true,
+    "unselectable": true,
+    "untargetable": true
+  },
+  "id": "BuffDummy",
+  "name": "BuffDummy",
+  "starting_snowtags": [
+    "status_invulnerable"
+  ],
+  "unreal_actor": "BP_LocationMarkerPlayerStart",
+  "vision_radius": 0.0
+}
