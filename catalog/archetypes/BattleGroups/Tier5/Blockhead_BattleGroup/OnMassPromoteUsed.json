@@ -216,8 +216,19 @@
               ]
             },
             {
-              "function_id": "Unit_AdjustVeterancyXP",
+              "function_id": "Variable_SetVariable",
               "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "IV_GiveCoreUnitsVeterancy_Core"
+                      }
+                    }
+                  ],
+                  "id": "variable"
+                },
                 {
                   "expressions": [
                     {
@@ -227,7 +238,23 @@
                       "type": "Function"
                     }
                   ],
-                  "id": "unit"
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "Variable_SetVariable",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "IV_GiveCoreUnitsVeterancy_NumXP"
+                      }
+                    }
+                  ],
+                  "id": "variable"
                 },
                 {
                   "expressions": [
@@ -238,130 +265,31 @@
                           "directive": "FunctionType",
                           "type": "Value"
                         },
-                        "value": "100.0"
+                        "value": "100"
                       }
                     }
                   ],
-                  "id": "veterancy"
-                },
-                {
-                  "expressions": [
-                    {
-                      "preset": {
-                        "preset_id": "General_DoDoNot",
-                        "value_id": "do_not"
-                      },
-                      "type": "Preset"
-                    }
-                  ],
-                  "id": "adjust_player_score"
+                  "id": "value"
                 }
               ]
             },
             {
-              "function_id": "UnitGroup_ForEachUnitInGroup",
+              "function_id": "Trigger_Run",
               "parameters": [
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "Blackboard_GetValue_UnitGroup",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "Blackboard_GetBlackboardOfEntity",
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "function": {
-                                            "function_id": "UnitGroup_GetCurrentUnit"
-                                          },
-                                          "type": "Function"
-                                        }
-                                      ],
-                                      "id": "entity"
-                                    }
-                                  ]
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "blackboard"
-                          },
-                          {
-                            "expressions": [
-                              {
-                                "type": "Value",
-                                "value": {
-                                  "type": {
-                                    "directive": "FunctionType",
-                                    "type": "String"
-                                  },
-                                  "value": "units"
-                                }
-                              }
-                            ],
-                            "id": "key"
-                          }
-                        ]
-                      },
-                      "type": "Function"
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "GiveCoreUnitsVeterancy"
+                      }
                     }
                   ],
-                  "id": "units"
-                }
-              ],
-              "sub_functions": [
-                {
-                  "functions": [
-                    {
-                      "function_id": "Unit_AdjustVeterancyXP",
-                      "parameters": [
-                        {
-                          "expressions": [
-                            {
-                              "function": {
-                                "function_id": "UnitGroup_GetCurrentUnit"
-                              },
-                              "type": "Function"
-                            }
-                          ],
-                          "id": "unit"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "type": "Value",
-                              "value": {
-                                "type": {
-                                  "directive": "FunctionType",
-                                  "type": "Value"
-                                },
-                                "value": "100.0"
-                              }
-                            }
-                          ],
-                          "id": "veterancy"
-                        },
-                        {
-                          "expressions": [
-                            {
-                              "preset": {
-                                "preset_id": "General_DoDoNot",
-                                "value_id": "do_not"
-                              },
-                              "type": "Preset"
-                            }
-                          ],
-                          "id": "adjust_player_score"
-                        }
-                      ]
-                    }
-                  ],
-                  "id": "actions"
+                  "id": "trigger"
                 }
               ]
             }

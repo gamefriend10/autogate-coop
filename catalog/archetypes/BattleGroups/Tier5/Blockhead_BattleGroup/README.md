@@ -18,22 +18,6 @@ OnMassPromoteUsed():
   UnitGroup_ForEachUnitInGroup(`OV_PlayerStagingCoresAsUnitGroup`):
     If(Entity_HasNoneTags(UnitGroup_GetCurrentUnit(), vanguard_snowtag)):
       General_Continue()
-      
-    Unit_AdjustVeterancyXP(
-      UnitGroup_GetCurrentUnit(),
-      100,
-      General_DoDoNot.do_not
-    )
-    
-    // For every unit in `units`
-    UnitGroup_ForEachUnitInGroup(
-      Blackboard_GetValue_UnitGroup(
-        Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit()),
-        `units`
-      )
-    ):
-      Unit_AdjustVeterancyXP(
-        UnitGroup_GetCurrentUnit(),
-        100,
-        General_DoDoNot.do_not
-      )
+    Set `IV_GiveCoreUnitsVeterancy_Core` = UnitGroup_GetCurrentUnit()
+    Set `IV_GiveCoreUnitsVeterancy_NumXP` = 100
+    GiveCoreUnitsVeterancy(`IV_GiveCoreUnitsVeterancy_Core`, `IV_GiveCoreUnitsVeterancy_NumXP`)

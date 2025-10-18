@@ -2,14 +2,14 @@
   "__base_type": "GlobalVariable",
   "array_size": 0,
   "based_on": "GlobalVariable",
-  "id": "IV_GiveCoreAndUnitsVeterancy_NumXP",
+  "id": "IV_GiveCoreUnitsVeterancy_Core",
   "initial_values": [],
   "is_array": false,
-  "is_constant": true,
-  "name": "IV_GiveCoreAndUnitsVeterancy_NumXP",
+  "is_constant": false,
+  "name": "IV_GiveCoreUnitsVeterancy_Core",
   "per_element_initial_values": false,
   "type": {
     "directive": "FunctionType",
-    "type": "Value"
+    "type": "Unit"
   }
 }

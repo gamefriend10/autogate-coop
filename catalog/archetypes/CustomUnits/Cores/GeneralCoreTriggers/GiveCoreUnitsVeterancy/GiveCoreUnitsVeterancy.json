@@ -22,7 +22,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "GiveCoreAndUnitsVeterancy"
+                          "value": "GiveCoreUnitsVeterancy"
                         }
                       }
                     ],
@@ -49,45 +49,6 @@
       ]
     },
     {
-      "function_id": "Unit_AdjustVeterancyXP",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
-              }
-            }
-          ],
-          "id": "unit"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
-              }
-            }
-          ],
-          "id": "veterancy"
-        },
-        {
-          "expressions": [
-            {
-              "preset": {
-                "preset_id": "General_DoDoNot",
-                "value_id": "do_not"
-              },
-              "type": "Preset"
-            }
-          ],
-          "id": "adjust_player_score"
-        }
-      ]
-    },
-    {
       "function_id": "UnitGroup_ForEachUnitInGroup",
       "parameters": [
         {
@@ -107,7 +68,7 @@
                                 {
                                   "type": "Variable",
                                   "variable": {
-                                    "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
+                                    "variable_id": "IV_GiveCoreUnitsVeterancy_Core"
                                   }
                                 }
                               ],
@@ -165,7 +126,7 @@
                     {
                       "type": "Variable",
                       "variable": {
-                        "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
+                        "variable_id": "IV_GiveCoreUnitsVeterancy_NumXP"
                       }
                     }
                   ],
@@ -194,6 +155,6 @@
   "based_on": "Trigger",
   "conditions": [],
   "events": [],
-  "id": "GiveCoreAndUnitsVeterancy",
+  "id": "GiveCoreUnitsVeterancy",
   "variables": []
 }

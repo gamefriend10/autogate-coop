@@ -56,7 +56,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_GiveCoreAndUnitsVeterancy_Core"
+                "variable_id": "IV_GiveCoreUnitsVeterancy_Core"
               }
             }
           ],
@@ -83,7 +83,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_GiveCoreAndUnitsVeterancy_NumXP"
+                "variable_id": "IV_GiveCoreUnitsVeterancy_NumXP"
               }
             }
           ],
@@ -118,7 +118,7 @@
                   "directive": "TypeRef",
                   "type": "Trigger"
                 },
-                "value": "GiveCoreAndUnitsVeterancy"
+                "value": "GiveCoreUnitsVeterancy"
               }
             }
           ],
