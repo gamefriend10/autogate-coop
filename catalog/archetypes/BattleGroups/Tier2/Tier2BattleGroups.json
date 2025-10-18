@@ -1,6 +1,6 @@
 {
   "__base_type": "GlobalVariable",
-  "array_size": 1,
+  "array_size": 2,
   "based_on": "GlobalVariable",
   "id": "Tier2BattleGroups",
   "initial_values": [
@@ -12,6 +12,16 @@
           "type": "SnowTag"
         },
         "value": "bunkerrush_snowtag"
+      }
+    },
+    {
+      "type": "Value",
+      "value": {
+        "type": {
+          "directive": "TypeRef",
+          "type": "SnowTag"
+        },
+        "value": "hogdog_snowtag"
       }
     }
   ],

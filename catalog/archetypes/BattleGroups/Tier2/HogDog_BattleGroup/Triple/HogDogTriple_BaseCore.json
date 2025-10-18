@@ -1,0 +1,8 @@
+{
+  "based_on": "BaseTripleCore",
+  "id": "HogDogTriple_BaseCore",
+  "placed_name": "HogDogTriple",
+  "name": "=== [2] Hog Dog (Triple) ===\nWhen placed, add 1 SCOUT to all adjacent (diagonal\nincluded) Battle Groups.",
+  "unit_button": "MissileJeep_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_HedgehogV2.UI_Portrait_Human_Default_HedgehogV2'"
+}

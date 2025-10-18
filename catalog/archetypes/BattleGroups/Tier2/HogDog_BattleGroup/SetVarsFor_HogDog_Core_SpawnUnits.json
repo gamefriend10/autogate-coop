@@ -23,7 +23,7 @@
                             ],
                             "type": "String"
                           },
-                          "value": "SetVarsFor_HogDog_ShopCore_SpawnUnits"
+                          "value": "SetVarsFor_HogDog_Core_SpawnUnits"
                         }
                       }
                     ],
@@ -244,7 +244,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "4"
+                "value": "1"
               }
             }
           ],
@@ -258,6 +258,6 @@
   "dev_only": false,
   "enabled": true,
   "events": [],
-  "id": "SetVarsFor_HogDog_ShopCore_SpawnUnits",
+  "id": "SetVarsFor_HogDog_Core_SpawnUnits",
   "variables": []
 }

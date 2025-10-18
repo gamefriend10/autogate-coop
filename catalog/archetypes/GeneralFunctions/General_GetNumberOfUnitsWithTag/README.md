@@ -38,6 +38,14 @@ General_GetNumberOfUnitsWithTag(
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), bunkerrushtriple_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1
         General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == hogdog_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), hogdog_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
+    If(`IV_General_GetNumberOfUnitsWithTag_Tag` == hogdogtriple_snowtag):
+      If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), hogdogtriple_snowtag)):
+        `OV_General_GetNumberOfUnitsWithTag_Num` += 1
+        General_Continue()
     If(`IV_General_GetNumberOfUnitsWithTag_Tag` == loveletter_snowtag):
       If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), loveletter_snowtag)):
         `OV_General_GetNumberOfUnitsWithTag_Num` += 1

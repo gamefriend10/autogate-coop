@@ -1,9 +1,6 @@
 {
   "abilityList": [
-    "HogDog_HandCore_Construct"
-  ],
-  "alias_tech": [
-    "_HandCore"
+    "StagingCore_Sell"
   ],
   "based_on": "HogDog_BaseCore",
   "build_cost": {
@@ -14,22 +11,32 @@
   },
   "commandList": [
     {
-      "ability": "HogDog_HandCore_Construct",
-      "button": "HandCorePlaceInStaging_Button",
+      "ability": "StagingCore_Sell",
+      "button": "StagingCore_Sell_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 1,
-      "slot": 1,
+      "slot": 5,
       "submenu": 0,
       "targetSubmenu": -1
     }
   ],
-  "id": "HogDog_HandCore",
+  "footprint": {
+    "angled": false,
+    "clumpable": true,
+    "snap": true,
+    "unbuildable": false,
+    "vision_block_height": 0,
+    "x": 7.0,
+    "y": 7.0
+  },
+  "id": "HogDog_StagingCore",
   "starting_snowtags": [
     "entity_unit",
-    "handcore_snowtag",
-    "hogdog_snowtag"
+    "hogdog_snowtag",
+    "stagingcore_snowtag",
+    "vanguard_snowtag"
   ]
 }

@@ -4,7 +4,7 @@
   Switch(`IV_Core_SpawnUnits_CoreToSpawn`):
     case DogPack_ShopCore: SetVarsFor_DogPack_Core_SpawnUnits()
     case DogPack_HandCore: SetVarsFor_DogPack_Core_SpawnUnits()
-    case DogPackTriple_HandCore: SetVarsFor_DogPackTriple_ShopCore_SpawnUnits()
+    case DogPackTriple_HandCore: SetVarsFor_DogPackTriple_Core_SpawnUnits()
     repeat for all battle groups...
 
 ----------------------------------------

@@ -8,7 +8,7 @@
 3. adjust the name and visuals in base core and triple base core. This propagates to the other cores.
 4. Create units for the battle group. Copy over things from other groups (uncommandable, vet) and rename the ID.
 5. adjust SetVarsFor_XXX_ShopCore_SpawnUnits function.
-  1. double unit counts for the triple
+  1. triple unit counts for the triple
 
 7. add to tier's battlegroup array
   1. add snowtag to array e.g. Tier2BattleGroups

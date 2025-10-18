@@ -15,3 +15,9 @@ PerformWhenXIsPlaced():
   If(Entity_HasAllTags(Unit_GetTriggeringUnit(), dogpacktriple_snowtag)):
     DogPackTriple_PerformWhenXIsPlaced()
     General_SkipRemainingActions()
+  If(Entity_HasAllTags(Unit_GetTriggeringUnit(), hogdog_snowtag)):
+    HogDog_PerformWhenXIsPlaced()
+    General_SkipRemainingActions()
+  If(Entity_HasAllTags(Unit_GetTriggeringUnit(), hogdogtriple_snowtag)):
+    HogDogTriple_PerformWhenXIsPlaced()
+    General_SkipRemainingActions()
