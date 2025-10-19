@@ -1,0 +1,81 @@
+﻿{
+  "autocast": {
+    "autocast_filter": {
+      "alliance": {
+        "ally": true,
+        "enemy": true,
+        "neutral": true,
+        "player": true,
+        "self": true
+      },
+      "tags": {
+        "excluded": [],
+        "required": []
+      }
+    },
+    "autocasts": true,
+    "exclusive_targeting": true,
+    "initially_on": true,
+    "range": 8.0,
+    "required_scan_level": "Offensive",
+    "target_sorts": [],
+    "validator": "Valid_CanAutocastNanoswarm"
+  },
+  "based_on": "BaseStagedAbility",
+  "cast_game_effect": "Nanoswarm_Set",
+  "commands": [
+    {
+      "charges": {
+        "max_count": 0,
+        "name": "default",
+        "recharge_duration": 0,
+        "starting_count": 0
+      },
+      "cooldown": {
+        "duration": 0.0,
+        "name": "Nanoswarm",
+        "scope": "Ability"
+      },
+      "cost_power": 0.0,
+      "cost_resources": {
+        "resource_a": 0.0,
+        "resource_b": 0.0,
+        "resource_c": 0.0,
+        "resource_d": 0.0
+      },
+      "cost_vitals": {
+        "energy": 40.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "requirement": "NoRequirement"
+    }
+  ],
+  "finish_duration": 0.5,
+  "id": "Nanoswarm",
+  "range_maximum": 8.0,
+  "target_filter": {
+    "alliance": {
+      "ally": true,
+      "enemy": true,
+      "neutral": true,
+      "player": true,
+      "self": true
+    },
+    "tags": {
+      "excluded": [
+        "entity_destructible_tree",
+        "entity_unit_structure",
+        "dead",
+        "attribute_object",
+        "capturable"
+      ],
+      "required": []
+    }
+  },
+  "targeting_type": "Unit",
+  "unreal_component": "/Script/Engine.BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/AbilityComponents/AC_Ability_Cast_SpellA.AC_Ability_Cast_SpellA_C'"
+}

@@ -363,7 +363,7 @@
   "vital_energy": {
     "maximum": 100.0,
     "regen": 0.5,
-    "starting": 25.0
+    "starting": 100.0
   },
   "vital_health": {
     "maximum": 200.0,
