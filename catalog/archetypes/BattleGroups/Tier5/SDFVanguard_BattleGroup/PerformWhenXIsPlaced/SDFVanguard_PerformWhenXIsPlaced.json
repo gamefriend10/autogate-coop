@@ -205,163 +205,7 @@
             {
               "type": "Variable",
               "variable": {
-                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Units"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "OV_PlayerStagingCoresAsUnitGroup"
-              }
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "sdfvanguard_snowtag"
-              }
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "General_GetNumberOfUnitsWithTag"
-              }
-            }
-          ],
-          "id": "trigger"
-        }
-      ]
-    },
-    {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "num_to_spawn"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
-              }
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "IV_General_GetNumberOfUnitsWithTag_Tag"
-              }
-            }
-          ],
-          "id": "variable"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "SnowTag"
-                },
-                "value": "sdfvanguardtriple_snowtag"
-              }
-            }
-          ],
-          "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "Trigger_Run",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "Trigger"
-                },
-                "value": "General_GetNumberOfUnitsWithTag"
-              }
-            }
-          ],
-          "id": "trigger"
-        }
-      ]
-    },
-    {
-      "function_id": "Variable_SetVariable",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "num_to_spawn"
+                "variable_id": "sdfs"
               }
             }
           ],
@@ -371,149 +215,12 @@
           "expressions": [
             {
               "function": {
-                "function_id": "Math_Arithmetic_Integer",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "type": "Variable",
-                        "variable": {
-                          "variable_id": "num_to_spawn"
-                        }
-                      }
-                    ],
-                    "id": "value1"
-                  },
-                  {
-                    "expressions": [
-                      {
-                        "preset": {
-                          "preset_id": "Math_ArithmeticOperator",
-                          "value_id": "plus"
-                        },
-                        "type": "Preset"
-                      }
-                    ],
-                    "id": "op"
-                  },
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Math_Arithmetic_Integer",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Variable",
-                                  "variable": {
-                                    "variable_id": "OV_General_GetNumberOfUnitsWithTag_Num"
-                                  }
-                                }
-                              ],
-                              "id": "value1"
-                            },
-                            {
-                              "expressions": [
-                                {
-                                  "preset": {
-                                    "preset_id": "Math_ArithmeticOperator",
-                                    "value_id": "mult"
-                                  },
-                                  "type": "Preset"
-                                }
-                              ],
-                              "id": "op"
-                            },
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Value",
-                                  "value": {
-                                    "type": {
-                                      "directive": "FunctionType",
-                                      "type": "Integer"
-                                    },
-                                    "value": "2"
-                                  }
-                                }
-                              ],
-                              "id": "value2"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "value2"
-                  }
-                ]
+                "function_id": "UnitGroup_GetNewUnitGroup"
               },
               "type": "Function"
             }
           ],
           "id": "value"
-        }
-      ]
-    },
-    {
-      "function_id": "General_IfThenElse",
-      "sub_functions": [
-        {
-          "functions": [
-            {
-              "function_id": "Logic_Comparison",
-              "parameters": [
-                {
-                  "expressions": [
-                    {
-                      "type": "Variable",
-                      "variable": {
-                        "variable_id": "num_to_spawn"
-                      }
-                    }
-                  ],
-                  "id": "value1"
-                },
-                {
-                  "expressions": [
-                    {
-                      "preset": {
-                        "preset_id": "Logic_ComparisonOperator",
-                        "value_id": "eq"
-                      },
-                      "type": "Preset"
-                    }
-                  ],
-                  "id": "op"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "FunctionType",
-                          "type": "Integer"
-                        },
-                        "value": "0"
-                      }
-                    }
-                  ],
-                  "id": "value2"
-                }
-              ]
-            }
-          ],
-          "id": "if"
-        },
-        {
-          "functions": [
-            {
-              "function_id": "General_SkipRemainingActions"
-            }
-          ],
-          "id": "then"
         }
       ]
     },
@@ -536,7 +243,262 @@
         {
           "functions": [
             {
-              "function_id": "Unit_CreateUnit",
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Entity_HasAllTags",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "who"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "SnowTag"
+                                          },
+                                          "value": "sdfvanguard_snowtag"
+                                        }
+                                      }
+                                    ],
+                                    "id": "tags"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Boolean"
+                                },
+                                "value": "true"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "UnitGroup_AddUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "sdfs"
+                              }
+                            }
+                          ],
+                          "id": "group"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "UnitGroup_GetCurrentUnit"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_Continue"
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Entity_HasAllTags",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "who"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "SnowTag"
+                                          },
+                                          "value": "sdfvanguardtriple_snowtag"
+                                        }
+                                      }
+                                    ],
+                                    "id": "tags"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Boolean"
+                                },
+                                "value": "true"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "UnitGroup_AddUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "sdfs"
+                              }
+                            }
+                          ],
+                          "id": "group"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "UnitGroup_GetCurrentUnit"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_Continue"
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
+        }
+      ]
+    },
+    {
+      "function_id": "UnitGroup_ForEachUnitInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "sdfs"
+              }
+            }
+          ],
+          "id": "units"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Variable_SetVariable",
               "parameters": [
                 {
                   "expressions": [
@@ -547,70 +509,7 @@
                       }
                     }
                   ],
-                  "id": "count"
-                },
-                {
-                  "expressions": [
-                    {
-                      "type": "Value",
-                      "value": {
-                        "type": {
-                          "directive": "TypeRef",
-                          "type": "UnitData"
-                        },
-                        "value": "Gunner_Autogate"
-                      }
-                    }
-                  ],
-                  "id": "unit_data"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Unit_GetOwningPlayer",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "UnitGroup_GetCurrentUnit"
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "unit"
-                          }
-                        ]
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "player"
-                },
-                {
-                  "expressions": [
-                    {
-                      "function": {
-                        "function_id": "Actor_GetPosition",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "UnitGroup_GetCurrentUnit"
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "actor"
-                          }
-                        ]
-                      },
-                      "type": "Function"
-                    }
-                  ],
-                  "id": "position"
+                  "id": "variable"
                 },
                 {
                   "expressions": [
@@ -619,81 +518,362 @@
                       "value": {
                         "type": {
                           "directive": "FunctionType",
-                          "type": "Boolean"
+                          "type": "Integer"
                         },
-                        "value": "true"
+                        "value": "1"
                       }
                     }
                   ],
-                  "id": "force_position"
+                  "id": "value"
                 }
               ]
             },
             {
-              "function_id": "UnitGroup_AddUnits",
+              "function_id": "General_IfThenElse",
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Logic_Comparison",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Entity_HasAllTags",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "who"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "TypeRef",
+                                            "type": "SnowTag"
+                                          },
+                                          "value": "sdfvanguardtriple_snowtag"
+                                        }
+                                      }
+                                    ],
+                                    "id": "tags"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value1"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "preset": {
+                                "preset_id": "Logic_ComparisonOperator",
+                                "value_id": "eq"
+                              },
+                              "type": "Preset"
+                            }
+                          ],
+                          "id": "op"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Boolean"
+                                },
+                                "value": "true"
+                              }
+                            }
+                          ],
+                          "id": "value2"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "if"
+                },
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "num_to_spawn"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "2"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "then"
+                }
+              ]
+            },
+            {
+              "function_id": "Variable_SetVariable",
               "parameters": [
                 {
                   "expressions": [
                     {
-                      "function": {
-                        "function_id": "Blackboard_GetValue_UnitGroup",
-                        "parameters": [
-                          {
-                            "expressions": [
-                              {
-                                "function": {
-                                  "function_id": "Blackboard_GetBlackboardOfEntity",
-                                  "parameters": [
-                                    {
-                                      "expressions": [
-                                        {
-                                          "function": {
-                                            "function_id": "UnitGroup_GetCurrentUnit"
-                                          },
-                                          "type": "Function"
-                                        }
-                                      ],
-                                      "id": "entity"
-                                    }
-                                  ]
-                                },
-                                "type": "Function"
-                              }
-                            ],
-                            "id": "blackboard"
-                          },
-                          {
-                            "expressions": [
-                              {
-                                "type": "Value",
-                                "value": {
-                                  "type": {
-                                    "directive": "FunctionType",
-                                    "type": "String"
-                                  },
-                                  "value": "units"
-                                }
-                              }
-                            ],
-                            "id": "key"
-                          }
-                        ]
-                      },
-                      "type": "Function"
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "IV_Staging_GetAdjacentStagingCores_Core"
+                      }
                     }
                   ],
-                  "id": "destination"
+                  "id": "variable"
                 },
                 {
                   "expressions": [
                     {
                       "function": {
-                        "function_id": "UnitGroup_GetLastCreatedUnits"
+                        "function_id": "UnitGroup_GetCurrentUnit"
                       },
                       "type": "Function"
                     }
                   ],
-                  "id": "source"
+                  "id": "value"
+                }
+              ]
+            },
+            {
+              "function_id": "Trigger_Run",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "Trigger"
+                        },
+                        "value": "Staging_GetAdjacentStagingCores"
+                      }
+                    }
+                  ],
+                  "id": "trigger"
+                }
+              ]
+            },
+            {
+              "function_id": "UnitGroup_ForEachUnitInGroup",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "OV_Staging_GetAdjacentStagingCores_Cores"
+                      }
+                    }
+                  ],
+                  "id": "units"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Unit_CreateUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "num_to_spawn"
+                              }
+                            }
+                          ],
+                          "id": "count"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
+                                },
+                                "value": "Gunner_Autogate"
+                              }
+                            }
+                          ],
+                          "id": "unit_data"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Unit_GetOwningPlayer",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "unit"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "player"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "UnitGroup_GetCurrentUnit"
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "position"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Boolean"
+                                },
+                                "value": "true"
+                              }
+                            }
+                          ],
+                          "id": "force_position"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "UnitGroup_AddUnits",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Blackboard_GetValue_UnitGroup",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Blackboard_GetBlackboardOfEntity",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "function": {
+                                                    "function_id": "UnitGroup_GetCurrentUnit"
+                                                  },
+                                                  "type": "Function"
+                                                }
+                                              ],
+                                              "id": "entity"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "blackboard"
+                                  },
+                                  {
+                                    "expressions": [
+                                      {
+                                        "type": "Value",
+                                        "value": {
+                                          "type": {
+                                            "directive": "FunctionType",
+                                            "type": "String"
+                                          },
+                                          "value": "units"
+                                        }
+                                      }
+                                    ],
+                                    "id": "key"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "destination"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "UnitGroup_GetLastCreatedUnits"
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "source"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
                 }
               ]
             }
@@ -720,6 +900,20 @@
       "type": {
         "directive": "FunctionType",
         "type": "Integer"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "sdfs",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "sdfs",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "UnitGroup"
       }
     }
   ]
