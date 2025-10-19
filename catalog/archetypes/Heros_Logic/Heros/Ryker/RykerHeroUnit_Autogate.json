@@ -1,41 +1,27 @@
-{
-  "__base_type": "UnitData",
+﻿{
   "abilityList": [
     "attackData",
     "moveData",
     "stopData",
     "holdPositionData",
-    "Revitalize",
-    "HeroicCharge",
-    "HammerTime",
-    "JusticeJump",
+    "SummonGhostAndShadow",
+    "TuckAndRoll",
+    "ActiveCamouflage",
+    "BoomHeadshot",
     "structureProductionQueueAbilityData",
-    "BarclayHero_Research",
+    "Ryker_Upgrades_Research",
     "BaseInventory",
     "AllyPortal"
   ],
-  "additional_black_mask_vision_radius": 5.0,
-  "alias_tech": [
-    "_Hero"
-  ],
-  "armor": 20.0,
-  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Heavy.UI_Icons_Armor_Vanguard_Infantry_Heavy'",
   "armor_name": "pegasus_core|ArmorName_VanguardHeroicArmor",
-  "attack_target_priority": 20,
   "based_on": "BaseUnit_VanguardHero",
-  "behaviors": [],
   "buffs": [
-    "HeartOfTheVanguard_BuffAura"
+    "Houndmaster_GhostBuff",
+    "Houndmaster_ShadowBuff",
+    "SniperMentality_BuffAura"
   ],
-  "build_cost": {
-    "resource_a": 0.0,
-    "resource_b": 0.0,
-    "resource_c": 0.0,
-    "resource_d": 0.0
-  },
-  "build_time": 10.0,
+  "build_time": 0.0,
   "cargo_size": "Four",
-  "cascade_field_radius": 0,
   "commandList": [
     {
       "ability": "attackData",
@@ -98,8 +84,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "Revitalize",
-      "button": "Revitalize_Button",
+      "ability": "SummonGhostAndShadow",
+      "button": "SummonGhostAndShadow_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -110,8 +96,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "HeroicCharge",
-      "button": "HeroicCharge_Button",
+      "ability": "TuckAndRoll",
+      "button": "TuckAndRoll_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -122,26 +108,26 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "HammerTime",
-      "button": "HammerTime_Button",
-      "commandIndex": 0,
-      "hotkey_should_hide": false,
-      "panel": "CommandPanel",
-      "repeatable": false,
-      "row": 1,
-      "slot": 3,
-      "submenu": 0,
-      "targetSubmenu": -1
-    },
-    {
-      "ability": "JusticeJump",
-      "button": "JusticeJump_Button",
+      "ability": "BoomHeadshot",
+      "button": "BoomHeadshot_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 1,
       "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "ActiveCamouflage",
+      "button": "ActiveCamouflage_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
       "submenu": 0,
       "targetSubmenu": -1
     },
@@ -158,8 +144,8 @@
       "targetSubmenu": 1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "RevitalizeLevel1Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "SummonWarhoundsLevel1Upgrade_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -170,8 +156,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "RevitalizeLevel2Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "SummonWarhoundsLevel2Upgrade_Button",
       "commandIndex": 1,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -182,8 +168,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "RevitalizeLevel3Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "SummonWarhoundsLevel3Upgrade_Button",
       "commandIndex": 2,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -194,8 +180,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HeroicChargeLevel1Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "TuckAndRollLevel1Upgrade_Button",
       "commandIndex": 3,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -206,8 +192,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HeroicChargeLevel2Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "TuckAndRollLevel2Upgrade_Button",
       "commandIndex": 4,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -218,8 +204,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HeroicChargeLevel3Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "TuckAndRollLevel3Upgrade_Button",
       "commandIndex": 5,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -230,8 +216,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HammerTimeLevel1Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "ActiveCamouflageLevel1Upgrade_Button",
       "commandIndex": 6,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -242,8 +228,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HammerTimeLevel2Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "ActiveCamouflageLevel2Upgrade_Button",
       "commandIndex": 7,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -254,8 +240,8 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "HammerTimeLevel3Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "ActiveCamouflageLevel3Upgrade_Button",
       "commandIndex": 8,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -266,21 +252,9 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "BarclayHero_Research",
-      "button": "JusticeJumpLevel1Upgrade_Button",
+      "ability": "Ryker_Upgrades_Research",
+      "button": "BoomHeadshotLevel1Upgrade_Button",
       "commandIndex": 9,
-      "hotkey_should_hide": false,
-      "panel": "CommandPanel",
-      "repeatable": false,
-      "row": 1,
-      "slot": 4,
-      "submenu": 1,
-      "targetSubmenu": -1
-    },
-    {
-      "ability": "BarclayHero_Research",
-      "button": "JusticeJumpLevel2Upgrade_Button",
-      "commandIndex": 10,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -302,9 +276,6 @@
       "targetSubmenu": 0
     }
   ],
-  "construction_set_sfx": "OnConstructionSet",
-  "damage_response": "Acquire_or_Flee",
-  "default_acquire_level": "Offensive",
   "default_control_groups": [
     0,
     10
@@ -313,23 +284,8 @@
     "birth": "SetHeroLevelToOne",
     "constructed": "emptyRef",
     "creation": "emptyRef",
-    "death": "emptyRef",
+    "death": "SummonGhostAndShadow_Unsummon_SearchRadius",
     "revenge": "emptyRef"
-  },
-  "enabled_unit_tech": [],
-  "energy_type": "Energy",
-  "expiration_time": -1.0,
-  "faction": "Vanguard",
-  "fidget": {
-    "delay_maximum": 30.0,
-    "delay_minimum": 10.0,
-    "turning_angle": 90.0,
-    "turning_duration": 1.0,
-    "weights": {
-      "animate": 33.0,
-      "idle": 66.0,
-      "turn": 0.0
-    }
   },
   "flags": {
     "alert_when_attacked": false,
@@ -349,29 +305,13 @@
     "untargetable": false,
     "victory_expansion": false
   },
-  "fog_visibility": "Hidden",
-  "footprint": {
-    "angled": false,
-    "clumpable": false,
-    "snap": true,
-    "unbuildable": false,
-    "vision_block_height": 0,
-    "x": 0.0,
-    "y": 0.0
-  },
-  "global_energy": "emptyRef",
-  "global_resource_overrides": [],
-  "height": 0.0,
-  "id": "BlockadeUnit_Uncommandable",
+  "id": "RykerHeroUnit_Autogate",
   "inner_radius": 0.5,
   "minimap_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Minimap/UI_Icons_Minimap_Hero_Default.UI_Icons_Minimap_Hero_Default'",
-  "minimap_icon_custom_color": "FFFFFFFF",
-  "minimap_icon_no_color_override": false,
   "minimap_icon_size": 40.0,
-  "minimap_icon_upper_layer": true,
   "minimap_icon_use_heading": true,
   "minimap_icon_use_team_color": true,
-  "minimap_material_instance": "MaterialInterface'/Game/Pegasus/UI/Assets/Materials/MI_UI_MinimapCharacterPortraitMask_Barclay.MI_UI_MinimapCharacterPortraitMask_Barclay'",
+  "minimap_material_instance": "MaterialInterface'/Game/Pegasus/UI/Assets/Materials/MI_UI_MinimapCharacterPortraitMask_Ryker.MI_UI_MinimapCharacterPortraitMask_Ryker'",
   "minimap_widget": "/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Pegasus/UI/Minimap/WBP_Minimap_Icon_Hero.WBP_Minimap_Icon_Hero_C'",
   "movement": {
     "acceleration_time": 0.0,
@@ -394,69 +334,29 @@
     "moving_turn_period": 0.13,
     "pathing_mode": "Ground",
     "push_priority": 0,
-    "push_priority_same_team": 3,
-    "speed": 5.5,
-    "stationary_turn_period": 0.18,
+    "push_priority_same_team": 0,
+    "speed": 6.5,
+    "stationary_turn_period": 0.13,
     "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "pegasus_core|UnitData_name_Unit_Barclay",
-  "num_corpses": 1,
-  "outer_radius": 1.0,
-  "placed_name": "",
-  "power_consumed": 0.0,
-  "power_produced": 0.0,
-  "responses": [],
-  "sb_id": "barclay",
-  "selection_alias": "",
-  "show_name_on_hover": false,
-  "shroud_radius": 0.0,
-  "sound_cooldown_data_list": [
-    "BaseSoundCooldownData_Unit_Attack",
-    "BaseSoundCooldownData_Unit_AttackGround",
-    "BaseSoundCooldownData_Unit_AttackMove",
-    "BaseSoundCooldownData_Unit_AttackStructure",
-    "BaseSoundCooldownData_Unit_Build",
-    "BaseSoundCooldownData_Unit_Follow",
-    "BaseSoundCooldownData_Unit_Harvest",
-    "BaseSoundCooldownData_Unit_Hold",
-    "BaseSoundCooldownData_Unit_Morph",
-    "BaseSoundCooldownData_Unit_Move",
-    "BaseSoundCooldownData_Unit_Patrol",
-    "BaseSoundCooldownData_Unit_Rally",
-    "BaseSoundCooldownData_Unit_Selection",
-    "BaseSoundCooldownData_Unit_Stop",
-    "BaseSoundCooldownData_Unit_Trained",
-    "BaseSoundCooldownData_Unit_UnderConstruction"
-  ],
+  "name": "pegasus_heroes|UnitData_name_Unit_Ryker",
+  "outer_radius": 0.8,
   "starting_snowtags": [
     "entity_unit",
     "heightplane_ground",
-    "attribute_heavy",
+    "attribute_light",
     "attribute_biological",
     "attribute_hero",
-    "attribute_melee"
+    "attribute_ranged"
   ],
   "subgroup_priority": 200,
-  "supply_add": 0.0,
   "supply_cost": 0.0,
-  "targeting_participation_alias": [],
   "traits": [],
-  "turret_list": [],
-  "ui_flags": {
-    "callout_attacks_air": false,
-    "callout_attacks_ground": true
-  },
-  "ui_kind": "unit",
-  "unit_button": "Barclay_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Barclay.UI_Portrait_Human_Default_Barclay'",
-  "unit_name_list": "emptyRef",
-  "unreal_actor": "BP_UH_Hero_Barclay",
-  "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
-  "veterancy_data": "HeroVanguardVeterancyData",
-  "veterancy_given_on_death": 1000,
-  "veterancy_starting_tier": 0,
+  "unit_button": "Ryker_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Ryker.UI_Portrait_Human_Default_Ryker'",
+  "unreal_actor": "BP_UH_Hero_Ryker",
   "veterancy_tiers": [
     {
       "stat_modifiers": [
@@ -465,7 +365,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -489,7 +389,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -513,7 +413,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -537,7 +437,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -561,8 +461,8 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
-          "stat": "AttackDamageUnscaledBonus"
+          "amount": 6.0,
+          "stat": "AttackDamageScaledBonus"
         },
         {
           "amount": 10.0,
@@ -585,7 +485,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -609,7 +509,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -633,7 +533,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -657,7 +557,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -681,7 +581,7 @@
           "stat": "HealthMaxPercentageAdditiveMultiplier"
         },
         {
-          "amount": 5.0,
+          "amount": 6.0,
           "stat": "AttackDamageScaledBonus"
         },
         {
@@ -699,9 +599,6 @@
       "visual_fx": "BP_FX_HeroLevelUp"
     }
   ],
-  "veterancy_vxp_weight": 1,
-  "victory_points": 0.0,
-  "vision_height": 0.0,
   "vision_radius": 12.0,
   "vital_energy": {
     "maximum": 100.0,
@@ -713,26 +610,7 @@
     "regen": 0.0,
     "starting": 100.0
   },
-  "vital_out_shroud_deduction_energy_flat": 0.0,
-  "vital_out_shroud_deduction_energy_multiplier": 0.0,
-  "vital_out_shroud_deduction_health_flat": 0.0,
-  "vital_out_shroud_deduction_health_multiplier": 0.0,
-  "vital_out_shroud_deduction_shield_flat": 0.0,
-  "vital_out_shroud_deduction_shield_multiplier": 0.0,
-  "vital_shield": {
-    "maximum": 0.0,
-    "regen": 0.0,
-    "starting": 0.0
-  },
-  "vital_shroud_bonus_energy_flat": 0.0,
-  "vital_shroud_bonus_energy_multiplier": 0.0,
-  "vital_shroud_bonus_health_flat": 0.0,
-  "vital_shroud_bonus_health_multiplier": 0.0,
-  "vital_shroud_bonus_shield_flat": 0.0,
-  "vital_shroud_bonus_shield_multiplier": 0.0,
-  "vital_shroud_combat_delay": 5.0,
-  "vitals_force_hide": false,
   "weaponList": [
-    "Barclay_WeaponGround"
+    "Ryker_Weapon"
   ]
 }

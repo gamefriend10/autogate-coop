@@ -389,6 +389,7 @@
   "unit_button": "Barclay_Button",
   "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Barclay.UI_Portrait_Human_Default_Barclay'",
   "unreal_actor": "BP_UH_Hero_Barclay",
+  "veterancy_data": "AutogateVanguardVeterancyData",
   "veterancy_tiers": [
     {
       "stat_modifiers": [

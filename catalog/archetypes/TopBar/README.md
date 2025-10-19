@@ -107,3 +107,7 @@ ShopTopBarAbilityCastedTrigger():
       remove
     )
     SkipRemainingActions()
+
+  If(Ability_GetTriggeringAbility == DogSoldiers):
+    PerformRykerHeroPowerActive()
+    SkipRemainingActions()

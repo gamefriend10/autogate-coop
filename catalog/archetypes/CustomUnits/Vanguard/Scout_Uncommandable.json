@@ -1,36 +1,39 @@
 {
   "__base_type": "UnitData",
   "abilityList": [
-    "UnderConstruction_Vanguard",
     "attackData",
     "moveData",
     "stopData",
-    "Salvage",
-    "SentryPostCargo",
-    "rallyData"
+    "holdPositionData",
+    "OnTheHunt",
+    "Pounce_Agument"
   ],
   "additional_black_mask_vision_radius": 5.0,
-  "alias_tech": [],
-  "armor": 10.0,
-  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Building_0.UI_Icons_Armor_Vanguard_Building_0'",
-  "armor_name": "pegasus_core|ArmorName_VanguardStructureArmor",
+  "alias_tech": [
+    "_Scout"
+  ],
+  "armor": 0.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Light.UI_Icons_Armor_Vanguard_Infantry_Light'",
+  "armor_name": "pegasus_core|ArmorName_VanguardInfantryArmor",
   "attack_target_priority": 20,
-  "based_on": "BaseUnit_Vanguard",
+  "based_on": "BaseUnit_VanguardU",
   "behaviors": [],
-  "buffs": [],
+  "buffs": [
+    "PupperRadar_Buff"
+  ],
   "build_cost": {
-    "resource_a": 100.0,
+    "resource_a": 50.0,
     "resource_b": 0.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
-  "build_time": 45.0,
+  "build_time": 18.0,
   "cargo_size": "One",
   "cascade_field_radius": 0,
   "commandList": [
     {
       "ability": "attackData",
-      "button": "ImmobileAttack_Button",
+      "button": "AttackButton",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -53,6 +56,18 @@
       "targetSubmenu": -1
     },
     {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
       "ability": "moveData",
       "button": "MoveButton",
       "commandIndex": 0,
@@ -65,20 +80,20 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "Salvage",
-      "button": "Salvage_Button",
-      "commandIndex": 0,
+      "ability": "moveData",
+      "button": "PatrolButton",
+      "commandIndex": 1,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
-      "row": 1,
+      "row": 2,
       "slot": 5,
       "submenu": 0,
       "targetSubmenu": -1
     },
     {
-      "ability": "SentryPostCargo",
-      "button": "SentryPostLoad_Button",
+      "ability": "OnTheHunt",
+      "button": "OnTheHunt_Button",
       "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
@@ -89,9 +104,9 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "SentryPostCargo",
-      "button": "UnloadAll_Button",
-      "commandIndex": 3,
+      "ability": "Pounce_Agument",
+      "button": "Pounce_Button",
+      "commandIndex": 0,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
@@ -99,24 +114,14 @@
       "slot": 2,
       "submenu": 0,
       "targetSubmenu": -1
-    },
-    {
-      "ability": "rallyData",
-      "button": "Rally_Button",
-      "commandIndex": 0,
-      "hotkey_should_hide": false,
-      "panel": "CommandPanel",
-      "repeatable": false,
-      "row": 1,
-      "slot": 4,
-      "submenu": 0,
-      "targetSubmenu": -1
     }
   ],
   "construction_set_sfx": "OnConstructionSet",
   "damage_response": "Acquire_or_Flee",
   "default_acquire_level": "Offensive",
-  "default_control_groups": [],
+  "default_control_groups": [
+    10
+  ],
   "effects": {
     "birth": "emptyRef",
     "constructed": "emptyRef",
@@ -129,20 +134,20 @@
   "expiration_time": 60.0,
   "faction": "Vanguard",
   "fidget": {
-    "delay_maximum": 0.0,
-    "delay_minimum": 0.0,
+    "delay_maximum": 30.0,
+    "delay_minimum": 10.0,
     "turning_angle": 90.0,
     "turning_duration": 1.0,
     "weights": {
       "animate": 33.0,
-      "idle": 33.0,
-      "turn": 33.0
+      "idle": 66.0,
+      "turn": 0.0
     }
   },
   "flags": {
     "alert_when_attacked": true,
     "award_victory_points_to_other_team": false,
-    "detector": false,
+    "detector": true,
     "display_ui_description": false,
     "has_prime_structure": false,
     "hologram": false,
@@ -157,7 +162,7 @@
     "untargetable": false,
     "victory_expansion": false
   },
-  "fog_visibility": "Snapshot",
+  "fog_visibility": "Hidden",
   "footprint": {
     "angled": false,
     "clumpable": false,
@@ -170,8 +175,8 @@
   "global_energy": "emptyRef",
   "global_resource_overrides": [],
   "height": 0.0,
-  "id": "SentryPost_Movable_Uncommandable",
-  "inner_radius": 1.7,
+  "id": "Scout_Uncommandable",
+  "inner_radius": 0.375,
   "minimap_icon": "",
   "minimap_icon_custom_color": "FFFFFFFF",
   "minimap_icon_no_color_override": false,
@@ -193,31 +198,32 @@
     },
     "deceleration_time": 0.0,
     "flocking": {
-      "separation_delay": 0.5,
+      "separation_delay": 0,
       "separation_radius": 0,
-      "separation_strength": 1.5
+      "separation_strength": 1.0
     },
     "idle_pushable": false,
     "lock_facing": false,
-    "moving_turn_period": 0.13,
+    "moving_turn_period": 0.25,
     "pathing_mode": "Ground",
     "push_priority": 0,
     "push_priority_same_team": 0,
-    "speed": 3.0,
-    "stationary_turn_period": 0.13,
+    "speed": 8.25,
+    "stationary_turn_period": 0.25,
     "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "pegasus_core|UnitData_name_SentryPost",
+  "name": "pegasus_core|UnitData_Name_Scout",
   "num_corpses": 1,
-  "outer_radius": 1.7,
+  "outer_radius": 0.6,
   "placed_name": "",
   "power_consumed": 0.0,
   "power_produced": 0.0,
+  "radius": 0.475,
   "responses": [],
-  "sb_id": "basic_turret",
-  "selection_alias": "sentry_post",
+  "sb_id": "scout",
+  "selection_alias": "",
   "show_name_on_hover": false,
   "shroud_radius": 0.0,
   "sound_cooldown_data_list": [
@@ -239,41 +245,39 @@
     "BaseSoundCooldownData_Unit_UnderConstruction"
   ],
   "starting_snowtags": [
-    "entity_unit_structure",
-    "preventdefeat_elimination",
+    "entity_unit",
     "heightplane_ground",
+    "attribute_light",
     "attribute_mechanical",
-    "attribute_heavy",
-    "defensive",
-    "attribute_ranged"
+    "attribute_biological",
+    "attribute_melee"
   ],
-  "subgroup_priority": 50,
+  "subgroup_priority": 118,
   "supply_add": 0.0,
-  "supply_cost": 0.0,
+  "supply_cost": 1.0,
   "targeting_participation_alias": [],
   "traits": [
-    "SentryPostCargo_Trait"
+    "PupperSense_Trait",
+    "ScoutWeaponDamageUpgrade_Trait"
   ],
-  "turret_list": [
-    "Turret_SentryPost"
-  ],
+  "turret_list": [],
   "ui_flags": {
     "callout_attacks_air": false,
     "callout_attacks_ground": true
   },
   "ui_kind": "unit",
-  "unit_button": "SentryPost_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_SentryPost.UI_Portrait_Human_Default_SentryPost'",
-  "unreal_actor": "BP_SH_SentryGun_00",
+  "unit_button": "Scout_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Scout.UI_Portrait_Human_Default_Scout'",
+  "unreal_actor": "BP_UH_Scout_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
-  "veterancy_data": "BaseVeterancyData",
+  "veterancy_data": "AutogateVanguardVeterancyData",
   "veterancy_given_on_death": 0,
   "veterancy_starting_tier": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -292,7 +296,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -311,7 +315,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -330,7 +334,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -349,7 +353,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -368,7 +372,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -387,7 +391,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -406,7 +410,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -425,7 +429,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -444,7 +448,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 66.0,
+          "amount": 24.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -464,16 +468,16 @@
   "veterancy_vxp_weight": 1,
   "victory_points": 0.0,
   "vision_height": 0.0,
-  "vision_radius": 13.0,
+  "vision_radius": 8.0,
   "vital_energy": {
     "maximum": 0.0,
     "regen": 0.0,
     "starting": 0.0
   },
   "vital_health": {
-    "maximum": 330.0,
+    "maximum": 120.0,
     "regen": 0.0,
-    "starting": 330.0
+    "starting": 120.0
   },
   "vital_out_shroud_deduction_energy_flat": 0.0,
   "vital_out_shroud_deduction_energy_multiplier": 0.0,
@@ -495,6 +499,6 @@
   "vital_shroud_combat_delay": 5.0,
   "vitals_force_hide": false,
   "weaponList": [
-    "SentryPost_Weapon"
+    "Scout_Weapon"
   ]
 }

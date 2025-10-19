@@ -13,7 +13,7 @@
     "remove_on_damage_taken": true,
     "show_progress": false
   },
-  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_MitigativeGuard.UI_Icons_Abilities_MitigativeGuard'",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_HeartOfTheVanguard.UI_Icons_Abilities_HeartOfTheVanguard'",
   "id": "IAmYourShield_BuffListener",
   "name": "I Am Your Shield",
   "responses": [

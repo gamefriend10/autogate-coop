@@ -1,0 +1,85 @@
+{
+  "based_on": "StagedAbilityData",
+  "cast_game_effect": "DogSoldiers_Set",
+  "commands": [
+    {
+      "charges": {
+        "max_count": 0,
+        "name": "default",
+        "recharge_duration": 0,
+        "starting_count": 0
+      },
+      "cooldown": {
+        "duration": 1.0,
+        "name": "HeroPower",
+        "scope": "Player"
+      },
+      "cost_power": 0.0,
+      "cost_resources": {
+        "resource_a": 3.0,
+        "resource_b": 0.0,
+        "resource_c": 0.0,
+        "resource_d": 0.0
+      },
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "requirement": "Requirement_DogSoldiers"
+    }
+  ],
+  "flags": {
+    "best_unit": true,
+    "cast_on_spawner": false,
+    "cast_while_concealed": false,
+    "channeled": false,
+    "channeling_breaks_on_facing": true,
+    "channeling_breaks_on_range": true,
+    "channeling_breaks_on_vision": true,
+    "channeling_resists_push": true,
+    "count_as_attack": true,
+    "harvest_on_game_start": false,
+    "homogenous_interruption": false,
+    "increment_worker_count": false,
+    "preempt": false,
+    "prevent_activation": false,
+    "progress_countdown": false,
+    "reactive": false,
+    "reapproach": false,
+    "requires_vision": false,
+    "show_progress": false,
+    "silenceable": true,
+    "uninterruptible_stages": {
+      "approach": false,
+      "cast": false,
+      "channel": false,
+      "finish": false,
+      "prepare": false
+    }
+  },
+  "id": "DogSoldiers",
+  "range_maximum": 9999.0,
+  "target_filter": {
+    "alliance": {
+      "ally": true,
+      "enemy": true,
+      "neutral": true,
+      "player": true,
+      "self": true
+    },
+    "tags": {
+      "excluded": [
+        "dead"
+      ],
+      "required": [
+        "stagingcore_snowtag"
+      ]
+    }
+  },
+  "targeting_type": "Unit",
+  "unreal_component": "/Script/Engine.BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/AbilityComponents/AC_Ability_Cast_SpellA.AC_Ability_Cast_SpellA_C'"
+}

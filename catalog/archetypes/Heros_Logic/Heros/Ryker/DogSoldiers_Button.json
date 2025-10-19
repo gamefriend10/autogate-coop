@@ -1,0 +1,9 @@
+{
+  "UseUITint": false,
+  "based_on": "Button",
+  "extended_tooltips": [],
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Abilities/UI_Icons_Abilities_LowDragInfantry.UI_Icons_Abilities_LowDragInfantry'",
+  "id": "DogSoldiers_Button",
+  "name": "Dog Soldiers",
+  "tooltip": "Convert all SCOUTs in a Staging Battle Group into Exos (can be used on allies)."
+}

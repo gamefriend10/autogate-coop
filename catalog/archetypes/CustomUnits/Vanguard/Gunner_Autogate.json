@@ -6,25 +6,23 @@
     "holdPositionData"
   ],
   "alias_tech": [
-    "_Lancer"
+    "_Gunner"
   ],
-  "armor": 15.0,
-  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Heavy.UI_Icons_Armor_Vanguard_Infantry_Heavy'",
+  "armor": 0.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Light.UI_Icons_Armor_Vanguard_Infantry_Light'",
   "armor_name": "pegasus_core|ArmorName_VanguardInfantryArmor",
   "attack_target_priority": 20,
   "based_on": "BaseUnit_VanguardU",
   "buffs": [
-    "LancerArmor_Buff",
-    "LancerRevenge_BuffBase"
+    "SurvivalInstinct_BuffListener"
   ],
   "build_cost": {
-    "resource_a": 100.0,
-    "resource_b": 0.0,
+    "resource_a": 75.0,
+    "resource_b": 25.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
   "build_time": 24.0,
-  "cargo_size": "One",
   "commandList": [
     {
       "ability": "attackData",
@@ -101,8 +99,7 @@
     "untargetable": false,
     "victory_expansion": false
   },
-  "id": "Lancer_Uncommandable",
-  "minimap_icon_size": 20.0,
+  "id": "Gunner_Autogate",
   "movement": {
     "acceleration_time": 0.0,
     "collision": {
@@ -121,45 +118,44 @@
     },
     "idle_pushable": false,
     "lock_facing": false,
-    "moving_turn_period": 0.35,
+    "moving_turn_period": 0.1,
     "pathing_mode": "Ground",
     "push_priority": 0,
     "push_priority_same_team": 0,
-    "speed": 5.5,
-    "stationary_turn_period": 0.35,
+    "speed": 5.0,
+    "stationary_turn_period": 0.1,
     "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "pegasus_core|UnitData_Name_Lancer",
+  "name": "pegasus_core|UnitData_Name_Gunner",
   "outer_radius": 0.6,
-  "sb_id": "lancer",
+  "sb_id": "gunner",
   "starting_snowtags": [
     "entity_unit",
     "heightplane_ground",
-    "attribute_heavy",
+    "attribute_light",
     "attribute_biological",
-    "attribute_melee"
+    "attribute_ranged"
   ],
-  "subgroup_priority": 102,
-  "supply_add": 0.0,
+  "subgroup_priority": 103,
   "supply_cost": 2.0,
   "traits": [
-    "LancerArmor_Trait",
-    "LancerRevenge_Trait",
-    "MitigativeGuardUpgrade_Trait"
+    "QuickdrawHustle_Trait",
+    "SurvivalInstinct_Trait"
   ],
-  "unit_button": "Lancer_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Lancer.UI_Portrait_Human_Default_Lancer'",
+  "unit_button": "Gunner_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Exo.UI_Portrait_Human_Default_Exo'",
   "unit_name_list": "VanInfantryM",
-  "unreal_actor": "BP_UH_HeavyMelee_00",
+  "unreal_actor": "BP_UH_ExoV2_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
+  "veterancy_data": "AutogateVanguardVeterancyData",
   "veterancy_given_on_death": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -167,8 +163,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 100,
@@ -177,7 +173,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -185,8 +181,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 200,
@@ -195,7 +191,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -203,8 +199,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 300,
@@ -213,7 +209,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -221,8 +217,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 400,
@@ -231,7 +227,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -239,8 +235,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 500,
@@ -249,7 +245,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -257,8 +253,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 600,
@@ -267,7 +263,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -275,8 +271,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 700,
@@ -285,7 +281,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -293,8 +289,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 800,
@@ -303,7 +299,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -311,8 +307,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 900,
@@ -321,7 +317,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 40.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -329,8 +325,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
         }
       ],
       "threshold": 1000,
@@ -340,11 +336,11 @@
   "veterancy_vxp_weight": 1,
   "vision_radius": 11.0,
   "vital_health": {
-    "maximum": 200.0,
+    "maximum": 110.0,
     "regen": 0.0,
-    "starting": 200.0
+    "starting": 110.0
   },
   "weaponList": [
-    "Lancer_Weapon"
+    "Gunner_Weapon"
   ]
 }

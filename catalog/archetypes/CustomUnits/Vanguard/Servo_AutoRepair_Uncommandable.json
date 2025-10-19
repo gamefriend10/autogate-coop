@@ -5,12 +5,13 @@
     "moveData",
     "stopData",
     "holdPositionData",
-    "OnTheHunt",
-    "Pounce_Agument"
+    "WorkerVanguardHarvest",
+    "WorkerConstructAbilityData",
+    "WorkerRepair"
   ],
   "additional_black_mask_vision_radius": 5.0,
   "alias_tech": [
-    "_Scout"
+    "_BOB"
   ],
   "armor": 0.0,
   "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Light.UI_Icons_Armor_Vanguard_Infantry_Light'",
@@ -18,19 +19,29 @@
   "attack_target_priority": 20,
   "based_on": "BaseUnit_VanguardU",
   "behaviors": [],
-  "buffs": [
-    "PupperRadar_Buff"
-  ],
+  "buffs": [],
   "build_cost": {
     "resource_a": 50.0,
     "resource_b": 0.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
-  "build_time": 18.0,
+  "build_time": 0.2,
   "cargo_size": "One",
   "cascade_field_radius": 0,
   "commandList": [
+    {
+      "ability": "moveData",
+      "button": "MoveButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
     {
       "ability": "attackData",
       "button": "AttackButton",
@@ -40,6 +51,42 @@
       "repeatable": false,
       "row": 2,
       "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "DummyBuild",
+      "button": "VanguardBuildSubmenu_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": 1
+    },
+    {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerVanguardHarvest",
+      "button": "Harvest_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
       "submenu": 0,
       "targetSubmenu": -1
     },
@@ -56,25 +103,121 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "holdPositionData",
-      "button": "HoldPositionButton",
+      "ability": "WorkerConstructAbilityData",
+      "button": "HQTier1_Button",
       "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 1,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "Habitat_Button",
+      "commandIndex": 1,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 2,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "Barracks_Button",
+      "commandIndex": 2,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 2,
       "slot": 3,
-      "submenu": 0,
+      "submenu": 1,
       "targetSubmenu": -1
     },
     {
-      "ability": "moveData",
-      "button": "MoveButton",
-      "commandIndex": 0,
+      "ability": "WorkerConstructAbilityData",
+      "button": "MechBay_Button",
+      "commandIndex": 3,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 2,
+      "slot": 4,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "Scrapyard_Button",
+      "commandIndex": 4,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "HangarBay_Button",
+      "commandIndex": 5,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 5,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "MunitionsFactory_Button",
+      "commandIndex": 6,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "Warforge_Button",
+      "commandIndex": 7,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 4,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerConstructAbilityData",
+      "button": "SentryPost_Button",
+      "commandIndex": 8,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 1,
+      "submenu": 1,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "WorkerRepair",
+      "button": "Repair_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
       "slot": 4,
       "submenu": 0,
       "targetSubmenu": -1
@@ -92,38 +235,48 @@
       "targetSubmenu": -1
     },
     {
-      "ability": "OnTheHunt",
-      "button": "OnTheHunt_Button",
+      "ability": "stopData",
+      "button": "CancelOrder_Button",
       "commandIndex": 0,
-      "hotkey_should_hide": false,
+      "hotkey_should_hide": true,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 1,
-      "slot": 1,
-      "submenu": 0,
-      "targetSubmenu": -1
+      "slot": 5,
+      "submenu": 1,
+      "targetSubmenu": 0
     },
     {
-      "ability": "Pounce_Agument",
-      "button": "Pounce_Button",
+      "ability": "stopData",
+      "button": "CancelOrder_Button",
       "commandIndex": 0,
+      "hotkey_should_hide": true,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 5,
+      "submenu": 2,
+      "targetSubmenu": 0
+    },
+    {
+      "ability": "WorkerVanguardHarvest",
+      "button": "ReturnResources_Button",
+      "commandIndex": 1,
       "hotkey_should_hide": false,
       "panel": "CommandPanel",
       "repeatable": false,
       "row": 1,
-      "slot": 2,
+      "slot": 3,
       "submenu": 0,
       "targetSubmenu": -1
     }
   ],
   "construction_set_sfx": "OnConstructionSet",
-  "damage_response": "Acquire_or_Flee",
-  "default_acquire_level": "Offensive",
-  "default_control_groups": [
-    10
-  ],
+  "damage_response": "Only_Flee",
+  "default_acquire_level": "Defensive",
+  "default_control_groups": [],
   "effects": {
-    "birth": "emptyRef",
+    "birth": "VanguardWarpBuffApplier",
     "constructed": "emptyRef",
     "creation": "emptyRef",
     "death": "emptyRef",
@@ -147,7 +300,7 @@
   "flags": {
     "alert_when_attacked": true,
     "award_victory_points_to_other_team": false,
-    "detector": true,
+    "detector": false,
     "display_ui_description": false,
     "has_prime_structure": false,
     "hologram": false,
@@ -175,7 +328,7 @@
   "global_energy": "emptyRef",
   "global_resource_overrides": [],
   "height": 0.0,
-  "id": "Scout_Uncommandable",
+  "id": "Servo_AutoRepair_Uncommandable",
   "inner_radius": 0.375,
   "minimap_icon": "",
   "minimap_icon_custom_color": "FFFFFFFF",
@@ -194,7 +347,7 @@
       "ground": true,
       "ground_tall": false,
       "item": false,
-      "worker": false
+      "worker": true
     },
     "deceleration_time": 0.0,
     "flocking": {
@@ -208,21 +361,20 @@
     "pathing_mode": "Ground",
     "push_priority": 0,
     "push_priority_same_team": 0,
-    "speed": 8.25,
+    "speed": 3.5,
     "stationary_turn_period": 0.25,
     "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "pegasus_core|UnitData_Name_Scout",
+  "name": "pegasus_core|UnitData_Name_Worker",
   "num_corpses": 1,
-  "outer_radius": 0.6,
+  "outer_radius": 0.45,
   "placed_name": "",
   "power_consumed": 0.0,
   "power_produced": 0.0,
-  "radius": 0.475,
   "responses": [],
-  "sb_id": "scout",
+  "sb_id": "worker",
   "selection_alias": "",
   "show_name_on_hover": false,
   "shroud_radius": 0.0,
@@ -247,18 +399,16 @@
   "starting_snowtags": [
     "entity_unit",
     "heightplane_ground",
-    "attribute_light",
+    "attribute_worker",
     "attribute_mechanical",
-    "attribute_biological",
     "attribute_melee"
   ],
-  "subgroup_priority": 118,
+  "subgroup_priority": 100,
   "supply_add": 0.0,
   "supply_cost": 1.0,
   "targeting_participation_alias": [],
   "traits": [
-    "PupperSense_Trait",
-    "ScoutWeaponDamageUpgrade_Trait"
+    "Multibuild_Trait"
   ],
   "turret_list": [],
   "ui_flags": {
@@ -266,18 +416,18 @@
     "callout_attacks_ground": true
   },
   "ui_kind": "unit",
-  "unit_button": "Scout_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Scout.UI_Portrait_Human_Default_Scout'",
-  "unreal_actor": "BP_UH_Scout_00",
+  "unit_button": "Worker_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Servo.UI_Portrait_Human_Default_Servo'",
+  "unreal_actor": "BP_UH_Servo_00",
   "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
-  "veterancy_data": "BaseVeterancyData",
-  "veterancy_given_on_death": 0,
+  "veterancy_data": "AutogateVanguardVeterancyData",
+  "veterancy_given_on_death": 100,
   "veterancy_starting_tier": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -285,8 +435,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 100,
@@ -296,7 +446,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -304,8 +454,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 200,
@@ -315,7 +465,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -323,8 +473,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 300,
@@ -334,7 +484,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -342,8 +492,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 400,
@@ -353,7 +503,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -361,8 +511,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 500,
@@ -372,7 +522,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -380,8 +530,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 600,
@@ -391,7 +541,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -399,8 +549,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 700,
@@ -410,7 +560,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -418,8 +568,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 800,
@@ -429,7 +579,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -437,8 +587,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 900,
@@ -448,7 +598,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 24.0,
+          "amount": 22.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -456,8 +606,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 2.0,
-          "stat": "VisionRadiusScaledAdditiveBonus"
+          "amount": 20.0,
+          "stat": "WorkerConstructionSpeedPercentageAdditiveBonus"
         }
       ],
       "threshold": 1000,
@@ -468,16 +618,16 @@
   "veterancy_vxp_weight": 1,
   "victory_points": 0.0,
   "vision_height": 0.0,
-  "vision_radius": 8.0,
+  "vision_radius": 10.0,
   "vital_energy": {
     "maximum": 0.0,
     "regen": 0.0,
     "starting": 0.0
   },
   "vital_health": {
-    "maximum": 120.0,
+    "maximum": 110.0,
     "regen": 0.0,
-    "starting": 120.0
+    "starting": 110.0
   },
   "vital_out_shroud_deduction_energy_flat": 0.0,
   "vital_out_shroud_deduction_energy_multiplier": 0.0,
@@ -499,6 +649,6 @@
   "vital_shroud_combat_delay": 5.0,
   "vitals_force_hide": false,
   "weaponList": [
-    "Scout_Weapon"
+    "Worker_Weapon"
   ]
 }

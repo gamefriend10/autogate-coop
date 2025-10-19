@@ -4,31 +4,30 @@
     "moveData",
     "stopData",
     "holdPositionData",
-    "HelicarrierMagazine",
-    "HelicarrierBomberLaunch",
-    "structureProductionQueueAbilityData",
-    "ReturnToHangar"
+    "MedPatch",
+    "Nanoswarm",
+    "SystemShock"
   ],
-  "armor": 20.0,
-  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Vehicle_Heavy.UI_Icons_Armor_Vanguard_Vehicle_Heavy'",
-  "armor_name": "pegasus_core|ArmorName_VanguardPlating",
-  "attack_target_priority": 20,
+  "alias_tech": [
+    "_MedTech"
+  ],
+  "armor": 5.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Heavy.UI_Icons_Armor_Vanguard_Infantry_Heavy'",
+  "armor_name": "pegasus_core|ArmorName_VanguardInfantryArmor",
   "based_on": "BaseUnit_VanguardU",
   "build_cost": {
-    "resource_a": 375.0,
-    "resource_b": 325.0,
+    "resource_a": 100.0,
+    "resource_b": 50.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
-  "build_time": 70.0,
-  "cargo_size": "Eight",
+  "build_time": 30.0,
+  "cargo_size": "Two",
   "commandList": [
     {
       "ability": "attackData",
       "button": "AttackButton",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 2,
       "slot": 1,
       "submenu": 0,
@@ -38,8 +37,6 @@
       "ability": "stopData",
       "button": "StopButton",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 2,
       "slot": 2,
       "submenu": 0,
@@ -49,8 +46,6 @@
       "ability": "holdPositionData",
       "button": "HoldPositionButton",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 2,
       "slot": 3,
       "submenu": 0,
@@ -60,8 +55,6 @@
       "ability": "moveData",
       "button": "MoveButton",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 2,
       "slot": 4,
       "submenu": 0,
@@ -71,43 +64,35 @@
       "ability": "moveData",
       "button": "PatrolButton",
       "commandIndex": 1,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 2,
       "slot": 5,
       "submenu": 0,
       "targetSubmenu": -1
     },
     {
-      "ability": "HelicarrierMagazine",
-      "button": "InterceptorBomber_Button",
+      "ability": "MedPatch",
+      "button": "MedPatch_Button",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
-      "row": 1,
-      "slot": 2,
-      "submenu": 0,
-      "targetSubmenu": -1
-    },
-    {
-      "ability": "HelicarrierBomberLaunch",
-      "button": "HelicarrierBomberLaunch_Button",
-      "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 1,
       "slot": 1,
       "submenu": 0,
       "targetSubmenu": -1
     },
     {
-      "ability": "ReturnToHangar",
-      "button": "ReturnToHangar_Button",
+      "ability": "Nanoswarm",
+      "button": "Nanoswarm_Button",
       "commandIndex": 0,
-      "panel": "CommandPanel",
-      "repeatable": false,
       "row": 1,
-      "slot": 5,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "SystemShock",
+      "button": "SystemShock_Button",
+      "commandIndex": 0,
+      "row": 1,
+      "slot": 3,
       "submenu": 0,
       "targetSubmenu": -1
     }
@@ -122,7 +107,7 @@
     "death": "emptyRef",
     "revenge": "emptyRef"
   },
-  "faction": "Vanguard",
+  "expiration_time": 60.0,
   "flags": {
     "alert_when_attacked": true,
     "award_victory_points_to_other_team": false,
@@ -141,63 +126,61 @@
     "untargetable": false,
     "victory_expansion": false
   },
-  "height": 5.5,
-  "id": "Helicarrier_Autogate",
-  "inner_radius": 0.8,
+  "id": "MedTech_Autogate",
+  "minimap_icon_size": 20.0,
   "movement": {
-    "acceleration_time": 2.0,
+    "acceleration_time": 0.0,
     "collision": {
-      "air": true,
+      "air": false,
       "burrowed": false,
-      "ground": false,
+      "ground": true,
       "ground_tall": false,
       "item": false,
       "worker": false
     },
-    "deceleration_time": 0.5,
+    "deceleration_time": 0.0,
     "flocking": {
       "separation_delay": 0.5,
-      "separation_radius": 1.5,
+      "separation_radius": 0,
       "separation_strength": 1.5
     },
     "idle_pushable": false,
     "lock_facing": false,
-    "moving_turn_period": 2.5,
-    "pathing_mode": "Flying",
+    "moving_turn_period": 0.13,
+    "pathing_mode": "Ground",
     "push_priority": 0,
-    "push_priority_same_team": 1,
-    "speed": 2.75,
-    "stationary_turn_period": 1.0,
-    "turn_radius": 2.0,
+    "push_priority_same_team": 0,
+    "speed": 5.0,
+    "stationary_turn_period": 0.13,
+    "turn_radius": 0.0,
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "pegasus_core|UnitData_name_Helicarrier",
-  "outer_radius": 1.5,
-  "sb_id": "Helli Carrier",
+  "name": "pegasus_core|UnitData_Name_MedTech",
+  "outer_radius": 0.85,
+  "sb_id": "med_tech",
   "starting_snowtags": [
     "entity_unit",
-    "heightplane_air",
     "attribute_heavy",
     "attribute_mechanical",
+    "heightplane_ground",
+    "attribute_biological",
     "attribute_ranged"
   ],
-  "subgroup_priority": 119,
-  "supply_cost": 14.0,
-  "traits": [
-    "HelicarrierMoveAndShoot_Trait",
-    "CovertBombersUpgrade_Trait"
-  ],
-  "unit_button": "Helicarrier_Button",
-  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_HelicarrierV2.UI_Portrait_Human_Default_HelicarrierV2'",
-  "unit_name_list": "VanFlagship",
-  "unreal_actor": "BP_UH_HelicarrierV2_00",
+  "subgroup_priority": 130,
+  "supply_cost": 3.0,
+  "unit_button": "MedTech_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_MedTech.UI_Portrait_Human_Default_MedTech'",
+  "unit_name_list": "VanInfantryF",
+  "unreal_actor": "BP_UH_MedTech_00",
+  "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
+  "veterancy_data": "AutogateVanguardVeterancyData",
   "veterancy_given_on_death": 0,
   "veterancy_tiers": [
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -205,8 +188,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 100,
@@ -215,7 +198,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -223,8 +206,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 200,
@@ -233,7 +216,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -241,8 +224,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 300,
@@ -251,7 +234,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -259,8 +242,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 400,
@@ -269,7 +252,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -277,8 +260,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 500,
@@ -287,7 +270,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -295,8 +278,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 600,
@@ -305,7 +288,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -313,8 +296,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 700,
@@ -323,7 +306,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -331,8 +314,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 800,
@@ -341,7 +324,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -349,8 +332,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 900,
@@ -359,7 +342,7 @@
     {
       "stat_modifiers": [
         {
-          "amount": 120.0,
+          "amount": 40.0,
           "stat": "HealthMaxAdditiveBonus"
         },
         {
@@ -367,8 +350,8 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 5.0,
-          "stat": "ArmorScaledAdditiveBonus"
+          "amount": 0.25,
+          "stat": "EnergyRegenScaledAdditiveBonus"
         }
       ],
       "threshold": 1000,
@@ -376,14 +359,18 @@
     }
   ],
   "veterancy_vxp_weight": 1,
-  "vision_height": 20.0,
-  "vision_radius": 15.0,
+  "vision_radius": 11.0,
+  "vital_energy": {
+    "maximum": 100.0,
+    "regen": 0.5,
+    "starting": 25.0
+  },
   "vital_health": {
-    "maximum": 600.0,
+    "maximum": 200.0,
     "regen": 0.0,
-    "starting": 600.0
+    "starting": 200.0
   },
   "weaponList": [
-    "Helicarrier_Weapon"
+    "MedTech_Weapon"
   ]
 }

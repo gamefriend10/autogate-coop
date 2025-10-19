@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "GameEffectSet",
+  "effects": [
+    "DogSoldiersVisualBuffApplier"
+  ],
+  "id": "DogSoldiers_Set"
+}

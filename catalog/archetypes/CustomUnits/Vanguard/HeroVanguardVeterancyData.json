@@ -1,0 +1,65 @@
+﻿{
+  "data": {
+    "based_on": "VeterancyData",
+    "id": "AutogateVanguardVeterancyData",
+    "tiers": [
+      {
+        "display_name": "Veterancy 0",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_00.UI_Icons_Veterancy_Human_Level_00'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Generic/Box/UI_Generic_Box_PixelAlpha.UI_Generic_Box_PixelAlpha'"
+      },
+      {
+        "display_name": "Veterancy 1",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_01.UI_Icons_Veterancy_Human_Level_01'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank1.UI_Icons_Status_Veterancy_Rank1'"
+      },
+      {
+        "display_name": "Veterancy 2",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_02.UI_Icons_Veterancy_Human_Level_02'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank2.UI_Icons_Status_Veterancy_Rank2'"
+      },
+      {
+        "display_name": "Veterancy 3",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_03.UI_Icons_Veterancy_Human_Level_03'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 4",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_04.UI_Icons_Veterancy_Human_Level_04'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 5",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_05.UI_Icons_Veterancy_Human_Level_05'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 6",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_06.UI_Icons_Veterancy_Human_Level_06'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 7",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_07.UI_Icons_Veterancy_Human_Level_07'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 8",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_08.UI_Icons_Veterancy_Human_Level_08'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 9",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_09.UI_Icons_Veterancy_Human_Level_09'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      },
+      {
+        "display_name": "Veterancy 10",
+        "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Veterancy/UI_Icons_Veterancy_Human_Level_10.UI_Icons_Veterancy_Human_Level_10'",
+        "icon_small": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Status/UI_Icons_Status_Veterancy_Rank3.UI_Icons_Status_Veterancy_Rank3'"
+      }
+    ],
+    "use_levels": true
+  },
+  "meta": {}
+}
