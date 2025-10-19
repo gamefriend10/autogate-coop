@@ -7,7 +7,12 @@
 3. add to ShopTopBarCaster
 4. add to AutoGateFaction
 
-// Condition: Entity_HasAllTags(attribute_topbar)
+// Condition:
+//  Entity_HasAllTags(attribute_topbar) AND
+//  (
+//    Ability_GetTriggeringAbility == SpawnRykerHero OR
+//    Ability_GetTriggeringAbility == SpawnBlockadeHero
+//  )
 // Trigger: Unit_OnAbilityUsed()
 SpawnHeros():
   Set `player` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())

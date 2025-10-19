@@ -24,6 +24,49 @@
                 "argument": {
                   "node": "Literal",
                   "type": "UpgradeData",
+                  "value": "OpponentSelectedDummyUpgrade"
+                },
+                "name": "upgrade",
+                "type": "UpgradeData"
+              }
+            ],
+            "type": "Count"
+          },
+          "node": "Logical",
+          "operator": "==",
+          "right": {
+            "node": "Literal",
+            "type": "Count",
+            "value": 1
+          },
+          "type": "Bool"
+        },
+        "type": "Bool"
+      },
+      "reason": "You must select an opponent (First quick macro tab).",
+      "reason_announcement": "None"
+    },
+    {
+      "check": {
+        "root": {
+          "left": {
+            "name": "ExpressionApi::count_completed_upgrade_of_type",
+            "node": "FunctionCall",
+            "parameters": [
+              {
+                "argument": {
+                  "name": "ExpressionApi::Player::self",
+                  "node": "FunctionCall",
+                  "parameters": [],
+                  "type": "Player"
+                },
+                "name": "player",
+                "type": "Player"
+              },
+              {
+                "argument": {
+                  "node": "Literal",
+                  "type": "UpgradeData",
                   "value": "HeroSelectedDummyUpgrade"
                 },
                 "name": "upgrade",
@@ -43,7 +86,7 @@
         },
         "type": "Bool"
       },
-      "reason": "You must select a hero.",
+      "reason": "You must select a hero (Second quick macro tab).",
       "reason_announcement": "None"
     },
     {

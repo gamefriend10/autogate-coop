@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "BaseButton",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Skirmish/Personalities/UI_Skirmish_Personalities_MajorGalt.UI_Skirmish_Personalities_MajorGalt'",
+  "id": "SelectMajorGaltHard_Button",
+  "name": "Select Major Galt (Hard, 4 Player)",
+  "tooltip": "Vanguard Opponent"
+}

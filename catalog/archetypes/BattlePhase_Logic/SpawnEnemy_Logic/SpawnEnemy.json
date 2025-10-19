@@ -79,7 +79,7 @@
                           "directive": "FunctionType",
                           "type": "String"
                         },
-                        "value": "MajorGalt"
+                        "value": "MajorGaltEasy"
                       }
                     }
                   ],
@@ -102,6 +102,53 @@
                                   "type": "Trigger"
                                 },
                                 "value": "SpawnMajorGaltWave"
+                              }
+                            }
+                          ],
+                          "id": "trigger"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "String"
+                        },
+                        "value": "MajorGaltHard"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Trigger_Run",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "Trigger"
+                                },
+                                "value": "SpawnMajorGaltHardWave"
                               }
                             }
                           ],

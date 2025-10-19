@@ -12,7 +12,9 @@
     "SpawnBlockadeHero",
     "IAmYourShield",
     "SpawnRykerHero",
-    "DogSoldiers"
+    "DogSoldiers",
+    "SelectMajorGaltEasy",
+    "SelectMajorGaltHard"
   ],
   "additional_black_mask_vision_radius": 5.0,
   "alias_tech": [],
