@@ -9,7 +9,9 @@
     "Tier6Upgrade",
     "ReadyUp",
     "UnreadyUp",
+    "SpawnBlockadeHero",
     "IAmYourShield",
+    "SpawnRykerHero",
     "DogSoldiers"
   ],
   "additional_black_mask_vision_radius": 5.0,

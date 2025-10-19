@@ -1,3 +1,4 @@
+// Condition: Entity_HasAllTags(attribute_topbar)
 // triggers when: anyone's topbar casts ability
 ShopTopBarAbilityCastedTrigger():
   if triggering ability was refresh:

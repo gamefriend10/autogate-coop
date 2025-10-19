@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "BaseButton",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Units/Human/UI_Icons_Units_Human_Ryker.UI_Icons_Units_Human_Ryker'",
+  "id": "SelectRykerHero_Button",
+  "name": "Select Ryker",
+  "tooltip": "<Bold>Hero Power:</> <Yellow>Dog Soldiers (3/0):</> Convert all SCOUTs in a Staging Battle Group into Exos (can be used on allies)."
+}

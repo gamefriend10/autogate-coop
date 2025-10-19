@@ -1,0 +1,7 @@
+﻿{
+  "based_on": "BaseButton",
+  "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Units/Human/UI_Icons_Units_Human_Barclay.UI_Icons_Units_Human_Barclay'",
+  "id": "SelectBlockadeHero_Button",
+  "name": "Select Blockade",
+  "tooltip": "<Bold>Hero Power:</> <Yellow>I Am Your Shield (Passive):</> Passing a Battle Group permanently applies a shield to its units that nullifies the first damage taken each Battle Phase."
+}

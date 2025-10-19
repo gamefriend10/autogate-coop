@@ -50,93 +50,552 @@
       ]
     },
     {
-      "function_id": "Unit_CreateUnit",
+      "function_id": "General_Switch",
       "parameters": [
         {
           "expressions": [
             {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
-                "value": "1"
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player"
               }
             }
           ],
-          "id": "count"
-        },
+          "id": "value"
+        }
+      ],
+      "sub_functions": [
         {
-          "expressions": [
+          "functions": [
             {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "RykerHeroUnit_Autogate"
-              }
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "1"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player1_HeroSpawnPoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "2"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player2_HeroSpawnPoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "3"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player3_HeroSpawnPoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Player"
+                        },
+                        "value": "4"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Variable_SetVariable",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "variable"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "function": {
+                                "function_id": "Actor_GetPosition",
+                                "parameters": [
+                                  {
+                                    "expressions": [
+                                      {
+                                        "function": {
+                                          "function_id": "Point_GetPointFromPlacedName",
+                                          "parameters": [
+                                            {
+                                              "expressions": [
+                                                {
+                                                  "type": "Value",
+                                                  "value": {
+                                                    "type": {
+                                                      "directive": "FunctionType",
+                                                      "type": "String"
+                                                    },
+                                                    "value": "Player4_HeroSpawnPoint"
+                                                  }
+                                                }
+                                              ],
+                                              "id": "name"
+                                            }
+                                          ]
+                                        },
+                                        "type": "Function"
+                                      }
+                                    ],
+                                    "id": "actor"
+                                  }
+                                ]
+                              },
+                              "type": "Function"
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
             }
           ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "1"
-              }
-            }
-          ],
-          "id": "player"
-        },
+          "id": "cases"
+        }
+      ]
+    },
+    {
+      "function_id": "General_Switch",
+      "parameters": [
         {
           "expressions": [
             {
               "function": {
-                "function_id": "Actor_GetPosition",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Point_GetPointFromPlacedName",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Value",
-                                  "value": {
-                                    "type": {
-                                      "directive": "FunctionType",
-                                      "type": "String"
-                                    },
-                                    "value": "Player1_HeroSpawnPoint"
-                                  }
-                                }
-                              ],
-                              "id": "name"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "actor"
-                  }
-                ]
+                "function_id": "Ability_GetTriggeringAbility"
               },
               "type": "Function"
             }
           ],
-          "id": "position"
+          "id": "value"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "SpawnRykerHero"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Unit_CreateUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "1"
+                              }
+                            }
+                          ],
+                          "id": "count"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
+                                },
+                                "value": "RykerHeroUnit_Autogate"
+                              }
+                            }
+                          ],
+                          "id": "unit_data"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player"
+                              }
+                            }
+                          ],
+                          "id": "player"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "position"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            },
+            {
+              "function_id": "General_SwitchCase",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "TypeRef",
+                          "type": "StagedAbilityData"
+                        },
+                        "value": "SpawnBlockadeHero"
+                      }
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "Unit_CreateUnit",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "1"
+                              }
+                            }
+                          ],
+                          "id": "count"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "TypeRef",
+                                  "type": "UnitData"
+                                },
+                                "value": "BlockadeUnit_Uncommandable"
+                              }
+                            }
+                          ],
+                          "id": "unit_data"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "player"
+                              }
+                            }
+                          ],
+                          "id": "player"
+                        },
+                        {
+                          "expressions": [
+                            {
+                              "type": "Variable",
+                              "variable": {
+                                "variable_id": "pos"
+                              }
+                            }
+                          ],
+                          "id": "position"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "actions"
+                }
+              ]
+            }
+          ],
+          "id": "cases"
         }
       ]
     },
@@ -157,8 +616,34 @@
       ]
     },
     {
-      "function_id": "Unit_CreateUnit",
+      "function_id": "TechTree_SetUpgradeLevel",
       "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Variable",
+              "variable": {
+                "variable_id": "player"
+              }
+            }
+          ],
+          "id": "player"
+        },
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "UpgradeData"
+                },
+                "value": "HeroSelectedDummyUpgrade"
+              }
+            }
+          ],
+          "id": "upgrade_data"
+        },
         {
           "expressions": [
             {
@@ -172,317 +657,90 @@
               }
             }
           ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "BlockadeUnit_Uncommandable"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "2"
-              }
-            }
-          ],
-          "id": "player"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Actor_GetPosition",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Point_GetPointFromPlacedName",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Value",
-                                  "value": {
-                                    "type": {
-                                      "directive": "FunctionType",
-                                      "type": "String"
-                                    },
-                                    "value": "Player2_HeroSpawnPoint"
-                                  }
-                                }
-                              ],
-                              "id": "name"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "actor"
-                  }
-                ]
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "position"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_AddUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_Heros_UnitGroup"
-              }
-            }
-          ],
-          "id": "group"
-        }
-      ]
-    },
-    {
-      "function_id": "Unit_CreateUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
-                "value": "1"
-              }
-            }
-          ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "BlockadeUnit_Uncommandable"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "3"
-              }
-            }
-          ],
-          "id": "player"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Actor_GetPosition",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Point_GetPointFromPlacedName",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Value",
-                                  "value": {
-                                    "type": {
-                                      "directive": "FunctionType",
-                                      "type": "String"
-                                    },
-                                    "value": "Player3_HeroSpawnPoint"
-                                  }
-                                }
-                              ],
-                              "id": "name"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "actor"
-                  }
-                ]
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "position"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_AddUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_Heros_UnitGroup"
-              }
-            }
-          ],
-          "id": "group"
-        }
-      ]
-    },
-    {
-      "function_id": "Unit_CreateUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Integer"
-                },
-                "value": "1"
-              }
-            }
-          ],
-          "id": "count"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "TypeRef",
-                  "type": "UnitData"
-                },
-                "value": "BlockadeUnit_Uncommandable"
-              }
-            }
-          ],
-          "id": "unit_data"
-        },
-        {
-          "expressions": [
-            {
-              "type": "Value",
-              "value": {
-                "type": {
-                  "directive": "FunctionType",
-                  "type": "Player"
-                },
-                "value": "4"
-              }
-            }
-          ],
-          "id": "player"
-        },
-        {
-          "expressions": [
-            {
-              "function": {
-                "function_id": "Actor_GetPosition",
-                "parameters": [
-                  {
-                    "expressions": [
-                      {
-                        "function": {
-                          "function_id": "Point_GetPointFromPlacedName",
-                          "parameters": [
-                            {
-                              "expressions": [
-                                {
-                                  "type": "Value",
-                                  "value": {
-                                    "type": {
-                                      "directive": "FunctionType",
-                                      "type": "String"
-                                    },
-                                    "value": "Player4_HeroSpawnPoint"
-                                  }
-                                }
-                              ],
-                              "id": "name"
-                            }
-                          ]
-                        },
-                        "type": "Function"
-                      }
-                    ],
-                    "id": "actor"
-                  }
-                ]
-              },
-              "type": "Function"
-            }
-          ],
-          "id": "position"
-        }
-      ]
-    },
-    {
-      "function_id": "UnitGroup_AddUnit",
-      "parameters": [
-        {
-          "expressions": [
-            {
-              "type": "Variable",
-              "variable": {
-                "variable_id": "GV_Heros_UnitGroup"
-              }
-            }
-          ],
-          "id": "group"
+          "id": "level"
         }
       ]
     }
   ],
   "based_on": "Trigger",
-  "conditions": [],
+  "conditions": [
+    {
+      "function_id": "Entity_HasAllTags",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "TypeRef",
+                  "type": "SnowTag"
+                },
+                "value": "attribute_topbar"
+              }
+            }
+          ],
+          "id": "tags"
+        }
+      ]
+    }
+  ],
   "dev_only": false,
   "enabled": true,
-  "events": [],
+  "events": [
+    {
+      "function_id": "Unit_OnAbilityUsed"
+    }
+  ],
   "id": "SpawnHeros",
-  "variables": []
+  "variables": [
+    {
+      "array_size": 1,
+      "id": "player",
+      "initial_values": [
+        {
+          "function": {
+            "function_id": "Unit_GetOwningPlayer",
+            "parameters": [
+              {
+                "expressions": [
+                  {
+                    "function": {
+                      "function_id": "Unit_GetTriggeringUnit"
+                    },
+                    "type": "Function"
+                  }
+                ],
+                "id": "unit"
+              }
+            ]
+          },
+          "type": "Function"
+        }
+      ],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "player",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Player"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "pos",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "pos",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Vector"
+      }
+    }
+  ]
 }
