@@ -4,4 +4,4 @@ SetVarsFor_BunkerRush_ShopCore_SpawnUnits():
   `GV_UnitDataToSpawnArray`[0] = SentryPost_Movable_Uncommandable
   `GV_NumOfUnitsToSpawnForEachUnitDataArray`[0] = 2
   `GV_UnitDataToSpawnArray`[1] = Servo_AutoRepair_Uncommandable
-  `GV_NumOfUnitsToSpawnForEachUnitDataArray`[1] = 3
+  `GV_NumOfUnitsToSpawnForEachUnitDataArray`[1] = 2

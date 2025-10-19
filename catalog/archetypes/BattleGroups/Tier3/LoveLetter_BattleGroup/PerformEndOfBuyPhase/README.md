@@ -1,5 +1,5 @@
 // End of Buy Phase: If adjacent to (diagonal included)
-// at least 2 Vanguard Battle Groups, add 2 Exos to
+// at least 2 Vanguard Battle Groups, add 1 Exos to
 // this Battle Group.
 LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`):
   set `IV_Staging_GetAdjacentStagingCores_Core` = `IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`
@@ -14,7 +14,7 @@ LoveLetter_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`):
 
   if `OV_General_GetNumberOfUnitsWithTag_Num` >= 2:
     Unit_CreateUnit(
-      2,
+      1,
       Exo,
       Unit_GetOwningPlayer(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),
       Actor_GetPosition(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),

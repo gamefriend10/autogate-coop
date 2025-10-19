@@ -158,7 +158,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "10"
+                "value": "6"
               }
             }
           ],
@@ -244,7 +244,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "8"
+                "value": "9"
               }
             }
           ],

@@ -14,7 +14,7 @@ LoveLetterTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingC
 
   if `OV_General_GetNumberOfUnitsWithTag_Num` >= 2:
     Unit_CreateUnit(
-      4,
+      2,
       Exo,
       Unit_GetOwningPlayer(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),
       Actor_GetPosition(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),
