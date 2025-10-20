@@ -2,7 +2,7 @@
   "based_on": "BaseCore",
   "id": "SDFVanguard_BaseCore",
   "placed_name": "SDFVanguard",
-  "name": "=== [5] SDF Vanguard ===\nWhen a Vanguard Battle Group is placed, add 1 Exo\nto this Battle Group.",
+  "name": "=== [5] SDF Vanguard ===\nWhen a Vanguard Battle Group is placed, add 1 Exo\nto this Battle Group.\nEnd of Buy Phase: Convert\n5 Exos into an Exo5.",
   "unit_button": "Helicarrier_Button",
   "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_HelicarrierV2.UI_Portrait_Human_Default_HelicarrierV2'"
 }

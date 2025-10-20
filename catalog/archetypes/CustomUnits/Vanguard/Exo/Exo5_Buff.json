@@ -1,0 +1,31 @@
+﻿{
+  "data": {
+    "alignment": "Helpful",
+    "based_on": "Buff",
+    "buff_visuals": "BP_BVA_StormEmpowerment",
+    "duration": -1.0,
+    "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Stormgates/Abilities/UI_Icons_Abilities_Stormgates_ImbueAvatar.UI_Icons_Abilities_Stormgates_ImbueAvatar'",
+    "id": "Exo5_Buff",
+    "modifiers": [
+      {
+        "amount": 400.0,
+        "stat_mod": "HealthMaxPercentageAdditiveMultiplier"
+      },
+      {
+        "amount": 400.0,
+        "stat_mod": "AttackSpeedPercentageAdditiveMultiplier"
+      }
+    ],
+    "name": "Exo5 Buff",
+    "stacks": {
+      "aggregation": "Target",
+      "buff_scope_effect_parent": "none",
+      "decay": 0,
+      "initial": 1,
+      "maximum": 99
+    },
+    "tooltip": "This Exo is the equivalent of 5 Exos.",
+    "visual_fx": "None"
+  },
+  "meta": {}
+}

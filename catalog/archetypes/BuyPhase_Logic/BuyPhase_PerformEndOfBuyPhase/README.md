@@ -18,6 +18,12 @@ BuyPhase_PerformEndOfBuyPhase():
       If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, bedtechtriple_snowtag)):
         BedTechTriple_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
         General_Continue()
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, sdfvanguard_snowtag)):
+        SDFVanguard_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
+        General_Continue()
+      If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, sdfvanguardtriple_snowtag)):
+        SDFVanguard_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`) // Reusing the non-triple func
+        General_Continue()
       If(Entity_HasAllTags(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`, blockhead_snowtag)):
         Blockhead_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
         General_Continue()

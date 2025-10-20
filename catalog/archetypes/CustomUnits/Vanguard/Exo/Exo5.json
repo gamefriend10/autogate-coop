@@ -1,0 +1,347 @@
+﻿{
+  "abilityList": [
+    "attackData",
+    "moveData",
+    "stopData",
+    "holdPositionData"
+  ],
+  "alias_tech": [
+    "_Gunner"
+  ],
+  "armor": 0.0,
+  "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Vanguard_Infantry_Light.UI_Icons_Armor_Vanguard_Infantry_Light'",
+  "armor_name": "pegasus_core|ArmorName_VanguardInfantryArmor",
+  "attack_target_priority": 20,
+  "based_on": "BaseUnit_VanguardU",
+  "buffs": [
+    "SurvivalInstinct_BuffListener",
+    "Exo5_Buff"
+  ],
+  "build_cost": {
+    "resource_a": 75.0,
+    "resource_b": 25.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "build_time": 24.0,
+  "commandList": [
+    {
+      "ability": "attackData",
+      "button": "AttackButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "stopData",
+      "button": "StopButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "MoveButton",
+      "commandIndex": 0,
+      "row": 2,
+      "slot": 4,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "moveData",
+      "button": "PatrolButton",
+      "commandIndex": 1,
+      "row": 2,
+      "slot": 5,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "default_control_groups": [
+    10
+  ],
+  "effects": {
+    "birth": "emptyRef",
+    "constructed": "emptyRef",
+    "creation": "emptyRef",
+    "death": "emptyRef",
+    "revenge": "emptyRef"
+  },
+  "expiration_time": 60.0,
+  "flags": {
+    "alert_when_attacked": true,
+    "award_victory_points_to_other_team": false,
+    "detector": false,
+    "display_ui_description": false,
+    "has_prime_structure": false,
+    "hologram": false,
+    "overlap_resource_a": false,
+    "receives_veterancy_from_kills": false,
+    "requires_cascade_field": false,
+    "requires_cascade_field_to_morph": true,
+    "seek_and_destroy": false,
+    "stealth": false,
+    "uncommandable": true,
+    "unselectable": false,
+    "untargetable": false,
+    "victory_expansion": false
+  },
+  "id": "Exo5",
+  "movement": {
+    "acceleration_time": 0.0,
+    "collision": {
+      "air": false,
+      "burrowed": false,
+      "ground": true,
+      "ground_tall": false,
+      "item": false,
+      "worker": false
+    },
+    "deceleration_time": 0.0,
+    "flocking": {
+      "separation_delay": 0,
+      "separation_radius": 0,
+      "separation_strength": 1.0
+    },
+    "idle_pushable": false,
+    "lock_facing": false,
+    "moving_turn_period": 0.1,
+    "pathing_mode": "Ground",
+    "push_priority": 0,
+    "push_priority_same_team": 0,
+    "speed": 5.0,
+    "stationary_turn_period": 0.1,
+    "turn_radius": 0.0,
+    "turn_without_slowing": false,
+    "unpushable": false
+  },
+  "name": "Exo5",
+  "outer_radius": 0.6,
+  "sb_id": "gunner",
+  "starting_snowtags": [
+    "entity_unit",
+    "heightplane_ground",
+    "attribute_light",
+    "attribute_biological",
+    "attribute_ranged"
+  ],
+  "subgroup_priority": 103,
+  "supply_cost": 2.0,
+  "traits": [
+    "QuickdrawHustle_Trait",
+    "SurvivalInstinct_Trait"
+  ],
+  "unit_button": "Gunner_Button",
+  "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Exo.UI_Portrait_Human_Default_Exo'",
+  "unit_name_list": "VanInfantryM",
+  "unreal_actor": "BP_UH_ExoV2_00",
+  "unreal_corpse_actor": "Proxy_BP_PersistentCorpse_Default",
+  "veterancy_data": "AutogateVanguardVeterancyData",
+  "veterancy_given_on_death": 0,
+  "veterancy_tiers": [
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 100,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 200,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 300,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 400,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 500,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 600,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 700,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 800,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 900,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 22.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 0.5,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 1000,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    }
+  ],
+  "veterancy_vxp_weight": 1,
+  "vision_radius": 11.0,
+  "vital_health": {
+    "maximum": 110.0,
+    "regen": 0.0,
+    "starting": 110.0
+  },
+  "weaponList": [
+    "Gunner_Weapon"
+  ]
+}
