@@ -297,7 +297,7 @@
     ]
   },
   "55698E63-4EE7-8DC2-5168-AC82769D7029": {
-    "facing": 1770902404,
+    "facing": 1770902414,
     "kind": "locationMarkerPlayerStart",
     "player": 1,
     "position": [
@@ -321,6 +321,15 @@
     "position": [
       3136012,
       -1144160
+    ]
+  },
+  "5B2AC782-444C-98C6-7053-E7B66EAC4CBB": {
+    "facing": 0,
+    "kind": "Player1_ShopCameraPosition",
+    "player": 0,
+    "position": [
+      588233,
+      1300783
     ]
   },
   "64802B1A-4832-D4D3-42D5-BEBEE06BAE91": {
@@ -656,6 +665,15 @@
       1079553
     ]
   },
+  "A0B2FDB5-4AAE-390B-5197-B3AE6742A9D1": {
+    "facing": 0,
+    "kind": "Player4_ShopCameraPosition",
+    "player": 0,
+    "position": [
+      2818048,
+      -933888
+    ]
+  },
   "A1CC9486-4C1C-CAEF-EC8B-EFAF9B9ECE1E": {
     "facing": 1770902414,
     "kind": "locationMarkerPlayerStart",
@@ -672,6 +690,15 @@
     "position": [
       889066,
       1263913
+    ]
+  },
+  "A8FCBCA4-4180-2499-2F56-D1AF33B44308": {
+    "facing": 0,
+    "kind": "VisionDummy",
+    "player": 1,
+    "position": [
+      -1703677,
+      -1536
     ]
   },
   "AA265A90-415A-298F-400C-EC84BEF1157B": {
@@ -744,6 +771,15 @@
     "position": [
       589824,
       1507328
+    ]
+  },
+  "B4EE51BB-4D0D-D22A-0747-348D25B204B7": {
+    "facing": 0,
+    "kind": "Player2_ShopCameraPosition",
+    "player": 0,
+    "position": [
+      2818048,
+      1294336
     ]
   },
   "B6401F10-46E2-AA40-0867-34849A991625": {
@@ -870,6 +906,15 @@
     "position": [
       851968,
       1507328
+    ]
+  },
+  "DC351278-4024-C925-49B9-8EA96C0590B2": {
+    "facing": 0,
+    "kind": "Player3_ShopCameraPosition",
+    "player": 0,
+    "position": [
+      589824,
+      -933888
     ]
   },
   "DC50FA50-45F5-6E98-6D12-AA873B0141D0": {

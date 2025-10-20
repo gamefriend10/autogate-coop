@@ -46,7 +46,7 @@ SpawnMajorGaltWave10:
   2 ArtilleryMechDeployed_Autogate, 5 Gunner, 4 MedTech_Autogate, 3 MissileJeep, 2 Vulcan, 10 Scout, 5 Lancer ~6000
 
 SpawnMajorGaltWave11:
-  24 Jet, 8 MedTech_Autogate 7200
+  36 Jet, 8 MedTech_Autogate 7200
 
 SpawnMajorGaltWave12:
   12 Jet 12 Vulcan 8 MedTech_Autogate 7350

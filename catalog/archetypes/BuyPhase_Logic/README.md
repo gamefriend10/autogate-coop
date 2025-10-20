@@ -15,5 +15,17 @@ OnEnterBuyPhaseTrigger():
     `GV_PlayerToRefreshFor` = PlayerGroup_GetCurrentPlayer()
     RefreshForPlayer(`GV_PlayerToRefreshFor`)
 
+    // Pan cameras to shop
+    Switch(PlayerGroup_GetCurrentPlayer):
+      Case 1: `pos` = Actor_GetPosition(Point_GetPointFromPlacedName("Player1_ShopCameraPosition"))
+      Case 2: `pos` = Actor_GetPosition(Point_GetPointFromPlacedName("Player2_ShopCameraPosition"))
+      Case 3: `pos` = Actor_GetPosition(Point_GetPointFromPlacedName("Player3_ShopCameraPosition"))
+      Case 4: `pos` = Actor_GetPosition(Point_GetPointFromPlacedName("Player4_ShopCameraPosition"))
+    Camera_PanCameraToLocation(
+      PlayerGroup_GetCurrentPlayer,
+      `pos`,
+      0.5
+    )
+
 OnExitBuyPhaseTrigger():
   BuyPhase_PerformEndOfBuyPhase()

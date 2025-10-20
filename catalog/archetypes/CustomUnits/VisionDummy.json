@@ -1,0 +1,15 @@
+﻿{
+  "based_on": "BaseUnit_CelestialS",
+  "flags": {
+    "uncommandable": true,
+    "unselectable": true,
+    "untargetable": true
+  },
+  "id": "VisionDummy",
+  "name": "VisionDummy",
+  "starting_snowtags": [
+    "status_invulnerable"
+  ],
+  "unreal_actor": "BP_LocationMarkerPlayerStart",
+  "vision_radius": 45.0
+}

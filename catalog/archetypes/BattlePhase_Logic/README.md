@@ -85,9 +85,25 @@ PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
   TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1) // Stops top bar
   `GV_PlayerToCreateBattleUnitsFor` = PlayerGroup_GetCurrentPlayer
   CreateBattleUnitsForPlayer(`GV_PlayerToCreateBattleUnitsFor`)
-  TODO: Set camera to player's corner
-  TODO: Pan camera to battle center
+
+  // Note: reusing `GV_BattlePositionForPlayer` from inside CreateBattleUnitsForPlayer()
+  Camera_PanCameraToLocation(`GV_PlayerToCreateBattleUnitsFor`, `GV_BattlePositionForPlayer`, 0.5)
+
 `GV_EnemyUnitCountAtBeginningOfRound` = SpawnEnemy()
+
+General_Wait(1.5)
+// Pan camera to battle center
+PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+  Camera_PanCameraToLocation(
+    PlayerGroup_GetCurrentPlayer,
+    Actor_GetPosition(
+      Point_GetPointFromPlacedName(
+        "BattleCenterPoint"
+      )
+    ),
+    0.5
+  )
+
 OrderToBattle()
 
 --------------------

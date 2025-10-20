@@ -187,6 +187,48 @@
                   "id": "trigger"
                 }
               ]
+            },
+            {
+              "function_id": "Camera_PanCameraToLocation",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_PlayerToCreateBattleUnitsFor"
+                      }
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "GV_BattlePositionForPlayer"
+                      }
+                    }
+                  ],
+                  "id": "pos"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Time"
+                        },
+                        "value": "0.5"
+                      }
+                    }
+                  ],
+                  "id": "duration"
+                }
+              ]
             }
           ],
           "id": "actions"
@@ -210,6 +252,121 @@
             }
           ],
           "id": "trigger"
+        }
+      ]
+    },
+    {
+      "function_id": "General_Wait",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "type": "Value",
+              "value": {
+                "type": {
+                  "directive": "FunctionType",
+                  "type": "Time"
+                },
+                "value": "1.5"
+              }
+            }
+          ],
+          "id": "duration"
+        }
+      ]
+    },
+    {
+      "function_id": "PlayerGroup_ForEachPlayerInGroup",
+      "parameters": [
+        {
+          "expressions": [
+            {
+              "function": {
+                "function_id": "PlayerGroup_GetActivePlayers"
+              },
+              "type": "Function"
+            }
+          ],
+          "id": "players"
+        }
+      ],
+      "sub_functions": [
+        {
+          "functions": [
+            {
+              "function_id": "Camera_PanCameraToLocation",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "Actor_GetPosition",
+                        "parameters": [
+                          {
+                            "expressions": [
+                              {
+                                "function": {
+                                  "function_id": "Point_GetPointFromPlacedName",
+                                  "parameters": [
+                                    {
+                                      "expressions": [
+                                        {
+                                          "type": "Value",
+                                          "value": {
+                                            "type": {
+                                              "directive": "FunctionType",
+                                              "type": "String"
+                                            },
+                                            "value": "BattleCenterPoint"
+                                          }
+                                        }
+                                      ],
+                                      "id": "name"
+                                    }
+                                  ]
+                                },
+                                "type": "Function"
+                              }
+                            ],
+                            "id": "actor"
+                          }
+                        ]
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "pos"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Time"
+                        },
+                        "value": "0.5"
+                      }
+                    }
+                  ],
+                  "id": "duration"
+                }
+              ]
+            }
+          ],
+          "id": "actions"
         }
       ]
     },

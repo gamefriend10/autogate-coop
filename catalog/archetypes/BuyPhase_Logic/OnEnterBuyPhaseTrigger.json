@@ -339,6 +339,407 @@
                   "id": "trigger"
                 }
               ]
+            },
+            {
+              "function_id": "General_Switch",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "value"
+                }
+              ],
+              "sub_functions": [
+                {
+                  "functions": [
+                    {
+                      "function_id": "General_SwitchCase",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "1"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ],
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "pos"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Actor_GetPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Point_GetPointFromPlacedName",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Value",
+                                                          "value": {
+                                                            "type": {
+                                                              "directive": "FunctionType",
+                                                              "type": "String"
+                                                            },
+                                                            "value": "Player1_ShopCameraPosition"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "name"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "actor"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "actions"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_SwitchCase",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "2"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ],
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "pos"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Actor_GetPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Point_GetPointFromPlacedName",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Value",
+                                                          "value": {
+                                                            "type": {
+                                                              "directive": "FunctionType",
+                                                              "type": "String"
+                                                            },
+                                                            "value": "Player2_ShopCameraPosition"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "name"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "actor"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "actions"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_SwitchCase",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "3"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ],
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "pos"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Actor_GetPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Point_GetPointFromPlacedName",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Value",
+                                                          "value": {
+                                                            "type": {
+                                                              "directive": "FunctionType",
+                                                              "type": "String"
+                                                            },
+                                                            "value": "Player3_ShopCameraPosition"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "name"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "actor"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "actions"
+                        }
+                      ]
+                    },
+                    {
+                      "function_id": "General_SwitchCase",
+                      "parameters": [
+                        {
+                          "expressions": [
+                            {
+                              "type": "Value",
+                              "value": {
+                                "type": {
+                                  "directive": "FunctionType",
+                                  "type": "Integer"
+                                },
+                                "value": "4"
+                              }
+                            }
+                          ],
+                          "id": "value"
+                        }
+                      ],
+                      "sub_functions": [
+                        {
+                          "functions": [
+                            {
+                              "function_id": "Variable_SetVariable",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Variable",
+                                      "variable": {
+                                        "variable_id": "pos"
+                                      }
+                                    }
+                                  ],
+                                  "id": "variable"
+                                },
+                                {
+                                  "expressions": [
+                                    {
+                                      "function": {
+                                        "function_id": "Actor_GetPosition",
+                                        "parameters": [
+                                          {
+                                            "expressions": [
+                                              {
+                                                "function": {
+                                                  "function_id": "Point_GetPointFromPlacedName",
+                                                  "parameters": [
+                                                    {
+                                                      "expressions": [
+                                                        {
+                                                          "type": "Value",
+                                                          "value": {
+                                                            "type": {
+                                                              "directive": "FunctionType",
+                                                              "type": "String"
+                                                            },
+                                                            "value": "Player4_ShopCameraPosition"
+                                                          }
+                                                        }
+                                                      ],
+                                                      "id": "name"
+                                                    }
+                                                  ]
+                                                },
+                                                "type": "Function"
+                                              }
+                                            ],
+                                            "id": "actor"
+                                          }
+                                        ]
+                                      },
+                                      "type": "Function"
+                                    }
+                                  ],
+                                  "id": "value"
+                                }
+                              ]
+                            }
+                          ],
+                          "id": "actions"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "cases"
+                }
+              ]
+            },
+            {
+              "function_id": "Camera_PanCameraToLocation",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "function": {
+                        "function_id": "PlayerGroup_GetCurrentPlayer"
+                      },
+                      "type": "Function"
+                    }
+                  ],
+                  "id": "player"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Variable",
+                      "variable": {
+                        "variable_id": "pos"
+                      }
+                    }
+                  ],
+                  "id": "pos"
+                },
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Time"
+                        },
+                        "value": "0.5"
+                      }
+                    }
+                  ],
+                  "id": "duration"
+                }
+              ]
             }
           ],
           "id": "actions"
@@ -365,6 +766,20 @@
       "type": {
         "directive": "FunctionType",
         "type": "PlayerGroup"
+      }
+    },
+    {
+      "array_size": 1,
+      "id": "pos",
+      "initial_values": [],
+      "is_array": false,
+      "is_constant": false,
+      "is_id_based_on_name": true,
+      "name": "pos",
+      "per_element_initial_values": false,
+      "type": {
+        "directive": "FunctionType",
+        "type": "Vector"
       }
     }
   ]
