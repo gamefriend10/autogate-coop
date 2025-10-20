@@ -1,5 +1,5 @@
 // When a Vanguard Battle Group is placed, add 1 Exo
-// to every adjacent (diagonal included) Battle Group.
+// to this Battle Group.
 // Note: also handles sdfvanguard triple
 SDFVanguard_PerformWhenXIsPlaced():
   // Note: It would be more efficient to put this check one level up, but harder to reason about
@@ -9,7 +9,42 @@ SDFVanguard_PerformWhenXIsPlaced():
   set `IV_PlayerToGetStagingCoresFor` = Unit_GetOwningPlayer(Unit_GetTriggeringUnit())
   `OV_PlayerStagingCoresAsUnitGroup` = GetAllStagingCoresForPlayer(`IV_PlayerToGetStagingCoresFor`)
 
-  // Add sdf cores to `sdfs` unit group
+  UnitGroup_ForEachUnitInGroup(`OV_PlayerStagingCoresAsUnitGroup`):
+    If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), sdfvanguard_snowtag)):
+      Unit_CreateUnit(
+        1,
+        Gunner_Autogate,
+        Unit_GetOwningPlayer(UnitGroup_GetCurrentUnit()),
+        Actor_GetPosition(UnitGroup_GetCurrentUnit()),
+        true
+      )
+      UnitGroup_AddUnits(
+        Blackboard_GetValue_UnitGroup(
+          Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit()),
+          `units`
+        ),
+        UnitGroup_GetLastCreatedUnits()
+      )
+      General_Continue
+    If(Entity_HasAllTags(UnitGroup_GetCurrentUnit(), sdfvanguardtriple_snowtag)):
+      Unit_CreateUnit(
+        2,
+        Gunner_Autogate,
+        Unit_GetOwningPlayer(UnitGroup_GetCurrentUnit()),
+        Actor_GetPosition(UnitGroup_GetCurrentUnit()),
+        true
+      )
+      UnitGroup_AddUnits(
+        Blackboard_GetValue_UnitGroup(
+          Blackboard_GetBlackboardOfEntity(UnitGroup_GetCurrentUnit()),
+          `units`
+        ),
+        UnitGroup_GetLastCreatedUnits()
+      )
+      General_Continue
+
+  // Note: I want to add 1 to every adjacent BG, but this explodes the unit count and the server starts freezing up.
+  <!-- // Add sdf cores to `sdfs` unit group
   Set `sdfs` = UnitGroup_GetNewUnitGroup()
   UnitGroup_ForEachUnitInGroup(`OV_PlayerStagingCoresAsUnitGroup`):
     // Need an if for every tag bc compiled code for HasAllTags wont accept a ref to a SnowTag, only a SnowTag itself
@@ -41,4 +76,4 @@ SDFVanguard_PerformWhenXIsPlaced():
           `units`
         ),
         UnitGroup_GetLastCreatedUnits()
-      )
+      ) -->
