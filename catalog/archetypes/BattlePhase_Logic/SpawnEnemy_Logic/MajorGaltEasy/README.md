@@ -15,47 +15,47 @@ SpawnMajorGaltWave1():
   // Return `GV_EnemyUnitGroup`
 
 SpawnMajorGaltWave2():
-  // Create 20 Scouts for player 5 at GV_BattleCenterPointPosition
-  Unit_CreateUnit(20, Scout, 5, GV_BattleCenterPointPosition)
+  // Create 10 Scouts for player 5 at GV_BattleCenterPointPosition
+  Unit_CreateUnit(10, Scout, 5, GV_BattleCenterPointPosition)
   UnitGroup_AddUnits(`GV_EnemyUnitGroup`, UnitGroup_GetLastCreatedUnits())
 
   // Return `GV_EnemyUnitGroup`
 
 SpawnMajorGaltWave3:
-  15 Lancer 1500
+  8 Lancer 800
 
 SpawnMajorGaltWave4:
-  20 Gunner 2000
+  12 Gunner 1200
 
 SpawnMajorGaltWave5:
-  10 Gunner, 5 MedTech_Autogate, 10 Lancer 2750
+  8 Gunner, 4 MedTech_Autogate, 5 Lancer 1900
 
 SpawnMajorGaltWave6:
-  15 MissileJeep, 15 Scout 3000
+  12 MissileJeep, 14 Scout 2500
 
 SpawnMajorGaltWave7:
-  12 Vulcan 3600
+  10 Vulcan 3000
 
 SpawnMajorGaltWave8:
-  20 MissileJeep, 6 MedTech_Autogate 3900
+  6 MedTech_Autogate, 25 MissileJeep 4650
 
 SpawnMajorGaltWave9:
-  10 MissileJeep, 5 Vulcan, 2 ArtilleryMechDeployed, 6 MedTech_Autogate 4700
+  2 ArtilleryMechDeployed_Autogate, 6 MedTech_Autogate, 10 MissileJeep, 5 Vulcan 4700
 
 SpawnMajorGaltWave10:
-  5 Gunner, 4 MedTech_Autogate, 3 MissileJeep, 2 Vulcan, 1 ArtilleryMechDeployed, 10 Scout, 5 Lancer ~5500
+  2 ArtilleryMechDeployed_Autogate, 5 Gunner, 4 MedTech_Autogate, 3 MissileJeep, 2 Vulcan, 10 Scout, 5 Lancer ~6000
 
 SpawnMajorGaltWave11:
-  24 Jet 6000
+  24 Jet, 8 MedTech_Autogate 7200
 
 SpawnMajorGaltWave12:
-  12 Jet 12 Vulcan 3 MedTech_Autogate 6600
+  12 Jet 12 Vulcan 8 MedTech_Autogate 7350
 
 SpawnMajorGaltWave13:
-  10 Helicarrier 3 MedTech_Autogate 7000
+  10 Helicarrier 3 MedTech_Autogate 4 Vulcan 8200
 
 SpawnMajorGaltWave14:
-  10 Jet, 8 Vulcan, 4 Helicarrier 3 MedTech_Autogate 7500
+  3 ArtilleryMechDeployed_Autogate, 10 Jet, 8 Vulcan, 4 Helicarrier 8 MedTech_Autogate ~9500
 
 SpawnMajorGaltWave15:
-  BotPersonaMajorGaltHeroUnit + 14
+  MajorGalt_Autogate + Wave14

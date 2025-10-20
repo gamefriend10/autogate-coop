@@ -1,0 +1,221 @@
+﻿{
+  "data": {
+    "abilityList": [
+      "attackData",
+      "moveData",
+      "stopData",
+      "holdPositionData",
+      "BattleSermon",
+      "JudgmentDrop",
+      "EmergencyCommendation",
+      "GreetDeathStandingTall"
+    ],
+    "alias_tech": [
+      "_Hero"
+    ],
+    "armor": 20.0,
+    "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Raiders_Medium.UI_Icons_Armor_Raiders_Medium'",
+    "armor_name": "pegasus_core|UnitData_armor_name_MajorGaltCreep",
+    "based_on": "UnitData",
+    "buffs": [
+      "BotPersonaMajorGaltRighteousSacrifice"
+    ],
+    "commandList": [
+      {
+        "ability": "attackData",
+        "button": "AttackButton",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 2,
+        "slot": 1,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "stopData",
+        "button": "StopButton",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 2,
+        "slot": 2,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "holdPositionData",
+        "button": "HoldPositionButton",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 2,
+        "slot": 3,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "moveData",
+        "button": "MoveButton",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 2,
+        "slot": 4,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "moveData",
+        "button": "PatrolButton",
+        "commandIndex": 1,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 2,
+        "slot": 5,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "BattleSermon",
+        "button": "WorkerOvercharge_Button",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 1,
+        "slot": 1,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "JudgmentDrop",
+        "button": "HeroicCharge_Button",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 1,
+        "slot": 2,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "EmergencyCommendation",
+        "button": "ImbueAvatar_Button",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 1,
+        "slot": 3,
+        "submenu": 0,
+        "targetSubmenu": -1
+      },
+      {
+        "ability": "GreetDeathStandingTall",
+        "button": "SurvivalInstinctUpgrade_Button",
+        "commandIndex": 0,
+        "hotkey_should_hide": false,
+        "panel": "CommandPanel",
+        "repeatable": false,
+        "row": 1,
+        "slot": 4,
+        "submenu": 0,
+        "targetSubmenu": -1
+      }
+    ],
+    "damage_response": "Only_Acquire",
+    "effects": {
+      "birth": "VanguardWarpBuffApplier",
+      "constructed": "emptyRef",
+      "creation": "emptyRef",
+      "death": "emptyRef",
+      "revenge": "emptyRef"
+    },
+    "expiration_time": -1.0,
+    "faction": "BotPersonaMajorGalt",
+    "id": "MajorGalt_Autogate",
+    "inner_radius": 1.0,
+    "minimap_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Minimap/UI_Icons_Minimap_Hero_Default.UI_Icons_Minimap_Hero_Default'",
+    "minimap_icon_size": 40.0,
+    "minimap_icon_upper_layer": true,
+    "minimap_icon_use_heading": true,
+    "minimap_icon_use_team_color": true,
+    "minimap_material_instance": "MaterialInterface'/Game/Pegasus/UI/Assets/Materials/MI_UI_MinimapCharacterPortraitMask_MajorGalt.MI_UI_MinimapCharacterPortraitMask_MajorGalt'",
+    "minimap_widget": "/Script/UMG.WidgetBlueprintGeneratedClass'/Game/Pegasus/UI/Minimap/WBP_Minimap_Icon_Hero.WBP_Minimap_Icon_Hero_C'",
+    "movement": {
+      "acceleration_time": 0.0,
+      "collision": {
+        "air": false,
+        "burrowed": false,
+        "ground": true,
+        "ground_tall": false,
+        "item": false,
+        "worker": false
+      },
+      "deceleration_time": 0.0,
+      "flocking": {
+        "separation_delay": 0.5,
+        "separation_radius": 0,
+        "separation_strength": 1.0
+      },
+      "idle_pushable": false,
+      "lock_facing": false,
+      "moving_turn_period": 0.13,
+      "pathing_mode": "Ground",
+      "push_priority": 1,
+      "push_priority_same_team": 3,
+      "speed": 5.5,
+      "stationary_turn_period": 0.18,
+      "turn_radius": 0.0,
+      "turn_without_slowing": false,
+      "unpushable": false
+    },
+    "name": "pegasus_core|Character_name_Character_MajorGalt",
+    "outer_radius": 1.5,
+    "starting_snowtags": [
+      "entity_unit",
+      "heightplane_ground",
+      "attribute_heavy",
+      "attribute_biological",
+      "attribute_resilient",
+      "attribute_hero"
+    ],
+    "supply_cost": 6.0,
+    "traits": [
+      "BotPersonaMajorGaltRighteousSacrifice_Trait",
+      "BotPersonaMajorGaltRighteousSacrifice_Abilities_Trait",
+      "BotPersonaMajorGaltRighteousSacrifice_Ult_Trait"
+    ],
+    "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Ai/UI_Portrait_Ai_Default_MajorGalt.UI_Portrait_Ai_Default_MajorGalt'",
+    "unreal_actor": "BP_UC_BotPersona_Hero_MajorGalt",
+    "veterancy_given_on_death": 1500,
+    "vision_radius": 12.0,
+    "vital_energy": {
+      "maximum": 100.0,
+      "regen": 0.0,
+      "starting": 0.0
+    },
+    "vital_health": {
+      "maximum": 2500.0,
+      "regen": 2.5,
+      "starting": 2500.0
+    },
+    "vital_shield": {
+      "maximum": 0.0,
+      "regen": 0.0,
+      "starting": 0.0
+    },
+    "weaponList": [
+      "BotPersonaMajorGalt_WeaponGround",
+      "MajorGaltCreep_WeaponAir"
+    ]
+  },
+  "meta": {}
+}

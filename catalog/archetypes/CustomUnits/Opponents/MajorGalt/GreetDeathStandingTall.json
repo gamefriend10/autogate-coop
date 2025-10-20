@@ -1,0 +1,86 @@
+﻿{
+  "data": {
+    "alignment": "Helpful",
+    "arc": 180.0,
+    "autocast": {
+      "autocast_filter": {
+        "alliance": {
+          "ally": true,
+          "enemy": true,
+          "neutral": true,
+          "player": true,
+          "self": true
+        },
+        "tags": {
+          "excluded": [],
+          "required": []
+        }
+      },
+      "autocasts": true,
+      "exclusive_targeting": true,
+      "initially_on": true,
+      "range": 8.0,
+      "required_scan_level": "Offensive",
+      "target_sorts": [],
+      "validator": "emptyRef"
+    },
+    "based_on": "BaseStagedAbility",
+    "cast_game_effect": "GreetDeathStandingTall_SearchRadius",
+    "commands": [
+      {
+        "charges": {
+          "max_count": 0,
+          "name": "default",
+          "recharge_duration": 0,
+          "starting_count": 0
+        },
+        "cooldown": {
+          "duration": 10.0,
+          "name": "BotPersonaMajorGaltGreetDeathStandingTallCooldown",
+          "scope": "Player"
+        },
+        "cost_power": 0.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "cost_vitals": {
+          "energy": 100.0,
+          "health": 0.0
+        },
+        "cost_vitals_percentage": {
+          "energy": 0.0,
+          "health": 0.0
+        },
+        "requirement": "NoRequirement"
+      }
+    ],
+    "display_effect_area": "GreetDeathStandingTall_SearchRadius",
+    "id": "GreetDeathStandingTall",
+    "range_indicator": "emptyRef",
+    "target_actor": "BP_InstantTargetActor",
+    "target_filter": {
+      "alliance": {
+        "ally": false,
+        "enemy": false,
+        "neutral": false,
+        "player": true,
+        "self": true
+      },
+      "tags": {
+        "excluded": [
+          "status_invulnerable",
+          "dead"
+        ],
+        "required": [
+          "entity_unit"
+        ]
+      }
+    },
+    "targeting_type": "LocationOrUnit",
+    "unreal_component": "/Script/Engine.BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/AbilityComponents/AC_Ability_Cast_Spell.AC_Ability_Cast_Spell_C'"
+  },
+  "meta": {}
+}

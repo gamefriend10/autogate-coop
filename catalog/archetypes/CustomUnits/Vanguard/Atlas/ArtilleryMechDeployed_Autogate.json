@@ -1,0 +1,185 @@
+﻿{
+  "abilityList": [
+    "attackData",
+    "stopData",
+    "holdPositionData",
+    "MorphToArtilleryMech"
+  ],
+  "based_on": "ArtilleryMech",
+  "build_cost": {
+    "resource_a": 250.0,
+    "resource_b": 125.0,
+    "resource_c": 0.0,
+    "resource_d": 0.0
+  },
+  "commandList": [
+    {
+      "ability": "attackData",
+      "button": "ImmobileAttack_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 1,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "stopData",
+      "button": "StopButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "holdPositionData",
+      "button": "HoldPositionButton",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 2,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "MorphToArtilleryMech",
+      "button": "MorphToArtilleryMech_Button",
+      "commandIndex": 0,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 2,
+      "submenu": 0,
+      "targetSubmenu": -1
+    },
+    {
+      "ability": "attackData",
+      "button": "AttackLocationButton",
+      "commandIndex": 1,
+      "hotkey_should_hide": false,
+      "panel": "CommandPanel",
+      "repeatable": false,
+      "row": 1,
+      "slot": 3,
+      "submenu": 0,
+      "targetSubmenu": -1
+    }
+  ],
+  "footprint": {
+    "vision_block_height": 0,
+    "x": 2.0,
+    "y": 2.0
+  },
+  "id": "ArtilleryMechDeployed_Autogate",
+  "minimap_icon_size": 20.0,
+  "movement": {
+    "acceleration_time": 0.0,
+    "collision": {
+      "air": false,
+      "burrowed": false,
+      "ground": true,
+      "ground_tall": false,
+      "item": false,
+      "worker": false
+    },
+    "deceleration_time": 0.0,
+    "idle_pushable": false,
+    "lock_facing": false,
+    "moving_turn_period": 0.13,
+    "pathing_mode": "Ground",
+    "push_priority": 0,
+    "push_priority_same_team": 0,
+    "speed": 0.0,
+    "stationary_turn_period": 0.18,
+    "turn_radius": 0.0,
+    "turn_without_slowing": false
+  },
+  "name": "pegasus_core|UnitData_Name_ArtilleryMech",
+  "outer_radius": 1.4,
+  "sb_id": "artillery_mech_deployed",
+  "starting_snowtags": [
+    "entity_unit",
+    "attribute_mechanical",
+    "attribute_heavy",
+    "heightplane_ground",
+    "attribute_ranged"
+  ],
+  "traits": [
+    "ArtilleryMechDoT_Trait",
+    "ArtilleryMechDeployedAreaDamage_Trait"
+  ],
+  "turret_list": [
+    "Turret_ArtilleryMechDeployed"
+  ],
+  "unit_button": "ArtilleryMechDeployed_Button",
+  "unit_name_list": "VanMech",
+  "unreal_actor": "BP_UH_ArtilleryMech_Deployed_00",
+  "veterancy_tiers": [
+    {
+      "stat_modifiers": [
+        {
+          "amount": 60.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 1.0,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 1200,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier1"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 60.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 1.0,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 3000,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier2"
+    },
+    {
+      "stat_modifiers": [
+        {
+          "amount": 60.0,
+          "stat": "HealthMaxAdditiveBonus"
+        },
+        {
+          "amount": 10.0,
+          "stat": "DamagePercentageBonus"
+        },
+        {
+          "amount": 1.0,
+          "stat": "WeaponRangeAdditiveBonus"
+        }
+      ],
+      "threshold": 5400,
+      "visual_fx": "BP_FX_VanguardLevelUp_Tier3"
+    }
+  ],
+  "weaponList": [
+    "ArtilleryMechDeployed_Weapon"
+  ]
+}

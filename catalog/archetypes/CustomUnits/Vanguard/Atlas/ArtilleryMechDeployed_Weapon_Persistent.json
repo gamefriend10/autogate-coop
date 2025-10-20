@@ -1,0 +1,22 @@
+﻿{
+  "based_on": "GameEffectPersistent",
+  "effect_initial": "ArtilleryMechDeployed_Weapon_SearchRadiusDoT",
+  "effect_location": {
+    "effect_parent": "ArtilleryMechDeployed_Weapon_MissileLauncher",
+    "entity_or_point": "Point",
+    "target": "Target"
+  },
+  "id": "ArtilleryMechDeployed_Weapon_Persistent",
+  "periodic": {
+    "count": 19,
+    "durations": [
+      0.25
+    ],
+    "effects": [
+      "ArtilleryMechDeployed_Weapon_SearchRadiusDoT"
+    ],
+    "validator": "NoValidator"
+  },
+  "unreal_actor": "Proxy_BP_EBFX_ArtilleryMechDeployed_FirePuddle",
+  "validator": "NoValidator"
+}

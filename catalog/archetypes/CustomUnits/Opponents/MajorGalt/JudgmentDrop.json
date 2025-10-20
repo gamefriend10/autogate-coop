@@ -1,0 +1,87 @@
+﻿{
+  "data": {
+    "autocast": {
+      "autocast_filter": {
+        "alliance": {
+          "ally": false,
+          "enemy": true,
+          "neutral": false,
+          "player": false,
+          "self": false
+        },
+        "tags": {
+          "excluded": [
+            "dead"
+          ],
+          "required": []
+        }
+      },
+      "autocasts": true,
+      "exclusive_targeting": true,
+      "initially_on": true,
+      "range": 13.0,
+      "required_scan_level": "Offensive",
+      "target_sorts": [],
+      "validator": "emptyRef"
+    },
+    "based_on": "BaseStagedAbility",
+    "cast_game_effect": "HeroicCharge_MissileLauncher",
+    "commands": [
+      {
+        "charges": {
+          "max_count": 0,
+          "name": "default",
+          "recharge_duration": 0,
+          "starting_count": 0
+        },
+        "cooldown": {
+          "duration": 10.0,
+          "name": "BotPersonaMajorGaltJudgmentDropCooldown",
+          "scope": "Ability"
+        },
+        "cost_power": 0.0,
+        "cost_resources": {
+          "resource_a": 0.0,
+          "resource_b": 0.0,
+          "resource_c": 0.0,
+          "resource_d": 0.0
+        },
+        "cost_vitals": {
+          "energy": 0.0,
+          "health": 0.0
+        },
+        "cost_vitals_percentage": {
+          "energy": 0.0,
+          "health": 0.0
+        },
+        "requirement": "emptyRef"
+      }
+    ],
+    "display_effect_area": "HeroicCharge_DamageRadius",
+    "id": "JudgmentDrop",
+    "range_maximum": 13.0,
+    "range_minimum": 4.0,
+    "target_filter": {
+      "alliance": {
+        "ally": true,
+        "enemy": true,
+        "neutral": true,
+        "player": true,
+        "self": false
+      },
+      "tags": {
+        "excluded": [
+          "status_invulnerable",
+          "entity_unit_structure"
+        ],
+        "required": [
+          "heightplane_ground",
+          "entity_unit"
+        ]
+      }
+    },
+    "targeting_type": "Location",
+    "unreal_component": "None"
+  },
+  "meta": {}
+}
