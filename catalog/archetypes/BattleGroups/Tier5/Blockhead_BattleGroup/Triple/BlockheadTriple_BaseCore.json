@@ -2,7 +2,7 @@
   "based_on": "BaseTripleCore",
   "id": "BlockheadTriple_BaseCore",
   "placed_name": "BlockheadTriple",
-  "name": "=== [6] Blockhead (Triple) ===\nCan Cast: Give 1 Veterancy Level to all Vanguard Battle Groups.\nEnd of Buy Phase: Gain 2 Ability Charges.",
+  "name": "=== [5] Blockhead (Triple) ===\nCan Cast: Give 1 Veterancy Level to all Vanguard Battle Groups.\nEnd of Buy Phase: Gain 2 Ability Charges.",
   "unit_button": "Barclay_Button",
   "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Humans/UI_Portrait_Human_Default_Barclay.UI_Portrait_Human_Default_Barclay'"
 }
