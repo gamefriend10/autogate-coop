@@ -13,7 +13,7 @@
     "alias_tech": [
       "_Hero"
     ],
-    "armor": 20.0,
+    "armor": 100.0,
     "armor_icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Armor/UI_Icons_Armor_Raiders_Medium.UI_Icons_Armor_Raiders_Medium'",
     "armor_name": "pegasus_core|UnitData_armor_name_MajorGaltCreep",
     "based_on": "UnitData",
@@ -195,7 +195,7 @@
     ],
     "unit_info_portrait": "Texture2D'/Game/Pegasus/UI/Assets/Portraits/Ai/UI_Portrait_Ai_Default_MajorGalt.UI_Portrait_Ai_Default_MajorGalt'",
     "unreal_actor": "BP_UC_BotPersona_Hero_MajorGalt",
-    "veterancy_given_on_death": 1500,
+    "veterancy_given_on_death": 0,
     "vision_radius": 12.0,
     "vital_energy": {
       "maximum": 100.0,
@@ -203,14 +203,14 @@
       "starting": 0.0
     },
     "vital_health": {
-      "maximum": 7500.0,
+      "maximum": 10000.0,
       "regen": 50,
-      "starting": 7500.0
+      "starting": 10000.0
     },
     "vital_shield": {
-      "maximum": 0.0,
+      "maximum": 10000.0,
       "regen": 0.0,
-      "starting": 0.0
+      "starting": 10000.0
     },
     "weaponList": [
       "BotPersonaMajorGalt_WeaponGround",

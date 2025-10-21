@@ -163,7 +163,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -181,7 +181,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -199,7 +199,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -217,7 +217,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -235,7 +235,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -253,7 +253,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -271,7 +271,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -289,7 +289,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -307,7 +307,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -325,7 +325,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],

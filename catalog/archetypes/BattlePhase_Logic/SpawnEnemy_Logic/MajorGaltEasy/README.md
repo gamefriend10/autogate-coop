@@ -46,16 +46,18 @@ SpawnMajorGaltWave10:
   2 ArtilleryMechDeployed_Autogate, 5 Gunner, 4 MedTech_Autogate, 3 MissileJeep, 2 Vulcan, 10 Scout, 5 Lancer ~6000
 
 SpawnMajorGaltWave11:
-  36 Jet, 8 MedTech_Autogate 7200
+  3 Helicarrier, 24 Jet, 8 MedTech_Autogate 2100 + 5400 + 2400 = 9900
 
 SpawnMajorGaltWave12:
-  12 Jet 12 Vulcan 8 MedTech_Autogate 7350
+  24 Jet 12 Vulcan 8 MedTech_Autogate 5400 + 3600 + 2400 = 11400
 
 SpawnMajorGaltWave13:
-  10 Helicarrier 3 MedTech_Autogate 4 Vulcan 8200
+  6 ArtilleryMechDeployed_Autogate, 20 Helicarrier 8 MedTech_Autogate 12 Vulcan 36 Gunner
+  2250 + 7000 + 2400 + 3600 + 3600 = 18850
 
 SpawnMajorGaltWave14:
-  3 ArtilleryMechDeployed_Autogate, 10 Jet, 8 Vulcan, 4 Helicarrier 8 MedTech_Autogate ~9500
+  12 ArtilleryMechDeployed_Autogate, 40 Jet, 24 Helicarrier 8 Vulcan 8 MedTech_Autogate 36 Gunner 24 Lancer
+  4500 + 2250 + 7000 + 2400 + 2800 + 2400 + 3600 + 2400 = 27350
 
 SpawnMajorGaltWave15:
   MajorGalt_Autogate + Wave14

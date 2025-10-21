@@ -378,7 +378,7 @@
   "starting_auto_harvester": "CollectionArray",
   "starting_resources": {
     "resource_a": 300.0,
-    "resource_b": 300.0,
+    "resource_b": 0.0,
     "resource_c": 0.0,
     "resource_d": 0.0
   },
@@ -393,8 +393,8 @@
   ],
   "starting_worker_count": 1,
   "store_item": "emptyRef",
-  "supply_max": 300.0,
-  "supply_starting": 300.0,
+  "supply_max": 999.0,
+  "supply_starting": 999.0,
   "topbar_unit": "ShopTopBarCaster",
   "ui_id": "Celestial"
 }

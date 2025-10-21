@@ -1,0 +1,22 @@
+﻿{
+  "data": {
+    "based_on": "Buff",
+    "duration": -1.0,
+    "effect_final": "Generic_SetStealthRemove",
+    "effect_periodic": "Generic_BuffApplierStealthening",
+    "flags": {
+      "disable_on_attacking": false,
+      "disable_on_damage_taken": false,
+      "hidden": true,
+      "hide_timer": false,
+      "override_source": false,
+      "remove_on_attacking": false,
+      "remove_on_damage_taken": false,
+      "show_progress": false
+    },
+    "id": "CovertBomber_BuffStealthListener",
+    "periodic_duration": 0.25,
+    "validator_disable": "emptyRef"
+  },
+  "meta": {}
+}

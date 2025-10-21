@@ -696,6 +696,26 @@
                               ]
                             },
                             {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "SDFVanguard_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
                               "function_id": "General_Continue"
                             }
                           ],
@@ -784,6 +804,46 @@
                         },
                         {
                           "functions": [
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "SDFVanguard_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
+                            {
+                              "function_id": "Trigger_Run",
+                              "parameters": [
+                                {
+                                  "expressions": [
+                                    {
+                                      "type": "Value",
+                                      "value": {
+                                        "type": {
+                                          "directive": "TypeRef",
+                                          "type": "Trigger"
+                                        },
+                                        "value": "SDFVanguard_PerformEndOfBuyPhase"
+                                      }
+                                    }
+                                  ],
+                                  "id": "trigger"
+                                }
+                              ]
+                            },
                             {
                               "function_id": "Trigger_Run",
                               "parameters": [

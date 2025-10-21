@@ -15,7 +15,7 @@
   "based_on": "BaseUnit_VanguardU",
   "buffs": [
     "SurvivalInstinct_BuffListener",
-    "Exo5_Buff"
+    "Exo10_Buff"
   ],
   "build_cost": {
     "resource_a": 75.0,
@@ -100,7 +100,7 @@
     "untargetable": false,
     "victory_expansion": false
   },
-  "id": "Exo5",
+  "id": "Exo10",
   "movement": {
     "acceleration_time": 0.0,
     "collision": {
@@ -129,7 +129,7 @@
     "turn_without_slowing": false,
     "unpushable": false
   },
-  "name": "Exo5",
+  "name": "Exo10",
   "outer_radius": 0.6,
   "sb_id": "gunner",
   "starting_snowtags": [
@@ -164,7 +164,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -182,7 +182,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -200,7 +200,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -218,7 +218,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -236,7 +236,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -254,7 +254,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -272,7 +272,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -290,7 +290,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -308,7 +308,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],
@@ -326,7 +326,7 @@
           "stat": "DamagePercentageBonus"
         },
         {
-          "amount": 0.5,
+          "amount": 0.15,
           "stat": "WeaponRangeAdditiveBonus"
         }
       ],

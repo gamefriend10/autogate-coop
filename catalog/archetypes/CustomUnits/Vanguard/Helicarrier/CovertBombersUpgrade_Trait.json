@@ -1,0 +1,6 @@
+﻿{
+  "based_on": "TraitData",
+  "button": "CovertBombersUpgrade_ButtonTrait",
+  "id": "CovertBombersUpgrade_Trait",
+  "requirement": "NoRequirement"
+}

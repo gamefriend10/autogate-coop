@@ -1,4 +1,4 @@
-// End of Buy Phase: Convert 5 Exos into an Exo5.
+// End of Buy Phase: Convert 10 Exos into an Exo10.
 // Note: also handles sdfvanguard triple
 SDFVanguard_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`):
   Set `count` = 0
@@ -14,20 +14,20 @@ SDFVanguard_PerformEndOfBuyPhase(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`)
       `count` += 1
       UnitGroup_AddUnit(`exos`, UnitGroup_GetCurrentUnit())
       `total_exp` += Unit_GetVeterancyTier(UnitGroup_GetCurrentUnit)
-    If(`count` == 5):
+    If(`count` == 10):
       General_Break
 
-  If(`count` == 5):
+  If(`count` == 10):
     Unit_CreateUnit(
       1,
-      Exo5,
+      Exo10,
       Unit_GetOwningPlayer(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),
       Actor_GetPosition(`IV_REUSABLE_PerformEndOfBuyPhase_StagingCore`),
       true
     )
     Unit_SetVeterancyTier(
       Unit_GetLastCreatedUnit,
-      `total_exp` / 5
+      `total_exp` / 10
       General_DoDoNot.do_not
     )
     UnitGroup_AddUnit(

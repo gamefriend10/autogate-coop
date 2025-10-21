@@ -1,0 +1,44 @@
+﻿{
+  "data": {
+    "based_on": "WeaponData",
+    "cannot_fire_while_flocking": 0.5,
+    "id": "BaseWeapon",
+    "name": "pegasus_core|Unnamed Weapon",
+    "range_acquire": 10.0,
+    "unreal_component": "/Script/Engine.BlueprintGeneratedClass'/Game/Pegasus/Blueprints/EntityComponents/WeaponComponents/AC_Weapon_Generic.AC_Weapon_Generic_C'",
+    "weapon_acquire_filter": {
+      "alliance": {
+        "ally": false,
+        "enemy": true,
+        "neutral": false,
+        "player": false,
+        "self": false
+      },
+      "tags": {
+        "excluded": [
+          "status_sleeping"
+        ],
+        "required": []
+      }
+    },
+    "weapon_target_filter": {
+      "alliance": {
+        "ally": true,
+        "enemy": true,
+        "neutral": true,
+        "player": true,
+        "self": false
+      },
+      "tags": {
+        "excluded": [
+          "status_invulnerable",
+          "entity_destructible_tree"
+        ],
+        "required": []
+      }
+    }
+  },
+  "meta": {
+    "useAsBasedOn": true
+  }
+}

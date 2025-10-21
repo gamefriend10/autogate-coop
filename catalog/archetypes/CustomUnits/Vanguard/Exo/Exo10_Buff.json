@@ -5,18 +5,18 @@
     "buff_visuals": "BP_BVA_StormEmpowerment",
     "duration": -1.0,
     "icon": "Texture2D'/Game/Pegasus/UI/Assets/Icons/Stormgates/Abilities/UI_Icons_Abilities_Stormgates_ImbueAvatar.UI_Icons_Abilities_Stormgates_ImbueAvatar'",
-    "id": "Exo5_Buff",
+    "id": "Exo10_Buff",
     "modifiers": [
       {
-        "amount": 400.0,
+        "amount": 900.0,
         "stat_mod": "HealthMaxPercentageAdditiveMultiplier"
       },
       {
-        "amount": 400.0,
+        "amount": 900.0,
         "stat_mod": "AttackSpeedPercentageAdditiveMultiplier"
       }
     ],
-    "name": "Exo5 Buff",
+    "name": "Exo10 Buff",
     "stacks": {
       "aggregation": "Target",
       "buff_scope_effect_parent": "none",
