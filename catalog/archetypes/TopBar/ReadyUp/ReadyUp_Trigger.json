@@ -492,6 +492,26 @@
               ]
             },
             {
+              "function_id": "General_Wait",
+              "parameters": [
+                {
+                  "expressions": [
+                    {
+                      "type": "Value",
+                      "value": {
+                        "type": {
+                          "directive": "FunctionType",
+                          "type": "Time"
+                        },
+                        "value": "2.0"
+                      }
+                    }
+                  ],
+                  "id": "duration"
+                }
+              ]
+            },
+            {
               "function_id": "Trigger_Run",
               "parameters": [
                 {

@@ -19,4 +19,5 @@ TechTree_SetAbilityAllowed(triggering player, ReadyUp, remove)
 TechTree_SetAbilityAllowed(triggering player, UnreadyUp, add)
 If `GV_NumPlayersReady` == `GV_NumActivePlayers`:
   TriggerRun(OnExitBuyPhaseTrigger())
+  General_Wait(2.0)
   TriggerRun(OnEnterBattlePhaseTrigger())
