@@ -28,4 +28,6 @@ OnEnterBuyPhaseTrigger():
     )
 
 OnExitBuyPhaseTrigger():
+  PlayerGroup_ForEachPlayerInGroup(PlayerGroup_GetActivePlayers()):
+    TechTree_SetUpgradeLevel(PlayerGroup_GetCurrentPlayer, GameStateIsBattleStateDummyUpgrade, 1) // Stops top bar
   BuyPhase_PerformEndOfBuyPhase()

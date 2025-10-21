@@ -1,0 +1,90 @@
+﻿{
+  "alignment": "Harmful",
+  "arc": 30.0,
+  "autocast": {
+    "autocast_filter": {
+      "alliance": {
+        "ally": false,
+        "enemy": true,
+        "neutral": false,
+        "player": false,
+        "self": false
+      },
+      "tags": {
+        "excluded": [],
+        "required": []
+      }
+    },
+    "autocasts": true,
+    "exclusive_targeting": true,
+    "initially_on": true,
+    "range": 15.0,
+    "required_scan_level": "Offensive",
+    "target_sorts": [],
+    "validator": "emptyRef"
+  },
+  "based_on": "BaseStagedAbility",
+  "cast_game_effect": "HelicarrierBomberLaunch_MagazineVolley",
+  "commands": [
+    {
+      "charges": {
+        "max_count": 0,
+        "name": "default",
+        "recharge_duration": 0,
+        "starting_count": 0
+      },
+      "cooldown": {
+        "duration": 30.0,
+        "name": "Launch Bomber",
+        "scope": "Ability"
+      },
+      "cost_resources": {
+        "resource_a": 0.0,
+        "resource_b": 0.0,
+        "resource_c": 0.0,
+        "resource_d": 0.0
+      },
+      "cost_vitals": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "cost_vitals_percentage": {
+        "energy": 0.0,
+        "health": 0.0
+      },
+      "requirement": "NoRequirement"
+    }
+  ],
+  "flags": {
+    "best_unit": true,
+    "cast_on_spawner": false,
+    "cast_while_concealed": false,
+    "channeled": true,
+    "channeling_breaks_on_facing": true,
+    "channeling_breaks_on_range": true,
+    "channeling_breaks_on_vision": true,
+    "count_as_attack": true,
+    "harvest_on_game_start": false,
+    "homogenous_interruption": false,
+    "preempt": false,
+    "prevent_activation": false,
+    "progress_countdown": false,
+    "reactive": false,
+    "reapproach": false,
+    "requires_vision": false,
+    "show_progress": false,
+    "silenceable": true,
+    "uninterruptible_stages": {
+      "approach": false,
+      "cast": false,
+      "channel": true,
+      "finish": false,
+      "prepare": false
+    }
+  },
+  "id": "HelicarrierBomberLaunch",
+  "range_maximum": 25.0,
+  "range_minimum": 7.0,
+  "range_slop": 5.0,
+  "targeting_type": "Location"
+}
