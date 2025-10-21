@@ -15,47 +15,49 @@ SpawnMajorGaltHardWave1():
   // Return `GV_EnemyUnitGroup`
 
 SpawnMajorGaltHardWave2():
-  // Create 20 Scouts for player 5 at GV_BattleCenterPointPosition
-  Unit_CreateUnit(20, Scout, 5, GV_BattleCenterPointPosition)
+  // Create 40 Scouts for player 5 at GV_BattleCenterPointPosition
+  Unit_CreateUnit(40, Scout, 5, GV_BattleCenterPointPosition)
   UnitGroup_AddUnits(`GV_EnemyUnitGroup`, UnitGroup_GetLastCreatedUnits())
 
   // Return `GV_EnemyUnitGroup`
 
 SpawnMajorGaltHardWave3:
-  15 Lancer 1500
+  32 Lancer 800
 
 SpawnMajorGaltHardWave4:
-  20 Gunner 2000
+  48 Gunner 1200
 
 SpawnMajorGaltHardWave5:
-  10 Gunner, 5 MedTech_Autogate, 10 Lancer 2750
+  32 Gunner, 16 MedTech_Autogate, 20 Lancer 1900
 
 SpawnMajorGaltHardWave6:
-  15 MissileJeep, 15 Scout 3000
+  48 MissileJeep, 56 Scout 2500
 
 SpawnMajorGaltHardWave7:
-  12 Vulcan 3600
+  40 Vulcan 3000
 
 SpawnMajorGaltHardWave8:
-  20 MissileJeep, 6 MedTech_Autogate 3900
+  24 MedTech_Autogate, 100 MissileJeep 4650
 
 SpawnMajorGaltHardWave9:
-  10 MissileJeep, 5 Vulcan, 2 ArtilleryMechDeployed, 6 MedTech_Autogate 4700
+  8 ArtilleryMechDeployed_Autogate, 24 MedTech_Autogate, 40 MissileJeep, 20 Vulcan 4700
 
 SpawnMajorGaltHardWave10:
-  5 Gunner, 4 MedTech_Autogate, 3 MissileJeep, 2 Vulcan, 1 ArtilleryMechDeployed, 10 Scout, 5 Lancer ~5500
+  8 ArtilleryMechDeployed_Autogate, 20 Gunner, 16 MedTech_Autogate, 12 MissileJeep, 8 Vulcan, 40 Scout, 20 Lancer ~6000
 
 SpawnMajorGaltHardWave11:
-  24 Jet 6000
+  12 Helicarrier, 96 Jet, 32 MedTech_Autogate 2100 + 5400 + 2400 = 9900
 
 SpawnMajorGaltHardWave12:
-  12 Jet 12 Vulcan 3 MedTech_Autogate 6600
+  96 Jet 48 Vulcan 32 MedTech_Autogate 5400 + 3600 + 2400 = 11400
 
 SpawnMajorGaltHardWave13:
-  10 Helicarrier 3 MedTech_Autogate 7000
+  24 ArtilleryMechDeployed_Autogate, 80 Helicarrier 32 MedTech_Autogate 48 Vulcan 144 Gunner
+  2250 + 7000 + 2400 + 3600 + 3600 = 18850
 
 SpawnMajorGaltHardWave14:
-  10 Jet, 8 Vulcan, 4 Helicarrier 3 MedTech_Autogate 7500
+  48 ArtilleryMechDeployed_Autogate, 160 Jet, 96 Helicarrier 32 Vulcan 32 MedTech_Autogate 144 Gunner 96 Lancer
+  4500 + 2250 + 7000 + 2400 + 2800 + 2400 + 3600 + 2400 = 27350
 
 SpawnMajorGaltHardWave15:
-  BotPersonaMajorGaltHardHeroUnit + 14
+  MajorGalt_Autogate + Wave14

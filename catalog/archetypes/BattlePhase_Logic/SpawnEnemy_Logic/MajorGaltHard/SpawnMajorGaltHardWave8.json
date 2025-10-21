@@ -61,7 +61,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "20"
+                "value": "24"
               }
             }
           ],
@@ -76,7 +76,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "MissileJeep"
+                "value": "MedTech_Autogate"
               }
             }
           ],
@@ -149,7 +149,7 @@
                   "directive": "FunctionType",
                   "type": "Integer"
                 },
-                "value": "6"
+                "value": "100"
               }
             }
           ],
@@ -164,7 +164,7 @@
                   "directive": "TypeRef",
                   "type": "UnitData"
                 },
-                "value": "MedTech_Autogate"
+                "value": "MissileJeep"
               }
             }
           ],

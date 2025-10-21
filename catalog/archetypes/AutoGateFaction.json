@@ -377,7 +377,7 @@
   "rewards": [],
   "starting_auto_harvester": "CollectionArray",
   "starting_resources": {
-    "resource_a": 300.0,
+    "resource_a": 3.0,
     "resource_b": 0.0,
     "resource_c": 0.0,
     "resource_d": 0.0
