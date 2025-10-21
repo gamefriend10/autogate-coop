@@ -25,7 +25,7 @@ SpawnMajorGaltWave3:
   8 Lancer 800
 
 SpawnMajorGaltWave4:
-  12 Gunner 1200
+  16 Gunner 1600
 
 SpawnMajorGaltWave5:
   8 Gunner, 4 MedTech_Autogate, 5 Lancer 1900
