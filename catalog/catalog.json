@@ -11,7 +11,7 @@
   "dependencies": [
     "pegasus_1v1"
   ],
-  "name": "AutoGate - Coop",
+  "name": "AutoGateCoop",
   "types": [
     {
       "directory": "Types",
